@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Polilibro</title>
+    <link rel="shortcut icon" href="../static/img/ipn.ico" type="image/x-icon">
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="../static/fonts/roboto.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../static/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/ownStyles.css">
+
+    <!--Componentes personalizados-->
+    <link rel="stylesheet" href="../static/css/shadowsCustomized.css">
+    <link rel="stylesheet" href="../static/css/bordersCustomized.css">
+    <link rel="stylesheet" href="../static/css/scrollBarCustomized.css">
+    <link rel="stylesheet" href="../static/css/footerCustomized.css">
+    <link rel="stylesheet" href="../static/css/botonPoliLibro.css">
+    <link rel="stylesheet" href="../static/css/defaultImage.css">
+    <link rel="stylesheet" href="../static/css/textosCustomized.css">
+    <link rel="stylesheet" href="../static/css/navCustomized.css">
+    <link rel="stylesheet" href="../static/css/tabsCustomized.css">
+    <link rel="stylesheet" href="../static/css/cardsCustomized.css">
+    <link rel="stylesheet" href="../static/css/glosario.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="../static/js/activateComponentsMaterialize.js"></script>
+
+    <!--Scripts propios-->
+    <script defer src="../static/js/hideSuperiorNav.js"></script>
+    <script defer src="../static/js/browserStyle.js"></script>
+    <script defer src="../static/js/buscador.js"></script>
+
+</head>
+
+<body>
+
+    <section>
+        <!--Navbar superior-->
+        <div class="nav-superior" id="nav-superior">
+            <div id="icoNavIpn"></div>
+            <div class="titleNavIpnContainer">
+                <p class="titleNavIpn white-text">Polilibro Académico de Finanzas Empresariales</p>
+            </div>
+            <div id="icoNavEscom"></div>
+        </div>
+        <!-- <div id="expandButton" class="hidenav-superior waves-effect waves-light">
+            <i id="expandIcon" class="material-icons white-text">expand_less</i>
+        </div> -->
+        <!--Navbar principal-->
+        <nav>
+            <div class="nav-wrapper light-blue darken-4">
+                <a href="/" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
+                        class="material-icons">arrow_back</i></a>
+                <a class="brand-logo titleUnity">Glosario</a>
+            </div>
+        </nav>
+    </section>
+
+    <section class="browserContainer col s12 blue-grey lighten-4">
+        <div class="browserContainer-inputContainer" id="browserContainer-inputContainer">
+            <div id="buttonBrowser" class="buttonBrowserOwn waves-effect waves-light white-text material-icons light-blue darken-4 shadow2">search</div>
+            <input  id="inputBrowser" type="text" onkeyup="buscar_concepto()" class="browserContainer-inputContainer-input browser-default shadow2">
+        </div>
+        <div class="browserContainer-conceptsContainer">
+            <div class="conceptCard white shadow2 border2">
+                <p class="textoTitulo">Concepto 1</p>
+                <p class="textoStandar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione, qui repudiandae, sunt quasi earum ipsum libero maiores officia ullam mollitia numquam dolore eligendi? Ea corrupti adipisci mollitia sed repudiandae?</p>
+            </div>
+            <div class="conceptCard white shadow2 border2">
+                <p class="textoTitulo">Concepto 2</p>
+                <p class="textoStandar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione, qui repudiandae, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, suscipit. Pariatur quos aut doloremque, fugiat soluta odio, blanditiis nulla quasi, dolores quod aspernatur corporis mollitia modi cumque nesciunt ea laboriosam. sunt quasi earum ipsum libero maiores officia ullam mollitia numquam dolore eligendi? Ea corrupti adipisci mollitia sed repudiandae?</p>
+            </div>
+            <div class="conceptCard white shadow2 border2">
+                <p class="textoTitulo">Test 1</p>
+                <p class="textoStandar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione, qui repudiandae, sunt quasi earum ipsum libero maiores officia ullam mollitia numquam dolore eligendi? Ea corrupti adipisci mollitia sed repudiandae?</p>
+            </div>
+            <div class="conceptCard white shadow2 border2">
+                <p class="textoTitulo">Test 2</p>
+                <p class="textoStandar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione, qui repudiandae, sunt quasi earum ipsum libero maiores officia ullam mollitia numquam dolore eligendi? Ea corrupti adipisci mollitia sed repudiandae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quasi necessitatibus quo, repellat molestiae, veniam suscipit eos molestias explicabo animi magni assumenda placeat eum id aperiam alias inventore porro quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur exercitationem quos, nulla, incidunt sunt modi a ab doloribus facere ipsum laudantium, ad nemo at expedita recusandae praesentium error natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi nam velit ducimus iusto delectus accusamus fugit similique impedit ut expedita nemo minima quibusdam magnam, quisquam perferendis repellat, dolorum cupiditate.</p>
+            </div>
+            <div class="conceptCard white shadow2 border2">
+                <p class="textoTitulo">Prueba 1</p>
+                <p class="textoStandar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt error enim accusamus vitae officia sit soluta aperiam provident nemo quibusdam maiores, explicabo ex quo numquam magnam quas illum recusandae hic. Blanditiis ratione, qui repudiandae, sunt quasi earum ipsum libero maiores officia ullam mollitia numquam dolore eligendi? Ea corrupti adipisci mollitia sed repudiandae?</p>
+            </div>
+            <div class="conceptCard white shadow2 border2">
+                <p class="textoTitulo">Prueba 2</p>
+                <p class="textoStandar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione, qui repudiandae, sunt quasi earum ipsum libero maiores officia ullam mollitia numquam dolore eligendi? Ea corrupti adipisci mollitia sed repudiandae?</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footerDesign blue-grey lighten-3">
+        <div class="footerContainerOne">
+            <p class="textoFooter">
+                Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
+                Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín
+                Ivette
+                Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+                Internacional.
+            </p>
+            <a href="https://link_ejemplo_pagina"
+                class="footerLink textoFooter blue-grey lighten-4 shadow2 border1 blue-text text-darken-2">
+                Repositorio de la obra https://link_ejemplo_pagina.
+            </a>
+            <div class="iconCreativeContainer">
+                <div class="iconCreative"></div>
+            </div>
+        </div>
+        <div class="footerContainerTwo">
+            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Manual<i
+                    class="material-icons right">help</i></a>
+            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Requerimientos<i
+                    class="material-icons right">build</i></a>
+            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Contacto<i
+                    class="material-icons right">alternate_email</i></a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
