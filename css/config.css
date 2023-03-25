@@ -1,0 +1,48 @@
+.containerSettings{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 1000px) {
+    .containerSettings{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        padding: 5px;
+    }
+}
+
+
+.colorCard{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    margin-bottom: 10px;
+    transition: all .1s ease-in-out;
+}
+
+.colorCard:hover{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+}
+
+.iconColorSelection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    font-size: 30px;
+}
+
+.textColorSelection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 600;
+}
