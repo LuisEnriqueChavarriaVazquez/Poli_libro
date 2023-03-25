@@ -32,12 +32,10 @@ let contentLoadHtml =
     <div class="loadingTextShimmerContainer">
         <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
-        <div class="clgreyl2 shimmer loadingText"></div>
     </div>
     `,
     `
     <div class="loadingTextShimmerContainer">
-        <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
@@ -47,6 +45,17 @@ let contentLoadHtml =
     <div class="loadingBoxShimmerContainer">
         <div class="clgreyl2 shimmer loadingBoxShimmer"></div>
     </div>
+
+    <div class="loadingTextShimmerContainer">
+        <div class="clgreyl2 shimmer loadingText"></div>
+        <div class="clgreyl2 shimmer loadingText"></div>
+        <div class="clgreyl2 shimmer loadingText"></div>
+    </div>
+
+    <div class="loadingBoxShimmerContainer">
+        <div class="clgreyl2 shimmer loadingBoxShimmer"></div>
+    </div>
+    
     `,
     `
     <div class="loadingBoxShimmerContainer">
@@ -54,8 +63,6 @@ let contentLoadHtml =
     </div>
 
     <div class="loadingTextShimmerContainer">
-        <div class="clgreyl2 shimmer loadingText"></div>
-        <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
         <div class="clgreyl2 shimmer loadingText"></div>
