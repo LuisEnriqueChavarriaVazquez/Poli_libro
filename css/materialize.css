@@ -3,7 +3,7 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-.materialize-red {
+ .materialize-red {
   background-color: #e51c23 !important;
 }
 
@@ -644,7 +644,7 @@
 }
 
 .blue {
-  background-color: #4878ac !important;
+  background-color: #2196F3 !important;
 }
 
 .blue-text {
@@ -692,7 +692,7 @@
 }
 
 .blue.darken-1 {
-  background-color: #534034 !important;
+  background-color: #1E88E5 !important;
 }
 
 .blue-text.text-darken-1 {
@@ -700,7 +700,7 @@
 }
 
 .blue.darken-2 {
-  background-color: #775b4a !important;
+  background-color: #1976D2 !important;
 }
 
 .blue-text.text-darken-2 {
@@ -708,7 +708,7 @@
 }
 
 .blue.darken-3 {
-  background-color: #916e59 !important;
+  background-color: #1565C0 !important;
 }
 
 .blue-text.text-darken-3 {
@@ -716,7 +716,7 @@
 }
 
 .blue.darken-4 {
-  background-color: #ad856b !important;
+  background-color: #0D47A1 !important;
 }
 
 .blue-text.text-darken-4 {
@@ -804,7 +804,7 @@
 }
 
 .light-blue.darken-1 {
-  background-color: #352d27 !important;
+  background-color: #039be5 !important;
 }
 
 .light-blue-text.text-darken-1 {
@@ -812,7 +812,7 @@
 }
 
 .light-blue.darken-2 {
-  background-color: #473b35 !important;
+  background-color: #0288d1 !important;
 }
 
 .light-blue-text.text-darken-2 {
@@ -820,7 +820,7 @@
 }
 
 .light-blue.darken-3 {
-  background-color: #5e4e44 !important;
+  background-color: #0277bd !important;
 }
 
 .light-blue-text.text-darken-3 {
@@ -828,7 +828,7 @@
 }
 
 .light-blue.darken-4 {
-  background-color: #705d51 !important;
+  background-color: #01579b !important;
 }
 
 .light-blue-text.text-darken-4 {
@@ -7515,20 +7515,19 @@ input[type=range]::-ms-thumb {
   line-height: 1.5rem;
   letter-spacing: .4;
   display: inline-block;
-  transition: all .1s ease;
 }
 
-.table-of-contents a:hover {
-  color: #a8a8a8;
+/* .table-of-contents a:hover {
+  font-weight: 600;
   padding-left: 15px;
-  border-left: 10px solid #534034;
+  border-left: 3px solid #2b3846;
 }
 
 .table-of-contents a.active {
-  font-weight: 500;
+  font-weight: 600;
   padding-left: 14px;
-  border-left: 15px solid #362a23;
-}
+  border-left: 6px solid #2b3846;
+} */
 
 .sidenav {
   position: fixed;

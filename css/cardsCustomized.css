@@ -39,7 +39,6 @@
 
 .cardUnit{
     height: 160px;
-    background-color: #e2e2e2;
 
     padding: 25px 20px 20px 20px;
 
@@ -52,7 +51,7 @@
     cursor: pointer;
 }
 
-#a1{border-bottom: 20px #9BCFB6 solid;}
+#a1{border-bottom: 20px #7ea793 solid;}
 #a2{border-bottom: 20px #b87c82 solid;}
 #a3{border-bottom: 20px #9b719b solid;}
 #a4{border-bottom: 20px #da7e74 solid;}

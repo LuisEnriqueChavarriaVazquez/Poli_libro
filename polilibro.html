@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="css/tabsCustomized.css">
     <link rel="stylesheet" href="css/cardsCustomized.css">
 
+    <!--Colors-->
+    <link rel="stylesheet" href="css/colors/standarColors.css">
+
     <!-- Compiled and minified JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -42,17 +45,20 @@
 
     <section>
         <!--Navbar superior-->
-        <div class="nav-superior" id="nav-superior">
+        <div class="nav-superior cl1" id="nav-superior">
             <div id="icoNavIpn"></div>
             <div class="titleNavIpnContainer">
                 <p class="titleNavIpn white-text">Polilibro Académico de Finanzas Empresariales</p>
             </div>
             <div id="icoNavEscom"></div>
         </div>
+        <!-- <div id="expandButton" class="hidenav-superior waves-effect waves-light">
+            <i id="expandIcon" class="material-icons white-text">expand_less</i>
+        </div> -->
         <!--Navbar principal-->
         <!--Navbar principal-->
         <nav>
-            <div class="nav-wrapper light-blue darken-4">
+            <div class="nav-wrapper cl2">
                 <a href="/" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
                         class="material-icons">arrow_back</i></a>
                 <a class="brand-logo titleUnity">Unidades del polilibro</a>
@@ -61,34 +67,34 @@
     </section>
 
     <!--Contenidos principales de la página-->
-    <section class="unitCardsContainerFather blue-grey lighten-4">
-        <section class="unitCardsContainer blue-grey lighten-4">
+    <section class="unitCardsContainerFather">
+        <section class="unitCardsContainer clgreyl1">
             <a href="unidad1.html" id="a1Link">
-                <div id="a1" class="cardUnit shadow2 border2">
+                <div id="a1" class="cardUnit clgreyl2 shadow2 border2">
                     <p class="black-text textoTitulo">Unidad 1</p>
                     <p class="black-text textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
             <a href="unidad2.html" id="a2Link">
-                <div id="a2" class="cardUnit shadow2 border2">
+                <div id="a2" class="cardUnit clgreyl2 shadow2 border2">
                     <p class="black-text textoTitulo">Unidad 2</p>
                     <p class="black-text textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
             <a href="unidad3.html" id="a3Link">
-                <div id="a3" class="cardUnit shadow2 border2">
+                <div id="a3" class="cardUnit clgreyl2 shadow2 border2">
                     <p class="black-text textoTitulo">Unidad 3</p>
                     <p class="black-text textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
             <a href="unidad4.html" id="a4Link">
-                <div id="a4" class="cardUnit shadow2 border2">
+                <div id="a4" class="cardUnit clgreyl2 shadow2 border2">
                     <p class="black-text textoTitulo">Unidad 4</p>
                     <p class="black-text textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
             <a href="unidad5.html" id="a5Link">
-                <div id="a5" class="cardUnit shadow2 border2">
+                <div id="a5" class="cardUnit clgreyl2 shadow2 border2">
                     <p class="black-text textoTitulo">Unidad 5</p>
                     <p class="black-text textoStandar">Subtitulo de la unidad</p>
                 </div>
@@ -96,32 +102,29 @@
         </section>
     </section>
 
-    <footer class="footerDesign blue-grey lighten-3">
+    <footer class="footerDesign clgreyl2 clborder">
         <div class="footerContainerOne">
-            <p class="textoFooter">
-                Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
-                Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín
-                Ivette
-                Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-                Internacional.
-            </p>
-            <a href="https://link_ejemplo_pagina"
-                class="footerLink textoFooter blue-grey lighten-4 shadow2 border1 blue-text text-darken-2">
-                Repositorio de la obra https://link_ejemplo_pagina.
-            </a>
-            <div class="iconCreativeContainer">
-                <div class="iconCreative"></div>
-            </div>
+          <p class="textoFooter">
+            Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
+            Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín Ivette
+            Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+            Internacional.
+          </p>
+          <a class='btn waves-effect waves-light border1 white-text cl5' href='https://github.com/LuisEnriqueChavarriaVazquez/Poli_libro'>Repositorio del polilibro<i
+            class="material-icons right">code</i></a>
+          <div class="iconCreativeContainer">
+            <div class="iconCreative"></div>
+          </div>
         </div>
         <div class="footerContainerTwo">
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Manual<i
-                    class="material-icons right">help</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Requerimientos<i
-                    class="material-icons right">build</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Contacto<i
-                    class="material-icons right">alternate_email</i></a>
+          <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Manual<i
+              class="material-icons right">help</i></a>
+          <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Requerimientos<i
+              class="material-icons right">build</i></a>
+          <a class='btn waves-effect waves-light border1 white-text cl4' href='/contacto'>Contacto<i
+              class="material-icons right">alternate_email</i></a>
         </div>
-    </footer>
+      </footer>
 
 
 

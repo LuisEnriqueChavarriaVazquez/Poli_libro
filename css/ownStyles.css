@@ -9,8 +9,7 @@ html{
     margin: 0;
 }
 
-.error_msg{
-    background-color:#b94e4e;
-    color: white;
-    text-align: center;
+::selection {
+    background: #d3d3d3;
+    color: #000000;
 }

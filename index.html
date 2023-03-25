@@ -27,6 +27,9 @@
   <link rel="stylesheet" href="css/tabsCustomized.css">
   <link rel="stylesheet" href="css/cardsCustomized.css">
 
+  <!--Colors-->
+  <link rel="stylesheet" href="css/colors/standarColors.css">
+
   <!-- Compiled and minified JavaScript -->
   <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -43,7 +46,7 @@
 
   <section>
     <!--Navbar superior-->
-    <div class="nav-superior" id="nav-superior">
+    <div class="nav-superior cl1" id="nav-superior">
       <div id="icoNavIpn"></div>
       <div class="titleNavIpnContainer">
         <p class="titleNavIpn white-text">Polilibro Académico de Finanzas Empresariales</p>
@@ -52,23 +55,23 @@
     </div>
     <!-- <div id="expandButton" class="hidenav-superior waves-effect waves-light">
       <i id="expandIcon" class="material-icons white-text">expand_less</i>
-    </div> -->
+  </div> -->
     <!--Navbar principal-->
     <nav>
-      <div class="nav-wrapper light-blue darken-4">
+      <div class="nav-wrapper cl2">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
             class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a class='btn waves-effect waves-light border1 white-text blue darken-4' href='manual.html'>Manual<i
+          <li><a class='btn waves-effect waves-light border1 white-text cl3' href='manual.html'>Manual<i
                 class="material-icons right">help</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text blue darken-4' href='glosario.html'>Glosario<i
-                class="material-icons right">library_books</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text blue darken-4' href='requerimientos.html'>Requerimientos<i
-                class="material-icons right">build</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text blue darken-4' href='contacto.html'>Contacto<i
+          <li><a class='btn waves-effect waves-light border1 white-text cl3' href='contacto.html'>Contacto<i
                 class="material-icons right">alternate_email</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text blue darken-1' href='polilibro.html'>Polilibro<i
-                  class="material-icons right">menu_book</i></a></li>
+          <li><a class='btn waves-effect waves-light border1 white-text cl3' href='configuracion.html'>Configuración<i
+                class="material-icons right">settings</i></a></li>
+          <li><a class='btn waves-effect waves-light border1 white-text cl4' href='glosario.html'>Glosario<i
+                class="material-icons right">library_books</i></a></li>
+          <li><a class='btn waves-effect waves-light border1 white-text cl4' href='polilibro.html'>Polilibro<i
+                class="material-icons right">menu_book</i></a></li>
         </ul>
       </div>
     </nav>
@@ -87,25 +90,26 @@
       </li>
       <li><a href="index.html"><i class="material-icons">home</i>Inicio</a></li>
       <li><a href="polilibro.html"><i class="material-icons">menu_book</i>Polilibro</a></li>
-      <li><a href="manual"><i class="material-icons">help</i>Manual</a></li>
-      <li><a href="manual"><i class="material-icons">library_books</i>Glosario</a></li>
-      <li><a href="requerimientos"><i class="material-icons">build</i>Requerimientos</a></li>
-      <li><a href="contacto"><i class="material-icons">alternate_email</i>Contacto</a></li>
+      <li><a href="manual.html"><i class="material-icons">help</i>Manual</a></li>
+      <li><a href="glosario.html"><i class="material-icons">library_books</i>Glosario</a></li>
+      <li><a href="requerimientos.html"><i class="material-icons">build</i>Requerimientos</a></li>
+      <li><a href="contacto.html"><i class="material-icons">alternate_email</i>Contacto</a></li>
     </ul>
 
     <!--Menu para los contenidos en tiempo real-->
-    <ul id="tabs-swipe-demo" class="tabs light-blue darken-4">
+    <ul id="tabs-swipe-demo" class="tabs cl3">
       <li class="tab col s3"><a class="white-text" href="#test-swipe-1">Bienvenida</a></li>
       <li class="tab col s3"><a class="white-text" href="#test-swipe-3">Metodología</a></li>
       <li class="tab col s3"><a class="white-text" href="#test-swipe-2">Unidad de competencia</a></li>
       <li class="tab col s3"><a class="white-text" href="#test-swipe-4">Evaluación de los aprendizajes</a></li>
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-5">Fuentes</a></li>
+      <li class="tab col s3"><a class="white-text" href="#test-swipe-5">Requerimientos</a></li>
+      <li class="tab col s3"><a class="white-text" href="#test-swipe-6">Fuentes de consulta</a></li>
     </ul>
   </section>
 
   <!--Contenidos principales de la página-->
   <section class="mainContent">
-    <div id="test-swipe-1" class="mainTabs col s12 blue-grey lighten-4">
+    <div id="test-swipe-1" class="mainTabs col s12 clgreyl1">
       <div class="cardDesign white shadow2 border1">
         <p class="textoTitulo">Bienvenida</p>
         <p class="textoStandar">
@@ -132,7 +136,7 @@
         </p>
       </div>
     </div>
-    <div id="test-swipe-3" class="mainTabs col s12 blue-grey lighten-4">
+    <div id="test-swipe-3" class="mainTabs col s12 clgreyl1">
       <div class="cardDesign white shadow2 border1">
         <p class="textoTitulo">Metodología</p>
         <p class="textoStandar">
@@ -149,7 +153,7 @@
         </div>
       </div>
     </div>
-    <div id="test-swipe-2" class="mainTabs col s12 blue-grey lighten-4">
+    <div id="test-swipe-2" class="mainTabs col s12 clgreyl1">
       <div class="cardDesign white shadow2 border1">
         <p class="textoTitulo">Unidad de competencia</p>
         <p class="textoStandar">
@@ -212,7 +216,7 @@
         </p>
       </div>
     </div>
-    <div id="test-swipe-4" class="mainTabs col s12 blue-grey lighten-4">
+    <div id="test-swipe-4" class="mainTabs col s12 clgreyl1">
       <div class="cardDesign white shadow2 border1">
         <p class="textoTitulo">Evaluación de los aprendizajes</p>
         <p class="textoStandar">
@@ -229,9 +233,28 @@
         </div>
       </div>
     </div>
-    <div id="test-swipe-5" class="mainTabs col s12 blue-grey lighten-4">
+    <div id="test-swipe-5" class="mainTabs col s12 clgreyl1">
       <div class="cardDesign white shadow2 border1">
-        <p class="textoTitulo">Fuentes</p>
+        <p class="textoTitulo">Requerimientos</p>
+        <p class="textoStandar">
+          Para acceder y hacer uso de este curso se requiere
+        </p>
+        <p class="textoStandar">a. Conexión a internet</p>
+        <p class="textoStandar">b. Navegador a internet</p>
+        &nbsp;&nbsp;&nbsp;<p class="textoStandar">⬛ Navegador a internet 1</p>
+        &nbsp;&nbsp;&nbsp;<p class="textoStandar">⬛ Navegador a internet 2</p>
+        &nbsp;&nbsp;&nbsp;<p class="textoStandar">⬛ Navegador a internet 3</p>
+        &nbsp;&nbsp;&nbsp;<p class="textoStandar">⬛ Navegador a internet 4</p>
+        <div class="defaultImage">
+          <div class="defaultImageContent">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="test-swipe-6" class="mainTabs col s12 clgreyl1">
+      <div class="cardDesign white shadow2 border1">
+        <p class="textoTitulo">Fuentes de consulta</p>
         <p class="textoStandar">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae dignissimos
           consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae quaerat
@@ -248,7 +271,7 @@
     </div>
   </section>
 
-  <footer class="footerDesign blue-grey lighten-3">
+  <footer class="footerDesign clgreyl2 clborder">
     <div class="footerContainerOne">
       <p class="textoFooter">
         Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
@@ -256,20 +279,17 @@
         Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
         Internacional.
       </p>
-      <a href="https://github.com/LuisEnriqueChavarriaVazquez/Poli_libro"
-        class="footerLink textoFooter blue-grey lighten-4 shadow2 border1 blue-text text-darken-2">
-        Repositorio del polilibro.
-      </a>
+      <a class='btn waves-effect waves-light border1 white-text cl5'
+        href='https://github.com/LuisEnriqueChavarriaVazquez/Poli_libro'>Repositorio del polilibro<i
+          class="material-icons right">code</i></a>
       <div class="iconCreativeContainer">
         <div class="iconCreative"></div>
       </div>
     </div>
     <div class="footerContainerTwo">
-      <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Manual<i
+      <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Manual<i
           class="material-icons right">help</i></a>
-      <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Requerimientos<i
-          class="material-icons right">build</i></a>
-      <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='/contacto'>Contacto<i
+      <a class='btn waves-effect waves-light border1 white-text cl4' href='/contacto'>Contacto<i
           class="material-icons right">alternate_email</i></a>
     </div>
   </footer>
