@@ -4,45 +4,45 @@
 }
 
 .cl2 {
-    background-color: #5a7491;
+    background-color: #2e343a;
 }
 
 .cl3 {
-    background-color: #4a5f77;
+    background-color: #3b424b;
 }
 
 .cl4 {
-    background-color: #3a4c5f;
+    background-color: #444c57;
 }
 
 .cl5 {
-    background-color: #2b3846;
+    background-color: #4c5663;
 }
 
 .cl6 {
-    background-color: #1c242e;
+    background-color: #596675;
 }
 
 /*White element*/
 .clw {
-    background-color: #fff;
+    background-color: #3b424b;
 }
 
 /*Grey element*/
 .clgreyl1 {
-    background-color: #eee;
+    background-color: #272c31;
 }
 
 .clgreyl2 {
-    background-color: #ddd;
+    background-color: #2e343a;
 }
 
 .clgreyl3 {
-    background-color: #ccc;
+    background-color: #3b424b;
 }
 
 .clgreyl4 {
-    background-color: #bbb;
+    background-color: #444c57;
 }
 
 .clgreyl4 {
@@ -51,16 +51,16 @@
 
 /*Text style*/
 .clbktx{
-    color: #000;
+    color: #ffffff;
 }
 
 .clwtx{
-    color: #fff;
+    color: #000000;
 }
 
 /*Border element*/
 .clborder {
-    border-bottom: #2b3846 30px solid;
+    border-bottom: #232b33 30px solid;
 }
 
 /*Borders para el manual*/
