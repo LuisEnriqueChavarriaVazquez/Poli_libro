@@ -1,7 +1,6 @@
 //Botones para los cambios de color
 let modOscuro = document.getElementById('modOscuro');
 let modLuminoso = document.getElementById('modLuminoso');
-let modSepia = document.getElementById('modSepia');
 
 //Identificador para acceder a la ruta del color (ruta actual y futura)
 let rutaColor = document.getElementById('colorAdaptable');
@@ -13,7 +12,7 @@ if (rutaSaved === null){
 }
 
 //Validamos que los botones existan
-if(modOscuro !== null && modLuminoso !== null && modSepia !== null){
+if(modOscuro !== null && modLuminoso !== null){
     
     //Definimos el color guardado en memoria
     rutaColor.setAttribute('href', rutaSaved);
@@ -30,13 +29,6 @@ if(modOscuro !== null && modLuminoso !== null && modSepia !== null){
         M.toast({html: 'Modo luminoso activo'});
         localStorage.setItem('rutaSavedOn', 'css/colors/standarColors.css');
         rutaColor.setAttribute('href', 'css/colors/standarColors.css');
-    });
-
-    //Boton para los colores en sepia
-    modSepia.addEventListener('click', () => {
-        M.toast({html: 'Modo sepia activo'});
-        localStorage.setItem('rutaSavedOn', 'css/colors/standarSepia.css');
-        rutaColor.setAttribute('href', 'css/colors/standarSepia.css');
     });
     
 }else{

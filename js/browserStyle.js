@@ -15,7 +15,6 @@ window.onscroll = function () {
 
         buttonBrowser.classList.add('buttonBrowserOwn-fixed');
         buttonBrowser.classList.add('cl1');
-        buttonBrowser.classList.add('black-text');
         buttonBrowser.classList.remove('cl5');
 
         inputBrowser.classList.add('browserContainer-inputContainer-input-fixed');
@@ -26,7 +25,6 @@ window.onscroll = function () {
 
         buttonBrowser.classList.remove('buttonBrowserOwn-fixed');
         buttonBrowser.classList.remove('cl1');
-        buttonBrowser.classList.remove('black-text');
         buttonBrowser.classList.add('cl5');
 
         inputBrowser.classList.remove('browserContainer-inputContainer-input-fixed');
