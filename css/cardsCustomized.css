@@ -5,6 +5,12 @@
     padding: 20px 30px;
 }
 
+@media (max-width: 800px) {
+    .cardDesign{
+        padding: 20px;
+    }
+}
+
 
 /*Cards de las unidades*/
 .unitCardsContainerFather{

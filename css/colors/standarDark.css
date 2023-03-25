@@ -64,14 +64,20 @@
 }
 
 /*Borders para el manual*/
+.table-of-contents a{
+    color: #ffffff;
+}
+
 .table-of-contents a:hover {
     font-weight: 600;
+    color: #ffffff;
     padding-left: 15px;
-    border-left: 6px solid #41556b;
+    border-left: 6px solid #c9c9c9;
 }
 
 .table-of-contents a.active {
     font-weight: 600;
     padding-left: 14px;
-    border-left: 10px solid #2b3846;
+    color: #ffffff;
+    border-left: 10px solid #ffffff;
 }

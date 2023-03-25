@@ -8,6 +8,26 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 1300px) {
+    .contactContainer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 780px) {
+    .contactContainer{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+    }
+}
+
 .contactTeacher{
     width: 100%;
     display: flex;
