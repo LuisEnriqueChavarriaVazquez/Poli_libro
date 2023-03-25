@@ -30,11 +30,16 @@
   <!--Colors-->
   <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
 
+  <!--Shimmer effect-->
+  <link rel="stylesheet" href="css/load/shimmer.css">
+
+
   <!-- Compiled and minified JavaScript -->
   <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script defer src="js/activateComponentsMaterialize.js"></script>
+
 
   <!--Scripts propios-->
   <script defer src="js/hideSuperiorNav.js"></script>
@@ -42,6 +47,9 @@
 
   <!--Scripts de configuraciones-->
   <script defer src="js/modoLuz.js"></script>
+
+  <!--Scripts para la pantalla de carga-->
+  <script defer src="js/loadScreen.js"></script>
 
 </head>
 
@@ -114,29 +122,39 @@
   <section class="mainContent">
     <div id="test-swipe-1" class="mainTabs col s12 clgreyl1">
       <div class="cardDesign clw shadow2 border1">
-        <p class="textoTitulo clbktx">Bienvenida</p>
-        <p class="textoStandar clbktx">
-          Recibe la más cordial bienvenida a este recurso didáctico digital (RDD) de la Unidad de Aprendizaje (UA) de
-          Administración de Proyectos que se imparte en la Escuela Superior de Cómputo del Instituto Politécnico
-          Nacional. Este RDD fue construido con el propósito de promover el aprendizaje autónomo, así como de facilitar,
-          enriquecer y fortalecer los procesos de enseñanza-aprendizaje de la UA en cuestión en la modalidad
-          escolarizada.
-        </p>
-        <div class="defaultImage">
-          <div class="defaultImageContent">
 
+        <!--Contenido de carga de la página-->
+        <section class="loadContentScreen"></section>
+
+        <section class="readyContentScreen">
+          <p class="textoTitulo clbktx">Bienvenida</p>
+          <p class="textoStandar clbktx">
+            Recibe la más cordial bienvenida a este recurso didáctico digital (RDD) de la Unidad de Aprendizaje (UA) de
+            Administración de Proyectos que se imparte en la Escuela Superior de Cómputo del Instituto Politécnico
+            Nacional. Este RDD fue construido con el propósito de promover el aprendizaje autónomo, así como de
+            facilitar,
+            enriquecer y fortalecer los procesos de enseñanza-aprendizaje de la UA en cuestión en la modalidad
+            escolarizada.
+          </p>
+
+          <div class="defaultImage">
+            <div class="defaultImageContent">
+
+            </div>
           </div>
-        </div>
-        <p class="textoStandar clbktx">
-          Esperamos que las próximas semanas sean enriquecedoras de experiencias de aprendizaje, para lo cual es
-          indispensable tener en cuenta algunos elementos clave tales como: el compromiso e interacción de los actores
-          (participantes y facilitadores del aprendizaje), la conformación de un gran equipo de trabajo colaborativo y
-          la realización de las actividades de aprendizaje de acuerdo con las especificaciones proporcionadas y en los
-          tiempos establecidos.
-          Nuestra intención es que disfrutes esta experiencia educativa, ¡te deseamos el mayor de los éxitos!
-          Para cualquier duda o comentario, en relación a este material, puedes contactarnos en:
-          johernandezja@ipn.mx y jimenezg@ipn.mx
-        </p>
+
+          <p class="textoStandar clbktx">
+            Esperamos que las próximas semanas sean enriquecedoras de experiencias de aprendizaje, para lo cual es
+            indispensable tener en cuenta algunos elementos clave tales como: el compromiso e interacción de los actores
+            (participantes y facilitadores del aprendizaje), la conformación de un gran equipo de trabajo colaborativo y
+            la realización de las actividades de aprendizaje de acuerdo con las especificaciones proporcionadas y en los
+            tiempos establecidos.
+            Nuestra intención es que disfrutes esta experiencia educativa, ¡te deseamos el mayor de los éxitos!
+            Para cualquier duda o comentario, en relación a este material, puedes contactarnos en:
+            johernandezja@ipn.mx y jimenezg@ipn.mx
+          </p>
+        </section>
+
       </div>
     </div>
     <div id="test-swipe-3" class="mainTabs col s12 clgreyl1">
