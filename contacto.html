@@ -31,6 +31,9 @@
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
 
+    <!--Shimmer effect-->
+    <link rel="stylesheet" href="css/load/shimmer.css">
+
     <!-- Compiled and minified JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -42,6 +45,9 @@
 
     <!--Scripts de configuraciones-->
     <script defer src="js/modoLuz.js"></script>
+
+    <!--Scripts para la pantalla de carga-->
+    <script defer src="js/loading/loadingContacto.js"></script>
 
 </head>
 
@@ -73,7 +79,8 @@
         <div class="mainTabs col s12 clgreyl1">
             <div class="cardDesign clw shadow2 border1">
                 <p class="textoTitulo clbktx">Contacto</p>
-                <section class="contactContainer">
+
+                <section class="contactContainer readyContentScreen">
                     <div class="contactTeacher shadow2 clgreyl1">
                         <div>
                             <img src="img/Eduardo.jpeg" class="contactPhoto">
@@ -102,33 +109,38 @@
                         </div>
                     </div>
                 </section>
+
+                <!--Contenido de carga de la página-->
+                <section class="loadContentScreen"></section>
             </div>
         </div>
     </section>
 
     <footer class="footerDesign clgreyl2 clborder">
         <div class="footerContainerOne">
-          <p class="textoFooter clbktx">
-            Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
-            Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín Ivette
-            Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-            Internacional.
-          </p>
-          <a class='btn waves-effect waves-light border1 white-text cl5' href='https://github.com/LuisEnriqueChavarriaVazquez/Poli_libro'>Repositorio del polilibro<i
-            class="material-icons right">code</i></a>
-          <div class="iconCreativeContainer">
-            <div class="iconCreative"></div>
-          </div>
+            <p class="textoFooter clbktx">
+                Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
+                Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín
+                Ivette
+                Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+                Internacional.
+            </p>
+            <a class='btn waves-effect waves-light border1 white-text cl5'
+                href='https://github.com/LuisEnriqueChavarriaVazquez/Poli_libro'>Repositorio del polilibro<i
+                    class="material-icons right">code</i></a>
+            <div class="iconCreativeContainer">
+                <div class="iconCreative"></div>
+            </div>
         </div>
         <div class="footerContainerTwo">
-          <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Manual<i
-              class="material-icons right">help</i></a>
-          <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Requerimientos<i
-              class="material-icons right">build</i></a>
-          <a class='btn waves-effect waves-light border1 white-text cl4' href='/contacto'>Contacto<i
-              class="material-icons right">alternate_email</i></a>
+            <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Manual<i
+                    class="material-icons right">help</i></a>
+            <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Requerimientos<i
+                    class="material-icons right">build</i></a>
+            <a class='btn waves-effect waves-light border1 white-text cl4' href='/contacto'>Contacto<i
+                    class="material-icons right">alternate_email</i></a>
         </div>
-      </footer>
+    </footer>
 
 
 
