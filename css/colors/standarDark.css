@@ -51,11 +51,11 @@
 
 /*Text style*/
 .clbktx{
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .clwtx{
-    color: #000000;
+    color: #000000 !important;
 }
 
 /*Border element*/
