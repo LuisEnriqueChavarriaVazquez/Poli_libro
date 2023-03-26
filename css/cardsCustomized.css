@@ -13,16 +13,15 @@
 
 /*Cards de las unidades*/
 .unitCardsContainerFather{
-    min-height: 80vh;
-    max-height: 200vh;
-    width: 100% !important;
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.tituloSeleccionUnidades{
+/* .tituloSeleccionUnidades{
     width: calc(100% - 70px);
 }
 
@@ -30,7 +29,7 @@
     .tituloSeleccionUnidades{
         margin-top: 5vh;
     }
-}
+} */
 
 .unitCardsContainer{
     display: grid;
@@ -44,9 +43,7 @@
 
 .cardUnit{
     height: 160px;
-
     padding: 25px 20px 20px 20px;
-
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -54,6 +51,11 @@
 
     transition: all .2s ease;
     cursor: pointer;
+}
+
+.linkContainer{
+    width: 100%;
+    height: auto;
 }
 
 #a1{border-bottom: 20px #7ea793 solid;}
@@ -88,7 +90,7 @@
 @media (max-width: 800px) {
     .unitCardsContainer{
         gap: 20px;
-        padding: 0 20px 20px 20px;
+        padding: 15px 20px 20px 20px;
     }
 
     .cardUnit{

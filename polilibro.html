@@ -30,6 +30,9 @@
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
 
+    <!--Shimmer effect-->
+    <link rel="stylesheet" href="css/load/shimmer.css">
+
     <!-- Compiled and minified JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -41,6 +44,9 @@
 
     <!--Scripts de configuraciones-->
     <script defer src="js/modoLuz.js"></script>
+
+    <!--Scripts para la pantalla de carga-->
+    <script defer src="js/loading/loadingPolilibro.js"></script>
 
 </head>
 
@@ -70,38 +76,44 @@
     </section>
 
     <!--Contenidos principales de la página-->
-    <section class="unitCardsContainerFather">
-        <section class="unitCardsContainer clgreyl1">
-            <a href="unidad1.html" id="a1Link">
+    <section class="unitCardsContainerFather clgreyl1">
+
+        <section class="unitCardsContainer clgreyl1 readyContentScreen">
+            <a href="unidad1.html" class="linkContainer" id="a1Link">
                 <div id="a1" class="cardUnit clw shadow2 border2">
                     <p class="clbktx textoTitulo">Unidad 1</p>
                     <p class="clbktx textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
-            <a href="unidad2.html" id="a2Link">
+            <a href="unidad2.html" class="linkContainer" id="a2Link">
                 <div id="a2" class="cardUnit clw shadow2 border2">
                     <p class="clbktx textoTitulo">Unidad 2</p>
                     <p class="clbktx textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
-            <a href="unidad3.html" id="a3Link">
+            <a href="unidad3.html" class="linkContainer" id="a3Link">
                 <div id="a3" class="cardUnit clw shadow2 border2">
                     <p class="clbktx textoTitulo">Unidad 3</p>
                     <p class="clbktx textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
-            <a href="unidad4.html" id="a4Link">
+            <a href="unidad4.html" class="linkContainer" id="a4Link">
                 <div id="a4" class="cardUnit clw shadow2 border2">
                     <p class="clbktx textoTitulo">Unidad 4</p>
                     <p class="clbktx textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
-            <a href="unidad5.html" id="a5Link">
+            <a href="unidad5.html" class="linkContainer" id="a5Link">
                 <div id="a5" class="cardUnit clw shadow2 border2">
                     <p class="clbktx textoTitulo">Unidad 5</p>
                     <p class="clbktx textoStandar">Subtitulo de la unidad</p>
                 </div>
             </a>
+        </section>
+
+        <!--Contenido de carga de la página-->
+        <section class="loadContentScreen"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
         </section>
     </section>
 
