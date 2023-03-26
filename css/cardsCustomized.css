@@ -5,9 +5,42 @@
     padding: 20px 30px;
 }
 
+
 @media (max-width: 800px) {
     .cardDesign{
         padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardDesign{
+        padding: 15px;
+    }
+}
+
+
+/*Contenedor de cards*/
+.cardDesignFather{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .cardDesignFather{
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardDesignFather{
+        padding: 10px;
+        gap: 10px;
     }
 }
 

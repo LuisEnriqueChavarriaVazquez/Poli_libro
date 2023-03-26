@@ -14,7 +14,7 @@
 @media (max-width: 994px) {
     .fullUnity {
         display: grid;
-        grid-template-columns:auto;
+        grid-template-columns: auto;
         grid-template-rows: 1fr;
         transition: all .1s ease-in-out;
     }
@@ -122,32 +122,32 @@
     padding: 40px;
 }
 
-.lateralUnityContentSquare{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 40px;
-    padding: 40px;
-}
-
 @media (max-width: 994px) {
 	.lateralUnityContentList{
         gap: 20px;
         padding: 20px;
     }
-    
-    .lateralUnityContentSquare{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 20px;
-        padding: 20px;
+}
+
+@media (max-width: 600px) {
+	.lateralUnityContentList{
+        gap: 10px;
+        padding: 10px;
     }
 }
 
+
+
 #lateralUnityContent{
     overflow-y: scroll;
-    height: calc(100vh);
+    height: 100vh;
+}
+
+@media (max-width: 100px) {
+    #lateralUnityContent{
+        overflow-y:auto;
+        height: auto;
+    }
 }
 
 @media (min-width: 800px) {

@@ -8,7 +8,7 @@ document.onreadystatechange = function(event) {
                 //Mostramos el contenido
                 $(".readyContentScreen").removeClass("readyContentScreen");
             },500)
-        },1000)
+        },100)
     }
 };
 
