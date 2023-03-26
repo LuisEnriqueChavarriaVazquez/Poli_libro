@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Unidad 5</title>
+    <title>Unidad 1</title>
     <link rel="shortcut icon" href="img/ipn.ico" type="image/x-icon">
 
     <!--Fonts-->
@@ -28,8 +28,11 @@
     <link rel="stylesheet" href="css/cardsCustomized.css">
     <link rel="stylesheet" href="css/menuLateralCustomized.css">
 
-    <!--Colores de la unidad-->
-    <link rel="stylesheet" href="css/unidad5Colors.css">
+    <!--Colors-->
+    <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
+
+    <!--Shimmer effect-->
+    <link rel="stylesheet" href="css/load/shimmer.css">
 
     <!-- Compiled and minified JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -44,7 +47,13 @@
     <script defer src="js/hideSuperiorNav.js"></script>
     <script defer src="js/toggleMenuLateralUnity.js"></script>
     <script defer src="js/menuSticky.js"></script>
-    <script defer src="js/activeLinks.js"></script>
+    <script defer src="js/activeLinksUnits/activeLinksU5.js"></script>
+
+    <!--Scripts de configuraciones-->
+    <script defer src="js/modoLuz.js"></script>
+
+    <!--Scripts para la pantalla de carga-->
+    <script defer src="js/loading/loadingGlosario.js"></script>
 
 </head>
 
@@ -52,21 +61,23 @@
 
     <section>
         <!--Navbar superior-->
-        <div class="nav-superior" id="nav-superior">
+        <div class="nav-superior nav-superiorUnit5" id="nav-superior">
             <div id="icoNavIpn"></div>
             <div class="titleNavIpnContainer">
                 <p class="titleNavIpn white-text">Polilibro Académico de Finanzas Empresariales</p>
             </div>
             <div id="icoNavEscom"></div>
         </div>
+        <!-- <div id="expandButton" class="hidenav-superior waves-effect waves-light">
+            <i id="expandIcon" class="material-icons white-text">expand_less</i>
+        </div> -->
         <!--Navbar principal-->
         <nav id="menuStickyUnity">
             <div class="nav-wrapper navUnit5" id="menuIconUnity">
                 <a href="polilibro.html" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
                         class="material-icons">arrow_back</i></a>
                 <a class="brand-logo titleUnity white-text">Unidad 5&nbsp;&nbsp;
-                    <span class="border1 textoStandar"
-                        style="padding: 5px 15px; font-weight: 800; font-size: 1.3rem; background-color: #ffffff; color:#697088;">
+                    <span class="border1 textoStandar titleUnityColorUnit5">
                         Título de la unidad 5
                     </span>
                 </a>
@@ -75,7 +86,7 @@
     </section>
 
 
-    <section class="fullUnity blue-grey lighten-4">
+    <section class="fullUnity">
         <!--Contenidos principales de la unidad-->
         <section id="lateralUnityMenuBackOne" class="lateralUnityMenuBackOne menuLateralWidthShow"
             style="background-color: #97a0be;">
@@ -85,107 +96,60 @@
                     style="background-color: #5a6074;">
                     <section id="lateralUnityMenuBackFour" class="lateralUnityMenuBackFour menuLateralWidthShow"
                         style="background-color: #3f4352;">
-                        <section id="lateralUnityMenu" class="lateralUnityMenu white">
+                        <section id="lateralUnityMenu" class="lateralUnityMenu clw">
                             <div id="lateralUnityMenuSectionContainer" class="lateralUnityMenuSectionContainer">
-                                <p contador="1" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">
-                                    1. Sección A</p>
-                                <p contador="2"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    1.1
-                                    Sección A.1</p>
-                                <p contador="3" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">
-                                    2. Sección B</p>
-                                <p contador="4"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    2.1
-                                    Sección B.1</p>
-                                <p contador="5"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    2.2
-                                    Sección B.2</p>
-                                <p contador="6"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    2.3
-                                    Sección B.3</p>
-                                <p contador="7" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">
-                                    3. Sección C</p>
-                                <p contador="8"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.1
-                                    Sección C.1</p>
-                                <p contador="9"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.2
-                                    Sección C.2</p>
-                                <p contador="10"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.3
-                                    Sección C.3</p>
-                                <p contador="11"
-                                    class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C
-                                </p>
-                                <p contador="12"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.1
-                                    Sección C.1</p>
-                                <p contador="13"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.2
-                                    Sección C.2</p>
-                                <p contador="14"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.3
-                                    Sección C.3</p>
-                                <p contador="15"
-                                    class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C
-                                </p>
-                                <p contador="16"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.1
-                                    Sección C.1</p>
-                                <p contador="17"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.2
-                                    Sección C.2</p>
-                                <p contador="18"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.3
-                                    Sección C.3</p>
-                                <p contador="15"
-                                    class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C
-                                </p>
-                                <p contador="16"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.1
-                                    Sección C.1</p>
-                                <p contador="17"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.2
-                                    Sección C.2</p>
-                                <p contador="18"
-                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
-                                    3.3
-                                    Sección C.3</p>
+                                <a contador="1"
+                                    class="clbktx navOptionsContent rememberStateUnit5 mainSectionMenu leftBorderUnit5">1.
+                                    Sección
+                                    A</a>
+                                <a contador="2"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">1.1
+                                    Sección A.1</a>
+                                <a contador="3"
+                                    class="clbktx navOptionsContent rememberStateUnit5 mainSectionMenu leftBorderUnit5">2.
+                                    Sección
+                                    B</a>
+                                <a contador="4"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">2.1
+                                    Sección B.1</a>
+                                <a contador="5"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">2.2
+                                    Sección B.2</a>
+                                <a contador="6"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">2.3
+                                    Sección B.3</a>
+                                <a contador="15"
+                                    class="clbktx navOptionsContent rememberStateUnit5 mainSectionMenu leftBorderUnit5">3.
+                                    Sección
+                                    C</a>
+                                <a contador="16"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">3.1
+                                    Sección C.1</a>
+                                <a contador="17"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">3.2
+                                    Sección C.2</a>
+                                <a contador="18"
+                                    class="clbktx navOptionsContent rememberStateUnit5 secondarySectionMenu leftBorderSecondaryUnit5">3.3
+                                    Sección C.3</a>
                                 <hr>
-                                <div
-                                    class="cardOpcionesMenuLateral waves-effect waves-light blue-grey lighten-4 border2 shadow2">
-                                    <i class="material-icons">auto_stories</i>
-                                    <p>Material de apoyo</p>
+                                <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
+                                    href="#modal1">
+                                    <i class="material-icons clbktx">auto_stories</i>
+                                    <p class="clbktx">Material de apoyo</p>
                                 </div>
-                                <div
-                                    class="cardOpcionesMenuLateral waves-effect waves-light blue-grey lighten-4 border2 shadow2">
-                                    <i class="material-icons">diversity_2</i>
-                                    <p>Cierre de unidad temática</p>
+                                <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
+                                    href="#modal2">
+                                    <i class="material-icons clbktx">diversity_2</i>
+                                    <p class="clbktx">Cierre de unidad temática</p>
                                 </div>
-                                <div
-                                    class="cardOpcionesMenuLateral waves-effect waves-light blue-grey lighten-4 border2 shadow2">
-                                    <i class="material-icons">quiz</i>
-                                    <p>Evaluación</p>
+                                <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2">
+                                    <i class="material-icons clbktx">quiz</i>
+                                    <p class="clbktx">Evaluación</p>
                                 </div>
-                                <div
-                                    class="cardOpcionesMenuLateral waves-effect waves-light blue-grey lighten-4 border2 shadow2">
-                                    <i class="material-icons">format_quote</i>
-                                    <p>Referencias</p>
+                                <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
+                                    href="#modal3">
+                                    <i class="material-icons clbktx">format_quote</i>
+                                    <p class="clbktx">Referencias</p>
                                 </div>
                             </div>
                         </section>
@@ -195,7 +159,7 @@
         </section>
 
         <!--Menu para los dispositivos móviles-->
-        <ul id="slide-out" class="sidenav">
+        <ul id="slide-out" class="sidenav clw">
             <li><a href="#!">Sección 1</a></li>
             <li><a href="#!">Sección 2</a></li>
             <li><a href="#!">Sección 1</a></li>
@@ -207,66 +171,84 @@
         </ul>
 
         <!--Contenidos principales de texto-->
-        <section id="lateralUnityContent" class="lateralUnityContentList blue-grey lighten-4">
-            <div class="cardDesign white shadow2 border1">
-                <p class="textoTitulo">Texto título 1</p>
-                <p class="textoStandar">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae dignissimos
-                    consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
-                    quaerat
-                    cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                    labore
-                    minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum accusamus,
-                    similique
-                    laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
-                </p>
-                <div class="defaultImage">
-                    <div class="defaultImageContent">
+        <section id="lateralUnityContent" class="lateralUnityContentList clgreyl1">
 
+            <div class="clgreyl2 cardDesignFather shadow2 border1">
+                <div class="cardDesign clw shadow2 border1">
+                    <p class="textoTitulo clbktx">Texto título 1</p>
+                    <p class="textoStandar clbktx">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
+                        dignissimos
+                        consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
+                        quaerat
+                        cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum
+                        labore
+                        minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                        accusamus,
+                        similique
+                        laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
+                    </p>
+                    <!--Card con un ejemplo-->
+                    <div class="cardDesign clgreyl2 border1">
+                        <p class="textoTitulo clbktx">Ejemplo</p>
+                        <p class="textoStandar clbktx">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
+                            dignissimos
+                            consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto
+                            beatae
+                            quaerat
+                            cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Nostrum
+                            labore
+                            minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                            accusamus,
+                            similique
+                            laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cardDesign clw shadow2 border1">
+                    <p class="textoTitulo clbktx">Texto título 1</p>
+                    <p class="textoStandar clbktx">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
+                        dignissimos
+                        consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
+                        quaerat
+                        cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum
+                        labore
+                        minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                        accusamus,
+                        similique
+                        laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
+                    </p>
+                </div>
+
+                <div class="cardDesign clw shadow2 border1">
+                    <p class="textoTitulo clbktx">Texto título 2</p>
+                    <p class="textoStandar clbktx">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
+                        dignissimos
+                        consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
+                        quaerat
+                        cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nostrum
+                        labore
+                        minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                        accusamus,
+                        similique
+                        laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
+                    </p>
+                    <div class="defaultImage">
+                        <div class="defaultImageContent">
+
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
 
-            <div class="cardDesign white shadow2 border1">
-                <p class="textoTitulo">Texto título 2</p>
-                <p class="textoStandar">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae dignissimos
-                    consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
-                    quaerat
-                    cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                    labore
-                    minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum accusamus,
-                    similique
-                    laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
-                </p>
-                <div class="defaultImage">
-                    <div class="defaultImageContent">
-
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <div class="cardDesign white shadow2 border1">
-                <p class="textoTitulo">Texto título 3</p>
-                <p class="textoStandar">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae dignissimos
-                    consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
-                    quaerat
-                    cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                    labore
-                    minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum accusamus,
-                    similique
-                    laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
-                </p>
-                <div class="defaultImage">
-                    <div class="defaultImageContent">
-
-                    </div>
-                </div>
-            </div>
-            </div>
         </section>
     </section>
 
@@ -276,13 +258,12 @@
 
     <a href="#" data-target="slide-out"
         class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-large-only"
-        style="background-color: #757d97;"><i class="material-icons">menu</i></a>
+        style="background-color: #5a6074;"><i class="material-icons">menu</i></a>
     <a href="#" data-target="mobile-demo"
         class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-med-and-down"
-        style="background-color: #515769; width: 54px; height: 54px;">
+        style="background-color: #5a6074; width: 54px; height: 54px;">
         <i class="material-icons" id="menuIconUnityContent">close</i>
     </a>
-
 
 </body>
 

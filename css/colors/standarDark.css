@@ -1,5 +1,5 @@
 /*Color del body*/
-body{
+body {
     background-color: #272c31;
 }
 
@@ -55,11 +55,11 @@ body{
 }
 
 /*Text style*/
-.clbktx{
+.clbktx {
     color: #ffffff !important;
 }
 
-.clwtx{
+.clwtx {
     color: #000000 !important;
 }
 
@@ -69,7 +69,7 @@ body{
 }
 
 /*Borders para el manual*/
-.table-of-contents a{
+.table-of-contents a {
     color: #ffffff;
 }
 
@@ -88,40 +88,41 @@ body{
 }
 
 /*Colores de unidad 1*/
-.navUnit1{
+.navUnit1 {
     background-color: #557063;
 }
 
-.nav-superiorUnit1{
+.nav-superiorUnit1 {
     background-color: #272c31 !important;
 }
 
-.leftBorderUnit1{
+.leftBorderUnit1 {
     border-left: #7aa38f 10px solid !important;
     transition: all .2s ease;
     font-weight: 600;
     color: #3d3d3d;
 }
 
-.leftBorderSecondaryUnit1{
+.leftBorderSecondaryUnit1 {
     border-left: #9BCFB6 10px solid !important;
     transition: all .2s ease;
     color: #3d3d3d;
 }
 
-.leftBorderUnit1:hover, .leftBorderSecondaryUnit1:hover{
+.leftBorderUnit1:hover,
+.leftBorderSecondaryUnit1:hover {
     background-color: #272c31;
     border-left: #5c796b 20px solid !important;
 }
 
-.activeLinkOptionsContentUnit1{
+.activeLinkOptionsContentUnit1 {
     background-color: #607c6f;
     border-left: #4a6156 20px solid !important;
     color: #fff;
     font-weight: 600;
 }
 
-.leftBorderOnUnit1{
+.leftBorderOnUnit1 {
     border-left: #5c796b 10px solid !important;
     background-color: rgb(209, 209, 209);
     font-weight: 700;
@@ -129,42 +130,43 @@ body{
 }
 
 /*Colores de unidad 2*/
-.navUnit2{
+.navUnit2 {
     background-color: #805458;
 }
 
-.nav-superior{
-    background-color: #a0686e !important;
+.nav-superiorUnit2 {
+    background-color: #272c31 !important;
 }
 
-.footerDesign{
+.footerDesignUnit2 {
     border-bottom: #a0686e 30px solid !important;
 }
 
-.leftBorder{
+.leftBorderUnit2 {
     border-left: #724b4f 10px solid !important;
     transition: all .2s ease;
     font-weight: 600;
 }
 
-.leftBorderSecondary{
+.leftBorderSecondaryUnit2 {
     border-left: #b87c82 10px solid !important;
     transition: all .2s ease;
 }
 
-.leftBorder:hover, .leftBorderSecondary:hover{
+.leftBorderUnit2:hover,
+.leftBorderSecondaryUnit2:hover {
     background-color: #272c31;
     border-left: #583b3e 20px solid !important;
 }
 
-.activeLinkOptionsContent{
+.activeLinkOptionsContentUnit2 {
     background-color: #9b666c;
     border-left: #5f3f42 20px solid !important;
     color: #fff;
     font-weight: 600;
 }
 
-.leftBorderOn{
+.leftBorderOnUnit2 {
     border-left: #724b4f 10px solid !important;
     background-color: rgb(209, 209, 209);
     font-weight: 700;
@@ -172,42 +174,43 @@ body{
 }
 
 /*Colores de unidad 3*/
-.navUnit3{
-    background-color:#996D99;
+.navUnit3 {
+    background-color: #996D99;
 }
 
-.nav-superior{
-    background-color: #745474 !important;
+.nav-superiorUnit3 {
+    background-color: #272c31 !important;
 }
 
-.footerDesign{
+.footerDesignUnit3 {
     border-bottom: #745474 30px solid !important;
 }
 
-.leftBorder{
+.leftBorderUnit3 {
     border-left: #745474 10px solid !important;
     transition: all .2s ease;
     font-weight: 600;
 }
 
-.leftBorderSecondary{
+.leftBorderSecondaryUnit3 {
     border-left: #9b719b 10px solid !important;
     transition: all .2s ease;
 }
 
-.leftBorder:hover, .leftBorderSecondary:hover{
+.leftBorderUnit3:hover,
+.leftBorderSecondaryUnit3:hover {
     background-color: #272c31;
     border-left: #4d394d 20px solid !important;
 }
 
-.activeLinkOptionsContent{
+.activeLinkOptionsContentUnit3 {
     background-color: #886388;
     border-left: #5f455f 20px solid !important;
     color: #fff;
     font-weight: 600;
 }
 
-.leftBorderOn{
+.leftBorderOnUnit3 {
     border-left: #745474 10px solid !important;
     background-color: rgb(209, 209, 209);
     font-weight: 700;
@@ -215,42 +218,43 @@ body{
 }
 
 /*Colores de unidad 4*/
-.navUnit4{
+.navUnit4 {
     background-color: #ac655d;
 }
 
-.nav-superior{
-    background-color: #d67c72 !important;
+.nav-superiorUnit4 {
+    background-color: #272c31 !important;
 }
 
-.footerDesign{
+.footerDesignUnit4 {
     border-bottom: #b6685f 30px solid !important;
 }
 
-.leftBorder{
+.leftBorderUnit4 {
     border-left: #be6e65 10px solid !important;
     transition: all .2s ease;
     font-weight: 600;
 }
 
-.leftBorderSecondary{
+.leftBorderSecondaryUnit4 {
     border-left: #f79186 10px solid !important;
     transition: all .2s ease;
 }
 
-.leftBorder:hover, .leftBorderSecondary:hover{
+.leftBorderUnit4:hover,
+.leftBorderSecondaryUnit4:hover {
     background-color: #272c31;
     border-left: #9e5c55 20px solid !important;
 }
 
-.activeLinkOptionsContent{
+.activeLinkOptionsContentUnit4 {
     background-color: #ac645c;
     border-left: #7e4a44 20px solid !important;
     color: #fff;
     font-weight: 600;
 }
 
-.leftBorderOn{
+.leftBorderOnUnit4 {
     border-left: #d67c72 10px solid !important;
     background-color: rgb(209, 209, 209);
     font-weight: 700;
@@ -258,42 +262,43 @@ body{
 }
 
 /*Colores de unidad 5*/
-.navUnit5{
+.navUnit5 {
     background-color: #78819e;
 }
 
-.nav-superior{
-    background-color: #919bbd !important;
+.nav-superiorUnit5 {
+    background-color: #272c31 !important;
 }
 
-.footerDesign{
+.footerDesignUnit5 {
     border-bottom: #919bbd 30px solid !important;
 }
 
-.leftBorder{
+.leftBorderUnit5 {
     border-left: #919bbd 10px solid !important;
     transition: all .2s ease;
     font-weight: 600;
 }
 
-.leftBorderSecondary{
+.leftBorderSecondaryUnit5 {
     border-left: #b5c1eb 10px solid !important;
     transition: all .2s ease;
 }
 
-.leftBorder:hover, .leftBorderSecondary:hover{
+.leftBorderUnit5:hover,
+.leftBorderSecondaryUnit5:hover {
     background-color: #272c31;
     border-left: #697088 20px solid !important;
 }
 
-.activeLinkOptionsContent{
+.activeLinkOptionsContentUnit5 {
     background-color: #737b96;
     border-left: #363a47 20px solid !important;
     color: #fff;
     font-weight: 600;
 }
 
-.leftBorderOn{
+.leftBorderOnUnit5 {
     border-left: #919bbd 10px solid !important;
     background-color: rgb(209, 209, 209);
     font-weight: 700;

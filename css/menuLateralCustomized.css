@@ -18,7 +18,7 @@
         grid-template-rows: 1fr;
         transition: all .1s ease-in-out;
     }
-    
+
     .fullUnityComplete {
         display: grid;
         grid-template-columns: auto;
@@ -72,28 +72,62 @@
     }
 }
 
+/*Menu lateral configuraciones de unidades*/
+.cardOpcionesMenuLateral {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 19px 10px;
+}
+
+.cardOpcionesMenuLateral i {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardOpcionesMenuLateral p {
+    width: 100%;
+}
+
+.buttonMenuMobile {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Menu lateral opciones de cada sección*/
-.lateralUnityMenuSectionContainer{
+.lateralUnityMenuSectionContainer {
     overflow-y: scroll;
     height: calc(100vh);
 }
 
 @media (min-width: 800px) {
-	.lateralUnityMenuSectionContainer::-webkit-scrollbar-track {
-		background-color: rgb(41, 41, 41)
-	}
-	
-	.lateralUnityMenuSectionContainer::-webkit-scrollbar {
-		width: 10px;
-		background-color: #F5F5F5;
-	}
-	
-	.lateralUnityMenuSectionContainer::-webkit-scrollbar-thumb {
-		background-color: rgb(104, 104, 104);
-	}
+    .lateralUnityMenuSectionContainer::-webkit-scrollbar-track {
+        background-color: rgb(41, 41, 41)
+    }
+
+    .lateralUnityMenuSectionContainer::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .lateralUnityMenuSectionContainer::-webkit-scrollbar-thumb {
+        background-color: rgb(104, 104, 104);
+    }
 }
 
-.mainSectionMenu{
+.mainSectionMenu {
     margin: 0;
     height: 50px;
     display: flex;
@@ -103,7 +137,7 @@
     font-size: 1.3rem;
 }
 
-.secondarySectionMenu{
+.secondarySectionMenu {
     margin: 0 0 0 0;
     height: 30px;
     padding: 10px 5px 10px 20px;
@@ -114,7 +148,7 @@
 }
 
 /*Menu de contenido*/
-.lateralUnityContentList{
+.lateralUnityContentList {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -123,14 +157,14 @@
 }
 
 @media (max-width: 994px) {
-	.lateralUnityContentList{
+    .lateralUnityContentList {
         gap: 20px;
         padding: 20px;
     }
 }
 
 @media (max-width: 600px) {
-	.lateralUnityContentList{
+    .lateralUnityContentList {
         gap: 10px;
         padding: 10px;
     }
@@ -138,29 +172,29 @@
 
 
 
-#lateralUnityContent{
+#lateralUnityContent {
     overflow-y: scroll;
     height: 100vh;
 }
 
 @media (max-width: 100px) {
-    #lateralUnityContent{
-        overflow-y:auto;
+    #lateralUnityContent {
+        overflow-y: auto;
         height: auto;
     }
 }
 
 @media (min-width: 800px) {
-	#lateralUnityContent::-webkit-scrollbar-track {
-		background-color: rgb(41, 41, 41)
-	}
-	
-	#lateralUnityContent::-webkit-scrollbar {
-		width: 10px;
-		background-color: #F5F5F5;
-	}
-	
-	#lateralUnityContent::-webkit-scrollbar-thumb {
-		background-color: rgb(104, 104, 104);
-	}
+    #lateralUnityContent::-webkit-scrollbar-track {
+        background-color: rgb(41, 41, 41)
+    }
+
+    #lateralUnityContent::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    #lateralUnityContent::-webkit-scrollbar-thumb {
+        background-color: rgb(104, 104, 104);
+    }
 }

@@ -54,3 +54,45 @@
     font-weight: 700 !important;
     margin: 0px !important;
 }
+
+
+/*Titulos de las unidades*/
+.titleUnityColorUnit1{
+    padding: 5px 15px; 
+    font-weight: 800; 
+    font-size: 1.3rem; 
+    background-color: #ffffff; 
+    color:#547264;
+}
+
+.titleUnityColorUnit2{
+    padding: 5px 15px; 
+    font-weight: 800; 
+    font-size: 1.3rem; 
+    background-color: #ffffff; 
+    color:#8a5d62;
+}
+
+.titleUnityColorUnit3{
+    padding: 5px 15px; 
+    font-weight: 800; 
+    font-size: 1.3rem; 
+    background-color: #ffffff; 
+    color:#4d394d;
+}
+
+.titleUnityColorUnit4{
+    padding: 5px 15px; 
+    font-weight: 800; 
+    font-size: 1.3rem; 
+    background-color: #ffffff; 
+    color:#53302c;
+}
+
+.titleUnityColorUnit5{
+    padding: 5px 15px; 
+    font-weight: 800; 
+    font-size: 1.3rem; 
+    background-color: #ffffff; 
+    color:#697088;
+}
