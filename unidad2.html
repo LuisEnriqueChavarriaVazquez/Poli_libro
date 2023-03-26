@@ -37,6 +37,9 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
+    <!--Componentes inyectables-->
+    <script defer src="js/components/footer.js"></script>
+
     <!--Scripts propios-->
     <script defer src="js/hideSuperiorNav.js"></script>
     <script defer src="js/toggleMenuLateralUnity.js"></script>
@@ -60,7 +63,7 @@
         <nav id="menuStickyUnity">
             <div class="nav-wrapper green-low" id="menuIconUnity">
                 <a href="polilibro.html" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
-                    class="material-icons">arrow_back</i></a>
+                        class="material-icons">arrow_back</i></a>
                 <a class="brand-logo titleUnity white-text">Unidad 2&nbsp;&nbsp;
                     <span class="border1 textoStandar"
                         style="padding: 5px 15px; font-weight: 800; font-size: 1.3rem; background-color: #ffffff; color:#57393c;">
@@ -74,53 +77,94 @@
 
     <section class="fullUnity blue-grey lighten-4">
         <!--Contenidos principales de la unidad-->
-        <section id="lateralUnityMenuBackOne"
-            class="lateralUnityMenuBackOne menuLateralWidthShow" style="background-color: #e79fa8;">
-            <section id="lateralUnityMenuBackTwo"
-                class="lateralUnityMenuBackTwo menuLateralWidthShow" style="background-color: #b67b82;">
-                <section id="lateralUnityMenuBackThree"
-                    class="lateralUnityMenuBackThree menuLateralWidthShow" style="background-color: #8a5d62;">
-                    <section id="lateralUnityMenuBackFour"
-                        class="lateralUnityMenuBackFour menuLateralWidthShow" style="background-color: #583b3e;">
+        <section id="lateralUnityMenuBackOne" class="lateralUnityMenuBackOne menuLateralWidthShow"
+            style="background-color: #e79fa8;">
+            <section id="lateralUnityMenuBackTwo" class="lateralUnityMenuBackTwo menuLateralWidthShow"
+                style="background-color: #b67b82;">
+                <section id="lateralUnityMenuBackThree" class="lateralUnityMenuBackThree menuLateralWidthShow"
+                    style="background-color: #8a5d62;">
+                    <section id="lateralUnityMenuBackFour" class="lateralUnityMenuBackFour menuLateralWidthShow"
+                        style="background-color: #583b3e;">
                         <section id="lateralUnityMenu" class="lateralUnityMenu white">
                             <div id="lateralUnityMenuSectionContainer" class="lateralUnityMenuSectionContainer">
-                                <p contador="1" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">1. Sección A</p>
-                                <p contador="2" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">1.1
+                                <p contador="1" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">
+                                    1. Sección A</p>
+                                <p contador="2"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    1.1
                                     Sección A.1</p>
-                                <p contador="3" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">2. Sección B</p>
-                                <p contador="4" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">2.1
+                                <p contador="3" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">
+                                    2. Sección B</p>
+                                <p contador="4"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    2.1
                                     Sección B.1</p>
-                                <p contador="5" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">2.2
+                                <p contador="5"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    2.2
                                     Sección B.2</p>
-                                <p contador="6" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">2.3
+                                <p contador="6"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    2.3
                                     Sección B.3</p>
-                                <p contador="7" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C</p>
-                                <p contador="8" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.1
+                                <p contador="7" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">
+                                    3. Sección C</p>
+                                <p contador="8"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.1
                                     Sección C.1</p>
-                                <p contador="9" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.2
+                                <p contador="9"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.2
                                     Sección C.2</p>
-                                <p contador="10" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.3
+                                <p contador="10"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.3
                                     Sección C.3</p>
-                                <p contador="11" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C</p>
-                                <p contador="12" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.1
+                                <p contador="11"
+                                    class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C
+                                </p>
+                                <p contador="12"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.1
                                     Sección C.1</p>
-                                <p contador="13" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.2
+                                <p contador="13"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.2
                                     Sección C.2</p>
-                                <p contador="14" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.3
+                                <p contador="14"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.3
                                     Sección C.3</p>
-                                <p contador="15" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C</p>
-                                <p contador="16" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.1
+                                <p contador="15"
+                                    class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C
+                                </p>
+                                <p contador="16"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.1
                                     Sección C.1</p>
-                                <p contador="17" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.2
+                                <p contador="17"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.2
                                     Sección C.2</p>
-                                <p contador="18" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.3
+                                <p contador="18"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.3
                                     Sección C.3</p>
-                                <p contador="15" class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C</p>
-                                <p contador="16" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.1
+                                <p contador="15"
+                                    class="navOptionsContent rememberStateUnit1 mainSectionMenu leftBorder">3. Sección C
+                                </p>
+                                <p contador="16"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.1
                                     Sección C.1</p>
-                                <p contador="17" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.2
+                                <p contador="17"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.2
                                     Sección C.2</p>
-                                <p contador="18" class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">3.3
+                                <p contador="18"
+                                    class="navOptionsContent rememberStateUnit1 secondarySectionMenu leftBorderSecondary">
+                                    3.3
                                     Sección C.3</p>
                                 <hr>
                                 <div
@@ -225,40 +269,17 @@
             </div>
         </section>
     </section>
-    
 
-    <footer class="footerDesign blue-grey lighten-3">
-        <div class="footerContainerOne">
-            <p class="textoFooter">
-                Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
-                Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín
-                Ivette
-                Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-                Internacional.
-            </p>
-            <a href="https://link_ejemplo_pagina"
-                class="footerLink textoFooter blue-grey lighten-4 shadow2 border1 blue-text text-darken-2">
-                Repositorio de la obra https://link_ejemplo_pagina.
-            </a>
-            <div class="iconCreativeContainer">
-                <div class="iconCreative"></div>
-            </div>
-        </div>
-        <div class="footerContainerTwo">
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Manual<i
-                    class="material-icons right">help</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Requerimientos<i
-                    class="material-icons right">build</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Contacto<i
-                    class="material-icons right">alternate_email</i></a>
-        </div>
-    </footer>
 
-    <a href="#" data-target="slide-out" class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-large-only"
-    style="background-color: #916367;"><i class="material-icons">menu</i></a>
-    <a href="#" data-target="mobile-demo" 
-    class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-med-and-down" 
-    style="background-color: #583b3e; width: 54px; height: 54px;">
+    <!--Inyectamos componente de footer-->
+    <section id="footerListener"></section>
+
+    <a href="#" data-target="slide-out"
+        class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-large-only"
+        style="background-color: #916367;"><i class="material-icons">menu</i></a>
+    <a href="#" data-target="mobile-demo"
+        class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-med-and-down"
+        style="background-color: #583b3e; width: 54px; height: 54px;">
         <i class="material-icons" id="menuIconUnityContent">close</i>
     </a>
 

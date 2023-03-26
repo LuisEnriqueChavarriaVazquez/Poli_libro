@@ -43,6 +43,9 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
+    <!--Componentes inyectables-->
+    <script defer src="js/components/footer.js"></script>
+
     <!--Scripts propios-->
     <script defer src="js/hideSuperiorNav.js"></script>
     <script defer src="js/toggleMenuLateralUnity.js"></script>
@@ -253,32 +256,8 @@
     </section>
 
 
-    <footer class="footerDesign blue-grey lighten-3">
-        <div class="footerContainerOne">
-            <p class="textoFooter">
-                Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
-                Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín
-                Ivette
-                Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-                Internacional.
-            </p>
-            <a href="https://link_ejemplo_pagina"
-                class="footerLink textoFooter blue-grey lighten-4 shadow2 border1 blue-text text-darken-2">
-                Repositorio de la obra https://link_ejemplo_pagina.
-            </a>
-            <div class="iconCreativeContainer">
-                <div class="iconCreative"></div>
-            </div>
-        </div>
-        <div class="footerContainerTwo">
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Manual<i
-                    class="material-icons right">help</i></a>
-            <a class="btn waves-effect waves-light border1 white-text blue-grey darken-4">Requerimientos<i
-                    class="material-icons right">build</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Contacto<i
-                    class="material-icons right">alternate_email</i></a>
-        </div>
-    </footer>
+    <!--Inyectamos componente de footer-->
+    <section id="footerListener"></section>
 
     <a href="#" data-target="slide-out"
         class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-large-only"

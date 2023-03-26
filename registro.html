@@ -34,6 +34,9 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
+    <!--Componentes inyectables-->
+    <script defer src="js/components/footer.js"></script>
+
     <!--Scripts propios-->
     <script defer src="js/hideSuperiorNav.js"></script>
 
@@ -67,15 +70,15 @@
         <div class="mainTabs col s12 blue-grey lighten-4">
             <div class="cardDesign white shadow2 border1">
                 <p class="textoTitulo">Sign up docente</p>
-                    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    {% for message in messages %}
-                    <div class="error_msg">
-                        {{ message }}
-                    </div>
-                    {% endfor %}
-                    {% endif %}
-                    {% endwith %}
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="error_msg">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
                 <form class="col s4" method="post" action="/registro">
                     <div class="row">
                         <div class="input-field col s12">
@@ -99,33 +102,8 @@
         </div>
     </section>
 
-    <footer class="footerDesign blue-grey lighten-3">
-        <div class="footerContainerOne">
-            <p class="textoFooter">
-                Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
-                Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín
-                Ivette
-                Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-                Internacional.
-            </p>
-            <a href="https://link_ejemplo_pagina"
-                class="footerLink textoFooter blue-grey lighten-4 shadow2 border1 blue-text text-darken-2">
-                Repositorio de la obra https://link_ejemplo_pagina.
-            </a>
-            <div class="iconCreativeContainer">
-                <div class="iconCreative"></div>
-            </div>
-        </div>
-        <div class="footerContainerTwo">
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Manual<i
-                    class="material-icons right">help</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Requerimientos<i
-                    class="material-icons right">build</i></a>
-            <a class='btn waves-effect waves-light border1 white-text blue-grey darken-4' href='#!'>Contacto<i
-                    class="material-icons right">alternate_email</i></a>
-        </div>
-    </footer>
-
+    <!--Inyectamos componente de footer-->
+    <section id="footerListener"></section>
 
 
 </body>

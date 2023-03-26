@@ -37,6 +37,9 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script defer src="js/activateComponentsMaterialize.js"></script>
 
+  <!--Componentes inyectables-->
+  <script defer src="js/components/footer.js"></script>
+
   <!--Scripts propios-->
   <script defer src="js/hideSuperiorNav.js"></script>
 
@@ -115,7 +118,8 @@
 
         <div id="section2" class="section scrollspy">
           <p class="textoTitulo clbktx">Seccción 2</p>
-          <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem eos
+          <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem
+            eos
             accusamus molestias commodi officiis, facilis rem quaerat maxime, nihil iure ut soluta illum modi
             reprehenderit. Rerum temporibus blanditiis odit?
             Iste quibusdam ad veniam, voluptatibus sit omnis animi magnam voluptas quasi facere similique temporibus
@@ -312,29 +316,8 @@
       class="material-icons">download</i></a>
 
 
-      <footer class="footerDesign clgreyl2 clborder">
-        <div class="footerContainerOne">
-          <p class="textoFooter clbktx">
-            Recurso Didáctico Digital Unidad X: métodos de evaluación de proyectos de inversión de la UA Finanzas
-            Empresariales por M. en A. Eduardo Rodríguez Flores, M. en C. Josefina Hernández Jaime & Dra. Yasmín Ivette
-            Jiménez Galán se distribuye bajo una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-            Internacional.
-          </p>
-          <a class='btn waves-effect waves-light border1 white-text cl5' href='https://github.com/LuisEnriqueChavarriaVazquez/Poli_libro'>Repositorio del polilibro<i
-            class="material-icons right">code</i></a>
-          <div class="iconCreativeContainer">
-            <div class="iconCreative"></div>
-          </div>
-        </div>
-        <div class="footerContainerTwo">
-          <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Manual<i
-              class="material-icons right">help</i></a>
-          <a class='btn waves-effect waves-light border1 white-text cl4' href='#!'>Requerimientos<i
-              class="material-icons right">build</i></a>
-          <a class='btn waves-effect waves-light border1 white-text cl4' href='/contacto'>Contacto<i
-              class="material-icons right">alternate_email</i></a>
-        </div>
-      </footer>
+  <!--Inyectamos componente de footer-->
+  <section id="footerListener"></section>
 
 
 

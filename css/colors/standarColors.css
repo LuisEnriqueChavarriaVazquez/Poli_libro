@@ -1,3 +1,8 @@
+/*Color del body*/
+body{
+    background-color: #fff;
+}
+
 /*Base palette*/
 .cl1 {
     background-color: #6b89ac;
