@@ -1,0 +1,43 @@
+/*Colores de unidad 5*/
+.navUnit5 {
+    background-color: #78819e;
+}
+
+.nav-superiorUnit5 {
+    background-color: #272c31 !important;
+}
+
+.footerDesignUnit5 {
+    border-bottom: #919bbd 30px solid !important;
+}
+
+.leftBorderUnit5 {
+    border-left: #919bbd 10px solid !important;
+    transition: all .2s ease;
+    font-weight: 600;
+}
+
+.leftBorderSecondaryUnit5 {
+    border-left: #b5c1eb 10px solid !important;
+    transition: all .2s ease;
+}
+
+.leftBorderUnit5:hover,
+.leftBorderSecondaryUnit5:hover {
+    background-color: #272c31;
+    border-left: #697088 20px solid !important;
+}
+
+.activeLinkOptionsContentUnit5 {
+    background-color: #737b96;
+    border-left: #363a47 20px solid !important;
+    color: #fff;
+    font-weight: 600;
+}
+
+.leftBorderOnUnit5 {
+    border-left: #919bbd 10px solid !important;
+    background-color: rgb(209, 209, 209);
+    font-weight: 700;
+    transition: all .1s ease;
+}
