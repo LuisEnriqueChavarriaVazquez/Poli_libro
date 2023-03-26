@@ -31,6 +31,9 @@
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
 
+    <!--Shimmer effect-->
+    <link rel="stylesheet" href="css/load/shimmer.css">
+
     <!-- Compiled and minified JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -44,6 +47,9 @@
 
     <!--Scripts de configuraciones-->
     <script defer src="js/modoLuz.js"></script>
+
+    <!--Scripts para la pantalla de carga-->
+    <script defer src="js/loading/loadingGlosario.js"></script>
 
 </head>
 
@@ -79,7 +85,8 @@
             <input id="inputBrowser" type="text" onkeyup="buscar_concepto()"
                 class="browserContainer-inputContainer-input browser-default shadow2 clw clbktx">
         </div>
-        <div class="browserContainer-conceptsContainer">
+
+        <div class="browserContainer-conceptsContainer readyContentScreen">
             <div class="conceptCard clw shadow3 border2">
                 <p class="textoTitulo clbktx">Concepto 1</p>
                 <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione, qui
@@ -128,6 +135,10 @@
                     Ea corrupti adipisci mollitia sed repudiandae?</p>
             </div>
         </div>
+
+        <!--Contenido de carga de la página-->
+        <section class="loadContentScreen"></section>
+
     </section>
 
     <footer class="footerDesign clgreyl2 clborder">
