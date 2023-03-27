@@ -10,6 +10,7 @@ let rutaSaved = localStorage.getItem('rutaSavedOn');
 console.log('rutaSaved: ', rutaSaved);
 if (rutaSaved === null){
     localStorage.setItem('rutaSavedOn', 'css/colors/standarColors.css');
+    window.location.reload();
 }
 
 /*Debemos hacer una funcion que obtenga la URL para comprobar si estamos en la

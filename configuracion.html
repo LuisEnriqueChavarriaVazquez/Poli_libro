@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="generalDocument">
 
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,8 @@
     <script defer src="js/hideSuperiorNav.js"></script>
 
     <!--Scripts de configuraciones-->
-    <script defer src="js/modoLuz.js"></script>
+    <script defer src="js/configuraciones/modoLuz.js"></script>
+    <script defer src="js/configuraciones/modoLectura.js"></script>
 
 </head>
 
@@ -87,6 +88,9 @@
 
         <div class="cardDesign clw shadow2 border1">
             <p class="textoTitulo clbktx">Textos</p>
+            <p class="range-field">
+                <input type="range" id="modSepia" min="0" max="10" />
+            </p>
         </div>
     </section>
 
