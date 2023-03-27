@@ -1,6 +1,7 @@
 //Botones para los cambios de color
 let modOscuro = document.getElementById('modOscuro');
-let modLuminoso = document.getElementById('modLuminoso');
+let iconModOscuro = document.getElementById('iconModOscuro');
+let textModOscuro = document.getElementById('textModOscuro');
 
 //Identificador para acceder a la ruta del color (ruta actual y futura)
 let rutaColor = document.getElementById('colorAdaptable');
@@ -50,24 +51,32 @@ function validarUnidadvalidarColor(){
 }
 
 //Validamos que los botones existan (Botones para configurar el color)
-if(modOscuro !== null && modLuminoso !== null){
+if(modOscuro !== null){
     
     //Definimos el color guardado en memoria
     rutaColor.setAttribute('href', rutaSaved);
 
     //Como los botones existen debemos agregar los eventos que esten a la escucha del cambio de color
-    //Boton para el modo oscuro
+    //Boton para el modo oscuro y modo lumninoso
     modOscuro.addEventListener('click', () => {
-        M.toast({html: 'Modo oscuro activo'});
-        localStorage.setItem('rutaSavedOn', 'css/colors/standarDark.css');
-        rutaColor.setAttribute('href', 'css/colors/standarDark.css');
-    });
+        if(localStorage.getItem('rutaSavedOn') == 'css/colors/standarColors.css'){
+            M.toast({html: 'Modo oscuro activo'});
+            localStorage.setItem('rutaSavedOn', 'css/colors/standarDark.css');
+            rutaColor.setAttribute('href', 'css/colors/standarDark.css');
 
-    //Boton para el modo con color normal
-    modLuminoso.addEventListener('click', () => {
-        M.toast({html: 'Modo luminoso activo'});
-        localStorage.setItem('rutaSavedOn', 'css/colors/standarColors.css');
-        rutaColor.setAttribute('href', 'css/colors/standarColors.css');
+            //Modificacion de estilos
+            iconModOscuro.innerHTML = 'light_mode';
+            textModOscuro.innerHTML = 'Modo luz';
+
+        }else{
+            M.toast({html: 'Modo luminoso activo'});
+            localStorage.setItem('rutaSavedOn', 'css/colors/standarColors.css');
+            rutaColor.setAttribute('href', 'css/colors/standarColors.css');
+
+            //Modificacion de estilos
+            iconModOscuro.innerHTML = 'dark_mode';
+            textModOscuro.innerHTML = 'Modo oscuro';
+        }
     });
 
     /*Sirve para agregar los estilos de las unidades 1,2,3,4,5 dependiendo de si esta 
