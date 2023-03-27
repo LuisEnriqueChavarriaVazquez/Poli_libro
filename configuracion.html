@@ -48,6 +48,25 @@
     <!--Scripts para saber datos sobre la memoria-->
     <script defer src="js/memoria/datosGuardados.js"></script>
 
+    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <script src="https://cdn.tiny.cloud/1/bcjg9uoh2946vwwh06d86haeg33tw5awmre3248h9yv3wo7g/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            mode: "specific_textareas",
+            editor_selector: "mceEditor"
+        });
+
+        function get_editor_content() {
+            // Get the HTML contents of the currently active editor
+            console.debug(tinyMCE.activeEditor.getContent());
+            //method1 getting the content of the active editor
+            alert(tinyMCE.activeEditor.getContent());
+            //method2 getting the content by id of a particular textarea
+            alert(tinyMCE.get('myarea1').getContent());
+        }
+    </script>
+
 </head>
 
 <body>
@@ -73,6 +92,11 @@
             </div>
         </nav>
     </section>
+
+    <form method="post">
+        <textarea id="mytextarea">Hello, World!</textarea>
+    </form>
+    <button onclick="get_editor_content()">Get content</button> 
 
     <section class="containerSettings clgreyl1">
         <div class="cardDesign clw shadow2 border1">
@@ -107,8 +131,11 @@
                 <div><i class="material-icons">text_increase</i></div>
                 <div><i class="material-icons">text_decrease</i></div>
                 <div><i class="material-icons">border_color</i></div>
+            </div>
+            <div class="colorCardSepia shadow2 border1 clgreyl1">
                 <div><i class="material-icons">functions</i></div>
-
+            </div>
+            <div class="colorCardSepia shadow2 border1 clgreyl1">
                 <div><i class="material-icons">format_align_left</i></div>
                 <div><i class="material-icons">format_align_justify</i></div>
             </div>
