@@ -43,6 +43,13 @@
     font-weight: 600;
 }
 
+@media (max-width: 550px) {
+    .textColorSelection{
+        font-size: 18px;
+    }
+}
+
+
 /*Card color sepia*/
 .colorCardSepia{
     display: grid;

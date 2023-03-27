@@ -21,9 +21,9 @@ function changeIconSepia(valueSepia){
     if(valueSepia == '0'){
         iconModSepia.innerHTML = 'brightness_7';
     }else if(valueSepia == '1'){
-        iconModSepia.innerHTML = 'brightness_5';
-    }else if(valueSepia == '2'){
         iconModSepia.innerHTML = 'brightness_6';
+    }else if(valueSepia == '2'){
+        iconModSepia.innerHTML = 'brightness_5';
     }else if(valueSepia == '3'){
         iconModSepia.innerHTML = 'brightness_4';
     }

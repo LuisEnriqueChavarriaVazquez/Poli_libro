@@ -56,11 +56,11 @@ function changeIconDarkMode(rutaColorOscuroLuz){
     if(rutaColorOscuroLuz == 'css/colors/standarColors.css'){
         //Modificacion de estilos
         iconModOscuro.innerHTML = 'dark_mode';
-        textModOscuro.innerHTML = 'Modo oscuro';
+        textModOscuro.innerHTML = 'Activar modo oscuro';
     }else if(rutaColorOscuroLuz == 'css/colors/standarDark.css'){
         //Modificacion de estilos
         iconModOscuro.innerHTML = 'light_mode';
-        textModOscuro.innerHTML = 'Modo luz';
+        textModOscuro.innerHTML = 'Activar modo luz';
     }
 }
 
@@ -83,7 +83,7 @@ if(modOscuro !== null){
 
             //Modificacion de estilos
             iconModOscuro.innerHTML = 'light_mode';
-            textModOscuro.innerHTML = 'Modo luz';
+            textModOscuro.innerHTML = 'Activar modo luz';
 
         }else{
             M.toast({html: 'Modo luminoso activo'});
@@ -92,7 +92,7 @@ if(modOscuro !== null){
 
             //Modificacion de estilos
             iconModOscuro.innerHTML = 'dark_mode';
-            textModOscuro.innerHTML = 'Modo oscuro';
+            textModOscuro.innerHTML = 'Activar modo oscuro';
         }
     });
 
