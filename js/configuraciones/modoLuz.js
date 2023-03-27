@@ -50,11 +50,28 @@ function validarUnidadvalidarColor(){
     }
 }
 
+//Funcion para modificar el icono cuando sea modo oscuro o modo luz
+function changeIconDarkMode(rutaColorOscuroLuz){
+    //Actualizamos el icono de la interfaz que indica el brillo
+    if(rutaColorOscuroLuz == 'css/colors/standarColors.css'){
+        //Modificacion de estilos
+        iconModOscuro.innerHTML = 'dark_mode';
+        textModOscuro.innerHTML = 'Modo oscuro';
+    }else if(rutaColorOscuroLuz == 'css/colors/standarDark.css'){
+        //Modificacion de estilos
+        iconModOscuro.innerHTML = 'light_mode';
+        textModOscuro.innerHTML = 'Modo luz';
+    }
+}
+
 //Validamos que los botones existan (Botones para configurar el color)
 if(modOscuro !== null){
     
     //Definimos el color guardado en memoria
     rutaColor.setAttribute('href', rutaSaved);
+
+    //Funcion para cambiar los iconos cada que inicie la página de acuerdo al modo
+    changeIconDarkMode(rutaSaved);
 
     //Como los botones existen debemos agregar los eventos que esten a la escucha del cambio de color
     //Boton para el modo oscuro y modo lumninoso

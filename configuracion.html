@@ -73,19 +73,20 @@
 
     <section class="containerSettings clgreyl1">
         <div class="cardDesign clw shadow2 border1">
+            <!--Modo oscuro/luz-->
             <p class="textoTitulo clbktx">Colores</p>
-            <!--Modo oscuro-->
             <div id="modOscuro" class="waves-effect colorCard shadow2 clborder_min border1 clgreyl1">
-                <i id="iconModOscuro" class="clgreyl2 clbktx iconColorSelection material-icons">dark_mode</i>
+                <i id="iconModOscuro" class="cl5 white-text iconColorSelection material-icons">dark_mode</i>
                 <p id="textModOscuro" class="textColorSelection clbktx">Modo oscuro</p>
             </div>
 
+            <!--Modo de lectura-->
+            <p class="textoTitulo clbktx">Modo sepia</p>
             <div class="colorCardSepia shadow2 clborder_min border1 clgreyl1">
-                <i class="clgreyl2 clbktx iconColorSelection material-icons">wb_twilight</i>
+                <i id="iconModSepia" class="cl5 white-text iconColorSelection material-icons">brightness_7</i>
                 <div>
-                    <p id="textModOscuro" class="textColorSelection clbktx">Modo lectura</p>
                     <p class="range-field barSepiaContainer">
-                        <input type="range" id="modSepia" min="0" max="5" />
+                        <input type="range" id="modSepia" min="0" max="3" />
                     </p>
                 </div>
             </div>
@@ -93,9 +94,7 @@
 
         <div class="cardDesign clw shadow2 border1">
             <p class="textoTitulo clbktx">Textos</p>
-            <p class="range-field">
-                <input type="range" id="modSepia" min="0" max="5" />
-            </p>
+            
         </div>
     </section>
 
