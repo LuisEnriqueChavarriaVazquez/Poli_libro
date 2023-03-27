@@ -31,15 +31,15 @@ if(modSepia !== null){
         //Obtenemos el nuevo valor de la memoria
         sepiaValue = localStorage.getItem('sepiaValue');
         //Aplicamos los estilos guardados en memoria
-        generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ')');
+        generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ') brightness(' + (1-(sepiaValue)) +');');
     });
 
     //Aplicamos los estilos guardados en memoria
-    generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ')');
+    generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ') brightness(' + (1-(sepiaValue)) +');');
     
 }else{ //En caso de que el boton de selección de sepia no exista solo se pone el valor en memoria
 
     //Aplicamos los estilos guardados en memoria
-    generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ')');
+    generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ') brightness(' + (1-(sepiaValue)) +');');
 
 }
