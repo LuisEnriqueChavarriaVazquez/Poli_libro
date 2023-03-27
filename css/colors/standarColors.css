@@ -1,5 +1,5 @@
 /*Color del body*/
-body{
+body {
     background-color: #fff;
 }
 
@@ -55,11 +55,11 @@ body{
 }
 
 /*Text style*/
-.clbktx{
+.clbktx {
     color: #000;
 }
 
-.clwtx{
+.clwtx {
     color: #fff;
 }
 
@@ -69,7 +69,7 @@ body{
 }
 
 /*Borders para el manual*/
-.table-of-contents a{
+.table-of-contents a {
     color: #313131;
 }
 
@@ -85,4 +85,18 @@ body{
     padding-left: 14px;
     border-left: 10px solid #2b3846;
     color: #313131;
+}
+
+/*Colores de inputs*/
+input[type=range]+.thumb {
+    background-color: #4a5f77 !important;
+}
+
+input[type=range]+.thumb.active .value {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    position: relative;
+    bottom: 5px;
+    left: 1px;
 }

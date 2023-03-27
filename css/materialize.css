@@ -7344,7 +7344,7 @@ input[type=range] + .thumb {
 input[type=range] {
   position: relative;
   background-color: transparent;
-  border: none;
+  border: none !important;
   outline: none;
   width: 100%;
   margin: 15px 0;
@@ -7363,7 +7363,7 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #26a69a;
+  /* background-color: #26a69a; */
   margin-left: 7px;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
@@ -7386,7 +7386,7 @@ input[type=range] + .thumb.active {
 }
 
 input[type=range] + .thumb.active .value {
-  color: #fff;
+  /* color: #fff; */
   margin-left: -1px;
   margin-top: 8px;
   font-size: 10px;
