@@ -1,0 +1,129 @@
+/*Card que contiene los ajustes de los textos*/
+.cardFontAdjustFather{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "adjustFont_1 adjustFont_2 adjustFont_3"
+        "adjustFont_4 adjustFont_5 adjustFont_6"
+        "adjustFont_7 adjustFont_8 adjustFont_9"
+        "adjustPreview adjustPreview adjustPreview"
+    ;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    .cardFontAdjustFather{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "adjustFont_1 adjustFont_2"
+            "adjustFont_3 adjustFont_4"
+            "adjustFont_5 adjustFont_6"
+            "adjustFont_7 adjustFont_8"
+            "adjustFont_9 adjustFont_9"
+            "adjustPreview adjustPreview"
+        ;
+        gap: 10px;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    .cardFontAdjustFather{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "adjustFont_1 adjustFont_2 adjustFont_3"
+        "adjustFont_4 adjustFont_5 adjustFont_6"
+        "adjustFont_7 adjustFont_8 adjustFont_9"
+        "adjustPreview adjustPreview adjustPreview"
+        ;
+    }
+}
+
+/*Card que contiene a los botones de forma individual*/
+.cardFontAdjustButton{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    height: 50px;
+}
+
+/*span que contiene la descripción de los botones*/
+.descAdjustButton{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.iconAdjustButton{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 530px) {
+    .cardFontAdjustButton{
+        grid-template-columns: 1fr;
+        border-radius: 7px !important;
+    }
+
+    .iconAdjustButton{
+       font-size: 27px;
+    }
+
+    .descAdjustButton{
+        display: none;
+    }
+}
+
+
+#adjustFont_1{
+    grid-area: adjustFont_1;
+}
+
+#adjustFont_2{
+    grid-area: adjustFont_2;
+}
+
+#adjustFont_3{
+    grid-area: adjustFont_3;
+}
+
+#adjustFont_4{
+    grid-area: adjustFont_4;
+}
+
+#adjustFont_5{
+    grid-area: adjustFont_5;
+}
+
+#adjustFont_6{
+    grid-area: adjustFont_6;
+}
+
+#adjustFont_7{
+    grid-area: adjustFont_7;
+}
+
+#adjustPreview{
+    grid-area: adjustPreview;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+}
+
+.adjustPreviewTextContainer{
+    padding: 10px;
+}
