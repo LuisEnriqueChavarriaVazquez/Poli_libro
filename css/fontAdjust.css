@@ -5,8 +5,8 @@
     grid-template-rows: auto;
     grid-template-areas: 
         "adjustFont_1 adjustFont_2 adjustFont_3"
-        "adjustFont_4 adjustFont_5 adjustFont_6"
-        "adjustFont_7 adjustFont_8 adjustFont_9"
+        "adjustFont_6 adjustFont_7 adjustFont_8"
+        "adjustFont_size adjustFont_size adjustFont_size"
         "adjustPreview adjustPreview adjustPreview"
     ;
     gap: 20px;
@@ -21,10 +21,9 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
             "adjustFont_1 adjustFont_2"
-            "adjustFont_3 adjustFont_4"
-            "adjustFont_5 adjustFont_6"
+            "adjustFont_3 adjustFont_6"
             "adjustFont_7 adjustFont_8"
-            "adjustFont_9 adjustFont_9"
+            "adjustFont_size adjustFont_size"
             "adjustPreview adjustPreview"
         ;
         gap: 10px;
@@ -40,8 +39,8 @@
         grid-template-rows: auto;
         grid-template-areas: 
         "adjustFont_1 adjustFont_2 adjustFont_3"
-        "adjustFont_4 adjustFont_5 adjustFont_6"
-        "adjustFont_7 adjustFont_8 adjustFont_9"
+        "adjustFont_6 adjustFont_7 adjustFont_8"
+        "adjustFont_size adjustFont_size adjustFont_size"
         "adjustPreview adjustPreview adjustPreview"
         ;
     }
@@ -51,6 +50,13 @@
 .cardFontAdjustButton{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    height: 50px;
+}
+
+.cardFontAdjustButtonSize{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     height: 50px;
 }
@@ -69,6 +75,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.iconAdjustButtonSize{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
 }
 
 @media (max-width: 530px) {
@@ -99,12 +113,8 @@
     grid-area: adjustFont_3;
 }
 
-#adjustFont_4{
-    grid-area: adjustFont_4;
-}
-
-#adjustFont_5{
-    grid-area: adjustFont_5;
+#adjustFont_size{
+    grid-area: adjustFont_size;
 }
 
 #adjustFont_6{
@@ -113,6 +123,10 @@
 
 #adjustFont_7{
     grid-area: adjustFont_7;
+}
+
+#adjustFont_8{
+    grid-area: adjustFont_8;
 }
 
 #adjustPreview{
@@ -174,16 +188,19 @@
     text-align: justify;
     display: inline-block;
     transition: all .1 ease-in-out;
+    font-weight: 500;
 }
 
 .textoReadingH1 {
     font-size: 25px;
     text-align: justify;
+    display: inline-block;
     transition: all .1 ease-in-out;
 }
 
 .textoReadingH3 {
     font-size: 19px;
     text-align: justify;
+    display: inline-block;
     transition: all .1 ease-in-out;
 }

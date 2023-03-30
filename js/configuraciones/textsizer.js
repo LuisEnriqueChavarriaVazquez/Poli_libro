@@ -2,27 +2,27 @@
 let textoDinamicoIdentificador = document.getElementsByClassName('textoDinamicoIdentificador');
 
 //Clases tamaños
-// let textoReadingElementsH1 = document.getElementsByClassName('textoReadingH1');
-// let textoReadingElementsH3 = document.getElementsByClassName('textoReadingH3');
-// let textoReadingElementsH2 = document.getElementsByClassName('textoReadingH2');
+let textoReadingElementsH1 = document.getElementsByClassName('textoReadingH1');
+let textoReadingElementsH3 = document.getElementsByClassName('textoReadingH3');
+let textoReadingElementsH2 = document.getElementsByClassName('textoReadingH2');
 
 //Arrays de tamaños
-// let textoReadingElementsH2Arr = [...textoReadingElementsH2];
-// let textoReadingElementsH1Arr = [...textoReadingElementsH1];
-// let textoReadingElementsH3Arr = [...textoReadingElementsH3];
+let textoReadingElementsH2Arr = [...textoReadingElementsH2];
+let textoReadingElementsH1Arr = [...textoReadingElementsH1];
+let textoReadingElementsH3Arr = [...textoReadingElementsH3];
 
 //Cantidad de textos
-// let totalTextosDinamicos = textoReadingElementsH2.length;
+let totalTextosDinamicos = (textoReadingElementsH2.length + textoReadingElementsH1.length + textoReadingElementsH3.length)/3;
 
 //Botones para el tamaño del texto
-// let textSizeOne = document.getElementsByClassName('textSizeOne');
-// let textSizeTwo = document.getElementsByClassName('textSizeTwo');
-// let textSizeThree = document.getElementsByClassName('textSizeThree');
+let textSizeOne = document.getElementsByClassName('textSizeOne');
+let textSizeTwo = document.getElementsByClassName('textSizeTwo');
+let textSizeThree = document.getElementsByClassName('textSizeThree');
 
 //Conversion de array
-// let textSizeOneArr = [...textSizeOne];
-// let textSizeTwoArr = [...textSizeTwo];
-// let textSizeThreeArr = [...textSizeThree];
+let textSizeOneArr = [...textSizeOne];
+let textSizeTwoArr = [...textSizeTwo];
+let textSizeThreeArr = [...textSizeThree];
 
 //Reemplazo de textos
 function reemplazoH2H3porH1(){
@@ -92,61 +92,64 @@ function reemplazoH1H3porH2(){
 
 //Cambios en los botones cuando son presionados (Estilos)
 //Tamaño H1
-// for(var i = 0; i < textSizeOne.length; i++){
-//     textSizeOne[i].addEventListener('click', () => {
-//         textSizeOneArr.map(e => {
-//             e.classList.add('activeButtonText');
-//         });
+for(var i = 0; i < textSizeOne.length; i++){
+    textSizeOne[i].addEventListener('click', () => {
+        textSizeOneArr.map(e => {
+            e.classList.add('activeButtonText');
+        });
 
-//         textSizeTwoArr.map(e => {
-//             e.classList.remove('activeButtonText');
-//         });
+        textSizeTwoArr.map(e => {
+            e.classList.remove('activeButtonText');
+        });
 
-//         textSizeThreeArr.map(e => {
-//             e.classList.remove('activeButtonText');
-//         });
+        textSizeThreeArr.map(e => {
+            e.classList.remove('activeButtonText');
+        });
 
-//         reemplazoH2H3porH1();
-//     })
-// }
+        reemplazoH2H3porH1();
+        M.toast({html: 'Tamaño de fuente aumentado.'});
+    });
+}
 
 //Tamaño H2
-// for(var i = 0; i < textSizeTwo.length; i++){
-//     textSizeTwo[i].addEventListener('click', () => {
-//         textSizeOneArr.map(e => {
-//             e.classList.remove('activeButtonText');
-//         });
+for(var i = 0; i < textSizeTwo.length; i++){
+    textSizeTwo[i].addEventListener('click', () => {
+        textSizeOneArr.map(e => {
+            e.classList.remove('activeButtonText');
+        });
 
-//         textSizeTwoArr.map(e => {
-//             e.classList.add('activeButtonText');
-//         });
+        textSizeTwoArr.map(e => {
+            e.classList.add('activeButtonText');
+        });
 
-//         textSizeThreeArr.map(e => {
-//             e.classList.remove('activeButtonText');
-//         });
+        textSizeThreeArr.map(e => {
+            e.classList.remove('activeButtonText');
+        });
 
-//         reemplazoH1H3porH2();
-//     })
-// }
+        reemplazoH1H3porH2();
+        M.toast({html: 'Tamaño de fuente neutro.'});
+    });
+}
 
 //Tamaño H3
-// for(var i = 0; i < textSizeThree.length; i++){
-//     textSizeThree[i].addEventListener('click', () => {
-//         textSizeOneArr.map(e => {
-//             e.classList.remove('activeButtonText');
-//         });
+for(var i = 0; i < textSizeThree.length; i++){
+    textSizeThree[i].addEventListener('click', () => {
+        textSizeOneArr.map(e => {
+            e.classList.remove('activeButtonText');
+        });
 
-//         textSizeTwoArr.map(e => {
-//             e.classList.remove('activeButtonText');
-//         });
+        textSizeTwoArr.map(e => {
+            e.classList.remove('activeButtonText');
+        });
 
-//         textSizeThreeArr.map(e => {
-//             e.classList.add('activeButtonText');
-//         });
+        textSizeThreeArr.map(e => {
+            e.classList.add('activeButtonText');
+        });
 
-//         reemplazoH1H2porH3();
-//     })
-// }
+        reemplazoH1H2porH3();
+        M.toast({html: 'Tamaño de fuente reducido.'});
+    });
+}
 
 
 //Estado de los botones
