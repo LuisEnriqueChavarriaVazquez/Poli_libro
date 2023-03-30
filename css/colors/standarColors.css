@@ -130,3 +130,9 @@ input[type=range]::-webkit-slider-thumb {
         0 3px 1px -2px rgba(0, 0, 0, 0.2),
         0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
+
+/*Configuraciones de textos*/
+.activeButtonText{
+    background-color: #3f5268 !important;
+    color: #e7e7e7 !important;
+}
