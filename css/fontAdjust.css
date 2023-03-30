@@ -203,3 +203,39 @@
     display: inline-block;
     transition: all .1 ease-in-out;
 }
+
+@media (max-width: 1000px) {
+    .textoReadingH2,
+    .textoDinamicoIdentificador {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .textoReadingH1 {
+        font-size: 21px;
+        text-align: justify;
+    }
+
+    .textoReadingH3 {
+        font-size: 15px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 500px) {
+    .textoReadingH2,
+    .textoDinamicoIdentificador {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .textoReadingH1 {
+        font-size: 19px;
+        text-align: justify;
+    }
+
+    .textoReadingH3 {
+        font-size: 13px;
+        text-align: justify;
+    }
+}

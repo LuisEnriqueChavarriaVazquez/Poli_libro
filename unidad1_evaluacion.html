@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" id="generalDocument">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Unidad 1</title>
+    <link rel="shortcut icon" href="img/ipn.ico" type="image/x-icon">
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="fonts/roboto.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/ownStyles.css">
+
+    <!--Componentes personalizados-->
+    <link rel="stylesheet" href="css/shadowsCustomized.css">
+    <link rel="stylesheet" href="css/bordersCustomized.css">
+    <link rel="stylesheet" href="css/scrollBarCustomized.css">
+    <link rel="stylesheet" href="css/footerCustomized.css">
+    <link rel="stylesheet" href="css/botonPoliLibro.css">
+    <link rel="stylesheet" href="css/defaultImage.css">
+    <link rel="stylesheet" href="css/textosCustomized.css">
+    <link rel="stylesheet" href="css/navCustomized.css">
+    <link rel="stylesheet" href="css/tabsCustomized.css">
+    <link rel="stylesheet" href="css/cardsCustomized.css">
+    <link rel="stylesheet" href="css/menuLateralCustomized.css">
+    <link rel="stylesheet" href="css/menuLateralFontAdjust.css">
+    <link rel="stylesheet" href="css/fontAdjust.css">
+
+    <!--Colors-->
+    <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
+    <link id="unitColorsAdaptable" rel="stylesheet">
+
+    <!--Shimmer effect-->
+    <link rel="stylesheet" href="css/load/shimmer.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="js/activateComponentsMaterialize.js"></script>
+
+    <!--Componentes inyectables-->
+    <script defer src="js/components/footer.js"></script>
+
+    <!--Scripts propios-->
+    <script defer src="js/hideSuperiorNav.js"></script>
+    <script defer src="js/menuSticky.js"></script>
+    <script defer src="js/activeLinksUnits/activeLinksU1.js"></script>
+
+    <!--Scripts de configuraciones-->
+    <script defer src="js/configuraciones/modoLuz.js"></script>
+    <script defer src="js/configuraciones/modoLectura.js"></script>
+
+    <!--Scripts para la pantalla de carga-->
+    <script defer src="js/loading/loadingGlosario.js"></script>
+
+    <!--No copy-->
+    <script defer src="js/noCopy.js"></script>
+
+    <!--Scripts para la evaluacion-->
+    <script defer src="js/evaluacion/jspdf.min.js"></script>
+    <script defer src="js/evaluacion/fechaActual.js"></script>
+    <script defer src="js/evaluacion/intentosActuales.js"></script>
+    <script defer src="js/evaluacion/optMultiple.js"></script>
+    <script defer src="js/evaluacion/tiempoEnvio.js"></script>
+    <script defer src="js/evaluacion/generadorPdfs.js"></script>
+
+</head>
+
+<body>
+
+    <section>
+        <!--Navbar superior-->
+        <div class="nav-superior nav-superiorUnit1" id="nav-superior">
+            <div id="icoNavIpn"></div>
+            <div class="titleNavIpnContainer">
+                <p class="titleNavIpn white-text">Polilibro Académico de Finanzas Empresariales</p>
+            </div>
+            <div id="icoNavEscom"></div>
+        </div>
+        <!-- <div id="expandButton" class="hidenav-superior waves-effect waves-light">
+            <i id="expandIcon" class="material-icons white-text">expand_less</i>
+        </div> -->
+        <!--Navbar principal-->
+        <nav id="menuStickyUnity">
+            <div class="nav-wrapper navUnit1" id="menuIconUnity">
+                <a href="unidad1.html" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
+                        class="material-icons">arrow_back</i></a>
+                <a class="brand-logo titleUnity white-text">Unidad 1&nbsp;&nbsp;
+                    <span class="border1 textoStandar titleUnityColorUnit1">
+                        Título de la unidad 1
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </section>
+
+
+    <section>
+
+        <section class="cardsPaginaContenidoGridPadding">
+            <div class="contenedorBarraProgreso">
+                <p class="contenedorBarraProgresoTexto textoReading">Preguntas correctas <span
+                        id="contadorPreguntas">0</span>/10</p>
+                <hr>
+                <p class="contenedorBarraProgresoTexto textoReading">Preguntas respondidas <span
+                        id="contadorPreguntasRespondidas">0</span>/10</p>
+                <div class="contenedorBarraProgresoBarra" id="barraPreguntas"></div>
+            </div>
+
+            <div class="contenedorBarraProgreso">
+                <p class="contenedorBarraProgresoTexto textoReading">Fecha de respuesta: <span
+                        id="fechaActual"></span></p>
+                <p class="contenedorBarraProgresoTexto textoReading">Tiempo:
+                    <span id="tiempoActualHoras">00</span>:
+                    <span id="tiempoActualMinutos">00</span>':
+                    <span id="tiempoActualSegundos">00</span>''
+                </p>
+                <p class="contenedorBarraProgresoTexto textoReading">Intentos: <span
+                        id="intentosActuales"></span></p>
+            </div>
+        </section>
+
+        <section class="cardsPaginaContenidoGridPadding" id="contenedor_preguntas">
+
+        </section>
+
+        <br>
+        <section class="cardsPaginaContenidoListPadding">
+            <p class="notaStyle textoReading">Nota: Por respeto a su privacidad las descargas de PDFs de
+                resultados en Android
+                no son posibles, puesto que al ser generados del lado del cliente se solicitan permisos de
+                lectura/escritura más alla de lo necesario. Favor de tomar captura de
+                pantalla de sus resultados si es usuario de Android.</p>
+
+            <div class="d-grid gap-2 mt-3 textoReading">
+                <button class="btn btn-lg btn-secondary" id="generarDocumento" type="button">Descargar
+                    resultados en PDF</button>
+            </div>
+        </section>
+
+    </section>
+    
+
+
+    <!--Inyectamos componente de footer-->
+    <section id="footerListener"></section>
+
+</body>
+
+</html>

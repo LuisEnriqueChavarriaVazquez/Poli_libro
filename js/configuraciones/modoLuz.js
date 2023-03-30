@@ -36,10 +36,10 @@ function validarUnidadvalidarColor(){
         let unitColorsAdaptable = document.getElementById('unitColorsAdaptable');
         //Guardamos el nombre del archivo CSS segun el tono actual
         if(rutaSaved == 'css/colors/standarColors.css'){
-            cssDeLaUnidad = 'css/colors/' + unidadNombre.split(".").shift() + '/estilo_claro.css';
+            cssDeLaUnidad = 'css/colors/' + (unidadNombre.split(".").shift()).split("_").shift() + '/estilo_claro.css';
             console.log('cssDeLaUnidad: ', cssDeLaUnidad);
         }else if(rutaSaved == 'css/colors/standarDark.css'){
-            cssDeLaUnidad = 'css/colors/' + unidadNombre.split(".").shift() + '/estilo_oscuro.css';
+            cssDeLaUnidad = 'css/colors/' + (unidadNombre.split(".").shift()).split("_").shift() + '/estilo_oscuro.css';
             console.log('cssDeLaUnidad: ', cssDeLaUnidad);
         }
         //Definimos el archivo
