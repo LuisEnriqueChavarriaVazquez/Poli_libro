@@ -65,5 +65,4 @@ if(modSepia !== null){
 
     //Aplicamos los estilos guardados en memoria
     generalDocument.setAttribute('style', 'filter: sepia(' + sepiaValue + ') brightness(' + (1-(sepiaValue)) +');');
-
 }

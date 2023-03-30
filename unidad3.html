@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="css/tabsCustomized.css">
     <link rel="stylesheet" href="css/cardsCustomized.css">
     <link rel="stylesheet" href="css/menuLateralCustomized.css">
+    <link rel="stylesheet" href="css/menuLateralFontAdjust.css">
+    <link rel="stylesheet" href="css/fontAdjust.css">
 
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
@@ -54,6 +56,7 @@
     <!--Scripts de configuraciones-->
     <script defer src="js/configuraciones/modoLuz.js"></script>
     <script defer src="js/configuraciones/modoLectura.js"></script>
+    <script defer src="js/configuraciones/textSizerLateral.js"></script>
 
     <!--Scripts para la pantalla de carga-->
     <script defer src="js/loading/loadingGlosario.js"></script>
@@ -176,29 +179,44 @@
             <li><a href="#!">Sección 2</a></li>
         </ul>
 
+        <!--Menu para la configuración de los textos-->
+        <ul id="slide-fontAdjust" class="sidenav clw leftBorderUnit3Menu">
+            <p class="textoTitulo white-text lateralMenuAdjustTextTitle">Textos</p>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_1"><i class="material-icons clbktx">format_bold</i>Texto en negritas</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_2"><i class="material-icons clbktx">format_italic</i>Texto en italica</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_3"><i class="material-icons clbktx">format_underlined</i>Texto subrayado</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_6"><i class="material-icons clbktx">border_color</i>Palabras clave</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_7"><i class="material-icons clbktx">format_align_left</i>Quitar justificado</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_8"><i class="material-icons clbktx">format_line_spacing</i>Espaciado de lineas</a></li>
+            <li><a class="clbktx textoStandar clw border1 textSizeOne" href="#"><i class="clbktx">H1</i>Tamaño de fuente H1</a></li>
+            <li><a class="clbktx textoStandar clw border1 textSizeTwo" href="#"><i class="clbktx">H2</i>Tamaño de fuente H2</a></li>
+            <li><a class="clbktx textoStandar clw border1 textSizeThree" href="#"><i class="clbktx">H3</i>Tamaño de fuente H3</a></li>
+        </ul>
+
         <!--Contenidos principales de texto-->
         <section id="lateralUnityContent" class="lateralUnityContentList clgreyl1">
 
             <div class="clgreyl2 cardDesignFather shadow2 border1">
                 <div class="cardDesign clw shadow2 border1">
                     <p class="textoTitulo clbktx">Texto título 1</p>
-                    <p class="textoStandar clbktx">
+                    <!--Card con un ejemplo-->
+                    <p class="textoStandar clbktx textoDinamicoIdentificador textoReadingH2">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
                         dignissimos
                         consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
                         quaerat
                         cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nostrum
-                        labore
+                        labore <i class="keyWord"> lorem clave de ejemplo
                         minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-                        accusamus,
+                        accusamus,</i>
                         similique
                         laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
                     </p>
-                    <!--Card con un ejemplo-->
+
                     <div class="cardDesign clgreyl2 border1">
                         <p class="textoTitulo clbktx">Ejemplo</p>
-                        <p class="textoStandar clbktx">
+                        <p class="textoStandar clbktx textoDinamicoIdentificador textoReadingH2">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
                             dignissimos
                             consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto
@@ -217,16 +235,16 @@
 
                 <div class="cardDesign clw shadow2 border1">
                     <p class="textoTitulo clbktx">Texto título 1</p>
-                    <p class="textoStandar clbktx">
+                    <p class="textoStandar clbktx textoDinamicoIdentificador textoReadingH2">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
                         dignissimos
                         consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
                         quaerat
                         cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nostrum
-                        labore
+                        labore <i class="keyWord"> lorem clave de ejemplo
                         minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-                        accusamus,
+                        accusamus,</i>
                         similique
                         laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
                     </p>
@@ -234,16 +252,16 @@
 
                 <div class="cardDesign clw shadow2 border1">
                     <p class="textoTitulo clbktx">Texto título 2</p>
-                    <p class="textoStandar clbktx">
+                    <p class="textoStandar clbktx textoDinamicoIdentificador textoReadingH2">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
                         dignissimos
                         consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
                         quaerat
                         cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nostrum
-                        labore
+                        labore <i class="keyWord"> lorem clave de ejemplo
                         minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-                        accusamus,
+                        accusamus,</i>
                         similique
                         laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
                     </p>
@@ -269,6 +287,13 @@
         class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger hide-on-med-and-down"
         style="background-color: #755675; width: 54px; height: 54px;">
         <i class="material-icons" id="menuIconUnityContent">close</i>
+    </a>
+
+    <!--Botones para la configuracion de los textos-->
+    <a href="#" data-target="slide-fontAdjust"
+        class="border5 shadow2 white-text waves-effect waves-light buttonFontAdjustMobile sidenav-trigger"
+        style="background-color: #5f485f; width: 54px; height: 54px;">
+        <i class="material-icons">text_format</i>
     </a>
 
 </body>
