@@ -1,3 +1,39 @@
+////////////////////////////////////////////////////////////
+//Valores guardados en memoria
+let valueTextAdjust_1 = localStorage.getItem('valueTextAdjust_1');
+let valueTextAdjust_2 = localStorage.getItem('valueTextAdjust_2');
+let valueTextAdjust_3 = localStorage.getItem('valueTextAdjust_3');
+let valueTextAdjust_6 = localStorage.getItem('valueTextAdjust_6');
+let valueTextAdjust_7 = localStorage.getItem('valueTextAdjust_7');
+let valueTextAdjust_8 = localStorage.getItem('valueTextAdjust_8');
+let valueTextAdjust_size = localStorage.getItem('valueTextAdjust_size');
+
+//En caso de que los valores de los botones no existan no existan
+if (valueTextAdjust_1 === null || 
+    valueTextAdjust_2 === null || 
+    valueTextAdjust_3 === null || 
+    valueTextAdjust_6 === null ||
+    valueTextAdjust_7 === null ||
+    valueTextAdjust_8 === null ||
+    valueTextAdjust_size === null){
+    localStorage.setItem('valueTextAdjust_1', '0');
+    valueTextAdjust_1 = localStorage.getItem('valueTextAdjust_1');
+    localStorage.setItem('valueTextAdjust_2', '0');
+    valueTextAdjust_2 = localStorage.getItem('valueTextAdjust_2');
+    localStorage.setItem('valueTextAdjust_3', '0');
+    valueTextAdjust_3 = localStorage.getItem('valueTextAdjust_3');
+    localStorage.setItem('valueTextAdjust_6', '0');
+    valueTextAdjust_6 = localStorage.getItem('valueTextAdjust_6');
+    localStorage.setItem('valueTextAdjust_7', '0');
+    valueTextAdjust_7 = localStorage.getItem('valueTextAdjust_7');
+    localStorage.setItem('valueTextAdjust_8', '0');
+    valueTextAdjust_8 = localStorage.getItem('valueTextAdjust_8');
+    localStorage.setItem('valueTextAdjust_size', 'h2');
+    valueTextAdjust_size = localStorage.getItem('valueTextAdjust_size');
+}
+
+
+///////////////////////////////////////////////////////////
 //Identificador de texto dinamico
 let textoDinamicoIdentificador = document.getElementsByClassName('textoDinamicoIdentificador');
 
@@ -107,6 +143,7 @@ for(var i = 0; i < textSizeOne.length; i++){
         });
 
         reemplazoH2H3porH1();
+        localStorage.setItem('valueTextAdjust_size', 'h1');
         M.toast({html: 'Tamaño de fuente aumentado.'});
     });
 }
@@ -127,6 +164,7 @@ for(var i = 0; i < textSizeTwo.length; i++){
         });
 
         reemplazoH1H3porH2();
+        localStorage.setItem('valueTextAdjust_size', 'h2');
         M.toast({html: 'Tamaño de fuente neutro.'});
     });
 }
@@ -147,18 +185,70 @@ for(var i = 0; i < textSizeThree.length; i++){
         });
 
         reemplazoH1H2porH3();
+        localStorage.setItem('valueTextAdjust_size', 'h3');
         M.toast({html: 'Tamaño de fuente reducido.'});
     });
 }
 
 
 //Estado de los botones
-let stateCero = 0;
-let stateOne = 0;
-let stateTwo = 0;
-let stateThree = 0;
-let stateFour = 0;
-let stateFive = 0;
+let stateCero = localStorage.getItem('valueTextAdjust_1');
+let stateOne = localStorage.getItem('valueTextAdjust_2');
+let stateTwo = localStorage.getItem('valueTextAdjust_3');
+let stateThree = localStorage.getItem('valueTextAdjust_8');
+let stateFour = localStorage.getItem('valueTextAdjust_6');
+let stateFive = localStorage.getItem('valueTextAdjust_7');
+let stateSize = localStorage.getItem('valueTextAdjust_size');
+
+//Funciones para comprobar estado de los botones al cargar la pagina
+function checkMemoryButtonState(state,idElement,property){
+    //Si no es el boton para palabras clave entonces...
+    if(idElement != "adjustFont_6" && idElement != "adjustFont_size"){
+        if(state == 1){
+            $(`#${idElement}, #${idElement} i`).addClass('activeButtonText');
+            $(`#${idElement}`).addClass('shadow6');
+            $(".textoDinamicoIdentificador,.textoReadingH1,.textoReadingH2,.textoReadingH3").addClass(`${property}`);
+        }else{
+            $(`#${idElement}, #${idElement} i`).removeClass('activeButtonText');
+            $(`#${idElement}`).removeClass('shadow6');
+            $(".textoDinamicoIdentificador,.textoReadingH1,.textoReadingH2,.textoReadingH3").removeClass(`${property}`);
+        }
+    }else if(idElement == 'adjustFont_6'){ //En caso de que sea el boton de palabras clave
+        if(state == 1){
+            $(`#${idElement}, #${idElement} i`).addClass('activeButtonText');
+            $(`#${idElement}`).addClass('shadow6');
+            $('.keyWord').addClass(`${property}`);
+        }else{
+            $(`#${idElement}, #${idElement} i`).removeClass('activeButtonText');
+            $(`#${idElement}`).removeClass('shadow6');
+            $('.keyWord').removeClass(`${property}`);
+        }
+    }else if(idElement == 'adjustFont_size'){
+        if(stateSize == "h2"){
+            $('.textSizeOne').removeClass('activeButtonText');
+            $('.textSizeTwo').addClass('activeButtonText');
+            $('.textSizeThree').removeClass('activeButtonText');
+            reemplazoH1H3porH2();
+        }else if(stateSize == "h3"){
+            $('.textSizeOne').removeClass('activeButtonText');
+            $('.textSizeTwo').removeClass('activeButtonText');
+            $('.textSizeThree').addClass('activeButtonText');
+            reemplazoH1H2porH3();
+        }else if(stateSize == "h1"){
+            $('.textSizeOne').addClass('activeButtonText');
+            $('.textSizeTwo').removeClass('activeButtonText');
+            $('.textSizeThree').removeClass('activeButtonText');
+            reemplazoH2H3porH1();
+        }
+    }   
+}
+checkMemoryButtonState(stateCero,'adjustFont_1','textBoldOwn');
+checkMemoryButtonState(stateOne,'adjustFont_2','textItalicOwn');
+checkMemoryButtonState(stateTwo,'adjustFont_3','textLineSubOwn');
+checkMemoryButtonState(stateFour,'adjustFont_6','textWordHelp');
+checkMemoryButtonState(stateFive,'adjustFont_7','textAlignLeftOwn');
+checkMemoryButtonState(stateThree,'adjustFont_8','textSpaceLineOwn');
+checkMemoryButtonState(stateSize,'adjustFont_size');
 
 //Para los botones en bold e italic y el space line
 //Bold
@@ -169,12 +259,16 @@ $('#adjustFont_1').click( function() {
         stateCero = 1;
         $('#adjustFont_1 i').addClass('activeButtonText');
         $('#adjustFont_1').addClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_1', '1');
         //Texto mensaje
         M.toast({html: 'Texto en negritas activo.'});
     }else{
         stateCero = 0;
         $('#adjustFont_1 i').removeClass('activeButtonText');
         $('#adjustFont_1').removeClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_1', '0');
         //Texto mensaje
         M.toast({html: 'Texto en negritas apagado.'});
     }
@@ -191,12 +285,16 @@ $('#adjustFont_2').click( function() {
         stateOne = 1;
         $('#adjustFont_2 i').addClass('activeButtonText');
         $('#adjustFont_2').addClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_2', '1');
         //Texto mensaje
         M.toast({html: 'Texto en italica activo.'});
     }else{
         stateOne = 0;
         $('#adjustFont_2 i').removeClass('activeButtonText');
         $('#adjustFont_2').removeClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_2', '0');
         //Texto mensaje
         M.toast({html: 'Texto en italica apagado.'});
     }
@@ -213,12 +311,16 @@ $('#adjustFont_3').click( function() {
         stateTwo = 1;
         $('#adjustFont_3 i').addClass('activeButtonText');
         $('#adjustFont_3').addClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_3', '1');
         //Texto mensaje
         M.toast({html: 'Subrayado activo.'});
     }else{
         stateTwo = 0;
         $('#adjustFont_3 i').removeClass('activeButtonText');
         $('#adjustFont_3').removeClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_3', '0');
         //Texto mensaje
         M.toast({html: 'Subrayado apagado.'});
     }
@@ -235,12 +337,16 @@ $('#adjustFont_8').click( function() {
         stateThree = 1;
         $('#adjustFont_8 i').addClass('activeButtonText');
         $('#adjustFont_8').addClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_8', '1');
         //Texto mensaje
         M.toast({html: 'Espaciado activo.'});
     }else{
         stateThree = 0;
         $('#adjustFont_8 i').removeClass('activeButtonText');
         $('#adjustFont_8').removeClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_8', '0');
         //Texto mensaje
         M.toast({html: 'Espaciado apagado.'});
     }
@@ -258,12 +364,16 @@ $('#adjustFont_7').click( function() {
         stateFive = 1;
         $('#adjustFont_7 i').addClass('activeButtonText');
         $('#adjustFont_7').addClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_7', '1');
         //Texto mensaje
         M.toast({html: 'Justificado apagado.'});
     }else{
         stateFive = 0;
         $('#adjustFont_7 i').removeClass('activeButtonText');
         $('#adjustFont_7').removeClass('shadow6');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_7', '0');
         //Texto mensaje
         M.toast({html: 'Justificado activo.'});
     }
@@ -281,6 +391,8 @@ $('#adjustFont_6').click( function() {
         $('#adjustFont_6 i').addClass('activeButtonText');
         $('#adjustFont_6').addClass('shadow6');
         $('.keyWord').addClass('textWordHelp');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_6', '1');
         //Texto mensaje
         M.toast({html: 'Palabras clave apagadas.'});
     }else{
@@ -288,6 +400,8 @@ $('#adjustFont_6').click( function() {
         $('#adjustFont_6 i').removeClass('activeButtonText');
         $('#adjustFont_6').removeClass('shadow6');
         $('.keyWord').removeClass('textWordHelp');
+        //Guardado en memoria
+        localStorage.setItem('valueTextAdjust_6', '0');
         //Texto mensaje
         M.toast({html: 'Palabras clave activas.'});
     }
