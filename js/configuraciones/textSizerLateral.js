@@ -144,8 +144,7 @@ for(var i = 0; i < textSizeOne.length; i++){
 
         reemplazoH2H3porH1();
         localStorage.setItem('valueTextAdjust_size', 'h1');
-        M.toast({html: 'Tamaño de fuente aumentado.'});
-    });
+           });
 }
 
 //Tamaño H2
@@ -165,8 +164,7 @@ for(var i = 0; i < textSizeTwo.length; i++){
 
         reemplazoH1H3porH2();
         localStorage.setItem('valueTextAdjust_size', 'h2');
-        M.toast({html: 'Tamaño de fuente neutro.'});
-    });
+           });
 }
 
 //Tamaño H3
@@ -186,8 +184,7 @@ for(var i = 0; i < textSizeThree.length; i++){
 
         reemplazoH1H2porH3();
         localStorage.setItem('valueTextAdjust_size', 'h3');
-        M.toast({html: 'Tamaño de fuente reducido.'});
-    });
+           });
 }
 
 
@@ -260,15 +257,12 @@ $('#adjustFont_1').click( function() {
         $('#adjustFont_1').addClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_1', '1');
-        //Texto mensaje
-        M.toast({html: 'Texto en negritas activo.'});
-    }else{
+        }else{
         stateCero = 0;
         $('#adjustFont_1').removeClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_1', '0');
-        //Texto mensaje
-        M.toast({html: 'Texto en negritas apagado.'});
+        
     }
 
     //Accedemos a los textos
@@ -284,15 +278,12 @@ $('#adjustFont_2').click( function() {
         $('#adjustFont_2').addClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_2', '1');
-        //Texto mensaje
-        M.toast({html: 'Texto en italica activo.'});
-    }else{
+        }else{
         stateOne = 0;
         $('#adjustFont_2').removeClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_2', '0');
-        //Texto mensaje
-        M.toast({html: 'Texto en italica apagado.'});
+        
     }
 
     //Accedemos a los textos
@@ -308,15 +299,12 @@ $('#adjustFont_3').click( function() {
         $('#adjustFont_3').addClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_3', '1');
-        //Texto mensaje
-        M.toast({html: 'Subrayado activo.'});
-    }else{
+        }else{
         stateTwo = 0;
         $('#adjustFont_3').removeClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_3', '0');
-        //Texto mensaje
-        M.toast({html: 'Subrayado apagado.'});
+        
     }
 
     //Accedemos a los textos
@@ -332,15 +320,12 @@ $('#adjustFont_8').click( function() {
         $('#adjustFont_8').addClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_8', '1');
-        //Texto mensaje
-        M.toast({html: 'Espaciado activo.'});
-    }else{
+        }else{
         stateThree = 0;
         $('#adjustFont_8').removeClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_8', '0');
-        //Texto mensaje
-        M.toast({html: 'Espaciado apagado.'});
+        
     }
 
     //Accedemos a los textos
@@ -357,15 +342,12 @@ $('#adjustFont_7').click( function() {
         $('#adjustFont_7').addClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_7', '1');
-        //Texto mensaje
-        M.toast({html: 'Justificado apagado.'});
-    }else{
+        }else{
         stateFive = 0;
         $('#adjustFont_7').removeClass('shadow2');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_7', '0');
-        //Texto mensaje
-        M.toast({html: 'Justificado activo.'});
+        
     }
 
     //Accedemos a los textos
@@ -382,16 +364,13 @@ $('#adjustFont_6').click( function() {
         $('.keyWord').addClass('textWordHelp');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_6', '1');
-        //Texto mensaje
-        M.toast({html: 'Palabras clave apagadas.'});
-    }else{
+        }else{
         stateFour = 0;
         $('#adjustFont_6').removeClass('shadow2');
         $('.keyWord').removeClass('textWordHelp');
         //Guardado en memoria
         localStorage.setItem('valueTextAdjust_6', '0');
-        //Texto mensaje
-        M.toast({html: 'Palabras clave activas.'});
+        
     }
 });
 
