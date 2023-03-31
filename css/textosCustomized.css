@@ -1,7 +1,7 @@
 /*Textos*/
 .textoStandar{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin: 0 0 10px 0;
     text-align: justify;
@@ -10,7 +10,7 @@
 
 @media (max-width: 800px) {
 	.textoStandar{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -23,14 +23,14 @@
 
 .textoTitulo{
     font-family: 'Roboto', sans-serif;
-    font-size: 2.4rem;
-    font-weight: 800;
+    font-size: 2.3rem;
+    font-weight: 700;
     margin: 0 0 10px 0;
 }
 
 @media (max-width: 800px) {
 	.textoTitulo{
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         font-weight: 500;
     }
 }
