@@ -44,7 +44,7 @@
 
 .titleNavIpn{
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin: 10px 0 10px 0;
 }
@@ -56,14 +56,26 @@
     margin: 0px !important;
 }
 
+@media (max-width: 800px) {
+	.titleUnity{
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+        margin: 0px !important;
+    }
+    
+}
+
 
 /*Titulos de las unidades*/
 .titleUnityColorUnit1{
     padding: 5px 15px; 
     font-weight: 800; 
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
     background-color: #ffffff; 
     color:#547264;
+    height: auto;
+    display: inline;
 }
 
 .titleUnityColorUnit2{
@@ -72,6 +84,8 @@
     font-size: 1.3rem; 
     background-color: #ffffff; 
     color:#8a5d62;
+    height: auto;
+    display: inline;
 }
 
 .titleUnityColorUnit3{
@@ -80,6 +94,8 @@
     font-size: 1.3rem; 
     background-color: #ffffff; 
     color:#4d394d;
+    height: auto;
+    display: inline;
 }
 
 .titleUnityColorUnit4{
@@ -88,6 +104,8 @@
     font-size: 1.3rem; 
     background-color: #ffffff; 
     color:#53302c;
+    height: auto;
+    display: inline;
 }
 
 .titleUnityColorUnit5{
@@ -96,4 +114,34 @@
     font-size: 1.3rem; 
     background-color: #ffffff; 
     color:#697088;
+    height: auto;
+    display: inline;
 }
+
+@media (max-width: 1000px) {
+    .titleUnityColorUnit1{
+        font-size: 1.0rem;
+        display: none;
+    }
+    
+    .titleUnityColorUnit2{
+        font-size: 1.0rem;
+        display: none;
+    }
+    
+    .titleUnityColorUnit3{
+        font-size: 1.0rem;
+        display: none;
+    }
+    
+    .titleUnityColorUnit4{
+        font-size: 1.0rem;
+        display: none;
+    }
+    
+    .titleUnityColorUnit5{
+        font-size: 1.0rem;
+        display: none;
+    }
+}
+
