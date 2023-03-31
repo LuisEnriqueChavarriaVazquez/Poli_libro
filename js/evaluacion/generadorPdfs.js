@@ -57,7 +57,7 @@ generarDocumento.addEventListener('click', () => {
     let respuestaAlumnoClass = document.getElementsByClassName('respuestaAlumnoClassMark');
 
     let posicionRectangulo = 80;
-    let posicionEnunciado = 93;
+    let posicionEnunciado = 88;
     let posicionRespuesta = 100;
     let posicionRespuestaCorrecta = 105;
     let estadoRespuesta = 110;
@@ -70,9 +70,13 @@ generarDocumento.addEventListener('click', () => {
     
         ///////////////////////////////////////////////
         //Preguntas
-        doc.setFontSize(14);
+        doc.setFontSize(10);
         doc.setTextColor(0, 79, 118);
-        doc.text(20, posicionEnunciado, `${preguntaIdentificador[i].textContent}: ${preguntaEnunciado[i].textContent}`);
+
+        var textLong = `${preguntaIdentificador[i].textContent}: ${preguntaEnunciado[i].textContent}`;
+        var splitText = doc.splitTextToSize(textLong, 175);
+        doc.text(20, posicionEnunciado, splitText);
+
         doc.setFontSize(12);
         doc.setTextColor(0, 0, 0);
         doc.text(20, posicionRespuesta, 'Su respuesta: ' + `${respuestaAlumnoClass[i].value}`);
