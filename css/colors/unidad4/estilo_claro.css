@@ -44,6 +44,7 @@
 /*Menu lateral de textos*/
 .leftBorderUnit4Menu{
     border-bottom: #7e4a44 70px solid !important;
+    overflow-x: hidden;
 }
 
 .activeButtonTextLateral{
@@ -67,4 +68,55 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 10px;
+}
+
+/*Menu lateral para las secciones de la unidad en modo mobile*/
+.containerSectionLateralMobileMenu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.containerSectionLateralMobileMenu p{
+    padding: 10px 10px;
+    margin: 0 !important;
+    height: 40px !important;
+    font-weight: 600;
+    display: none;
+}
+
+.titleSectionMobileMenu{
+    height: 50px;
+    border-radius: 5px !important;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto;
+    cursor: pointer;
+}
+
+.titleSectionMobileMenu b{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.titleSectionMobileMenu i{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleSectionMobileMenu{
+    border-radius: 5px !important;
+}
+
+.activeLinkOptionsContentUnit4Mobile{
+    background-color: #dfdfdf;
+    border-left: #d67c72 10px solid !important;
+    color: #292929;
+    font-weight: 600;
 }
