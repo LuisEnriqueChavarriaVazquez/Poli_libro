@@ -131,8 +131,26 @@ input[type=range]::-webkit-slider-thumb {
         0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #b2d3f8;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: #b2d3f8;
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover {
+    background-color: #4a5f77 !important;
+    color: #fff !important;
+}
+
 /*Configuraciones de textos*/
-.activeButtonText{
+.activeButtonText {
     background-color: #697888 !important;
     color: #e4e4e4 !important;
 }

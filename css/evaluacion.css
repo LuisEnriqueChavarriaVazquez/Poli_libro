@@ -10,7 +10,7 @@
 @media (max-width: 800px) {
     .evaluationFatherContainer{
         gap: 5px;
-        padding: 10px;
+        padding: 5px;
     }
 }
 
@@ -131,7 +131,8 @@
 
 /*Segunda seccion*/
 .optionsQuestionContainer{
-    height: 130px;
+    min-height: 130px;
+    max-height: 150px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -144,4 +145,35 @@
     height: auto;
     width: 100%;
     padding: 10px;
+}
+
+.btnIndividualQuestion{
+    width: 100%;
+}
+
+/*Retroalimentacion de la pregunta*/
+.retroalimentacion{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.mensajeCorrecta{
+    padding: 10px;
+    color: #9cd6b2;
+    background-color: rgb(53, 82, 53);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+
+.mensajeIncorrecta{
+    padding: 10px;
+    color: #ffbcbc;
+    background-color: rgb(85, 36, 36);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
 }

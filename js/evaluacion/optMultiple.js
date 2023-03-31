@@ -46,12 +46,12 @@ function pregunta(numero) {
     //Evaluacion de las preguntas
     console.log(respuestaAlumnoId)
     if (respuestaCorrectaId == respuestaAlumnoId) {
-        retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Correcto</span>` + ", la respuesta es " + `<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
+        retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Correcto</span>` + ", la respuesta es: " + `&nbsp;<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
         retroalimentacion.classList.add('mensajeCorrecta');
         puntajeTotal++;
         preguntasContestadasTotal++;
     } else {
-        retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Incorrecto</span>` +", la respuesta es " + `<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
+        retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Incorrecto</span>` +", la respuesta es: " + `&nbsp;<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
         retroalimentacion.classList.add('mensajeIncorrecta');
         preguntasContestadasTotal++;
     }
@@ -194,7 +194,7 @@ function preguntas_aleatorias() {
                 <!--Opciones de la pregunta-->
                 <section class="optionsQuestionContainer clgreyl3" >
                     <div class="form-check">
-                        <label class="form-check-label textoStandar" for="pregunta${preguntas_aleatorias_indices[i]}_opt1">
+                        <label class="form-check-label textoStandar clbktx" for="pregunta${preguntas_aleatorias_indices[i]}_opt1">
                             <input name="flexRadioDefault1" type="radio" 
                             id="pregunta${preguntas_aleatorias_indices[i]}_opt1" 
                             value="${preguntas[preguntas_aleatorias_indices[i]].opciones[0]}"/>
@@ -202,7 +202,7 @@ function preguntas_aleatorias() {
                         </label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label textoStandar" for="pregunta${preguntas_aleatorias_indices[i]}_opt2">
+                        <label class="form-check-label textoStandar clbktx" for="pregunta${preguntas_aleatorias_indices[i]}_opt2">
                             <input name="flexRadioDefault1" type="radio" 
                             id="pregunta${preguntas_aleatorias_indices[i]}_opt2" 
                             value="${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}"/>
@@ -210,7 +210,7 @@ function preguntas_aleatorias() {
                         </label>
                     </div>
                     <div class="form-check">
-                        <label class="form-check-label textoStandar" for="pregunta${preguntas_aleatorias_indices[i]}_opt3">
+                        <label class="form-check-label textoStandar clbktx" for="pregunta${preguntas_aleatorias_indices[i]}_opt3">
                             <input name="flexRadioDefault1" type="radio" 
                             id="pregunta${preguntas_aleatorias_indices[i]}_opt3" 
                             value="${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}"/>
@@ -219,13 +219,13 @@ function preguntas_aleatorias() {
                     </div>
                 </section>
 
-                <!--Retroalimentacion de la pregunta-->
-                <div id="retroalimentacion"></div>
-
+                
                 <!--Boton para revisar la pregunta-->
                 <div class="evaluateQuestionContainer">
-                    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 clgreyl4 clbktx' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar pregunta<i
-                        class="material-icons right">done</i></a>
+                    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar pregunta<i
+                    class="material-icons right">done</i></a>
+                    <!--Retroalimentacion de la pregunta-->
+                    <div id="retroalimentacion"></div>
                 </div>
             </form>
         </section>
