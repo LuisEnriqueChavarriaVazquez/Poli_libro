@@ -5,4 +5,5 @@ $(document).ready(function () {
     $('.scrollspy').scrollSpy();
     $('.materialboxed').materialbox();
     $('.modal').modal();
+    $('.tooltipped').tooltip();
 });
