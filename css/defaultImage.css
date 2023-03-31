@@ -1,10 +1,11 @@
 /*Imagen por defecto*/
 .defaultImage{
     width: 100%;
-    height: 150px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 20px 0;
 }
 
@@ -15,5 +16,42 @@
     background-repeat: no-repeat;
     background-origin: initial;
     background-size: contain;
-    background-image: url('../img/default.png');
+}
+
+/*Rutas de los iconos*/
+#bienvenida{
+    background-image: url('../icons/bienvenida.svg');
+}
+
+#metodologia{
+    background-image: url('../icons/metodologia.svg');
+}
+
+#unidadCompetencia{
+    background-image: url('../icons/unidadCompetencia.svg');
+}
+
+#evaluacionAprendizajes{
+    background-image: url('../icons/evaluacion.svg');
+}
+
+#requerimientos{
+    background-image: url('../icons/requerimientos.svg');
+}
+
+#fuentes{
+    background-image: url('../icons/fuentes.svg');
+}
+
+#notFound{
+    background-image: url('../icons/notFound.svg');
+}
+
+/*Referencia de los iconos*/
+.referenciaIcono{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
