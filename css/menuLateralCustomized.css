@@ -177,9 +177,9 @@
     height: 100vh;
 }
 
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
     #lateralUnityContent {
-        overflow-y: auto;
+        overflow-y: hidden;
         height: auto;
     }
 }

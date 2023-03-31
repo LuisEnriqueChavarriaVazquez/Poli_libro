@@ -52,6 +52,14 @@
     z-index: 1000000;
 }
 
+.sidenav{
+    z-index: 10000000000;
+}
+
+.sidenav-overlay{
+    z-index: 1000000000;
+}
+
 .tabsFixed{
     position: fixed !important;
     top: 0;
