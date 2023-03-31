@@ -55,3 +55,68 @@
     justify-content: center;
     align-items: center;
 }
+
+/*Formato de las imagenes con zoom*/
+.imagenDefaultContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titleImageMine{
+    font-size: 18px;
+}
+
+.noteImageMine{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.imageZoomedContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageZoomed{
+    width: 700px;
+}
+
+@media (max-width: 1300px) {
+    .imageZoomed{
+        width: 500px;
+    }
+
+    .titleImageMine{
+        font-size: 16px;
+    }
+    
+    .noteImageMine{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .imageZoomed{
+        width: 400px;
+    }
+    
+    .titleImageMine{
+        font-size: 14px;
+    }
+    
+    .noteImageMine{
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .imageZoomed{
+        width: 300px;
+    }
+}
