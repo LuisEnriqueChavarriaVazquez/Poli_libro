@@ -32,7 +32,7 @@ function pregunta(numero) {
     let respuestaCorrectaId = respuestasId[numero]
     let contenedor = document.getElementById("pregunta" + String(numero))
     let retroalimentacion = contenedor.querySelector("#retroalimentacion")
-    var respuestaAlumnoId = contenedor.querySelector("section>div>input:checked").id;
+    var respuestaAlumnoId = contenedor.querySelector("section>div>label>input:checked").id;
 
     //Elementos para conteo de puntaje
     let barraPreguntas = document.getElementById('barraPreguntas');
@@ -182,47 +182,53 @@ function preguntas_aleatorias() {
     let contenido_preguntas = "";
     for (i = 1; i < preguntas_aleatorias_indices.length; i++) {
         contenido_preguntas = contenido_preguntas + `
-        <div class="card">
-        <div class="card-body" id="pregunta${preguntas_aleatorias_indices[i]}">
-        <form>
-            <h5 class="preguntaIdentificador card-title textoReadingTitle">Pregunta ${i}</h5>
-            <p class="preguntaEnunciado textoReading">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
-            <section class="m-3" >
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault1"
-                        id="pregunta${preguntas_aleatorias_indices[i]}_opt1" value="${preguntas[preguntas_aleatorias_indices[i]].opciones[0]}">
-                    <label class="form-check-label textoReading" for="pregunta${preguntas_aleatorias_indices[i]}_opt1">
-                    ${preguntas[preguntas_aleatorias_indices[i]].opciones[0]}
-                    </label>
+        <section id="pregunta${preguntas_aleatorias_indices[i]}">
+            <!--Formulario para la revision de la pregunta-->
+            <form class="cardPregunta clgreyl2 border1">
+                <!--Numero y enunciado de la pregunta-->
+                <div class="titleQuestionContainer clgreyl3">
+                    <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar">Pregunta ${i}</h5>
+                    <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault1"
-                        id="pregunta${preguntas_aleatorias_indices[i]}_opt2" value="${preguntas[preguntas_aleatorias_indices[i]].opciones[1]}">
-                    <label class="form-check-label textoReading" for="pregunta${preguntas_aleatorias_indices[i]}_opt2">
-                    ${preguntas[preguntas_aleatorias_indices[i]].opciones[1]}
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault1"
-                        id="pregunta${preguntas_aleatorias_indices[i]}_opt3" value="${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}">
-                    <label class="form-check-label textoReading" for="pregunta${preguntas_aleatorias_indices[i]}_opt3">
-                    ${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}
-                    </label>
-                </div>
-            </section>
-            <div id="retroalimentacion">
+                
+                <!--Opciones de la pregunta-->
+                <section class="optionsQuestionContainer clgreyl3" >
+                    <div class="form-check">
+                        <label class="form-check-label textoStandar" for="pregunta${preguntas_aleatorias_indices[i]}_opt1">
+                            <input name="flexRadioDefault1" type="radio" 
+                            id="pregunta${preguntas_aleatorias_indices[i]}_opt1" 
+                            value="${preguntas[preguntas_aleatorias_indices[i]].opciones[0]}"/>
+                            <span>${preguntas[preguntas_aleatorias_indices[i]].opciones[0]}</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label textoStandar" for="pregunta${preguntas_aleatorias_indices[i]}_opt2">
+                            <input name="flexRadioDefault1" type="radio" 
+                            id="pregunta${preguntas_aleatorias_indices[i]}_opt2" 
+                            value="${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}"/>
+                            <span>${preguntas[preguntas_aleatorias_indices[i]].opciones[1]}</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label textoStandar" for="pregunta${preguntas_aleatorias_indices[i]}_opt3">
+                            <input name="flexRadioDefault1" type="radio" 
+                            id="pregunta${preguntas_aleatorias_indices[i]}_opt3" 
+                            value="${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}"/>
+                            <span>${preguntas[preguntas_aleatorias_indices[i]].opciones[2]}</span>
+                        </label>
+                    </div>
+                </section>
 
-            </div>
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary btnIndividualQuestion" id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})" type="button">
-                    <span class="textoReading">
-                    Revisar pregunta
-                    </span>
-                </button>
-            </div>
+                <!--Retroalimentacion de la pregunta-->
+                <div id="retroalimentacion"></div>
+
+                <!--Boton para revisar la pregunta-->
+                <div class="evaluateQuestionContainer">
+                    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 clgreyl4 clbktx' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar pregunta<i
+                        class="material-icons right">done</i></a>
+                </div>
             </form>
-        </div>
-    </div>
+        </section>
         `;
     }
     contenedor_preguntas.innerHTML = contenido_preguntas;

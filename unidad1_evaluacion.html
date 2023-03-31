@@ -20,15 +20,13 @@
     <link rel="stylesheet" href="css/bordersCustomized.css">
     <link rel="stylesheet" href="css/scrollBarCustomized.css">
     <link rel="stylesheet" href="css/footerCustomized.css">
-    <link rel="stylesheet" href="css/botonPoliLibro.css">
     <link rel="stylesheet" href="css/defaultImage.css">
     <link rel="stylesheet" href="css/textosCustomized.css">
     <link rel="stylesheet" href="css/navCustomized.css">
     <link rel="stylesheet" href="css/tabsCustomized.css">
     <link rel="stylesheet" href="css/cardsCustomized.css">
     <link rel="stylesheet" href="css/menuLateralCustomized.css">
-    <link rel="stylesheet" href="css/menuLateralFontAdjust.css">
-    <link rel="stylesheet" href="css/fontAdjust.css">
+    <link rel="stylesheet" href="css/evaluacion.css">
 
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
@@ -100,51 +98,57 @@
     </section>
 
 
-    <section>
+    <section class="evaluationFatherContainer clw">
 
-        <section class="cardsPaginaContenidoGridPadding">
-            <div class="contenedorBarraProgreso">
-                <p class="contenedorBarraProgresoTexto textoReading">Preguntas correctas <span
+        <p class="textoTitulo clbktx tituloEvaluacion">Indicadores</p>
+        <!--Contador de preguntas-->
+        <section class="cardsEvaluation clgreyl1 border1">
+            <!--Primera card-->
+            <div class="contenedorBarraProgreso clgreyl2 border1 shadow2">
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas correctas <span
                         id="contadorPreguntas">0</span>/10</p>
-                <hr>
-                <p class="contenedorBarraProgresoTexto textoReading">Preguntas respondidas <span
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas respondidas <span
                         id="contadorPreguntasRespondidas">0</span>/10</p>
                 <div class="contenedorBarraProgresoBarra" id="barraPreguntas"></div>
             </div>
 
-            <div class="contenedorBarraProgreso">
-                <p class="contenedorBarraProgresoTexto textoReading">Fecha de respuesta: <span
-                        id="fechaActual"></span></p>
-                <p class="contenedorBarraProgresoTexto textoReading">Tiempo:
+            <!--Segunda card-->
+            <div class="contenedorBarraProgreso clgreyl2 border1 shadow2">
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha de respuesta: <span id="fechaActual"></span>
+                </p>
+
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Tiempo:
                     <span id="tiempoActualHoras">00</span>:
                     <span id="tiempoActualMinutos">00</span>':
                     <span id="tiempoActualSegundos">00</span>''
                 </p>
-                <p class="contenedorBarraProgresoTexto textoReading">Intentos: <span
-                        id="intentosActuales"></span></p>
+
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span id="intentosActuales"></span></p>
             </div>
         </section>
 
-        <section class="cardsPaginaContenidoGridPadding" id="contenedor_preguntas">
+        <p class="textoTitulo clbktx tituloEvaluacion">Preguntas</p>
+        <!--Preguntas del cuestionario-->
+        <section class="cardsEvaluation clgreyl1 border1" id="contenedor_preguntas">
 
         </section>
 
-        <br>
-        <section class="cardsPaginaContenidoListPadding">
-            <p class="notaStyle textoReading">Nota: Por respeto a su privacidad las descargas de PDFs de
+        <p class="textoTitulo clbktx tituloEvaluacion">Descargar resultados</p>
+        <!--Descarga de archivos-->
+        <section class="cardsEvaluationDownload clgreyl1 border1">
+            <p class="notaStyle clgreyl2 border1 shadow2 clbktx textoStandar">Nota: Por respeto a su privacidad las
+                descargas de PDFs de
                 resultados en Android
                 no son posibles, puesto que al ser generados del lado del cliente se solicitan permisos de
                 lectura/escritura más alla de lo necesario. Favor de tomar captura de
                 pantalla de sus resultados si es usuario de Android.</p>
 
-            <div class="d-grid gap-2 mt-3 textoReading">
-                <button class="btn btn-lg btn-secondary" id="generarDocumento" type="button">Descargar
-                    resultados en PDF</button>
-            </div>
+                <a class='btn-large waves-effect waves-light border1 white-text cl4' id="generarDocumento">Polilibro<i
+                    class="material-icons right">file_download</i></a>
         </section>
 
     </section>
-    
+
 
 
     <!--Inyectamos componente de footer-->
