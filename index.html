@@ -58,6 +58,11 @@
   <!--No copy-->
   <script defer src="js/noCopy.js"></script>
 
+  <!--Tutorial interactivo-->
+  <script defer src="js/driver.min.js"></script>
+  <link rel="stylesheet" href="css/driver.min.css">
+  <script defer src="js/tutorialInteractive.js"></script>
+
 </head>
 
 <body>
@@ -77,18 +82,18 @@
     <!--Navbar principal-->
     <nav>
       <div class="nav-wrapper cl2">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
+        <a href="#" data-target="mobile-demo" id="a12tutorialButton" class="sidenav-trigger show-on-large cl2"><i
             class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a class='btn waves-effect waves-light border1 white-text cl4' href='polilibro.html'>Polilibro<i
+          <li id="a1tutorialButton"><a class='btn waves-effect waves-light border1 white-text cl4' href='polilibro.html'>Polilibro<i
                 class="material-icons right">menu_book</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text cl4' href='glosario.html'>Glosario<i
+          <li id="a2tutorialButton"><a class='btn waves-effect waves-light border1 white-text cl4' href='glosario.html'>Glosario<i
                 class="material-icons right">library_books</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text cl3' href='contacto.html'>Contacto<i
+          <li id="a3tutorialButton"><a class='btn waves-effect waves-light border1 white-text cl3' href='contacto.html'>Contacto<i
                 class="material-icons right">alternate_email</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text cl3' href='manual.html'>Manual<i
+          <li id="a4tutorialButton"><a class='btn waves-effect waves-light border1 white-text cl3' href='manual.html'>Manual<i
                 class="material-icons right">help</i></a></li>
-          <li><a class='btn waves-effect waves-light border1 white-text cl3' href='configuracion.html'>Configuración<i
+          <li id="a5tutorialButton"><a class='btn waves-effect waves-light border1 white-text cl3' href='configuracion.html'>Configuración<i
                 class="material-icons right">settings</i></a></li>
         </ul>
       </div>
@@ -109,12 +114,12 @@
 
     <!--Menu para los contenidos en tiempo real-->
     <ul id="tabs-swipe-demo" class="tabs cl2">
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-1">Bienvenida</a></li>
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-3">Metodología</a></li>
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-2">Unidad de competencia</a></li>
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-4">Evaluación de los aprendizajes</a></li>
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-5">Requerimientos</a></li>
-      <li class="tab col s3"><a class="white-text" href="#test-swipe-6">Fuentes de consulta</a></li>
+      <li class="tab col s3 cl2" id="a6tutorialButton"><a class="white-text" href="#test-swipe-1">Bienvenida</a></li>
+      <li class="tab col s3 cl2" id="a7tutorialButton"><a class="white-text" href="#test-swipe-3">Metodología</a></li>
+      <li class="tab col s3 cl2" id="a8tutorialButton"><a class="white-text" href="#test-swipe-2">Unidad de competencia</a></li>
+      <li class="tab col s3 cl2" id="a9tutorialButton"><a class="white-text" href="#test-swipe-4">Evaluación de los aprendizajes</a></li>
+      <li class="tab col s3 cl2" id="a10tutorialButton"><a class="white-text" href="#test-swipe-5">Requerimientos</a></li>
+      <li class="tab col s3 cl2" id="a11tutorialButton"><a class="white-text" href="#test-swipe-6">Fuentes de consulta</a></li>
     </ul>
   </section>
 
@@ -287,6 +292,9 @@
       </div>
     </div>
   </section>
+
+  <!--Boton de tutorial-->
+  <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4" id="buttonHelp"><i class="material-icons left">help</i>Ayuda</a>
 
   <!--Inyectamos componente de footer-->
   <section id="footerListener"></section>
