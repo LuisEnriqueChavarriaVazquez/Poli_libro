@@ -1,4 +1,4 @@
-const driver = new Driver({
+var driver = new Driver({
     allowClose: false,
     showButtons: true,         
     closeBtnText: 'Cerrar',      
@@ -8,7 +8,7 @@ const driver = new Driver({
 });
 
 //Accedemos al boton de ayuda
-let buttonHelp = document.getElementById('buttonHelp');
+let buttonHelp = document.getElementById('buttonComputerHelp');
 //Boton del menu lateral
 let a12tutorialButton = document.getElementById('a12tutorialButton');
 
@@ -59,6 +59,7 @@ driver.defineSteps([
     element: '#a6tutorialButton',
     popover: {
       title: 'Bienvenida',
+      
       description: 'En esta pestaña encontrará el texto introductorio al sitio web.',
       position: 'right'
     }
