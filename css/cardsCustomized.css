@@ -54,16 +54,6 @@
     flex-direction: column;
 }
 
-/* .tituloSeleccionUnidades{
-    width: calc(100% - 70px);
-}
-
-@media (max-width: 800px) {
-    .tituloSeleccionUnidades{
-        margin-top: 5vh;
-    }
-} */
-
 .unitCardsContainer{
     display: grid;
     grid-template-columns: 1fr;
