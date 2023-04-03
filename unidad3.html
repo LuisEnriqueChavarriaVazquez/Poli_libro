@@ -7,61 +7,31 @@
     <title>Unidad 1</title>
     <link rel="shortcut icon" href="img/ipn.ico" type="image/x-icon">
 
-    <!--Fonts-->
-    <link rel="stylesheet" href="fonts/roboto.css">
-
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/scss/addsOn/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/ownStyles.css">
-
-    <!--Componentes personalizados-->
-    <link rel="stylesheet" href="css/shadowsCustomized.css">
-    <link rel="stylesheet" href="css/bordersCustomized.css">
-    <link rel="stylesheet" href="css/scrollBarCustomized.css">
-    <link rel="stylesheet" href="css/footerCustomized.css">
-    <link rel="stylesheet" href="css/botonPoliLibro.css">
-    <link rel="stylesheet" href="css/defaultImage.css">
-    <link rel="stylesheet" href="css/textosCustomized.css">
-    <link rel="stylesheet" href="css/navCustomized.css">
-    <link rel="stylesheet" href="css/tabsCustomized.css">
-    <link rel="stylesheet" href="css/cardsCustomized.css">
-    <link rel="stylesheet" href="css/menuLateralCustomized.css">
-    <link rel="stylesheet" href="css/menuLateralFontAdjust.css">
-    <link rel="stylesheet" href="css/fontAdjust.css">
+    <link rel="stylesheet" href="css/scss/styles.css">
+    <link rel="stylesheet" href="css/scss/addsOn/driver.min.css">
 
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
     <link id="unitColorsAdaptable" rel="stylesheet">
 
-
-    <!--Shimmer effect-->
-    <link rel="stylesheet" href="css/load/shimmer.css">
-
     <!-- Compiled and minified JavaScript -->
-    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/materialize.min.js"></script>
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
     <!--Componentes inyectables-->
     <script defer src="js/components/footer.js"></script>
 
     <!--Scripts propios-->
-    <script defer src="js/hideSuperiorNav.js"></script>
     <script defer src="js/toggleMenuLateralUnity.js"></script>
     <script defer src="js/menuSticky.js"></script>
     <script defer src="js/activeLinksUnits/activeLinksU3.js"></script>
-
-    <!--Scripts de configuraciones-->
     <script defer src="js/configuraciones/modoLuz.js"></script>
     <script defer src="js/configuraciones/modoLectura.js"></script>
     <script defer src="js/configuraciones/textSizerLateral.js"></script>
-
-    <!--Scripts para la pantalla de carga-->
-    <script defer src="js/loading/loadingGlosario.js"></script>
-
-    <!--No copy-->
     <script defer src="js/noCopy.js"></script>
 
 </head>
@@ -95,7 +65,7 @@
     </section>
 
 
-    <section class="fullUnity">
+    <section class="fullUnity clgreyl1">
         <!--Contenidos principales de la unidad-->
         <section id="lateralUnityMenuBackOne" class="lateralUnityMenuBackOne menuLateralWidthShow"
             style="background-color: #ebaceb;">
@@ -173,35 +143,52 @@
             <li><a class="clbktx textoStandar clw border0 activeButtonTextLateral" href="unidad3.html"><i
                         class="material-icons clbktx">looks_3</i>Unidad 3</a></li>
             <div class="containerSectionLateralMobileMenu clgreyl1 border0">
-                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="primeraSeccion"><i class="material-icons" id="primeraSeccionIcon">expand_more</i><b>Sección A Introducción</b></div>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.1 Con texto mucho más amplios para poder verlo en el menu</p>
+                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="primeraSeccion"><i
+                        class="material-icons" id="primeraSeccionIcon">expand_more</i><b>Sección A Introducción</b>
+                </div>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.1 Con
+                    texto mucho más amplios para poder verlo en el menu</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.2</p>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.3 Con texto un poco más largo</p>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.3 Con
+                    texto un poco más largo</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.4</p>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.1 Con texto mucho más amplios para poder verlo en el menu</p>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.1 Con
+                    texto mucho más amplios para poder verlo en el menu</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.2</p>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.3 Con texto un poco más largo</p>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.3 Con
+                    texto un poco más largo</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx primeraSeccionHide">Sección A.4</p>
             </div>
             <div class="containerSectionLateralMobileMenu clgreyl1 border0">
-                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="segundaSeccion"><i class="material-icons" id="segundaSeccionIcon">expand_more</i><b>Sección A Introducción</b></div>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx segundaSeccionHide">Sección A.1 Con texto mucho más amplios para poder verlo en el menu</p>
+                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="segundaSeccion"><i
+                        class="material-icons" id="segundaSeccionIcon">expand_more</i><b>Sección A Introducción</b>
+                </div>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx segundaSeccionHide">Sección A.1 Con
+                    texto mucho más amplios para poder verlo en el menu</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx segundaSeccionHide">Sección A.2</p>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx segundaSeccionHide">Sección A.3 Con texto un poco más largo</p>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx segundaSeccionHide">Sección A.3 Con
+                    texto un poco más largo</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx segundaSeccionHide">Sección A.4</p>
             </div>
             <div class="containerSectionLateralMobileMenu clgreyl1 border0">
-                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="terceraSeccion"><i class="material-icons" id="terceraSeccionIcon">expand_more</i><b>Sección A Introducción</b></div>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx terceraSeccionHide">Sección A.1 Con texto mucho más amplios para poder verlo en el menu</p>
+                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="terceraSeccion"><i
+                        class="material-icons" id="terceraSeccionIcon">expand_more</i><b>Sección A Introducción</b>
+                </div>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx terceraSeccionHide">Sección A.1 Con
+                    texto mucho más amplios para poder verlo en el menu</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx terceraSeccionHide">Sección A.2</p>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx terceraSeccionHide">Sección A.3 Con texto un poco más largo</p>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx terceraSeccionHide">Sección A.3 Con
+                    texto un poco más largo</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx terceraSeccionHide">Sección A.4</p>
             </div>
             <div class="containerSectionLateralMobileMenu clgreyl1 border0">
-                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="cuartaSeccion"><i class="material-icons" id="cuartaSeccionIcon">expand_more</i><b>Sección A Introducción</b></div>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx cuartaSeccionHide">Sección A.1 Con texto mucho más amplios para poder verlo en el menu</p>
+                <div class="truncate waves-effect clbktx clgreyl2 titleSectionMobileMenu" id="cuartaSeccion"><i
+                        class="material-icons" id="cuartaSeccionIcon">expand_more</i><b>Sección A Introducción</b></div>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx cuartaSeccionHide">Sección A.1 Con
+                    texto mucho más amplios para poder verlo en el menu</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx cuartaSeccionHide">Sección A.2</p>
-                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx cuartaSeccionHide">Sección A.3 Con texto un poco más largo</p>
+                <p class="navOptionsContentMobileMenu truncate waves-effect clbktx cuartaSeccionHide">Sección A.3 Con
+                    texto un poco más largo</p>
                 <p class="navOptionsContentMobileMenu truncate waves-effect clbktx cuartaSeccionHide">Sección A.4</p>
             </div>
             <li><a class="clbktx textoStandar clgreyl1 border0" href="unidad2.html"><i
@@ -217,15 +204,24 @@
         <!--Menu para la configuración de los textos-->
         <ul id="slide-fontAdjust" class="sidenav clw leftBorderUnit3Menu">
             <p class="textoTitulo white-text lateralMenuAdjustTextTitle">Textos</p>
-            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_1"><i class="material-icons clbktx">format_bold</i>Texto en negritas</a></li>
-            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_2"><i class="material-icons clbktx">format_italic</i>Texto en italica</a></li>
-            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_3"><i class="material-icons clbktx">format_underlined</i>Texto subrayado</a></li>
-            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_6"><i class="material-icons clbktx">border_color</i>Palabras clave</a></li>
-            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_7"><i class="material-icons clbktx">format_align_left</i>Quitar justificado</a></li>
-            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_8"><i class="material-icons clbktx">format_line_spacing</i>Espaciado de lineas</a></li>
-            <li><a class="clbktx textoStandar clw border1 textSizeOne" href="#"><i class="clbktx">H1</i>Tamaño de fuente H1</a></li>
-            <li><a class="clbktx textoStandar clw border1 textSizeTwo" href="#"><i class="clbktx">H2</i>Tamaño de fuente H2</a></li>
-            <li><a class="clbktx textoStandar clw border1 textSizeThree" href="#"><i class="clbktx">H3</i>Tamaño de fuente H3</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_1"><i
+                        class="material-icons clbktx">format_bold</i>Texto en negritas</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_2"><i
+                        class="material-icons clbktx">format_italic</i>Texto en italica</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_3"><i
+                        class="material-icons clbktx">format_underlined</i>Texto subrayado</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_6"><i
+                        class="material-icons clbktx">border_color</i>Palabras clave</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_7"><i
+                        class="material-icons clbktx">format_align_left</i>Quitar justificado</a></li>
+            <li><a class="clbktx textoStandar clw border1" href="#" id="adjustFont_8"><i
+                        class="material-icons clbktx">format_line_spacing</i>Espaciado de lineas</a></li>
+            <li><a class="clbktx textoStandar clw border1 textSizeOne" href="#"><i class="clbktx">H1</i>Tamaño de fuente
+                    H1</a></li>
+            <li><a class="clbktx textoStandar clw border1 textSizeTwo" href="#"><i class="clbktx">H2</i>Tamaño de fuente
+                    H2</a></li>
+            <li><a class="clbktx textoStandar clw border1 textSizeThree" href="#"><i class="clbktx">H3</i>Tamaño de
+                    fuente H3</a></li>
         </ul>
 
         <!--Contenidos principales de texto-->
@@ -243,8 +239,8 @@
                         cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nostrum
                         labore <i class="keyWord"> lorem clave de ejemplo
-                        minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-                        accusamus,</i>
+                            minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                            accusamus,</i>
                         similique
                         laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
                     </p>
@@ -278,8 +274,8 @@
                         cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nostrum
                         labore <i class="keyWord"> lorem clave de ejemplo
-                        minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-                        accusamus,</i>
+                            minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                            accusamus,</i>
                         similique
                         laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
                     </p>
@@ -295,8 +291,8 @@
                         cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nostrum
                         labore <i class="keyWord"> lorem clave de ejemplo
-                        minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-                        accusamus,</i>
+                            minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
+                            accusamus,</i>
                         similique
                         laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
                     </p>

@@ -4,67 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Polilibro</title>
+    <title>Configuración</title>
     <link rel="shortcut icon" href="img/ipn.ico" type="image/x-icon">
 
-    <!--Fonts-->
-    <link rel="stylesheet" href="fonts/roboto.css">
-
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/scss/addsOn/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/ownStyles.css">
-
-    <!--Componentes personalizados-->
-    <link rel="stylesheet" href="css/shadowsCustomized.css">
-    <link rel="stylesheet" href="css/bordersCustomized.css">
-    <link rel="stylesheet" href="css/scrollBarCustomized.css">
-    <link rel="stylesheet" href="css/footerCustomized.css">
-    <link rel="stylesheet" href="css/defaultImage.css">
-    <link rel="stylesheet" href="css/textosCustomized.css">
-    <link rel="stylesheet" href="css/navCustomized.css">
-    <link rel="stylesheet" href="css/cardsCustomized.css">
-    <link rel="stylesheet" href="css/config.css">
-    <link rel="stylesheet" href="css/fontAdjust.css">
+    <link rel="stylesheet" href="css/scss/styles.css">
+    <link rel="stylesheet" href="css/scss/addsOn/driver.min.css">
 
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
 
     <!-- Compiled and minified JavaScript -->
-    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/materialize.min.js"></script>
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
     <!--Componentes inyectables-->
     <script defer src="js/components/footer.js"></script>
 
-    <!--Scripts propios-->
-    <script defer src="js/hideSuperiorNav.js"></script>
-
     <!--Scripts de configuraciones-->
     <script defer src="js/configuraciones/modoLuz.js"></script>
     <script defer src="js/configuraciones/modoLectura.js"></script>
     <script defer src="js/configuraciones/textsizer.js"></script>
+    <script defer src="js/loading/loadScreen.js"></script>
+    <script defer src="js/noCopy.js"></script>
+
+    <!--Tutorial interactivo-->
+    <script defer src="js/driver.min.js"></script>
+    <script defer src="js/tutorialInteractive.js"></script>
 
     <!--Scripts para saber datos sobre la memoria-->
     <script defer src="js/memoria/datosGuardados.js"></script>
-
-    <!--No copy-->
-    <!-- <script defer src="js/noCopy.js"></script> -->
-
-    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
-    <!-- <script src="https://cdn.tiny.cloud/1/bcjg9uoh2946vwwh06d86haeg33tw5awmre3248h9yv3wo7g/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
-    <!-- <script>
-        tinymce.init({
-            selector: '#mytextarea',
-        });
-
-        function get_editor_content() {
-            // Get the HTML contents of the currently active editor
-            console.debug(tinyMCE.activeEditor.getContent());
-        }
-    </script> -->
 
 </head>
 
@@ -92,19 +64,13 @@
         </nav>
     </section>
 
-    <!-- <form method="post">
-        <textarea id="mytextarea">Hello, World!</textarea>
-    </form>
-    <button onclick="get_editor_content()">Get content</button>  -->
-
     <section class="containerSettings clgreyl1">
         <div class="cardDesign clw shadow2 border1">
             <!--Modo oscuro/luz-->
             <p class="textoTitulo clbktx">
                 Color
-                <a class="waves-effect waves-light tooltipped clbktx"
-                    style="position: relative; bottom: 0px;" data-position="bottom"
-                    data-tooltip="Elegir el modo oscuro o el modo luz.">
+                <a class="waves-effect waves-light tooltipped clbktx" style="position: relative; bottom: 0px;"
+                    data-position="bottom" data-tooltip="Elegir el modo oscuro o el modo luz.">
                     <i class="material-icons">help</i>
                 </a>
             </p>
@@ -116,9 +82,8 @@
             <!--Modo de lectura-->
             <p class="textoTitulo clbktx">
                 Modo lectura
-                <a class="waves-effect waves-light tooltipped clbktx"
-                    style="position: relative; bottom: 0px;" data-position="bottom"
-                    data-tooltip="Elegir el grado de tono sepia.">
+                <a class="waves-effect waves-light tooltipped clbktx" style="position: relative; bottom: 0px;"
+                    data-position="bottom" data-tooltip="Elegir el grado de tono sepia.">
                     <i class="material-icons">help</i>
                 </a>
             </p>
@@ -135,8 +100,8 @@
         <div class="cardDesign clw shadow2 border1">
             <!--Modificación de los textos-->
             <p class="textoTitulo clbktx">Texto
-                <a class="waves-effect waves-light tooltipped clbktx"
-                    style="position: relative; bottom: 0px;" data-position="bottom"
+                <a class="waves-effect waves-light tooltipped clbktx" style="position: relative; bottom: 0px;"
+                    data-position="bottom"
                     data-tooltip="Configurar el texto que aparecera en las unidades para su lectura">
                     <i class="material-icons">help</i>
                 </a>
@@ -159,7 +124,8 @@
                         class="descAdjustButton">Quitar justificado</span></div>
                 <div class="cardFontAdjustButton waves-effect clw clbktx shadow2 border1" id="adjustFont_8"><i
                         class="iconAdjustButton waves-effect cl4 white-text material-icons">format_line_spacing</i>
-                    <span class="descAdjustButton">Altura de linea</span></div>
+                    <span class="descAdjustButton">Altura de linea</span>
+                </div>
                 <div class="cardFontAdjustButtonSize waves-effect clw clbktx shadow2 border1" id="adjustFont_size">
                     <i class="textSizeOne iconAdjustButtonSize textoStandar waves-effect cl4 white-text">H1</i>
                     <i class="textSizeTwo iconAdjustButtonSize textoStandar waves-effect cl4 white-text">H2</i>

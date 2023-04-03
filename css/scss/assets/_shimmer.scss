@@ -1,45 +1,50 @@
 /*Cargador shimmer*/
+
 .shimmer {
     color: grey;
     display: inline-block;
-    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) (right / 300%) 100%;
     background-repeat: no-repeat;
     animation: shimmer 2.5s infinite;
 }
-    
-    @keyframes shimmer {
-        100% {
-            -webkit-mask-position: left
-        }
+
+@keyframes shimmer {
+    100% {
+        -webkit-mask-position: left;
     }
+}
 
 /*Caja donde se carga el contenido*/
-.loadContentScreen{
+
+.loadContentScreen {
     width: 100%;
     height: auto;
 }
 
 /*Clase para ocultar los elementos*/
-.readyContentScreen{
-    display: none;
+
+.readyContentScreen {
+    display: none !important;
 }
 
 /*Contenedor y caja de carga*/
-.loadingBoxShimmerContainer{
+
+.loadingBoxShimmerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px 0;
 }
 
-.loadingBoxShimmer{
+.loadingBoxShimmer {
     width: 100%;
     height: 150px;
     border-radius: 10px;
 }
 
 /*Contenedor y textos de carga*/
-.loadingTextShimmerContainer{
+
+.loadingTextShimmerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +54,7 @@
     padding: 5px 0;
 }
 
-.loadingText{
+.loadingText {
     width: 100%;
     height: 30px;
     border-radius: 5px;
@@ -57,7 +62,8 @@
 }
 
 /*Contenedor y fotos de docentes carga*/
-.loadingContactShimmerContainer{
+
+.loadingContactShimmerContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -67,7 +73,7 @@
     box-sizing: border-box;
 }
 
-.loadingContact{
+.loadingContact {
     width: 100%;
     height: 500px;
     border-radius: 10px;
@@ -75,7 +81,7 @@
 }
 
 @media (max-width: 1300px) {
-    .loadingContactShimmerContainer{
+    .loadingContactShimmerContainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
@@ -85,25 +91,26 @@
         box-sizing: border-box;
     }
 
-    .loadingContact{
+    .loadingContact {
         height: 350px;
     }
 }
 
 @media (max-width: 780px) {
-    .loadingContactShimmerContainer{
+    .loadingContactShimmerContainer {
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 0;
     }
 
-    .loadingContact{
+    .loadingContact {
         height: 350px;
     }
 }
 
 /*Contenedor para la carga de las palabras*/
-.loadingContactShimmerWord{
+
+.loadingContactShimmerWord {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -112,20 +119,21 @@
 }
 
 @media (max-width: 800px) {
-    .loadingContactShimmerWord{
+    .loadingContactShimmerWord {
         padding: 20px 10px 20px 10px;
         gap: 15px;
-    } 
+    }
 }
 
-.loadingWord{
+.loadingWord {
     width: 100%;
     height: 200px;
     border-radius: 20px;
 }
 
 /*Carga del menu de unidades del polilibro*/
-.loadingContactShimmerUnidad{
+
+.loadingContactShimmerUnidad {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -135,27 +143,26 @@
     height: auto;
 }
 
-.loadingUnidad{
+.loadingUnidad {
     width: 100%;
     height: 160px;
     border-radius: 20px;
 }
 
-
 @media (max-width: 1200px) {
-	.loadingContactShimmerUnidad{
+    .loadingContactShimmerUnidad {
         gap: 20px;
         padding: 20px 20px 20px 20px;
     }
 }
 
 @media (max-width: 800px) {
-    .loadingContactShimmerUnidad{
+    .loadingContactShimmerUnidad {
         gap: 20px;
         padding: 15px 20px 20px 20px;
     }
 
-    .loadingUnidad{
+    .loadingUnidad {
         height: 130px;
         padding: 20px;
         padding: 25px 20px 20px 20px;

@@ -3,18 +3,18 @@
 @use "variables/_variables.scss";
 
 //Assets generales
+@use "assets/_textCustomized.scss";
 @use "assets/_borders.scss";
 @use "assets/_buttons.scss";
 @use "assets/_cards.scss";
 @use "assets/_image.scss";
-@use "assets/_footer.scss";
 @use "assets/_menuLateralCustomized.scss";
 @use "assets/_menuLateralTextAdjust.scss";
 @use "assets/_navCustomized.scss";
 @use "assets/_scrollBarCustomized.scss";
 @use "assets/_shadowCustomized.scss";
 @use "assets/_tabsCustomized.scss";
-@use "assets/_textCustomized.scss";
+@use "assets/_footer.scss";
 @use "assets/_shimmer.scss";
 
 //Pages

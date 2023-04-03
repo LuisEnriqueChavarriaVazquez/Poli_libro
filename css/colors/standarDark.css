@@ -163,6 +163,10 @@ input[type=range]::-webkit-slider-thumb {
     outline: none;
 }
 
+input[type="range"] {
+    border: 0px solid white !important;
+}
+
 /*Configuraciones de textos*/
 .activeButtonText {
     background-color: #697888 !important;
