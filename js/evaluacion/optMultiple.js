@@ -187,7 +187,7 @@ function preguntas_aleatorias() {
             <form class="cardPregunta clgreyl2 border1">
                 <!--Numero y enunciado de la pregunta-->
                 <div class="titleQuestionContainer clgreyl3">
-                    <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Pregunta sin numerar</h5>
+                    <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
                     <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
                 </div>
                 
