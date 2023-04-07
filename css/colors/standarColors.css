@@ -68,6 +68,19 @@ body {
     border-bottom: #b6b6b6 30px solid;
 }
 
+.clbordert{
+    border: #979797 3px solid;
+}
+
+.clbordertdotted{
+    border: #505050 3px dotted;
+}
+
+.rightDropped{
+    background-color: #aaaaaa;
+    border: #777777 2px solid;
+}
+
 /*Borders para el manual*/
 .table-of-contents a {
     color: #313131;

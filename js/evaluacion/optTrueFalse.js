@@ -93,19 +93,17 @@ function printQuestionsTrueFalse(){
                         <p class="clbktx textoStandar">Pulsa el boton derecho o izquierdo</p>
                     </div>
 
-                    <!--Opciones de la pregunta-->
-                    <section class="optionsQuestionContainerTF clgreyl3" id="questionTFButtonsContainer_${i}">
-                        <div class="buttonTrue shadow2 waves-effect cl5 clwtx" id="questionTF_${i}_buttonTrue" onclick="checkTFanswer('questionTF_${i}_buttonTrue','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
-                            V
-                        </div>
-                        <div class="buttonFalse shadow2 waves-effect cl4 clwtx" id="questionTF_${i}_buttonFalse" onclick="checkTFanswer('questionTF_${i}_buttonFalse','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
-                            F
-                        </div>
-                    </section>
-
-
                     <!--Boton para revisar la pregunta-->
                     <div class="evaluateQuestionContainer">
+                        <!--Opciones de la pregunta-->
+                        <section class="optionsQuestionContainerTF" id="questionTFButtonsContainer_${i}">
+                            <div class="buttonTrue shadow2 waves-effect cl5 clwtx" id="questionTF_${i}_buttonTrue" onclick="checkTFanswer('questionTF_${i}_buttonTrue','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
+                                V
+                            </div>
+                            <div class="buttonFalse shadow2 waves-effect cl4 clwtx" id="questionTF_${i}_buttonFalse" onclick="checkTFanswer('questionTF_${i}_buttonFalse','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
+                                F
+                            </div>
+                        </section>
                         <!--Retroalimentacion de la pregunta-->
                         <div id="questionTF_${i}_retroalimentacion"></div>
                     </div>

@@ -68,6 +68,10 @@ body {
     border-bottom: #212427 30px solid;
 }
 
+.clbordert{
+    border: #3b424b 2px solid;
+}
+
 /*Borders para el manual*/
 .table-of-contents a {
     color: #ffffff;
