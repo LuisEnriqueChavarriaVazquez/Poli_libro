@@ -31,12 +31,14 @@
     <script defer src="js/configuraciones/modoLuz.js"></script>
     <script defer src="js/configuraciones/modoLectura.js"></script>
     <script defer src="js/configuraciones/textSizerLateral.js"></script>
-    <script defer src="js/noCopy.js"></script>
+    <!-- <script defer src="js/noCopy.js"></script> -->
 
     <!--Scripts para la evaluacion-->
     <script defer src="js/evaluacion/jspdf.min.js"></script>
     <script defer src="js/evaluacion/fechaActual.js"></script>
     <script defer src="js/evaluacion/optMultiple.js"></script>
+    <script defer src="js/evaluacion/optTrueFalse.js"></script>
+    <script defer src="js/evaluacion/numeradorPreguntas.js"></script>
     <script defer src="js/evaluacion/intentosActuales.js"></script>
     <script defer src="js/evaluacion/generadorPdfs.js"></script>
 
@@ -87,7 +89,8 @@
 
             <!--Segunda card-->
             <div class="contenedorBarraProgreso clgreyl2 border1 shadow2">
-                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha de respuesta: <span id="fechaActual"></span>
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha de respuesta: <span
+                        id="fechaActual"></span>
                 </p>
 
                 <p class="contenedorBarraProgresoTexto textoStandar clbktx">Tiempo:
@@ -96,12 +99,13 @@
                     <span id="tiempoActualSegundos">00</span>''
                 </p>
 
-                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span id="intentosActuales"></span></p>
+                <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span
+                        id="intentosActuales"></span></p>
             </div>
         </section>
 
         <p class="textoTitulo clbktx tituloEvaluacion">Preguntas</p>
-        <!--Preguntas del cuestionario-->
+        <!--Preguntas del cuestionario opcion multiple-->
         <section class="cardsEvaluation clgreyl1 border1" id="contenedor_preguntas">
 
         </section>
@@ -116,7 +120,7 @@
                 lectura/escritura más alla de lo necesario. Favor de tomar captura de
                 pantalla de sus resultados si es usuario de Android.</p>
 
-                <a class='btn-large waves-effect waves-light border1 white-text cl4' id="generarDocumento">Polilibro<i
+            <a class='btn-large waves-effect waves-light border1 white-text cl4' id="generarDocumento">Polilibro<i
                     class="material-icons right">file_download</i></a>
         </section>
 
