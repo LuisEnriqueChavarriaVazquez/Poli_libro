@@ -56,16 +56,16 @@ body {
 
 /*Text style*/
 .clbktx {
-    color: #000;
+    color: #000 !important;
 }
 
 .clwtx {
-    color: #fff;
+    color: #fff !important;
 }
 
 /*Border element*/
 .clborder {
-    border-bottom: #b6b6b6 30px solid;
+    border-bottom: hsl(0, 0%, 85%) 30px solid;
 }
 
 .clbordert{
@@ -73,12 +73,12 @@ body {
 }
 
 .clbordertdotted{
-    border: #505050 3px dotted;
+    border: #acacac 3px dotted;
 }
 
 .rightDropped{
-    background-color: #aaaaaa;
-    border: #777777 2px solid;
+    background-color: #e0e0e0;
+    border: 0px;
 }
 
 /*Borders para el manual*/

@@ -96,11 +96,11 @@ function printQuestionsTrueFalse(){
                     <!--Boton para revisar la pregunta-->
                     <div class="evaluateQuestionContainer">
                         <!--Opciones de la pregunta-->
-                        <section class="optionsQuestionContainerTF" id="questionTFButtonsContainer_${i}">
-                            <div class="buttonTrue shadow2 waves-effect cl5 clwtx" id="questionTF_${i}_buttonTrue" onclick="checkTFanswer('questionTF_${i}_buttonTrue','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
+                        <section class="optionsQuestionContainerTF clgrel1" id="questionTFButtonsContainer_${i}">
+                            <div class="buttonTrue shadow2 waves-effect cl5 white-text" id="questionTF_${i}_buttonTrue" onclick="checkTFanswer('questionTF_${i}_buttonTrue','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
                                 V
                             </div>
-                            <div class="buttonFalse shadow2 waves-effect cl4 clwtx" id="questionTF_${i}_buttonFalse" onclick="checkTFanswer('questionTF_${i}_buttonFalse','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
+                            <div class="buttonFalse shadow2 waves-effect cl4 white-text" id="questionTF_${i}_buttonFalse" onclick="checkTFanswer('questionTF_${i}_buttonFalse','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
                                 F
                             </div>
                         </section>
