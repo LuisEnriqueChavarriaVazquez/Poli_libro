@@ -22,12 +22,13 @@ $( function() {
 
         //Obtenemos el valor de la descripcion
         let valorDefinicionTemp = ui.draggable;
+        let numeroDePreguntaDragAndDrop = valorDefinicionTemp.attr('valorDef') 
         valorDefinicionTemp.hide();
         valorDefinicionTemp = valorDefinicionTemp.text().trim();
         console.log('valorDefinicionTemp: ', valorDefinicionTemp);
 
         //Recolectamos el concepto y la definicion dado
-        collectAnswers(valorConceptoTemp, valorDefinicionTemp);
+        collectAnswers(valorConceptoTemp, valorDefinicionTemp, numeroDePreguntaDragAndDrop);
 
         //Limita la cantidad de elementos a 1
         let hijos = $(this).siblings();
@@ -54,9 +55,18 @@ $( function() {
 });
 
 //Funcion de recolección de respuestas
-let respuestasDragAndDrop_one = [];
-function collectAnswers(concepto, definicion){
-  console.log('respuestasDragAndDrop_one: ', respuestasDragAndDrop_one);
+let respuestasDragAndDrop = [[],[]];
+function collectAnswers(concepto, definicion, numeroPregunta){
+  let temporalAnswerObject = "";
+  //Dependiendo del tipo de pregunta
+  if(numeroPregunta == "preguntaDragAndDrop_0"){
+    temporalAnswerObject = {concepto, definicion};
+    respuestasDragAndDrop[0].push(temporalAnswerObject);
+  }else{
+    temporalAnswerObject = {concepto, definicion};
+    respuestasDragAndDrop[1].push(temporalAnswerObject);
+  }
+  console.log(respuestasDragAndDrop);
 }
 
 
@@ -68,21 +78,21 @@ let questionsDragAndDrop = [
         definicion: "Lorem ipsum dolorignissimos. Minus molestias idofficia ipsum corrupti impedit.",
     },
     {
-        concepto: "Concepto 2.1",
+        concepto: "Concepto 1.2",
         definicion: "Ullam dignissimos. Minus molestias idofficia ipsum corrupti impedit. ullam dignissimos. Minus molestias.",
     },
     {
-        concepto: "Concepto 3.1",
+        concepto: "Concepto 1.3",
         definicion: "Illum quos perspiciatis, voluptatum veritatis error nihil laboriosam earum voluptatem aliquid, facilis consequatur.",
     },
     {
-        concepto: "Concepto 4.1",
+        concepto: "Concepto 1.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
   ],
   [
     {
-        concepto: "Concepto 1.2",
+        concepto: "Concepto 2.1",
         definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
     },
     {
@@ -90,21 +100,21 @@ let questionsDragAndDrop = [
         definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
     },
     {
-        concepto: "Concepto 3.2",
+        concepto: "Concepto 2.3",
         definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
     },
     {
-        concepto: "Concepto 4.2",
+        concepto: "Concepto 2.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
   ],
   [
     {
-        concepto: "Concepto 1.3",
-        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+        concepto: "Concepto 3.1",
+        definicion: "Lorem ipsum dolor sit amet consect sdm,dsmsdm sd,msd,msd, offcorrupti impedit.",
     },
     {
-        concepto: "Concepto 2.3",
+        concepto: "Concepto 3.1",
         definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
     },
     {
@@ -112,21 +122,21 @@ let questionsDragAndDrop = [
         definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
     },
     {
-        concepto: "Concepto 4.3",
+        concepto: "Concepto 3.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
   ],
   [
     {
-        concepto: "Concepto 1.4",
+        concepto: "Concepto 4.1",
         definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
     },
     {
-        concepto: "Concepto 2.4",
+        concepto: "Concepto 4.2",
         definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
     },
     {
-        concepto: "Concepto 3.4",
+        concepto: "Concepto 4.3",
         definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
     },
     {
@@ -136,19 +146,19 @@ let questionsDragAndDrop = [
   ],
   [
     {
-        concepto: "Concepto 1.5",
+        concepto: "Concepto 5.1",
         definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
     },
     {
-        concepto: "Concepto 2.5",
+        concepto: "Concepto 5.2",
         definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
     },
     {
-        concepto: "Concepto 3.5",
+        concepto: "Concepto 5.3",
         definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
     },
     {
-        concepto: "Concepto 4.5",
+        concepto: "Concepto 5.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
   ]
@@ -167,19 +177,19 @@ for(var h = 0; h < 2; h++){
       <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
     
       <section class="conceptosCajaContainer">
-        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx" valorDef="preguntaDragAndDrop_${h}">
           <p>${suffledquestionsDragAndDrop[h][0].concepto}</p>
         </div>
     
-        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx" valorDef="preguntaDragAndDrop_${h}">
           <p>${suffledquestionsDragAndDrop[h][1].concepto}</p>
         </div>
     
-        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx" valorDef="preguntaDragAndDrop_${h}">
           <p>${suffledquestionsDragAndDrop[h][2].concepto}</p>
         </div>
     
-        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx" valorDef="preguntaDragAndDrop_${h}">
           <p>${suffledquestionsDragAndDrop[h][3].concepto}</p>
         </div>
       </section>
@@ -225,7 +235,7 @@ for(var h = 0; h < 2; h++){
     
       <!--Boton para revisar la pregunta-->
       <div class="evaluateQuestionContainer">
-        <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="" onclick="">Revisar
+        <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' onclick="checkDragAndDrop('preguntaDragAndDrop_${h}')">Revisar
           conceptos<i class="material-icons right">done</i></a>
         <!--Retroalimentacion de la pregunta-->
         <div id="retroalimentacion"></div>
@@ -234,3 +244,14 @@ for(var h = 0; h < 2; h++){
     </section>
     `
 };
+
+function checkDragAndDrop(numeroPregunta){
+
+  if(numeroPregunta = 'preguntaDragAndDrop_0'){
+    console.log(respuestasDragAndDrop[0]);
+
+  }else{
+    console.log(respuestasDragAndDrop[1]);
+
+  }
+}
