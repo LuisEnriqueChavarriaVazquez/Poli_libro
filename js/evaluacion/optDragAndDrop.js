@@ -1,127 +1,236 @@
+/* Script para el manejo del drag and drop */
 $( function() {
   $( ".conceptosCaja" ).draggable({
     revert: "invalid",
     // drag: function( event, ui ) {
-    // $( this )
-    // .find( "p" )
-    // .html( "¡Concepto seleccionado!" );
+    //   $( this )
+    //   .hide();
     // }
-    });
+  });
 
   $( ".definicionCaja" ).droppable({
     drop: function( event, ui ) {
-  $( this )
-    //En cuanto soltamos el elemento modificamos el contenedor
-    .addClass( "rightDropped" )
-    .removeClass( "ui-droppable " )
-    .find( "p" )
-    .html( "¡Definición vinculada a concepto!" );
-    M.toast({html: 'Definición vinculada a concepto'})
-  $(this)
-    //Modificamos el estilo del icono cuando el elemento fue soltado
-    .find('span')
-    .html('thumb_up')
-  $(this)
-    //Modificamos la caja que contiene el icono de like
-    .find('div')
-    .addClass( "clgreyl3" )
-    .removeClass('clgreyl1')
+      $(this)
+        //Modificamos la caja que contiene el icono de like
+        .find('div')
+        .addClass( "clgreyl3" )
+        .removeClass('clgreyl1');
 
-    //Obtenemos el valor del concepto
-    console.log($(this).attr('valorConcepto'));
-    //Obtenemos el valor de la descripcion
-    var $el = ui.draggable;
-    console.log($el.text())
-    //Limita la cantidad de elementos a 1
-    let hijos = $(this).siblings();
-    if(hijos.length > 0){
-    console.log(hijos); //Nombre del concepto
-    console.log(hijos.prevObject); //Nombre del concepto
-    $(this).droppable('disable');
-  }
-  },
+        //Obtenemos el valor del concepto
+        let valorConceptoTemp = $(this).attr('valorConcepto');
+        console.log('valorConceptoTemp: ', valorConceptoTemp);
+
+        //Obtenemos el valor de la descripcion
+        let valorDefinicionTemp = ui.draggable;
+        valorDefinicionTemp.hide();
+        valorDefinicionTemp = valorDefinicionTemp.text().trim();
+        console.log('valorDefinicionTemp: ', valorDefinicionTemp);
+
+        //Recolectamos el concepto y la definicion dado
+        collectAnswers(valorConceptoTemp, valorDefinicionTemp);
+
+        //Limita la cantidad de elementos a 1
+        let hijos = $(this).siblings();
+        if(hijos.length > 0){
+          //console.log(hijos); //Nombre del concepto
+          //console.log(hijos.prevObject); //Nombre del concepto
+          $(this).droppable('disable');
+        }
+
+        $( this )
+          //En cuanto soltamos el elemento modificamos el contenedor
+          .addClass( "rightDropped" )
+          .removeClass( "ui-droppable " )
+          .find( "p" )
+          .html( valorDefinicionTemp );
+          M.toast({html: 'Definición vinculada a concepto'});
+
+        $(this)
+          //Modificamos el estilo del icono cuando el elemento fue soltado
+          .find('span')
+          .html('thumb_up');
+    },
   });
-} );
+});
+
+//Funcion de recolección de respuestas
+let respuestasDragAndDrop_one = [];
+function collectAnswers(concepto, definicion){
+  console.log('respuestasDragAndDrop_one: ', respuestasDragAndDrop_one);
+}
 
 
-`
-<section class="conceptsDefinitionContainer clgreyl2 border1">
+//Listado de conceptos
+let questionsDragAndDrop = [
+  [
+    {
+        concepto: "Concepto 1.1",
+        definicion: "Lorem ipsum dolorignissimos. Minus molestias idofficia ipsum corrupti impedit.",
+    },
+    {
+        concepto: "Concepto 2.1",
+        definicion: "Ullam dignissimos. Minus molestias idofficia ipsum corrupti impedit. ullam dignissimos. Minus molestias.",
+    },
+    {
+        concepto: "Concepto 3.1",
+        definicion: "Illum quos perspiciatis, voluptatum veritatis error nihil laboriosam earum voluptatem aliquid, facilis consequatur.",
+    },
+    {
+        concepto: "Concepto 4.1",
+        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+    },
+  ],
+  [
+    {
+        concepto: "Concepto 1.2",
+        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+    },
+    {
+        concepto: "Concepto 2.2",
+        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+    },
+    {
+        concepto: "Concepto 3.2",
+        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+    },
+    {
+        concepto: "Concepto 4.2",
+        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+    },
+  ],
+  [
+    {
+        concepto: "Concepto 1.3",
+        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+    },
+    {
+        concepto: "Concepto 2.3",
+        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+    },
+    {
+        concepto: "Concepto 3.3",
+        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+    },
+    {
+        concepto: "Concepto 4.3",
+        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+    },
+  ],
+  [
+    {
+        concepto: "Concepto 1.4",
+        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+    },
+    {
+        concepto: "Concepto 2.4",
+        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+    },
+    {
+        concepto: "Concepto 3.4",
+        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+    },
+    {
+        concepto: "Concepto 4.4",
+        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+    },
+  ],
+  [
+    {
+        concepto: "Concepto 1.5",
+        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+    },
+    {
+        concepto: "Concepto 2.5",
+        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+    },
+    {
+        concepto: "Concepto 3.5",
+        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+    },
+    {
+        concepto: "Concepto 4.5",
+        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+    },
+  ]
+];
 
-  <!--Numero y enunciado de la pregunta-->
-  <div>
-    <h5 class="preguntaIdentificador clbktx border1 textoStandar numeracionPregunta"></h5>
-    <hr>
-  </div>
+//Mezclamos el array de opciones
+let suffledquestionsDragAndDrop = shuffle(questionsDragAndDrop);
 
-  <section class="conceptosCajaContainer">
-    <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
-      <p>Concepto 1</p>
-    </div>
-
-    <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
-      <p>Concepto 2</p>
-    </div>
-
-    <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
-      <p>Concepto 3</p>
-    </div>
-
-    <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
-      <p>Concepto 4</p>
-    </div>
-  </section>
-
-  <section class="definicionCajaContainerFather">
-    <div class="definicionCajaContainer clgreyl1 border1">
-      <p class="textoStandar clbktx">ciatis repellat. Reiciendis quidem omnisut consequatur temporibus, fuga amet libero
-        ad cum quis ea in eveniet.</p>
-      <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="">
-        <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-        <div class="border1 clgreyl1">
-          <span class="material-icons clbktx">swipe_up</span>
+//Contenedor de las preguntas de drag and drop
+let contenedor_preguntas_drag = document.getElementById('contenedor_preguntas_two');
+for(var h = 0; h < 2; h++){
+    contenedor_preguntas_drag.innerHTML += `
+    <section class="conceptsDefinitionContainer clgreyl3 border1">
+    
+      <!--Numero y enunciado de la pregunta-->
+      <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+    
+      <section class="conceptosCajaContainer">
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+          <p>${suffledquestionsDragAndDrop[h][0].concepto}</p>
         </div>
-      </div>
-    </div>
-    <div class="definicionCajaContainer clgreyl1 border1">
-      <p class="textoStandar clbktx">Lorem ipsum dolor sit, ameconsectetur aliquam dignissimos porro explicabo
-        perferendis laudantium, ex saepe, placeat accusamus! In reprehenderit iure sed facilis dolore.</p>
-      <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="">
-        <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-        <div class="border1 clgreyl1">
-          <span class="material-icons clbktx">swipe_up</span>
+    
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+          <p>${suffledquestionsDragAndDrop[h][1].concepto}</p>
         </div>
-      </div>
-    </div>
-    <div class="definicionCajaContainer clgreyl1 border1">
-      <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consect officiis ullam dignissimos. Minus molestias id
-        officia ipsum corrupti impedit.</p>
-      <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="">
-        <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-        <div class="border1 clgreyl1">
-          <span class="material-icons clbktx">swipe_up</span>
+    
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+          <p>${suffledquestionsDragAndDrop[h][2].concepto}</p>
         </div>
-      </div>
-    </div>
-    <div class="definicionCajaContainer clgreyl1 border1">
-      <p class="textoStandar clbktx">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus molestias repellat,
-        quam similique saepe illum quos perspiciatis, voluptatum veritatis error nihil laboriosam earum voluptatem
-        aliquid, facilis consequatur accusamus excepturi quasi?</p>
-      <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="">
-        <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-        <div class="border1 clgreyl1">
-          <span class="material-icons clbktx">swipe_up</span>
+    
+        <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx">
+          <p>${suffledquestionsDragAndDrop[h][3].concepto}</p>
         </div>
+      </section>
+    
+      <section class="definicionCajaContainerFather">
+        <div class="definicionCajaContainer shadow2 clgreyl1 border1">
+          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][0].definicion}</p>
+          <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][0].definicion}">
+            <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
+            <div class="border1 clgreyl1">
+              <span class="material-icons clbktx">swipe_up</span>
+            </div>
+          </div>
+        </div>
+        <div class="definicionCajaContainer shadow2 clgreyl1 border1">
+          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][1].definicion}</p>
+          <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][1].definicion}">
+            <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
+            <div class="border1 clgreyl1">
+              <span class="material-icons clbktx">swipe_up</span>
+            </div>
+          </div>
+        </div>
+        <div class="definicionCajaContainer shadow2 clgreyl1 border1">
+          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][2].definicion}</p>
+          <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][2].definicion}">
+            <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
+            <div class="border1 clgreyl1">
+              <span class="material-icons clbktx">swipe_up</span>
+            </div>
+          </div>
+        </div>
+        <div class="definicionCajaContainer shadow2 clgreyl1 border1">
+          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][3].definicion}</p>
+          <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][3].definicion}">
+            <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
+            <div class="border1 clgreyl1">
+              <span class="material-icons clbktx">swipe_up</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!--Boton para revisar la pregunta-->
+      <div class="evaluateQuestionContainer">
+        <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="" onclick="">Revisar
+          conceptos<i class="material-icons right">done</i></a>
+        <!--Retroalimentacion de la pregunta-->
+        <div id="retroalimentacion"></div>
       </div>
-    </div>
-  </section>
-
-  <!--Boton para revisar la pregunta-->
-  <div class="evaluateQuestionContainer">
-    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="" onclick="">Revisar
-      conceptos<i class="material-icons right">done</i></a>
-    <!--Retroalimentacion de la pregunta-->
-    <div id="retroalimentacion"></div>
-  </div>
-
-</section>
-`
+    
+    </section>
+    `
+};

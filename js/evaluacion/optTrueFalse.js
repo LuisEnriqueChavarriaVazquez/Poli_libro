@@ -30,7 +30,11 @@ let questionsTF = [
     {
         enunciado: "Enunciado de pregunta True/False 7",
         respuesta: "F",
-    }
+    },
+    {
+        enunciado: "Enunciado de pregunta True/False 8",
+        respuesta: "V",
+    },
 ];
 
 //Sirve para revisar las preguntas una vez que han sido contestadas
@@ -58,31 +62,12 @@ function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     
 }
 
-////////////////////////////////////////////////////////////////////////
-//Mezclador de arrays
-function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
-    // Mientras tengamos elementos para mezclar
-    while (currentIndex != 0) {
-  
-      // Escoje a uno de los elementos
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // Intercambialo con el elemento actual
-      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-    }
-  
-    return array;
-}
-
 function printQuestionsTrueFalse(){
     let containerTrueFalse = document.getElementById('contenedor_preguntas');
 
     let suffledquestionsTF = shuffle(questionsTF);
 
-    for(var i = 0; i < 7; i++){
+    for(var i = 0; i < 8; i++){
         containerTrueFalse.innerHTML +=  `
             <section id="">
                 <form class="cardPregunta clgreyl2 border1">

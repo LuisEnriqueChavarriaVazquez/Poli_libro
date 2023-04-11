@@ -55,6 +55,24 @@
   }
 }
 
+.cardsEvaluationTwo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+
+@media (max-width: 800px) {
+  .cardsEvaluationTwo {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
 .contenedorBarraProgreso {
   padding: 15px;
   display: grid;
@@ -256,7 +274,6 @@ textarea.materialize-textarea {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
   padding: 20px;
-  margin: 10px;
   gap: 20px;
 }
 
@@ -286,7 +303,9 @@ textarea.materialize-textarea {
 @media (max-width: 500px) {
   .conceptosCajaContainer {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0;
+    justify-items: center;
+    align-content: center;
   }
 }
 
@@ -323,6 +342,13 @@ textarea.materialize-textarea {
   height: 60px;
   cursor: all-scroll;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  .conceptosCaja {
+    height: 40px;
+    width: 85%;
+  }
 }
 
 .definicionCaja {

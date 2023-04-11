@@ -36,6 +36,7 @@
     <!-- <script defer src="js/noCopy.js"></script> -->
 
     <!--Scripts para la evaluacion-->
+    <script src="js/evaluacion/mezclaArray.js"></script>
     <script defer src="js/evaluacion/jspdf.min.js"></script>
     <script defer src="js/evaluacion/fechaActual.js"></script>
     <script defer src="js/evaluacion/optMultiple.js"></script>
@@ -47,7 +48,7 @@
 
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
 
     <section>
         <!--Navbar superior-->
@@ -109,11 +110,8 @@
 
         <p class="textoTitulo clbktx tituloEvaluacion">Preguntas</p>
         <!--Preguntas del cuestionario opcion multiple-->
-        <section class="cardsEvaluation clgreyl1 border1 shadow2" id="contenedor_preguntas">
-
-        </section>
-
-        
+        <section class="cardsEvaluation clgreyl1 border1 shadow2" id="contenedor_preguntas"></section>
+        <section class="cardsEvaluationTwo clgreyl1 border1 shadow2" id="contenedor_preguntas_two"></section>
 
         <p class="textoTitulo clbktx tituloEvaluacion">Descargar resultados</p>
         <!--Descarga de archivos-->
