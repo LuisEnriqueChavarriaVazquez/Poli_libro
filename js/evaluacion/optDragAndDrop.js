@@ -190,7 +190,13 @@ for(var h = 0; h < 2; h++){
     <section class="conceptsDefinitionContainer clgreyl3 border1">
     
       <!--Numero y enunciado de la pregunta-->
-      <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+      <div class="titleQuestionContainerSecondary">
+          <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+          <a class="waves-effect waves-light tooltipped clgreyl2 clbktx border1"
+              data-position="left" data-tooltip="Relaciona los conceptos con su definición">
+              <i class="material-icons">help</i>
+          </a>
+      </div>
     
       <section class="conceptosCajaContainer">
         <div class="conceptosCaja border1 clbordertdotted shadow2 textoStandar clw clbktx" id="defQuestionId_${0}_${h}" valorDef="preguntaDragAndDrop_${h}">

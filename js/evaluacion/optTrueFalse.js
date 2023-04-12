@@ -78,6 +78,9 @@ function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     //Eliminamos los botones de la pregunta
     contenedorButtonsTF_value.setAttribute('style', 'display: none;')
 
+    //Retroalimentamos al usuario
+    M.toast({html: `Pregunta respondida`});
+
     
 }
 
@@ -92,9 +95,14 @@ function printQuestionsTrueFalse(){
                 <form class="cardPregunta clgreyl2 border1">
                     <!--Numero y enunciado de la pregunta-->
                     <div class="titleQuestionContainer clgreyl3">
-                        <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+                        <div class="titleQuestionContainerSecondary">
+                            <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+                            <a class="waves-effect waves-light tooltipped clgreyl2 clbktx border1"
+                            data-position="left" data-tooltip="Presiona el boton izquierdo o derecho">
+                            <i class="material-icons">help</i>
+                            </a>
+                        </div>
                         <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
-                        <p class="clbktx textoStandar">Pulsa el boton derecho o izquierdo</p>
                     </div>
 
                     <!--Boton para revisar la pregunta-->

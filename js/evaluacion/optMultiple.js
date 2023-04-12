@@ -77,6 +77,9 @@ function pregunta(numero) {
     opt2_input.setAttribute('disabled', '');
     opt3_input.setAttribute('disabled', '');
     opt4_input.setAttribute('disabled', '');
+
+    //Retroalimentamos al usuario
+    M.toast({html: `Pregunta respondida`});
 }
 
 const preguntas_aleatorias_indices = [0]
@@ -185,7 +188,13 @@ function preguntas_aleatorias() {
             <form class="cardPregunta clgreyl2 border1">
                 <!--Numero y enunciado de la pregunta-->
                 <div class="titleQuestionContainer clgreyl3">
-                    <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+                    <div class="titleQuestionContainerSecondary">
+                        <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+                        <a class="waves-effect waves-light tooltipped clgreyl2 clbktx border1"
+                            data-position="left" data-tooltip="Selecciona alguna de las opciones">
+                            <i class="material-icons">help</i>
+                        </a>
+                    </div>
                     <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
                 </div>
                 

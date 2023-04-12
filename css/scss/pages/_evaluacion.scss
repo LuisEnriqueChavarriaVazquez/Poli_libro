@@ -138,6 +138,27 @@
   gap: 0;
 }
 
+.titleQuestionContainerSecondary{
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: auto;
+}
+
+@media (max-width: 800px) {
+  .titleQuestionContainerSecondary{
+    grid-template-columns: 85% 15%;
+  }
+}
+
+.titleQuestionContainerSecondary a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  bottom: 5px;
+  margin: 5px 0 5px 5px;
+}
+
 .preguntaIdentificador {
   font-weight: 600;
   padding: 10px;
@@ -327,7 +348,7 @@ textarea.materialize-textarea {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
 }
 
 .definicionCajaContainerFather {
@@ -339,6 +360,7 @@ textarea.materialize-textarea {
 
 @media (max-width: 1000px) {
   .definicionCajaContainer {
+    grid-template-rows: auto 1fr;
     padding: 10px;
   }
 
