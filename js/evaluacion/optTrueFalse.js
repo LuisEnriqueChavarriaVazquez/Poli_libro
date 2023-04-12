@@ -51,10 +51,29 @@ function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     if(valueAnswerUser == respuesta){
         retroalimentacionContainer.classList.add('mensajeCorrecta');
         retroalimentacionContainer.textContent = "Correcto, la respuesta es: " + respuesta;
+
+        //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+        puntajeTotal++;
+        preguntasContestadasTotal++;
     }else{
         retroalimentacionContainer.classList.add('mensajeIncorrecta');
         retroalimentacionContainer.textContent = "Incorrecto, la respuesta es: " + respuesta;
+
+        //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+        preguntasContestadasTotal++;
     }
+
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+    //Cada que se responda pregunta correcta se actualiza contador
+    contadorPreguntas.innerText = puntajeTotal;
+
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+    //Cada que contestemos una pregunta se actualiza el contador
+    contadorPreguntasRespondidas.innerText = preguntasContestadasTotal;
+
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+    //La barra se incrementa de tamaño con cada pregunta
+    barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
 
     //Eliminamos los botones de la pregunta
     contenedorButtonsTF_value.setAttribute('style', 'display: none;')

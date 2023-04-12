@@ -277,12 +277,32 @@ function checkDragAndDrop(numeroPregunta,id_preguntas,id_button, id_retroaliment
       retroalimentacionDragAndDrop.innerText = (puntos/4) + " de 1 punto obtenido";
       retroalimentacionDragAndDrop.classList.add('mensajeNeutra');
 
+      //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+      puntajeTotal += (puntos/4);
+      preguntasContestadasTotal++;
+
       //Mensaje de pregunta correctas e incorrectas
       M.toast({html: `Pregunta evaluada`});
   }else{
+
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+    preguntasContestadasTotal++;
+
     //Validacion de preguntas faltantes
     M.toast({html: `Aún faltan conceptos por relacionar.`});
   }
+
+  //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+  //Cada que se responda pregunta correcta se actualiza contador
+  contadorPreguntas.innerText = puntajeTotal;
+
+  //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+  //Cada que contestemos una pregunta se actualiza el contador
+  contadorPreguntasRespondidas.innerText = preguntasContestadasTotal;
+
+  //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
+  //La barra se incrementa de tamaño con cada pregunta
+  barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
 }
 
 //Recolecta los datos de las respuestas de usuario y las respuestas correctas

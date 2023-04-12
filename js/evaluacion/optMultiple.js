@@ -1,7 +1,3 @@
-//Puntaje del usuario
-let puntajeTotal = 0;
-let preguntasContestadasTotal = 0;
-
 function pregunta(numero) {
     //Respuestas para las preguntas
     let respuestasId = [0, "pregunta1_opt3"
@@ -34,11 +30,6 @@ function pregunta(numero) {
     let retroalimentacion = contenedor.querySelector("#retroalimentacion")
     var respuestaAlumnoId = contenedor.querySelector("section>div>label>input:checked").id;
 
-    //Elementos para conteo de puntaje
-    let barraPreguntas = document.getElementById('barraPreguntas');
-    let contadorPreguntas = document.getElementById('contadorPreguntas');
-    let contadorPreguntasRespondidas = document.getElementById('contadorPreguntasRespondidas');
-
     //Accedemos al contenido de la opcion elejida por el alumno
     var respuestaAlumnoContent = document.getElementById(respuestaAlumnoId);
     respuestaAlumnoContent.classList.add('respuestaAlumnoClassMark');
@@ -48,22 +39,29 @@ function pregunta(numero) {
     if (respuestaCorrectaId == respuestaAlumnoId) {
         retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Correcto</span>` + ", la respuesta es: " + `&nbsp;<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
         retroalimentacion.classList.add('mensajeCorrecta');
+
+        //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
         puntajeTotal++;
         preguntasContestadasTotal++;
     } else {
         retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Incorrecto</span>` +", la respuesta es: " + `&nbsp;<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
         retroalimentacion.classList.add('mensajeIncorrecta');
+
+        //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
         preguntasContestadasTotal++;
     }
 
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //Cada que se responda pregunta correcta se actualiza contador
     contadorPreguntas.innerText = puntajeTotal;
 
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //Cada que contestemos una pregunta se actualiza el contador
     contadorPreguntasRespondidas.innerText = preguntasContestadasTotal;
 
+    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //La barra se incrementa de tamaño con cada pregunta
-    barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*10 + '%');
+    barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
 
     //Se elimina el boton de la pregunta que ha sido respondida
     let button_evaluation = document.getElementById('button_evaluation_'+numero);
@@ -239,16 +237,4 @@ function aleatorio(a, b) {
     var aleatorio = Math.round(Math.random() * (b - a) + parseInt(a));
     return aleatorio
 }
-
-
 preguntas_aleatorias();
-
-//Evaluacion de todo (Pendiente)
-// let evaluartodo = document.getElementById('evaluartodo');
-// evaluartodo.addEventListener('click', () => {
-//     let getAllButtonsQuestions = document.getElementsByClassName('btnIndividualQuestion');
-//     getAllButtonsQuestionsArr = [...getAllButtonsQuestions]
-//     getAllButtonsQuestionsArr.forEach(element => {
-//         element.click();
-//     });
-// })

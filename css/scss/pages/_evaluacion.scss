@@ -214,10 +214,14 @@
 /*Barra de progreso*/
 
 #barraPreguntas {
-  background-color: #00cc7a;
-  height: 25px;
-  border-radius: 100px;
-  width: 5px;
+  background: rgb(0,204,122);
+  background: -moz-linear-gradient(90deg, rgba(0,204,122,1) 0%, rgba(0,138,82,1) 93%);
+  background: -webkit-linear-gradient(90deg, rgba(0,204,122,1) 0%, rgba(0,138,82,1) 93%);
+  background: linear-gradient(90deg, rgba(0,204,122,1) 0%, rgba(0,138,82,1) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00cc7a",endColorstr="#008a52",GradientType=1); 
+  height: 20px;
+  border-radius: 5px;
+  width: 2px;
 }
 
 /*Inputs eliminar estilos*/
