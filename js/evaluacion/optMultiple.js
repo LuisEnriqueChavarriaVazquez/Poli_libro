@@ -185,7 +185,7 @@ function preguntas_aleatorias() {
         contenido_preguntas = contenido_preguntas + `
         <section id="pregunta${preguntas_aleatorias_indices[i]}">
             <!--Formulario para la revision de la pregunta-->
-            <form class="cardPregunta clgreyl2 border1">
+            <form class="cardPregunta clgreyl2 border1 shadow2">
                 <!--Numero y enunciado de la pregunta-->
                 <div class="titleQuestionContainer clgreyl3">
                     <div class="titleQuestionContainerSecondary">

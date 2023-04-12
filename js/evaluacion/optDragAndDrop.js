@@ -187,7 +187,7 @@ let suffledquestionsDragAndDrop = shuffle(questionsDragAndDrop);
 let contenedor_preguntas_drag = document.getElementById('contenedor_preguntas_two');
 for(var h = 0; h < 2; h++){
     contenedor_preguntas_drag.innerHTML += `
-    <section class="conceptsDefinitionContainer clgreyl3 border1">
+    <section class="conceptsDefinitionContainer clgreyl3 border1 shadow2">
     
       <!--Numero y enunciado de la pregunta-->
       <div class="titleQuestionContainerSecondary">
