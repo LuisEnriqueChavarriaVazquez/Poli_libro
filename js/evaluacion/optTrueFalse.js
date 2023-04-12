@@ -97,11 +97,11 @@ function printQuestionsTrueFalse(){
                     <div class="titleQuestionContainer clgreyl3">
                         <div class="titleQuestionContainerSecondary">
                             <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
-                        </div>
                             <a class="tooltipped clgreyl2 clbktx border1"
                             data-position="left" data-tooltip="Presiona el boton izquierdo o derecho">
-                            <i class="small material-icons">help</i>
+                            <i class="material-icons">help</i>
                             </a>
+                        </div>
                         <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
                     </div>
 
