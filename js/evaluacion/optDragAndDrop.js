@@ -4,7 +4,7 @@ $( function() {
     revert: "invalid",
     // drag: function( event, ui ) {
     //   $( this )
-    //   .hide();
+    //   .css("z-index",actualIndex++);
     // }
   });
 
@@ -17,18 +17,18 @@ $( function() {
         .removeClass('clgreyl1');
 
         //Obtenemos el valor del concepto
-        let valorConceptoTemp = $(this).attr('valorConcepto');
-        console.log('valorConceptoTemp: ', valorConceptoTemp);
+        let valorDefTemp = $(this).attr('valorConcepto');
+        console.log('valorDefTemp: ', valorDefTemp);
 
         //Obtenemos el valor de la descripcion
-        let valorDefinicionTemp = ui.draggable;
-        let numeroDePreguntaDragAndDrop = valorDefinicionTemp.attr('valorDef') 
-        valorDefinicionTemp.hide();
-        valorDefinicionTemp = valorDefinicionTemp.text().trim();
-        console.log('valorDefinicionTemp: ', valorDefinicionTemp);
+        let valorConcepTemp = ui.draggable;
+        let numeroDePreguntaDragAndDrop = valorConcepTemp.attr('valorDef') 
+        valorConcepTemp.hide();
+        valorConcepTemp = valorConcepTemp.text().trim();
+        console.log('valorConcepTemp: ', valorConcepTemp);
 
         //Recolectamos el concepto y la definicion dado
-        collectAnswers(valorConceptoTemp, valorDefinicionTemp, numeroDePreguntaDragAndDrop);
+        collectAnswers(valorDefTemp, valorConcepTemp, numeroDePreguntaDragAndDrop);
 
         //Limita la cantidad de elementos a 1
         let hijos = $(this).siblings();
@@ -43,7 +43,7 @@ $( function() {
           .addClass( "rightDropped" )
           .removeClass( "ui-droppable " )
           .find( "p" )
-          .html( valorDefinicionTemp );
+          .html( valorConcepTemp );
           M.toast({html: 'Definición vinculada a concepto'});
 
         $(this)
@@ -56,7 +56,7 @@ $( function() {
 
 //Funcion de recolección de respuestas
 let respuestasDragAndDrop = [[],[]];
-function collectAnswers(concepto, definicion, numeroPregunta){
+function collectAnswers(definicion, concepto, numeroPregunta){
   let temporalAnswerObject = "";
   //Dependiendo del tipo de pregunta
   if(numeroPregunta == "preguntaDragAndDrop_0"){
@@ -89,6 +89,9 @@ let questionsDragAndDrop = [
         concepto: "Concepto 1.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
+    {
+      id: "0"
+    }
   ],
   [
     {
@@ -107,6 +110,9 @@ let questionsDragAndDrop = [
         concepto: "Concepto 2.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
+    {
+      id: "1"
+    }
   ],
   [
     {
@@ -114,7 +120,7 @@ let questionsDragAndDrop = [
         definicion: "Lorem ipsum dolor sit amet consect sdm,dsmsdm sd,msd,msd, offcorrupti impedit.",
     },
     {
-        concepto: "Concepto 3.1",
+        concepto: "Concepto 3.2",
         definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
     },
     {
@@ -125,6 +131,9 @@ let questionsDragAndDrop = [
         concepto: "Concepto 3.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
+    {
+      id: "2"
+    }
   ],
   [
     {
@@ -143,6 +152,9 @@ let questionsDragAndDrop = [
         concepto: "Concepto 4.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
+    {
+      id: "3"
+    }
   ],
   [
     {
@@ -161,10 +173,14 @@ let questionsDragAndDrop = [
         concepto: "Concepto 5.4",
         definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
     },
+    {
+      id: "4"
+    }
   ]
 ];
 
 //Mezclamos el array de opciones
+let oldOrderquestionsDragAndDrop = [...questionsDragAndDrop];
 let suffledquestionsDragAndDrop = shuffle(questionsDragAndDrop);
 
 //Contenedor de las preguntas de drag and drop
@@ -199,7 +215,7 @@ for(var h = 0; h < 2; h++){
           <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][0].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][0].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-            <div class="border1 clgreyl1">
+            <div id="stateQuestion_${0}_${h}" class="border1 clgreyl1">
               <span class="material-icons clbktx">swipe_up</span>
             </div>
           </div>
@@ -208,7 +224,7 @@ for(var h = 0; h < 2; h++){
           <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][1].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][1].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-            <div class="border1 clgreyl1">
+            <div id="stateQuestion_${1}_${h}" class="border1 clgreyl1">
               <span class="material-icons clbktx">swipe_up</span>
             </div>
           </div>
@@ -217,7 +233,7 @@ for(var h = 0; h < 2; h++){
           <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][2].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][2].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-            <div class="border1 clgreyl1">
+            <div id="stateQuestion_${2}_${h}" class="border1 clgreyl1">
               <span class="material-icons clbktx">swipe_up</span>
             </div>
           </div>
@@ -226,7 +242,7 @@ for(var h = 0; h < 2; h++){
           <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][3].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][3].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
-            <div class="border1 clgreyl1">
+            <div id="stateQuestion_${3}_${h}" class="border1 clgreyl1">
               <span class="material-icons clbktx">swipe_up</span>
             </div>
           </div>
@@ -235,23 +251,84 @@ for(var h = 0; h < 2; h++){
     
       <!--Boton para revisar la pregunta-->
       <div class="evaluateQuestionContainer">
-        <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' onclick="checkDragAndDrop('preguntaDragAndDrop_${h}')">Revisar
+        <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' onclick="checkDragAndDrop('preguntaDragAndDrop_${h}','${suffledquestionsDragAndDrop[h][4].id}')">Revisar
           conceptos<i class="material-icons right">done</i></a>
         <!--Retroalimentacion de la pregunta-->
         <div id="retroalimentacion"></div>
       </div>
     
     </section>
-    `
+    `;
 };
 
-function checkDragAndDrop(numeroPregunta){
+function checkDragAndDrop(numeroPregunta,id_preguntas){
+  if(respuestasDragAndDrop[0].length == 4 || respuestasDragAndDrop[1].length == 4){
+    
+    //Revision de las preguntas
+    if(numeroPregunta == 'preguntaDragAndDrop_0'){
+        
+      //Llamamos a la funcion para colectar la data y esta funcion al mismo tiempo evaluara el puntaje
+      //El parametro es el indice de la pregunta en el orden que aparece en el DOM
+      collectAnswersDragAndDrop(0, id_preguntas);
 
-  if(numeroPregunta = 'preguntaDragAndDrop_0'){
-    console.log(respuestasDragAndDrop[0]);
+    }else{
 
+      //Llamamos a la funcion para colectar la data y esta funcion al mismo tiempo evaluara el puntaje
+      collectAnswersDragAndDrop(1, id_preguntas);
+    }
+
+    //Mensaje de pregunta correctas e incorrectas
+    M.toast({html: `Pregunta evaluada`});
   }else{
-    console.log(respuestasDragAndDrop[1]);
+
+    //Validacion de preguntas faltantes
+    if(numeroPregunta = 'preguntaDragAndDrop_0'){
+      M.toast({html: `Aún faltan ${4 - respuestasDragAndDrop[0].length} conceptos por relacionar.`});
+    }else{
+      M.toast({html: `Aún faltan ${4 - respuestasDragAndDrop[1].length} conceptos por relacionar.`});
+    }
 
   }
+}
+
+//Recolecta los datos de las respuestas de usuario y las respuestas correctas
+function collectAnswersDragAndDrop(questionIndex, id_preguntas){
+  //Accedemos a las respuestas correctas
+  let respuestasPregunta = oldOrderquestionsDragAndDrop[id_preguntas];
+  
+  //Accedemos a las respuestas del estudiante
+  //console.log(respuestasDragAndDrop[questionIndex]);
+
+  //Obtenemos el puntaje
+  let puntos = evaluateDragAndDrop(respuestasPregunta,respuestasDragAndDrop[questionIndex], questionIndex);
+  return puntos;
+}
+
+//Obtiene los puntajes de las preguntas
+function evaluateDragAndDrop(respuestasCorrectas, respuestasUsuario, questionIndex){
+  let puntaje = 0;
+  for(var i = 0; i < 4; i++){
+    //Sumamos los conceptos  las definiciones
+    let respuestasCorrectasToken = respuestasCorrectas[i].concepto + respuestasCorrectas[i].definicion;
+    let respuestasUsuarioToken = respuestasUsuario[i].concepto + respuestasUsuario[i].definicion;
+
+    //Comparamos las definiciones y los conceptos sumados
+    if(respuestasCorrectasToken == respuestasUsuarioToken){
+      //Agregamos estilos a la casilla correcta correcta
+      let casillaEvaluada = document.getElementById(`stateQuestion_${i}_` + questionIndex);
+      casillaEvaluada.innerHTML = '<span class="material-icons">done</span>';
+      casillaEvaluada.classList.remove('clgreyl3');
+      casillaEvaluada.classList.add('mensajeCorrecta');
+      //Sumamos en caso de que coincidan el puntaje total
+      puntaje++;
+    }else{
+
+      //Agregamos estilos a la casilla correcta correcta
+      let casillaEvaluada = document.getElementById(`stateQuestion_${i}_` + questionIndex);
+      casillaEvaluada.innerHTML = '<span class="material-icons">close</span>';
+      casillaEvaluada.classList.remove('clgreyl3');
+      casillaEvaluada.classList.add('mensajeIncorrecta');
+    }
+  }
+  return puntaje;
 }
