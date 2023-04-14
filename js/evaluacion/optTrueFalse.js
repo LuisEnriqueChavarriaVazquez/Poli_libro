@@ -84,6 +84,9 @@ function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     //Retroalimentamos al usuario
     M.toast({html: `Pregunta respondida`});
 
+    //Validamos que el examen se hay terminado en este punto
+    validateExamenCompletado();
+
     
 }
 
@@ -108,7 +111,7 @@ function printQuestionsTrueFalse(){
                         <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
                     </div>
                     
-                    <section class="optionsQuestionContainer clgreyl3" ></section>
+                    <section class="optionsQuestionContainer clgreyl3 hide-on-small-only" ></section>
 
                     <!--Boton para revisar la pregunta-->
                     <div class="evaluateQuestionContainer">

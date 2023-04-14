@@ -81,6 +81,9 @@ function pregunta(numero) {
 
     //Retroalimentamos al usuario
     M.toast({html: `Pregunta respondida`});
+
+    //Validamos que el examen se hay terminado en este punto
+    validateExamenCompletado();
 }
 
 const preguntas_aleatorias_indices = [0]

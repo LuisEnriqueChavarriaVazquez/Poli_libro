@@ -46,6 +46,7 @@
     <script defer src="js/evaluacion/statsSticky.js"></script>
     <script defer src="js/evaluacion/randomizeQuestionsDom.js"></script>
     <script defer src="js/evaluacion/numeradorPreguntas.js"></script>
+    <script defer src="js/evaluacion/validarCompletadoDeCuestionario.js"></script>
 
 </head>
 
@@ -90,13 +91,13 @@
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">scoreboard</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx border1">Puntaje: <span
-                        id="contadorPreguntas">0</span>/20 puntos</p>
+                            id="contadorPreguntas">0</span>/20 puntos</p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">sports_score</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas respondidas: <span
-                        id="contadorPreguntasRespondidas">0</span>/20</p>
+                            id="contadorPreguntasRespondidas">0</span>/20</p>
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
@@ -115,7 +116,7 @@
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">today</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha respuesta: <span
-                        id="fechaActual"></span></p>
+                            id="fechaActual"></span></p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
@@ -130,27 +131,28 @@
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">history</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span
-                        id="intentosActuales"></span></p>
+                            id="intentosActuales"></span></p>
                 </div>
             </div>
         </section>
 
         <!--------------------------------------------------->
         <!--Contador de preguntas sticky-->
-        <section id="contenedorStatsIdentificadorFixed" class="contenedorStats-level1 contenedorStats-level1Small clgreyl1 border1 shadow2 statsFixed scale-transition scale-out">
+        <section id="contenedorStatsIdentificadorFixed"
+            class="contenedorStats-level1 contenedorStats-level1Small clgreyl1 border1 shadow2 statsFixed scale-transition scale-out">
             <!--Primera sección de stats-->
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">scoreboard</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx border1">Puntaje: <span
-                        id="contadorPreguntas2">0</span>/20 puntos</p>
+                            id="contadorPreguntas2">0</span>/20 puntos</p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">sports_score</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas respondidas: <span
-                        id="contadorPreguntasRespondidas2">0</span>/20</p>
+                            id="contadorPreguntasRespondidas2">0</span>/20</p>
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
@@ -169,7 +171,7 @@
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">today</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha respuesta: <span
-                        id="fechaActual2"></span></p>
+                            id="fechaActual2"></span></p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
@@ -184,7 +186,7 @@
                 <div class="contenedorStats-level3">
                     <span class="material-icons clw clbktx border4 shadow2">history</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span
-                        id="intentosActuales2"></span></p>
+                            id="intentosActuales2"></span></p>
                 </div>
             </div>
         </section>
@@ -194,18 +196,20 @@
         <section class="cardsEvaluation clgreyl1 border1 shadow2" id="contenedor_preguntas"></section>
         <section class="cardsEvaluationTwo clgreyl1 border1 shadow2" id="contenedor_preguntas_two"></section>
 
-        <p class="textoTitulo clbktx tituloEvaluacion">Descargar resultados</p>
         <!--Descarga de archivos-->
-        <section class="cardsEvaluationDownload clgreyl1 border1">
-            <p class="notaStyle clgreyl2 border1 shadow2 clbktx textoStandar">Nota: Por respeto a su privacidad las
-                descargas de PDFs de
-                resultados en Android
-                no son posibles, puesto que al ser generados del lado del cliente se solicitan permisos de
-                lectura/escritura más alla de lo necesario. Favor de tomar captura de
-                pantalla de sus resultados si es usuario de Android.</p>
+        <section id="contenedorDescargaArchivos">
+            <p class="textoTitulo clbktx tituloEvaluacion">Descargar resultados</p>
+            <section class="cardsEvaluationDownload clgreyl1 border1">
+                <p class="notaStyle clgreyl2 border1 shadow2 clbktx textoStandar">Nota: Por respeto a su privacidad las
+                    descargas de PDFs de
+                    resultados en Android
+                    no son posibles, puesto que al ser generados del lado del cliente se solicitan permisos de
+                    lectura/escritura más alla de lo necesario. Favor de tomar captura de
+                    pantalla de sus resultados si es usuario de Android.</p>
 
-            <a class='btn-large waves-effect waves-light border1 white-text cl4' id="generarDocumento">Polilibro<i
-                    class="material-icons right">file_download</i></a>
+                <a class='btn-large waves-effect waves-light border1 white-text cl4' id="generarDocumento">Polilibro<i
+                        class="material-icons right">file_download</i></a>
+            </section>
         </section>
 
     </section>
@@ -214,9 +218,8 @@
     <!--Botones para saber las estadísticas-->
     <a data-target="mobile-demo"
         class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobile sidenav-trigger scale-transition scale-out"
-        style="background-color: #4e685b; width: 54px; height: 54px;"
-        id="stats-button-exam">
-        <i class="material-icons" id="menuIconUnityContent">close</i>
+        style="background-color: #4e685b; width: 54px; height: 54px;" id="stats-button-exam">
+        <i class="material-icons" id="menuIconUnityContent">show_chart</i>
     </a>
 
 

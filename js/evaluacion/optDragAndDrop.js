@@ -289,6 +289,10 @@ function checkDragAndDrop(numeroPregunta,id_preguntas,id_button, id_retroaliment
 
       //Mensaje de pregunta correctas e incorrectas
       M.toast({html: `Pregunta evaluada`});
+
+      //Validamos que el examen se hay terminado en este punto
+      validateExamenCompletado();
+      
   }else{
 
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js

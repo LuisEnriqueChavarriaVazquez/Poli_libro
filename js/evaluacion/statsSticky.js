@@ -13,7 +13,6 @@ window.onscroll = function () {
         buttonStats.classList.remove('scale-out');
         //contenedorStatsIdentificador.classList.remove('scale-out');
         menuStickyUnity.classList.add('tabsFixed');
-        menuIconUnityContent.innerText = 'query_stats';
     }else{
         buttonStats.classList.add('scale-out');
         contenedorStatsIdentificador.classList.add('scale-out');
@@ -28,10 +27,8 @@ buttonStats.addEventListener('click', () => {
 
     if(activeButtonStats == false){
         activeButtonStats = true;
-        menuIconUnityContent.innerText = 'close';
     }else{
         activeButtonStats = false;
-        menuIconUnityContent.innerText = 'query_stats';
     }
 });
 
