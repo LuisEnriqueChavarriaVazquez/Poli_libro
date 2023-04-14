@@ -1,6 +1,8 @@
 //Boton para mostrar las estidisticas al momento de contestar las preguntas
 let buttonStats = document.getElementById('stats-button-exam');
+let menuIconUnityContent = document.getElementById('menuIconUnityContent');
 let menuStickyUnity = document.getElementById('menuStickyUnity');
+let contenedorStatsIdentificador = document.getElementById('contenedorStatsIdentificadorFixed');
 
 let scrollDownButtonStats, scrollUpButtonStats;
 window.onscroll = function () {
@@ -8,19 +10,29 @@ window.onscroll = function () {
     scrollUpButtonStats = window.scrollX;
 
     if(scrollDownButtonStats >= 145){
-        menuStickyUnity.classList.add('tabsFixed');
         buttonStats.classList.remove('scale-out');
+        //contenedorStatsIdentificador.classList.remove('scale-out');
+        menuStickyUnity.classList.add('tabsFixed');
+        menuIconUnityContent.innerText = 'query_stats';
     }else{
         buttonStats.classList.add('scale-out');
+        contenedorStatsIdentificador.classList.add('scale-out');
         menuStickyUnity.classList.remove('tabsFixed');
     }
 };
 
 //Hacer aparecer el menu de las estadísticas cuando esta abajo.
-let contenedorStatsIdentificador = document.getElementById('contenedorStatsIdentificadorFixed');
-console.log('contenedorStatsIdentificador: ', contenedorStatsIdentificador);
+let activeButtonStats = false; 
 buttonStats.addEventListener('click', () => {
     contenedorStatsIdentificador.classList.toggle('scale-out');
+
+    if(activeButtonStats == false){
+        activeButtonStats = true;
+        menuIconUnityContent.innerText = 'close';
+    }else{
+        activeButtonStats = false;
+        menuIconUnityContent.innerText = 'query_stats';
+    }
 });
 
 

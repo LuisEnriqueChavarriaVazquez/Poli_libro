@@ -66,14 +66,17 @@ function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //Cada que se responda pregunta correcta se actualiza contador
     contadorPreguntas.innerText = puntajeTotal;
+    contadorPreguntas2.innerText = puntajeTotal;
 
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //Cada que contestemos una pregunta se actualiza el contador
     contadorPreguntasRespondidas.innerText = preguntasContestadasTotal;
+    contadorPreguntasRespondidas2.innerText = preguntasContestadasTotal;
 
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //La barra se incrementa de tamaño con cada pregunta
     barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
+    barraPreguntas2.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
 
     //Eliminamos los botones de la pregunta
     contenedorButtonsTF_value.setAttribute('style', 'display: none;')

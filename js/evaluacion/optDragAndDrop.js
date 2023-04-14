@@ -301,14 +301,17 @@ function checkDragAndDrop(numeroPregunta,id_preguntas,id_button, id_retroaliment
   //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
   //Cada que se responda pregunta correcta se actualiza contador
   contadorPreguntas.innerText = puntajeTotal;
+  contadorPreguntas2.innerText = puntajeTotal;
 
   //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
   //Cada que contestemos una pregunta se actualiza el contador
   contadorPreguntasRespondidas.innerText = preguntasContestadasTotal;
+  contadorPreguntasRespondidas2.innerText = preguntasContestadasTotal;
 
   //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
   //La barra se incrementa de tamaño con cada pregunta
   barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
+  barraPreguntas2.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
 }
 
 //Recolecta los datos de las respuestas de usuario y las respuestas correctas

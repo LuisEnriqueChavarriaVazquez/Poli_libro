@@ -54,14 +54,17 @@ function pregunta(numero) {
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //Cada que se responda pregunta correcta se actualiza contador
     contadorPreguntas.innerText = puntajeTotal;
+    contadorPreguntas2.innerText = puntajeTotal;
 
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //Cada que contestemos una pregunta se actualiza el contador
     contadorPreguntasRespondidas.innerText = preguntasContestadasTotal;
+    contadorPreguntasRespondidas2.innerText = preguntasContestadasTotal;
 
     //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
     //La barra se incrementa de tamaño con cada pregunta
     barraPreguntas.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
+    barraPreguntas2.setAttribute('style', 'width:' + preguntasContestadasTotal*5 + '%');
 
     //Se elimina el boton de la pregunta que ha sido respondida
     let button_evaluation = document.getElementById('button_evaluation_'+numero);

@@ -8,3 +8,7 @@ let preguntasContestadasTotal = 0;
 let barraPreguntas = document.getElementById('barraPreguntas');
 let contadorPreguntas = document.getElementById('contadorPreguntas');
 let contadorPreguntasRespondidas = document.getElementById('contadorPreguntasRespondidas');
+
+let barraPreguntas2 = document.getElementById('barraPreguntas2');
+let contadorPreguntas2 = document.getElementById('contadorPreguntas2');
+let contadorPreguntasRespondidas2 = document.getElementById('contadorPreguntasRespondidas2');
