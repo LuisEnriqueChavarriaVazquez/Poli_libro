@@ -6,6 +6,8 @@ function validateExamenCompletado(){
         $('#contenedorDescargaArchivos').hide();
     }else{
         $('#contenedorDescargaArchivos').show();
+        //Retroalimentamos al usuario
+        M.toast({html: `En la parte inferior es posible descargar sus resultados.`});
     }
 }
 
