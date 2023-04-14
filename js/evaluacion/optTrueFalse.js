@@ -94,7 +94,7 @@ function printQuestionsTrueFalse(){
 
     for(var i = 0; i < 8; i++){
         containerTrueFalse.innerHTML +=  `
-            <section>
+            <section class="randomizeDOMClass">
                 <form class="cardPregunta clgreyl2 border1 shadow2">
                     <!--Numero y enunciado de la pregunta-->
                     <div class="titleQuestionContainer clgreyl3">
@@ -107,6 +107,8 @@ function printQuestionsTrueFalse(){
                         </div>
                         <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
                     </div>
+                    
+                    <section class="optionsQuestionContainer clgreyl3" ></section>
 
                     <!--Boton para revisar la pregunta-->
                     <div class="evaluateQuestionContainer">

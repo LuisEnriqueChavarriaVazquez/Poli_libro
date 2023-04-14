@@ -65,11 +65,20 @@ body {
 
 /*Border element*/
 .clborder {
-    border-bottom: #212427 30px solid;
+    border-bottom: hsl(0, 0%, 85%) 30px solid;
 }
 
 .clbordert{
-    border: #3b424b 2px solid;
+    border: #444c57 3px solid;
+}
+
+.clbordertdotted{
+    border: #6f7b8d 3px dotted;
+}
+
+.rightDropped{
+    background-color: #525b68;
+    border: 0px;
 }
 
 /*Borders para el manual*/

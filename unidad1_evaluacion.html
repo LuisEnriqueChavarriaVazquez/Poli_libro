@@ -41,10 +41,11 @@
     <script defer src="js/evaluacion/optMultiple.js"></script>
     <script defer src="js/evaluacion/optTrueFalse.js"></script>
     <script defer src="js/evaluacion/optDragAndDrop.js"></script>
-    <script defer src="js/evaluacion/numeradorPreguntas.js"></script>
     <script defer src="js/evaluacion/intentosActuales.js"></script>
     <script defer src="js/evaluacion/generadorPdfs.js"></script>
     <script defer src="js/evaluacion/statsSticky.js"></script>
+    <script defer src="js/evaluacion/randomizeQuestionsDom.js"></script>
+    <script defer src="js/evaluacion/numeradorPreguntas.js"></script>
 
 </head>
 
@@ -87,19 +88,19 @@
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">scoreboard</span>
+                    <span class="material-icons clw clbktx border4 shadow2">scoreboard</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx border1">Puntaje: <span
                         id="contadorPreguntas">0</span>/20 puntos</p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">sports_score</span>
+                    <span class="material-icons clw clbktx border4 shadow2">sports_score</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas respondidas: <span
                         id="contadorPreguntasRespondidas">0</span>/20</p>
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">percent</span>
+                    <span class="material-icons clw clbktx border4 shadow2">percent</span>
                     <div>
                         <div class="contenedorBarraProgresoShadow clw">
                             <div class="shadow2" id="barraPreguntas"></div>
@@ -112,13 +113,13 @@
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">today</span>
+                    <span class="material-icons clw clbktx border4 shadow2">today</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha respuesta: <span
                         id="fechaActual"></span></p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">schedule</span>
+                    <span class="material-icons clw clbktx border4 shadow2">schedule</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Tiempo:
                         <span id="tiempoActualHoras">00</span>:
                         <span id="tiempoActualMinutos">00</span>':
@@ -127,7 +128,7 @@
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">history</span>
+                    <span class="material-icons clw clbktx border4 shadow2">history</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span
                         id="intentosActuales"></span></p>
                 </div>
@@ -141,19 +142,19 @@
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">scoreboard</span>
+                    <span class="material-icons clw clbktx border4 shadow2">scoreboard</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx border1">Puntaje: <span
                         id="contadorPreguntas2">0</span>/20 puntos</p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">sports_score</span>
+                    <span class="material-icons clw clbktx border4 shadow2">sports_score</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas respondidas: <span
                         id="contadorPreguntasRespondidas2">0</span>/20</p>
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">percent</span>
+                    <span class="material-icons clw clbktx border4 shadow2">percent</span>
                     <div>
                         <div class="contenedorBarraProgresoShadow clw">
                             <div class="shadow2" id="barraPreguntas2"></div>
@@ -166,13 +167,13 @@
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">today</span>
+                    <span class="material-icons clw clbktx border4 shadow2">today</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha respuesta: <span
                         id="fechaActual2"></span></p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">schedule</span>
+                    <span class="material-icons clw clbktx border4 shadow2">schedule</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Tiempo:
                         <span id="tiempoActualHoras2">00</span>:
                         <span id="tiempoActualMinutos2">00</span>':
@@ -181,7 +182,7 @@
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw border4 shadow2">history</span>
+                    <span class="material-icons clw clbktx border4 shadow2">history</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span
                         id="intentosActuales2"></span></p>
                 </div>

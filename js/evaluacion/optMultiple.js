@@ -35,7 +35,7 @@ function pregunta(numero) {
     respuestaAlumnoContent.classList.add('respuestaAlumnoClassMark');
     
     //Evaluacion de las preguntas
-    console.log(respuestaAlumnoId)
+    //console.log(respuestaAlumnoId)
     if (respuestaCorrectaId == respuestaAlumnoId) {
         retroalimentacion.innerHTML = `<span class="estadoPreguntaAzar">Correcto</span>` + ", la respuesta es: " + `&nbsp;<span class="respuestaCorrectaPreguntaAzar">${respuestasExplicacion[numero]}</span>`;
         retroalimentacion.classList.add('mensajeCorrecta');
@@ -74,12 +74,10 @@ function pregunta(numero) {
     let opt1_input = document.getElementById('pregunta' + numero + '_opt1');
     let opt2_input = document.getElementById('pregunta' + numero + '_opt2');
     let opt3_input = document.getElementById('pregunta' + numero + '_opt3');
-    let opt4_input = document.getElementById('pregunta' + numero + '_opt4');
 
     opt1_input.setAttribute('disabled', '');
     opt2_input.setAttribute('disabled', '');
     opt3_input.setAttribute('disabled', '');
-    opt4_input.setAttribute('disabled', '');
 
     //Retroalimentamos al usuario
     M.toast({html: `Pregunta respondida`});
@@ -186,7 +184,7 @@ function preguntas_aleatorias() {
     let contenido_preguntas = "";
     for (i = 1; i < preguntas_aleatorias_indices.length; i++) {
         contenido_preguntas = contenido_preguntas + `
-        <section id="pregunta${preguntas_aleatorias_indices[i]}">
+        <section class="randomizeDOMClass" id="pregunta${preguntas_aleatorias_indices[i]}">
             <!--Formulario para la revision de la pregunta-->
             <form class="cardPregunta clgreyl2 border1 shadow2">
                 <!--Numero y enunciado de la pregunta-->
