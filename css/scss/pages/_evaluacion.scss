@@ -115,13 +115,13 @@
     grid-template-rows: auto;
     padding: 10px;
     margin: 10px;
-    gap: 15px;
+    gap: 5;
   }
 }
 
 @media (max-width: 600px) {
-  .contenedorStats-level1 {
-    width: 90%;
+  .contenedorStats-level1Small {
+    width: 90% !important;
   }
 }
 
@@ -216,7 +216,7 @@
 
 @media (max-width: 600px) {
   .statsFixed {
-    top: 230px;
+    top: 140px;
     left: 49%;
     transform: translate(-50%, -50%);
     width: 90%;
