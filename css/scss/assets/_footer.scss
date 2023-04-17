@@ -70,3 +70,25 @@
     }
   }
   
+
+  .licenciaDeLaPagina{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    flex-direction: column;
+
+    margin-top: 20px;
+  }
+
+  .licenciaDeLaPagina img{
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 800px) {
+    .licenciaDeLaPagina img{
+      width: 150px;
+      margin-bottom: 10px;
+    }
+  }
