@@ -12,3 +12,14 @@ let contadorPreguntasRespondidas = document.getElementById('contadorPreguntasRes
 let barraPreguntas2 = document.getElementById('barraPreguntas2');
 let contadorPreguntas2 = document.getElementById('contadorPreguntas2');
 let contadorPreguntasRespondidas2 = document.getElementById('contadorPreguntasRespondidas2');
+
+//Cuando terminamos la pregunta final, entonces sacamos la califacion
+function getGrade(){
+    if(contadorPreguntasRespondidas.textContent >= 19){
+        //Calculo de la calificacion
+        let calificacionFinal = (puntajeTotal*10)/20;
+        return calificacionFinal;
+    }else{
+        return 'TEST SIN TERMINAR, NO HAGAS TRAMPA.';
+    }
+}
