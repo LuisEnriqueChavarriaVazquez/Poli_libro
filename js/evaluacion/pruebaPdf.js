@@ -46,8 +46,12 @@ documentoPrueba.addEventListener('click', () => {
 
         //Rectangulo para el pie de página
         doc.setDrawColor(0);
+        doc.setFillColor(85, 112, 99);
+        doc.roundedRect(0, pageAltura-3, pageAncho, 3, 0, 0, 'F');
+
+        doc.setDrawColor(0);
         doc.setFillColor(109, 142, 126);
-        doc.roundedRect(0, pageAltura-5, pageAncho, 5, 0, 0, 'F');
+        doc.roundedRect(0, pageAltura-6, pageAncho, 3, 0, 0, 'F');
     }
 
     encabezado(altura = 0); //pag uno
@@ -137,86 +141,115 @@ documentoPrueba.addEventListener('click', () => {
     doc.addImage(iconoIntentos, 'png', 20, 115+40, 9,9);
 
     //Para lo iconos de aprobacion
+    let iconoAprobado = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABl0lEQVR4Ae3WA2iuARSH8et4w7Vy186ua9u2lbu27exm5Bbm7Boytzjb29kz63x6MZ6nfhn/8/GdZFmWZVketRo/kI/qbvn4gdUYtc3AX7RANGjBX8wYjePTIGFKG21H/IVE6C9GRauVj00hTmFBt1MoVD5OqzHi/VDGz8bgZitH/MCIlwfp5xQCdQrSTx5GvCpIP4sQqEWQfqrsAPsIuf4S28+o/ZE5f5Swhzl7nLYi6SBiMQ1jrgNohCBxrB2xD42QfqLhaXNxCJ+QjFwUQLo9hZP2ogHSTzOOw3Ur8RJ5kCD+YzIibbcyvgUn4artyISE4RectAva+NNw3JII/22/QesRNiBQO1CvjD8Lx21GKQSaRmTjJy5jI7ReQ1AC7YjtyvhWXIDjlqFGGd2GFJzGTITqJaSfYqxHT1tRp4y/CFclKOMTsAJ6QQ5QjliHLdDGX4bryiH93ITTXitHlKBWGX8NniQOvYDWO0gQbbgBzxIfjvgQZPwteJr4dMQnZfwdeJ74eMQXSLd7GJN9wwNYlmVZI1c7iJl2lL7EnFcAAAAASUVORK5CYII=";
+    let iconoReprobado = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAACL0lEQVRYw+2XzUojQRDHfxskoomKevPrJL7ALmaPOS97FdkXEOPRy2ZX49G4dxV9h6wXQfEllJBzFvwaDwpeBA0I7cGe2jHd0zOTkAHBmltXzb+q67vhg94DZfjKb/7S4AaFwqNOjTLzfOoefIo/XKFCvgs2megcfJw9WqHg/vfENmOdwP/gLhLc/25ZSAbex36blSeUKDJLnjyzFClxwtMbmR364sIPchT40aNE3iqXp4QXkDxkIJ71/+EfqZBzSueo8BhQEeMWewHbC7FuXAjcYzc6tL5oncnYMZukLv8tuhPzTqyfSlgvnmSUI2l3xfeFxGldkFjshFvhl9V6R4W5Lkkd4tyquMfPnCxVPDyqZA1pk5cTN23aW9qlZi/L2ZaEbsuQt/GWpUdlbD70LzgsZ9cCcm3I23jDUt2WGP7SrOMIEDfvWJ+VTQU1zVqJcIObt6LPaqaChmYVnYGM4hU1SsNUcKtZc10NqDkpN4P88Ax1pWBIUiV9BT13kS3IyckRZFuaJidHmtoKjUCNLnFAkxYtmhywFKh34hWarVW8Uj8VHoxN4oEK/YYZjlZha3YAM5yGriunzLyRdTY7W7uGac71aZNVPjPKKF9Y5Z8+PWc6sAA427Vt4GQ5Q6F45mebTRnKPKNQnEmriBw45sjc0PDfrNLftYqNuCOzfeiPcI9CsRYqv4ZCcc9I3KHf87UlhcUrhdWx58tvCut7Cg+QVJ5QKTwCU3nGflDv6QVrGz1C2gNOnwAAAABJRU5ErkJggg==";
     if(getGrade() >= 6){
-        let iconoAprobado = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABl0lEQVR4Ae3WA2iuARSH8et4w7Vy186ua9u2lbu27exm5Bbm7Boytzjb29kz63x6MZ6nfhn/8/GdZFmWZVketRo/kI/qbvn4gdUYtc3AX7RANGjBX8wYjePTIGFKG21H/IVE6C9GRauVj00hTmFBt1MoVD5OqzHi/VDGz8bgZitH/MCIlwfp5xQCdQrSTx5GvCpIP4sQqEWQfqrsAPsIuf4S28+o/ZE5f5Swhzl7nLYi6SBiMQ1jrgNohCBxrB2xD42QfqLhaXNxCJ+QjFwUQLo9hZP2ogHSTzOOw3Ur8RJ5kCD+YzIibbcyvgUn4artyISE4RectAva+NNw3JII/22/QesRNiBQO1CvjD8Lx21GKQSaRmTjJy5jI7ReQ1AC7YjtyvhWXIDjlqFGGd2GFJzGTITqJaSfYqxHT1tRp4y/CFclKOMTsAJ6QQ5QjliHLdDGX4bryiH93ITTXitHlKBWGX8NniQOvYDWO0gQbbgBzxIfjvgQZPwteJr4dMQnZfwdeJ74eMQXSLd7GJN9wwNYlmVZI1c7iJl2lL7EnFcAAAAASUVORK5CYII=";
         doc.addImage(iconoAprobado, 'png', 20, 115+50, 9,9);
     }else{
-        let iconoReprobado = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAACL0lEQVRYw+2XzUojQRDHfxskoomKevPrJL7ALmaPOS97FdkXEOPRy2ZX49G4dxV9h6wXQfEllJBzFvwaDwpeBA0I7cGe2jHd0zOTkAHBmltXzb+q67vhg94DZfjKb/7S4AaFwqNOjTLzfOoefIo/XKFCvgs2megcfJw9WqHg/vfENmOdwP/gLhLc/25ZSAbex36blSeUKDJLnjyzFClxwtMbmR364sIPchT40aNE3iqXp4QXkDxkIJ71/+EfqZBzSueo8BhQEeMWewHbC7FuXAjcYzc6tL5oncnYMZukLv8tuhPzTqyfSlgvnmSUI2l3xfeFxGldkFjshFvhl9V6R4W5Lkkd4tyquMfPnCxVPDyqZA1pk5cTN23aW9qlZi/L2ZaEbsuQt/GWpUdlbD70LzgsZ9cCcm3I23jDUt2WGP7SrOMIEDfvWJ+VTQU1zVqJcIObt6LPaqaChmYVnYGM4hU1SsNUcKtZc10NqDkpN4P88Ax1pWBIUiV9BT13kS3IyckRZFuaJidHmtoKjUCNLnFAkxYtmhywFKh34hWarVW8Uj8VHoxN4oEK/YYZjlZha3YAM5yGriunzLyRdTY7W7uGac71aZNVPjPKKF9Y5Z8+PWc6sAA427Vt4GQ5Q6F45mebTRnKPKNQnEmriBw45sjc0PDfrNLftYqNuCOzfeiPcI9CsRYqv4ZCcc9I3KHf87UlhcUrhdWx58tvCut7Cg+QVJ5QKTwCU3nGflDv6QVrGz1C2gNOnwAAAABJRU5ErkJggg==";
         doc.addImage(iconoReprobado, 'png', 20, 115+50, 9,9);
     }
 
     /////////////////////////////////////////////
-    //PAGINA 2
+    //PAGINA 2,3,4
     ////////////////////////////////////////////
 
-    doc.addPage();
-    encabezado(0); //pag dos
+    function imprimirLasPreguntasPorHoja(primeroIndex,segundoIndex){
+        //Esta función es para crear los elementos básicos del PDF
+        function crearContenidosPreguntasPdf(){
+            doc.addPage();
+            encabezado(); //encabezado de las páginas
 
-    //Rectangulo para el contenido del esta sección
-    doc.setDrawColor(0);
-    doc.setFillColor(225,225,225);
-    doc.roundedRect(10, 45, 195, 100, 5, 5, 'F');
-    
-    //Rectangulo para el titulo
-    doc.setDrawColor(0);
-    doc.setFillColor(210,210,210);
-    doc.roundedRect(10, 45, 195, 25, 5, 5, 'F');
-    
-    //Titulo de la sección
-    doc.setTextColor(70,70,70);
-    doc.setFontSize(20);
-    doc.text(35, 60, 'Resultado de preguntas');
+            //Rectangulo para el contenido del esta sección
+            doc.setDrawColor(0);
+            doc.setFillColor(225,225,225);
+            doc.roundedRect(10, 45, 195, 30*7.5, 5, 5, 'F');
+            
+            //Rectangulo para el titulo
+            doc.setDrawColor(0);
+            doc.setFillColor(210,210,210);
+            doc.roundedRect(10, 45, 195, 25, 5, 5, 'F');
+            
+            //Titulo de la sección
+            doc.setTextColor(70,70,70);
+            doc.setFontSize(20);
+            doc.text(35, 60, 'Resultado de preguntas');
 
-    
-    //Icono para el titulo
-    doc.addImage(iconoSeccionResultados, 'png', 20, 52, 12, 12);
+            //Icono para el titulo
+            doc.addImage(iconoSeccionResultados, 'png', 20, 52, 12, 12);
+        }
 
-    //Obtenemos los datos para las preguntas
-    let getEnunciadoPdf = document.getElementsByClassName('getEnunciadoPdf');
-    let getEnunciadoNumeroPdf = document.getElementsByClassName('getEnunciadoNumeroPdf');
+        //Obtenemos los datos para las preguntas
+        let getEnunciadoPdf = document.getElementsByClassName('getEnunciadoPdf');
+        let getEnunciadoNumeroPdf = document.getElementsByClassName('getEnunciadoNumeroPdf');
+        let resultadoFinal = document.querySelectorAll('[resultadoFinal]');
+        let respuestaCorrectaFinal = document.querySelectorAll('[cajaRetroalimentacion]');
 
-    let posicionRectangulo = 80;
-    let posicionEnunciado = 88;
-    let posicionRespuesta = 100;
-    let posicionRespuestaCorrecta = 105;
-    let estadoRespuesta = 110;
-    let colores = 245;
-    for(var i = 0; i < 10; i++){
-        //Rectangulo para preguntas del cuestionario
-        doc.setDrawColor(0);
-        doc.setFillColor(colores, colores, colores);
-        doc.roundedRect(10, posicionRectangulo, 190, 40, 2, 2, 'FD');
-    
-        ///////////////////////////////////////////////
-        //Preguntas
-        doc.setFontSize(10);
-        doc.setTextColor(0, 79, 118);
+        let posicionRectangulo = 75;
+        let posicionEnunciado = 83;
+        let posicionRespuesta = 98;
+        let posicionRespuestaCorrecta = 102;
+        let estadoRespuesta = 93;
 
-        var textLong = `${getEnunciadoNumeroPdf[i].textContent}: ${getEnunciadoPdf[i].textContent}`;
-        var splitText = doc.splitTextToSize(textLong, 175);
-        doc.text(20, posicionEnunciado, splitText);
+        for(var i = primeroIndex; i < segundoIndex; i++){
 
-        // doc.setFontSize(12);
-        // doc.setTextColor(0, 0, 0);
-        // doc.text(20, posicionRespuesta, 'Su respuesta: ' + `${respuestaAlumnoClass[i].value}`);
-        // doc.text(20, posicionRespuestaCorrecta, 'Respuesta correcta: ' + `${respuestaCorrectaPreguntaAzar[i].textContent}`);
+            function insertQuestions(index){
+                //Rectangulo para preguntas del cuestionario
+                doc.setDrawColor(0);
+                doc.setFillColor(245,245,245);
+                doc.roundedRect(15, posicionRectangulo, 185, 30, 5, 5, 'F');
+            
+                ///////////////////////////////////////////////
+                //Preguntas
+                doc.setFontSize(11);
+                doc.setTextColor(0,0,0);
+                doc.setFontType("bold");
 
-        // if (estadoPreguntaAzar[i].textContent=='Correcto') {
-        //     doc.setTextColor(11, 95, 17);
-        // } else {
-        //     doc.setTextColor(151, 29, 5);
-        // }
-        
-        // doc.text(20, estadoRespuesta, 'Estado: ' + `${estadoPreguntaAzar[i].textContent}`);
-        // doc.setTextColor(0, 79, 118);
-        // //Actualizacion de valores para la siguiente pregunta
-        // posicionRectangulo += 40;
-        // posicionEnunciado += 40;
-        // posicionRespuesta += 40;
-        // posicionRespuestaCorrecta += 40;
-        // estadoRespuesta += 40;
-        // colores -= 4;
+                var textLong = `${getEnunciadoNumeroPdf[index].textContent}: ${getEnunciadoPdf[index].textContent}`;
+                var splitText = doc.splitTextToSize(textLong, 175);
+                doc.text(20, posicionEnunciado, splitText);
+
+                doc.setFontSize(10);
+                doc.setTextColor(0, 0, 0);
+                doc.setFontType("normal");
+                doc.text(20, posicionRespuesta, 'Su respuesta: ' + `${resultadoFinal[index].getAttribute('resultadoFinal')}`);
+                doc.text(20, posicionRespuestaCorrecta, 'Retroalimentación = ' + `${respuestaCorrectaFinal[index].textContent}`);
+
+                doc.setFontSize(20);
+                doc.setTextColor(0, 0, 0);
+                doc.setFontType("normal");
+                if((respuestaCorrectaFinal[index].textContent).indexOf('Correcto') != -1){
+                    doc.addImage(iconoAprobado, 'png', 188, estadoRespuesta, 9,9);
+                }else{
+                    doc.addImage(iconoReprobado, 'png', 188, estadoRespuesta, 9,9);
+                }
+                
+
+                posicionRectangulo += 32;
+                posicionEnunciado += 32;
+                posicionRespuesta += 32;
+                posicionRespuestaCorrecta += 32;
+                estadoRespuesta += 32;
+            }
+
+            if(i == primeroIndex){
+                crearContenidosPreguntasPdf();
+            }
+            insertQuestions(i);
+        }
+
+        posicionRectangulo = 75;
+        posicionEnunciado = 83;
+        posicionRespuesta = 98;
+        posicionRespuestaCorrecta = 102;
+        estadoRespuesta = 93;
     }
+
+    //Pag 2
+    imprimirLasPreguntasPorHoja(0,6);
+    //Pag 3
+    imprimirLasPreguntasPorHoja(6,12);
+    //Pag 4
+    imprimirLasPreguntasPorHoja(12,18);
 
     doc.save('resultado_cuestionario_unidad_1.pdf');
     //let previewPDF = document.getElementById('previewPDF');

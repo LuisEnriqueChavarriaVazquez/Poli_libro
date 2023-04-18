@@ -32,8 +32,11 @@ function pregunta(numero) {
 
     //Accedemos al contenido de la opcion elejida por el alumno
     var respuestaAlumnoContent = document.getElementById(respuestaAlumnoId);
-    respuestaAlumnoContent.classList.add('respuestaAlumnoClassMark');
-    
+
+    //Hay que registrar la respuesta del usuario como atributo en el DOM
+    let contenedorPrincipalOPTMULTIPLE = document.getElementById(`pregunta${numero}`);
+    contenedorPrincipalOPTMULTIPLE.setAttribute('resultadoFinal',`${respuestaAlumnoContent.value}`)
+
     //Evaluacion de las preguntas
     //console.log(respuestaAlumnoId)
     if (respuestaCorrectaId == respuestaAlumnoId) {
@@ -187,7 +190,7 @@ function preguntas_aleatorias() {
     let contenido_preguntas = "";
     for (i = 1; i < preguntas_aleatorias_indices.length; i++) {
         contenido_preguntas = contenido_preguntas + `
-        <section class="randomizeDOMClass" id="pregunta${preguntas_aleatorias_indices[i]}">
+        <section class="randomizeDOMClass" id="pregunta${preguntas_aleatorias_indices[i]}" resultadoFinal="">
             <!--Formulario para la revision de la pregunta-->
             <form class="cardPregunta clgreyl2 border1 shadow2">
                 <!--Numero y enunciado de la pregunta-->
@@ -236,7 +239,7 @@ function preguntas_aleatorias() {
                     <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar pregunta<i
                     class="material-icons right">done</i></a>
                     <!--Retroalimentacion de la pregunta-->
-                    <div id="retroalimentacion"></div>
+                    <div id="retroalimentacion" cajaRetroalimentacion="retroalimentacion"></div>
                 </div>
             </form>
         </section>

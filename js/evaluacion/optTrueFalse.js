@@ -41,7 +41,9 @@ let questionsTF = [
 function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     //Obtenemos el valor de la respuesta del cliente
     let valueAnswerUser = document.getElementById(id);
+    valueAnswerUser.setAttribute('resultadoFinal', `${valueAnswerUser.innerText}`);
     valueAnswerUser = valueAnswerUser.innerText;
+    
 
     //Accedemos al contenedor de la retroalimentacion
     let contenedorButtonsTF_value = document.getElementById(contenedorButtonsTF);
@@ -117,15 +119,15 @@ function printQuestionsTrueFalse(){
                     <div class="evaluateQuestionContainer">
                         <!--Opciones de la pregunta-->
                         <section class="optionsQuestionContainerTF clgrel1" id="questionTFButtonsContainer_${i}">
-                            <div class="buttonTrue shadow2 waves-effect cl5 white-text" id="questionTF_${i}_buttonTrue" onclick="checkTFanswer('questionTF_${i}_buttonTrue','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
+                            <div class="buttonTrue shadow2 waves-effect cl5 white-text"  id="questionTF_${i}_buttonTrue" onclick="checkTFanswer('questionTF_${i}_buttonTrue','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
                                 V
                             </div>
-                            <div class="buttonFalse shadow2 waves-effect cl4 white-text" id="questionTF_${i}_buttonFalse" onclick="checkTFanswer('questionTF_${i}_buttonFalse','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
+                            <div class="buttonFalse shadow2 waves-effect cl4 white-text"  id="questionTF_${i}_buttonFalse" onclick="checkTFanswer('questionTF_${i}_buttonFalse','${suffledquestionsTF[i].respuesta}','questionTF_${i}_retroalimentacion','questionTFButtonsContainer_${i}')">
                                 F
                             </div>
                         </section>
                         <!--Retroalimentacion de la pregunta-->
-                        <div id="questionTF_${i}_retroalimentacion"></div>
+                        <div id="questionTF_${i}_retroalimentacion" cajaRetroalimentacion="retroalimentacion"></div>
                     </div>
                 </form>
             </section>

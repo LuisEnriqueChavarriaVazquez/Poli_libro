@@ -8,7 +8,7 @@ function numeradorDePreguntas(){
     let numeracionPreguntaElementsArr = [...numeracionPreguntaElements];
     
     for(z = 0; z < numeracionPreguntaElementsArr.length; z++){
-        numeracionPreguntaElementsArr[z].innerHTML = "Pregunta número " + (z + 1);
+        numeracionPreguntaElementsArr[z].innerHTML = "Pregunta " + (z + 1);
     }
 }
 

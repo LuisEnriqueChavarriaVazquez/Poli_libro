@@ -23,3 +23,6 @@ function getGrade(){
         return 'TEST SIN TERMINAR, NO HAGAS TRAMPA.';
     }
 }
+
+//Guardamos las respuesta de las preguntas de opt multiple y de tru y false
+let AnswersPDF = [];
