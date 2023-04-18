@@ -311,10 +311,6 @@ function checkDragAndDrop(numeroPregunta,id_preguntas,id_button, id_retroaliment
       validateExamenCompletado();
       
   }else{
-
-    //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
-    preguntasContestadasTotal++;
-
     //Validacion de preguntas faltantes
     M.toast({html: `Aún faltan conceptos por relacionar.`});
   }

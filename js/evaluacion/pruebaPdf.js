@@ -292,11 +292,11 @@ documentoPrueba.addEventListener('click', () => {
     }
 
     //Pag 2
-    //imprimirLasPreguntasPorHoja(0,6);
+    imprimirLasPreguntasPorHoja(0,6);
     //Pag 3
-    //imprimirLasPreguntasPorHoja(6,12);
+    imprimirLasPreguntasPorHoja(6,12);
     //Pag 4
-    //imprimirLasPreguntasPorHoja(12,18);
+    imprimirLasPreguntasPorHoja(12,18);
 
     /////////////////////////////////////////////
     //PAGINA 5
@@ -372,8 +372,8 @@ documentoPrueba.addEventListener('click', () => {
 
         }
 
-        //crearContenidosPreguntasPdf(0,18);
-        //crearContenidosPreguntasPdf(1,19);
+        crearContenidosPreguntasPdf(0,18);
+        crearContenidosPreguntasPdf(1,19);
     }
 
     //Pag 2
