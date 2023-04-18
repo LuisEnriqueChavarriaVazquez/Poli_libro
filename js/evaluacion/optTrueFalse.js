@@ -102,13 +102,13 @@ function printQuestionsTrueFalse(){
                     <!--Numero y enunciado de la pregunta-->
                     <div class="titleQuestionContainer clgreyl3">
                         <div class="titleQuestionContainerSecondary">
-                            <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+                            <h5 class="getEnunciadoNumeroPdf preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
                             <a class="tooltipped clgreyl2 clbktx border1"
                             data-position="left" data-tooltip="Presiona el boton izquierdo o derecho">
                             <i class="material-icons">help</i>
                             </a>
                         </div>
-                        <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
+                        <p class="getEnunciadoPdf preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
                     </div>
                     
                     <section class="optionsQuestionContainer clgreyl3 hide-on-small-only" ></section>

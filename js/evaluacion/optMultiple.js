@@ -193,13 +193,13 @@ function preguntas_aleatorias() {
                 <!--Numero y enunciado de la pregunta-->
                 <div class="titleQuestionContainer clgreyl3">
                     <div class="titleQuestionContainerSecondary">
-                        <h5 class="preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
+                        <h5 class="getEnunciadoNumeroPdf preguntaIdentificador clgreyl2 clbktx border1 textoStandar numeracionPregunta">Numero de la pregunta</h5>
                         <a class="waves-effect waves-light tooltipped clgreyl2 clbktx border1"
                             data-position="left" data-tooltip="Selecciona alguna de las opciones">
                             <i class="material-icons">help</i>
                         </a>
                     </div>
-                    <p class="preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
+                    <p class="getEnunciadoPdf preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
                 </div>
                 
                 <!--Opciones de la pregunta-->
