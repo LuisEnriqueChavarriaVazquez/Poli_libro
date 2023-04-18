@@ -1,10 +1,55 @@
 let documentoPrueba = document.getElementById('documentoPrueba');
+let unidadActual = documentoPrueba.getAttribute('unidadButton');
+console.log('unidadActual: ', unidadActual);
 
 documentoPrueba.addEventListener('click', () => {
     //Crear el documento [high, wide]
     const pageAltura = 279; 
     const pageAncho = 216;
     var doc = new jsPDF('p', 'mm', [pageAltura,pageAncho]);
+
+    //Se valida la unidad actual para elegir los textos y los colores
+    let tituloPDF = '';
+    let colorOnePDF = [];
+    let colorTwoPDF = [];
+    let colorThreePDF = [];
+
+    if(unidadActual == 'u1'){
+
+        tituloPDF = 'Unidad 1: Título de la unidad con un texto largo de prueba';
+        colorOnePDF = [61, 81, 71];
+        colorTwoPDF = [85, 112, 99];
+        colorThreePDF = [109, 142, 126];
+
+    }else if(unidadActual == 'u2'){
+
+        tituloPDF = 'Unidad 2: Título de la unidad con un texto largo de prueba';
+        colorOnePDF = [128, 84, 88];
+        colorTwoPDF = [160, 104, 110];
+        colorThreePDF = [205, 140, 146];
+
+    }else if(unidadActual == 'u3'){
+
+        tituloPDF = 'Unidad 3: Título de la unidad con un texto largo de prueba';
+        colorOnePDF = [116, 84, 116];
+        colorTwoPDF = [153, 109, 153]; 
+        colorThreePDF = [181, 131, 181];
+
+    }else if(unidadActual == 'u4'){
+
+        tituloPDF = 'Unidad 4: Título de la unidad con un texto largo de prueba';
+        colorOnePDF = [172, 101, 93];
+        colorTwoPDF = [214, 124, 114];
+        colorThreePDF = [232, 151, 142];
+
+    }else if(unidadActual == 'u5'){
+
+        tituloPDF = 'Unidad 5: Título de la unidad con un texto largo de prueba';
+        colorOnePDF = [120, 129, 158];
+        colorTwoPDF = [145, 155, 189];
+        colorThreePDF = [174, 185, 218];
+
+    }
 
     /////////////////////////////////////////////
     //PAGINA 1
@@ -19,7 +64,7 @@ documentoPrueba.addEventListener('click', () => {
     function encabezado(){
         //Rectangulo para el logo del poli
         doc.setDrawColor(0);
-        doc.setFillColor(61, 81, 71);
+        doc.setFillColor(colorOnePDF[0],colorOnePDF[1],colorOnePDF[2]);
         doc.roundedRect(0, 0, pageAncho, 25, 0, 0, 'F');
 
         doc.addImage(iconoEscom, 'png', 190, 5, 18, 16);
@@ -37,20 +82,20 @@ documentoPrueba.addEventListener('click', () => {
         
         //Rectangulo para decoracion del rectangulo del encabezado
         doc.setDrawColor(0);
-        doc.setFillColor(85, 112, 99);
+        doc.setFillColor(colorTwoPDF[0],colorTwoPDF[1],colorTwoPDF[2]);
         doc.roundedRect(0, 25, pageAncho, 5, 0, 0, 'F');
     
         doc.setDrawColor(0);
-        doc.setFillColor(109, 142, 126);
+        doc.setFillColor(colorThreePDF[0],colorThreePDF[1],colorThreePDF[2]);
         doc.roundedRect(0, 30, pageAncho, 5, 0, 0, 'F');
 
         //Rectangulo para el pie de página
         doc.setDrawColor(0);
-        doc.setFillColor(85, 112, 99);
+        doc.setFillColor(colorTwoPDF[0],colorTwoPDF[1],colorTwoPDF[2]);
         doc.roundedRect(0, pageAltura-3, pageAncho, 3, 0, 0, 'F');
 
         doc.setDrawColor(0);
-        doc.setFillColor(109, 142, 126);
+        doc.setFillColor(colorThreePDF[0],colorThreePDF[1],colorThreePDF[2]);
         doc.roundedRect(0, pageAltura-6, pageAncho, 3, 0, 0, 'F');
     }
 
@@ -66,15 +111,15 @@ documentoPrueba.addEventListener('click', () => {
     doc.roundedRect(0, 35, pageAncho, 40, 0, 0, 'F');
 
     //Datos de la unidad
-    doc.setTextColor(61, 81, 71);
+    doc.setTextColor(colorOnePDF[0],colorOnePDF[1],colorOnePDF[2]);
     doc.setFont("helvetica");
     doc.setFontType("bold");
     doc.setFontSize(25);
     doc.text(10, 52, 'Recurso didáctico digital');
-    doc.setTextColor(85, 112, 99);
+    doc.setTextColor(colorTwoPDF[0],colorTwoPDF[1],colorTwoPDF[2]);
     doc.setFontType("bold");
     doc.setFontSize(16);
-    doc.text(10, 62, 'Unidad 1: Título de la unidad con un texto largo de prueba');
+    doc.text(10, 62, tituloPDF);
 
     ////////////////////////////////////////////////////////////////////////////
     //Estadísticas del usuario
@@ -247,11 +292,11 @@ documentoPrueba.addEventListener('click', () => {
     }
 
     //Pag 2
-    imprimirLasPreguntasPorHoja(0,6);
+    //imprimirLasPreguntasPorHoja(0,6);
     //Pag 3
-    imprimirLasPreguntasPorHoja(6,12);
+    //imprimirLasPreguntasPorHoja(6,12);
     //Pag 4
-    imprimirLasPreguntasPorHoja(12,18);
+    //imprimirLasPreguntasPorHoja(12,18);
 
     /////////////////////////////////////////////
     //PAGINA 5
@@ -327,8 +372,8 @@ documentoPrueba.addEventListener('click', () => {
 
         }
 
-        crearContenidosPreguntasPdf(0,18);
-        crearContenidosPreguntasPdf(1,19);
+        //crearContenidosPreguntasPdf(0,18);
+        //crearContenidosPreguntasPdf(1,19);
     }
 
     //Pag 2
