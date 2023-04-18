@@ -153,6 +153,12 @@ documentoPrueba.addEventListener('click', () => {
     //PAGINA 2,3,4
     ////////////////////////////////////////////
 
+    //Obtenemos los datos para las preguntas
+    let getEnunciadoPdf = document.getElementsByClassName('getEnunciadoPdf');
+    let getEnunciadoNumeroPdf = document.getElementsByClassName('getEnunciadoNumeroPdf');
+    let resultadoFinal = document.querySelectorAll('[resultadoFinal]');
+    let respuestaCorrectaFinal = document.querySelectorAll('[cajaRetroalimentacion]');
+
     function imprimirLasPreguntasPorHoja(primeroIndex,segundoIndex){
         //Esta función es para crear los elementos básicos del PDF
         function crearContenidosPreguntasPdf(){
@@ -172,17 +178,13 @@ documentoPrueba.addEventListener('click', () => {
             //Titulo de la sección
             doc.setTextColor(70,70,70);
             doc.setFontSize(20);
+            doc.setFontType("bold");
             doc.text(35, 60, 'Resultado de preguntas');
 
             //Icono para el titulo
             doc.addImage(iconoSeccionResultados, 'png', 20, 52, 12, 12);
         }
 
-        //Obtenemos los datos para las preguntas
-        let getEnunciadoPdf = document.getElementsByClassName('getEnunciadoPdf');
-        let getEnunciadoNumeroPdf = document.getElementsByClassName('getEnunciadoNumeroPdf');
-        let resultadoFinal = document.querySelectorAll('[resultadoFinal]');
-        let respuestaCorrectaFinal = document.querySelectorAll('[cajaRetroalimentacion]');
 
         let posicionRectangulo = 75;
         let posicionEnunciado = 83;
@@ -250,6 +252,87 @@ documentoPrueba.addEventListener('click', () => {
     imprimirLasPreguntasPorHoja(6,12);
     //Pag 4
     imprimirLasPreguntasPorHoja(12,18);
+
+    /////////////////////////////////////////////
+    //PAGINA 5
+    ////////////////////////////////////////////
+
+    function imprimirLasPreguntasPorHojaDragDrop(indexNumeroPregunta, indexRetroalimentacion){
+        //Esta función es para crear los elementos básicos del PDF
+        function crearContenidosPreguntasPdf(indexNumeroPregunta, indexRetroalimentacion){
+            doc.addPage();
+            encabezado(); //encabezado de las páginas
+
+            //Rectangulo para el contenido del esta sección
+            doc.setDrawColor(0);
+            doc.setFillColor(225,225,225);
+            doc.roundedRect(10, 45, 195, 30*7.5, 5, 5, 'F');
+            
+            //Rectangulo para el titulo
+            doc.setDrawColor(0);
+            doc.setFillColor(210,210,210);
+            doc.roundedRect(10, 45, 195, 25, 5, 5, 'F');
+            
+            //Titulo de la sección
+            doc.setTextColor(70,70,70);
+            doc.setFontSize(20);
+            doc.setFontType("bold");
+            doc.text(35, 60, 'Relación correcta');
+
+            //Icono para el titulo
+            doc.addImage(iconoSeccionResultados, 'png', 20, 52, 12, 12);
+
+            //Icono de la flecha de relación de concepto con definicion
+            let iconRight = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAY0lEQVRYw+3Uuw2AQAwE0SmKT2sESEYUDHRgEkJCFvl0O873JacD51zfBaGdT1JHLORzImLgUBMjp4kixPQHcamJuQSRH16ogVeiKSCae0ee93yP87Cqv2fYtfMAm3beOVenG/m2EqQg70+XAAAAAElFTkSuQmCC';
+            
+            //Rectangulo para preguntas del cuestionario
+            let adjustHeightSquare = 75;
+            for(var i = 0; i < 4; i++){
+
+                //Definiciones
+                doc.setDrawColor(0);
+                doc.setFillColor(245,245,245);
+                doc.roundedRect(15, adjustHeightSquare, 100, 42, 5, 5, 'F');
+
+                doc.setFontSize(12);
+                doc.setTextColor(0, 0, 0);
+                doc.setFontType("normal");
+                var splitText = doc.splitTextToSize('Definición: ' + `${arrayDragAndDropPDFRespuestas[indexNumeroPregunta][i+4]}`, 90);
+                doc.text(20, adjustHeightSquare + 8, splitText);
+
+                //Conceptos
+                doc.setDrawColor(0);
+                doc.setFillColor(245,245,245);
+                doc.roundedRect(120, adjustHeightSquare, 80, 42, 5, 5, 'F');
+
+                doc.setFontSize(13);
+                doc.setTextColor(0, 0, 0);
+                doc.setFontType("normal");
+                doc.text(125, adjustHeightSquare + 8, `${arrayDragAndDropPDFRespuestas[indexNumeroPregunta][i]}`);
+
+                //Iconos
+                doc.addImage(iconRight, 'png', 114.5, adjustHeightSquare + 20, 8,8);
+
+                
+                adjustHeightSquare += 44;
+            }
+            
+            //Cuadro final de calificaciones
+            doc.setDrawColor(0);
+            doc.setFillColor(245,245,245);
+            doc.roundedRect(15, 251, 185, 15, 4, 4, 'F');
+            
+            //Calificación final
+            doc.text(20, 260, 'Puntos = ' + `${respuestaCorrectaFinal[indexRetroalimentacion].textContent}`);
+
+        }
+
+        crearContenidosPreguntasPdf(0,18);
+        crearContenidosPreguntasPdf(1,19);
+    }
+
+    //Pag 2
+    imprimirLasPreguntasPorHojaDragDrop();
 
     doc.save('resultado_cuestionario_unidad_1.pdf');
     //let previewPDF = document.getElementById('previewPDF');

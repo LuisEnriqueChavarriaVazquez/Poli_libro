@@ -183,9 +183,26 @@ let questionsDragAndDrop = [
 let oldOrderquestionsDragAndDrop = [...questionsDragAndDrop];
 let suffledquestionsDragAndDrop = shuffle(questionsDragAndDrop);
 
+//Array para el PDF
+let arrayDragAndDropPDFRespuestas = [];
+
 //Contenedor de las preguntas de drag and drop
 let contenedor_preguntas_drag = document.getElementById('contenedor_preguntas_two');
 for(var h = 0; h < 2; h++){
+
+    let arrayDragAndDropPDFRespuestasMini = [
+      suffledquestionsDragAndDrop[h][0].concepto,
+      suffledquestionsDragAndDrop[h][1].concepto,
+      suffledquestionsDragAndDrop[h][2].concepto,
+      suffledquestionsDragAndDrop[h][3].concepto,
+      suffledquestionsDragAndDrop[h][0].definicion,
+      suffledquestionsDragAndDrop[h][1].definicion,
+      suffledquestionsDragAndDrop[h][2].definicion,
+      suffledquestionsDragAndDrop[h][3].definicion
+    ];
+
+    arrayDragAndDropPDFRespuestas.push(arrayDragAndDropPDFRespuestasMini);
+
     contenedor_preguntas_drag.innerHTML += `
     <section class="conceptsDefinitionContainer clgreyl3 border1 shadow2">
     
@@ -260,7 +277,7 @@ for(var h = 0; h < 2; h++){
         <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="buttonEvaluateDragAndDrop_${h}" onclick="checkDragAndDrop('${h}','${suffledquestionsDragAndDrop[h][4].id}','buttonEvaluateDragAndDrop_${h}','retroalimentacionDragAndDrop_${h}')">Revisar
           conceptos<i class="material-icons right">done</i></a>
         <!--Retroalimentacion de la pregunta-->
-        <div id="retroalimentacionDragAndDrop_${h}"></div>
+        <div id="retroalimentacionDragAndDrop_${h}" cajaRetroalimentacion="retroalimentacion"></div>
       </div>
     
     </section>
