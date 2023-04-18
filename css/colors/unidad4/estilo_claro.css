@@ -41,6 +41,18 @@
     transition: all .1s ease;
 }
 
+/*Algunos estilos para la pantalla de carga de los cuestionarios*/
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	--primary: #7e4a44;
+	--primary-l: #9e5c55;
+	--primary-d: #9e5c55;
+	--white: hsl(var(--hue),10%,100%);
+	--white-d: hsl(var(--hue),10%,45%);
+}
+
 /*Menu lateral de textos*/
 .leftBorderUnit4Menu{
     border-bottom: #7e4a44 70px solid !important;
