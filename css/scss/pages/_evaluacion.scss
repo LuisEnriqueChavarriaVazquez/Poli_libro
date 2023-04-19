@@ -374,18 +374,6 @@
   width: 100%;
 }
 
-#barraPreguntas,#barraPreguntas2 {
-  background: rgb(0, 204, 122);
-  background: -moz-linear-gradient(90deg, rgba(0, 204, 122, 1) 0%, rgba(0, 138, 82, 1) 93%);
-  background: -webkit-linear-gradient(90deg, rgba(0, 204, 122, 1) 0%, rgba(0, 138, 82, 1) 93%);
-  background: linear-gradient(90deg, rgba(0, 204, 122, 1) 0%, rgba(0, 138, 82, 1) 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00cc7a",endColorstr="#008a52",GradientType=1);
-  height: 20px;
-  border-radius: 5px;
-  width: 0px;
-  transition: all 0.1s ease-in-out;
-}
-
 /*Inputs eliminar estilos*/
 // input:not([type]),
 // input[type="text"],

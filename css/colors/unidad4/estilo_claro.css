@@ -132,3 +132,16 @@
     color: #292929;
     font-weight: 600;
 }
+
+#barraPreguntas,
+#barraPreguntas2 {
+    background: rgb(214,124,114);
+    background: -moz-linear-gradient(90deg, rgba(214,124,114,1) 17%, rgba(172,101,93,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(214,124,114,1) 17%, rgba(172,101,93,1) 100%);
+    background: linear-gradient(90deg, rgba(214,124,114,1) 17%, rgba(172,101,93,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d67c72",endColorstr="#ac655d",GradientType=1); 
+    height: 20px;
+    border-radius: 5px;
+    width: 0px;
+    transition: all 0.1s ease-in-out;
+}
