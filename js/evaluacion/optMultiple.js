@@ -190,7 +190,7 @@ function preguntas_aleatorias() {
     let contenido_preguntas = "";
     for (i = 1; i < preguntas_aleatorias_indices.length; i++) {
         contenido_preguntas = contenido_preguntas + `
-        <section class="randomizeDOMClass" id="pregunta${preguntas_aleatorias_indices[i]}" resultadoFinal="">
+        <section class="randomizeDOMClass lazy" id="pregunta${preguntas_aleatorias_indices[i]}" resultadoFinal="">
             <!--Formulario para la revision de la pregunta-->
             <form class="cardPregunta clgreyl2 border1 shadow2">
                 <!--Numero y enunciado de la pregunta-->

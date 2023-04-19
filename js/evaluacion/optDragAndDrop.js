@@ -204,7 +204,7 @@ for(var h = 0; h < 2; h++){
     arrayDragAndDropPDFRespuestas.push(arrayDragAndDropPDFRespuestasMini);
 
     contenedor_preguntas_drag.innerHTML += `
-    <section class="conceptsDefinitionContainer clgreyl3 border1 shadow2">
+    <section class="conceptsDefinitionContainer clgreyl3 border1 shadow2 lazy">
     
       <!--Numero y enunciado de la pregunta-->
       <div class="titleQuestionContainerSecondary">

@@ -550,3 +550,9 @@
   padding: 8px;
   width: 100%;
 }
+
+//Scroll reveal
+.lazy {
+  opacity: 0;
+  transition: opacity 1.5s;
+}

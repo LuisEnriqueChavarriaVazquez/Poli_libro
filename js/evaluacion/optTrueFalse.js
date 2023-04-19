@@ -99,7 +99,7 @@ function printQuestionsTrueFalse(){
 
     for(var i = 0; i < 8; i++){
         containerTrueFalse.innerHTML +=  `
-            <section class="randomizeDOMClass">
+            <section class="randomizeDOMClass lazy">
                 <form class="cardPregunta clgreyl2 border1 shadow2">
                     <!--Numero y enunciado de la pregunta-->
                     <div class="titleQuestionContainer clgreyl3">
