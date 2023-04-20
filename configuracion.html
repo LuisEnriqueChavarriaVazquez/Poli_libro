@@ -33,7 +33,7 @@
 
     <!--Tutorial interactivo-->
     <script defer src="js/driver.min.js"></script>
-    <script defer src="js/tutorialInteractive.js"></script>
+    <script defer src="js/tutorialInteractiveConfig.js"></script>
 
     <!--Scripts para saber datos sobre la memoria-->
     <script defer src="js/memoria/datosGuardados.js"></script>
@@ -87,7 +87,7 @@
                     <i class="material-icons">help</i>
                 </a>
             </p>
-            <div class="colorCardSepia shadow2 border1 clgreyl1">
+            <div class="colorCardSepia shadow2 border1 clgreyl1" id="a2tutorialButton">
                 <i id="iconModSepia" class="cl4 white-text iconColorSelection material-icons">brightness_7</i>
                 <div>
                     <p class="range-field barSepiaContainer">
@@ -133,7 +133,7 @@
                 </div>
                 <div id="adjustPreview">
                     <p class="textoTitulo clbktx">Vista previa</p>
-                    <div class="adjustPreviewTextContainer clw clbktx shadow3 border1">
+                    <div class="adjustPreviewTextContainer clw clbktx shadow3 border1" id="adjustPreviewContainer">
                         <span class="textoDinamicoIdentificador textoReadingH2">Lorem ipsum dolor sit amet consectetur,
                             adipisicing elit. Iusto ipsam omnis sunt <i class="keyWord"> lorem clave de ejemplo </i>
                             illo deserunt asperiores minima, magni quas eius nulla temporibus placeat alias suscipit
@@ -143,6 +143,10 @@
             </div>
         </div>
     </section>
+
+    <!--Boton de tutorial-->
+    <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-small-only"
+        id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
 
     <!--Inyectamos componente de footer-->
     <section id="footerListener"></section>

@@ -9,6 +9,9 @@ let lateralUnityMenuBackThree = document.getElementById('lateralUnityMenuBackThr
 let lateralUnityMenuBackFour = document.getElementById('lateralUnityMenuBackFour');
 let lateralUnityMenu = document.getElementById('lateralUnityMenu');
 
+//Boton para ayuda al usuario
+let buttonComputerHelpMenu = document.getElementById('buttonComputerHelp');
+
 //Contenedor principal derecho
 let fullUnity = document.getElementsByClassName('fullUnity');
 let lateralUnityMenuSectionContainer = document.getElementById('lateralUnityMenuSectionContainer');
@@ -22,15 +25,18 @@ menuIconUnityContent.addEventListener('click', () => {
         lateralUnityMenuBackThree.classList.add('menuLateralWidthHide');
         lateralUnityMenuBackFour.classList.add('menuLateralWidthHide');
         lateralUnityMenu.classList.add('menuLateralWidthHide');
-
+        
         lateralUnityMenuBackOne.classList.remove('menuLateralWidthShow');
         lateralUnityMenuBackTwo.classList.remove('menuLateralWidthShow');
         lateralUnityMenuBackThree.classList.remove('menuLateralWidthShow');
         lateralUnityMenuBackFour.classList.remove('menuLateralWidthShow');
         lateralUnityMenu.classList.remove('menuLateralWidthShow');
-
+        
         fullUnity[0].classList.add('fullUnityComplete');
-        lateralUnityMenuSectionContainer.classList.add('')
+        //lateralUnityMenuSectionContainer.classList.add('');
+        
+        buttonComputerHelpMenu.classList.add('scale-out');
+        console.log('buttonComputerHelpMenu: ', buttonComputerHelpMenu);
     }else{
         menuIconUnityContent.textContent = 'close';
         lateralUnityMenuBackOne.classList.remove('menuLateralWidthHide');
@@ -46,5 +52,8 @@ menuIconUnityContent.addEventListener('click', () => {
         lateralUnityMenu.classList.add('menuLateralWidthShow');
 
         fullUnity[0].classList.remove('fullUnityComplete');
+
+        buttonComputerHelpMenu.classList.remove('scale-out');
+        console.log('buttonComputerHelpMenu: ', buttonComputerHelpMenu);
     }
 })

@@ -34,6 +34,10 @@
     <script defer src="js/configuraciones/textSizerLateral.js"></script>
     <script defer src="js/noCopy.js"></script>
 
+    <!--Tutorial interactivo-->
+    <script defer src="js/driver.min.js"></script>
+    <script defer src="js/tutorialInteractiveContenidoUnidad.js"></script>
+
 </head>
 
 <body>
@@ -112,16 +116,18 @@
                                     Sección C.3</a>
                                 <hr>
                                 <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
+                                    id="a1tutorialButton"
                                     href="#modal1">
                                     <i class="material-icons clbktx">auto_stories</i>
                                     <p class="clbktx">Material de apoyo</p>
                                 </div>
                                 <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
+                                    id="a2tutorialButton"
                                     href="#modal2">
                                     <i class="material-icons clbktx">diversity_2</i>
                                     <p class="clbktx">Cierre de unidad temática</p>
                                 </div>
-                                <a href="unidad2_evaluacion.html">
+                                <a href="unidad2_evaluacion.html" id="a3tutorialButton">
                                     <div
                                         class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2">
                                         <i class="material-icons clbktx">quiz</i>
@@ -129,6 +135,7 @@
                                     </div>
                                 </a>
                                 <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
+                                    id="a4tutorialButton"
                                     href="#modal3">
                                     <i class="material-icons clbktx">format_quote</i>
                                     <p class="clbktx">Referencias</p>
@@ -329,6 +336,10 @@
         style="background-color: #775054; width: 54px; height: 54px;">
         <i class="material-icons">text_format</i>
     </a>
+
+ <!--Boton de tutorial-->
+ <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-med-and-down scale-transition"
+ id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
 
 </body>
 
