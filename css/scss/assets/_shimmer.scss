@@ -108,6 +108,46 @@
     }
 }
 
+/*Contenedor para la carga de las configuraciones*/
+
+.loadingContactShimmerConfig {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loadingContact {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+    .loadingContact {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .loadingContactShimmerConfig {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .loadingContact {
+        height: 450px;
+    }
+}
+
 /*Contenedor para la carga de las palabras*/
 
 .loadingContactShimmerWord {
