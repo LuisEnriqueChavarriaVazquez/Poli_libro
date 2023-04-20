@@ -4,6 +4,9 @@ let menuIconUnityContent = document.getElementById('menuIconUnityContent');
 let menuStickyUnity = document.getElementById('menuStickyUnity');
 let contenedorStatsIdentificador = document.getElementById('contenedorStatsIdentificadorFixed');
 
+//Button de ayuda
+let buttonComputerHelpTest = document.getElementById('buttonComputerHelp');
+
 let scrollDownButtonStats, scrollUpButtonStats;
 window.onscroll = function () {
     scrollDownButtonStats = window.scrollY;
@@ -11,10 +14,12 @@ window.onscroll = function () {
 
     if(scrollDownButtonStats >= 145){
         buttonStats.classList.remove('scale-out');
+        buttonComputerHelpTest.classList.add('scale-out');
         //contenedorStatsIdentificador.classList.remove('scale-out');
         menuStickyUnity.classList.add('tabsFixed');
     }else{
         buttonStats.classList.add('scale-out');
+        buttonComputerHelpTest.classList.remove('scale-out');
         contenedorStatsIdentificador.classList.add('scale-out');
         menuStickyUnity.classList.remove('tabsFixed');
     }

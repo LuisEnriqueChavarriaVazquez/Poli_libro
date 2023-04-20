@@ -15,9 +15,17 @@ let a12tutorialButton = document.getElementById('a12tutorialButton');
 // Define the steps for introduction
 driver.defineSteps([
   {
-    element: '#a1tutorialButton',
+    element: '#contenedorStatsIdentificador',
     popover: {
       className: 'first-step-popover-class',
+      title: 'Panel de información',
+      description: 'En este panel puede ver informacion fundamental para la realización del cuestionario.',
+      position: 'bottom'
+    }
+  },
+  {
+    element: '#a1tutorialButton',
+    popover: {
       title: 'Puntos obtenidos',
       description: 'En esta sección podrás encontrar la cantidad de puntos que obtuviste en la evaluación. Estos puntos pueden indicar tu nivel de conocimiento o habilidad en un tema determinado.',
       position: 'bottom'

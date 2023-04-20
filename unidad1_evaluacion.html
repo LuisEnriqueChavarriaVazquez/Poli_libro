@@ -49,12 +49,16 @@
     <script defer src="js/evaluacion/statsSticky.js"></script>
     <script defer src="js/evaluacion/randomizeQuestionsDom.js"></script>
     <script defer src="js/evaluacion/numeradorPreguntas.js"></script>
+    <script defer src="js/evaluacion/pruebaPdf.js"></script>
 
     <!--Script para ir mostrando los elementos poco a poco-->
     <script defer src="js/scrollReveal/scrollReveal.js"></script>
     <script defer src="js/progressReading/progressReading.js"></script>
 
-    <script defer src="js/evaluacion/pruebaPdf.js"></script>
+    <!--Tutorial interactivo-->
+    <script defer src="js/driver.min.js"></script>
+    <script defer src="js/tutorialInteractiveEval.js"></script>
+
 
 </head>
 
@@ -115,18 +119,18 @@
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw clbktx border4 shadow2">scoreboard</span>
+                    <span class="material-icons clw clbktx border4 shadow2" id="a1tutorialButton">scoreboard</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx border1">Puntaje: <span
                             id="contadorPreguntas">0</span>/20 puntos</p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw clbktx border4 shadow2">sports_score</span>
+                    <span class="material-icons clw clbktx border4 shadow2" id="a2tutorialButton">sports_score</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Preguntas respondidas: <span
                             id="contadorPreguntasRespondidas">0</span>/20</p>
                 </div>
                 <!--Barra de progreso-->
-                <div class="contenedorStats-level3">
+                <div class="contenedorStats-level3" id="a3tutorialButton">
                     <span class="material-icons clw clbktx border4 shadow2">percent</span>
                     <div>
                         <div class="contenedorBarraProgresoShadow clw">
@@ -140,13 +144,13 @@
             <div class="contenedorStats-level2 clgreyl2 border1 shadow2">
                 <!--Puntaje-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw clbktx border4 shadow2">today</span>
+                    <span class="material-icons clw clbktx border4 shadow2" id="a4tutorialButton">today</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Fecha respuesta: <span
                             id="fechaActual"></span></p>
                 </div>
                 <!--Preguntas respondidas-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw clbktx border4 shadow2">schedule</span>
+                    <span class="material-icons clw clbktx border4 shadow2" id="a5tutorialButton">schedule</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Tiempo:
                         <span id="tiempoActualHoras">00</span>:
                         <span id="tiempoActualMinutos">00</span>':
@@ -155,7 +159,7 @@
                 </div>
                 <!--Barra de progreso-->
                 <div class="contenedorStats-level3">
-                    <span class="material-icons clw clbktx border4 shadow2">history</span>
+                    <span class="material-icons clw clbktx border4 shadow2" id="a6tutorialButton">history</span>
                     <p class="contenedorBarraProgresoTexto textoStandar clbktx">Intentos: <span
                             id="intentosActuales"></span></p>
                 </div>
@@ -248,12 +252,12 @@
         <i class="material-icons" id="menuIconUnityContent">show_chart</i>
     </a>
 
-    <!--Boton de tutorial-->
-    <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-small-only"
-        id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
-
     <!--Inyectamos componente de footer-->
     <section id="footerListener"></section>
+
+    <!--Boton de tutorial-->
+    <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 scale-transition"
+    id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
 
 </body>
 
