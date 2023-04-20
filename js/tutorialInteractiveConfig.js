@@ -60,7 +60,7 @@ driver.defineSteps([
     popover: {
       title: 'Botón de subrayado',
       description: 'Este botón te permitirá aplicar subrayado al texto seleccionado. Al hacer clic en el botón, el texto seleccionado aparecerá subrayado.',
-      position: 'bottom'
+      position: 'left'
     }
   },
   {
@@ -84,7 +84,7 @@ driver.defineSteps([
     popover: {
       title: 'Botón de altura de línea',
       description: 'Este botón te permitirá ajustar la altura de la línea del texto seleccionado. Al hacer clic en el botón, podrás ajustar la altura de línea para mejorar la legibilidad del texto.',
-      position: 'bottom'
+      position: 'left'
     }
   },
   {
