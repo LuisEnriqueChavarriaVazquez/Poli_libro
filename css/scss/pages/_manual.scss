@@ -1,19 +1,48 @@
+//Contenedor del manual para los contenidos y el menu lateral
 .containerManual {
-    padding: 20px;
-  }
-  
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr .2fr;
+}
+
+//Contenedor para los conteneidos
+.contentContainerManual{
+  padding: 10px;
+}
+
+//Contenedor para el menu de los contenidos
+.sectionPanelManualContainer{
+  padding: 20px;
   .sectionPanelManual {
     top: 300px;
   }
-  
-  .buttonMenuMobile {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 20px;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .containerManual {
+    padding: 10px;
+    grid-template-columns: 1fr .4fr;
   }
-  
+}
+
+@media (max-width: 900px) {
+  .sectionPanelManualContainer{
+    display: none;
+  }
+
+  .containerManual {
+    padding: 10px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.buttonMenuMobile {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

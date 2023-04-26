@@ -21,14 +21,16 @@
 
 @media (max-width: 800px) {
     .navTitlteManualDefault {
-        height: 120px;
+        height: 70px;
         padding: 0 20px;
-        font-size: 1.4rem;
+        font-size: 2rem;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .stickyHeaderManual {
-        height: 50px;
-        font-size: 1.2rem;
-        font-weight: 400;
+        height: 64px;
+        font-size: 1.4rem;
+        font-weight: 500;
     }
 }
