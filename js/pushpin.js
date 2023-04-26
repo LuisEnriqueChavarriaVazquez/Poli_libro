@@ -9,12 +9,12 @@ window.onscroll = function () {
     detectarNombreDeSeccion();
 
     if(scrollDown >= 164){
-        titleSectionManual.classList.add('shadow8', 'stickyHeaderManual', 'cl3', 'clwtx');
-        titleSectionManual.classList.remove('clgreyl1', 'clbktx');
+        titleSectionManual.classList.add('shadow8', 'stickyHeaderManual', 'clw', 'white-text');
+        titleSectionManual.classList.remove('clgreyl1');
         detectarNombreDeSeccion();
     }else{
-        titleSectionManual.classList.remove('shadow8', 'stickyHeaderManual', 'cl3', 'clwtx');
-        titleSectionManual.classList.add('clgreyl1', 'clbktx');
+        titleSectionManual.classList.remove('shadow8', 'stickyHeaderManual', 'clw', 'white-text');
+        titleSectionManual.classList.add('clgreyl1');
     }
 };
 

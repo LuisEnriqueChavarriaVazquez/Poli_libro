@@ -2,7 +2,7 @@
 .containerManual {
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr .2fr;
+  grid-template-columns: 1fr .25fr;
 }
 
 //Contenedor para los conteneidos
@@ -36,6 +36,15 @@
   }
 }
 
+//Grid para la seccion de bienvenida
+.manualGridSections{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+//Boton para las descargas de los pdfs de manual de usuario
 .buttonMenuMobile {
   position: fixed;
   bottom: 0;

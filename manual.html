@@ -21,8 +21,10 @@
   <script defer src="js/materialize.min.js"></script>
   <script defer src="js/activateComponentsMaterialize.js"></script>
 
-  <!--Menus sticky-->
+  <!--scripts en general-->
   <script defer src="js/pushpin.js"></script>
+  <script defer src="js/progressReading/progressReading.js"></script>
+
 
   <!--Componentes inyectables-->
   <script defer src="js/components/footer.js"></script>
@@ -56,6 +58,11 @@
     </nav>
   </section>
 
+  <!--Barra de progreso de lectura-->
+  <div class="progress">
+    <div class="determinate" id="progressReading"></div>
+  </div>
+
 
   <p id="titleSectionManual" class="textoTitulo clbktx navTitlteManualDefault clgreyl1 clbktx">Manual de usuario</p>
 
@@ -65,20 +72,72 @@
       <div class="clgreyl2 cardDesignFather shadow2 border1">
 
         <div id="section1" class="scrollspy cardDesign clw shadow2 border1">
-          <p class="textoTitulo clbktx">Texto título 1</p>
+          <p class="textoTitulo clbktx">Secciónes de la página de inicio</p>
           <!--Card con un ejemplo-->
           <p class="textoStandar clbktx textoDinamicoIdentificador textoReadingH2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, obcaecati recusandae
-            dignissimos
-            consequuntur itaque assumenda voluptas dicta aspernatur iusto suscipit quas! Quidem iusto beatae
-            quaerat
-            cupiditate eum fuga omnis maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nostrum
-            labore <i class="keyWord"> lorem clave de ejemplo
-              minima excepturi incidunt voluptatibus culpa expedita quod explicabo, cumque voluptatum
-              accusamus,</i>
-            similique
-            laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
+          <div class="manualGridSections">
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b
+                class="clgreyl3 subTitleCard">Bienvenida:</b> Bienvenido al manual de usuario de la página web. Este
+              manual ha sido creado para ayudarte a entender y utilizar eficazmente todas las características y
+              funcionalidades de la página web.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b
+                class="clgreyl3 subTitleCard">Metodología:</b> La metodología de la página web está diseñada para
+              brindar una experiencia de aprendizaje dinámica e interactiva. Utiliza una variedad de técnicas
+              pedagógicas, tales como ejercicios interactivos, lecturas, videos, y otros recursos multimedia para
+              ayudarte a alcanzar los objetivos de aprendizaje.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Unidad de
+                competencia:</b> La unidad de competencia es una sección de la página web que está diseñada para
+              ayudarte a desarrollar habilidades específicas en un área determinada. Cada unidad de competencia consta
+              de varios módulos, y cada módulo incluye diferentes tipos de actividades de aprendizaje para ayudarte a
+              alcanzar los objetivos de aprendizaje.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Evaluación de
+                los aprendizajes:</b> La evaluación de los aprendizajes es una parte importante de la página web, ya que
+              te permite medir tu progreso en el aprendizaje de nuevas habilidades y conocimientos. La página web
+              utiliza diferentes tipos de evaluación, como cuestionarios, exámenes y ejercicios prácticos, para ayudarte
+              a medir tu progreso.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b
+                class="clgreyl3 subTitleCard">Requerimientos:</b> Para utilizar la página web, es necesario cumplir con
+              ciertos requisitos técnicos. Asegúrate de tener una conexión a Internet estable y una computadora o
+              dispositivo móvil actualizado con los navegadores web recomendados para una experiencia de usuario óptima.
+            </div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Fuentes de
+                consulta:</b> Las fuentes de consulta son una sección de la página web que te permite acceder a una
+              variedad de recursos adicionales para ampliar tus conocimientos. Estos recursos pueden incluir libros,
+              artículos, videos y otros recursos relacionados con los temas de aprendizaje.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Botón de
+                Polilibro:</b> El botón de Polilibro es una característica de la página web que te permite acceder a un
+              catálogo de unidades con cada uno de los contenidos de la unidad de aprendizaje. </div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Botón de
+                Glosario:</b> El botón de glosario es una característica de la página web que te permite acceder a un
+              glosario de términos relacionados con los temas de aprendizaje. Puedes utilizar esta característica para
+              buscar y aprender nuevos términos y definiciones.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Botón de
+                Contacto con docentes:</b> El botón de contacto con docentes es una característica de la página web que
+              te permite comunicarte directamente con los docentes y el personal de apoyo de la página web. Puedes
+              utilizar esta característica para obtener ayuda y soporte en cualquier momento.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Botón de
+                Manual:</b> El botón de manual es una característica de la página web que te permite acceder a la guía
+              de usuario de la página web en cualquier momento. Puedes utilizar esta característica para obtener ayuda y
+              soporte en la utilización de la página web.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Botón de
+                Configuración:</b> El botón de configuración te permite personalizar la página web según tus
+              preferencias. Puedes ajustar el tamaño y el estilo de los textos, y elegir entre el modo oscuro y modo luz
+              para una mejor visualización. Esto te permite adaptar la página web a tus necesidades de lectura y
+              visualización, mejorando la legibilidad y reduciendo la fatiga visual.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Botón de
+                Ayuda (Interfaz con descripciones):</b> El botón de ayuda es una característica de la página web que te
+              permite obtener ayuda y soporte en la utilización de la página web. Al hacer clic en este botón, podrás
+              acceder a una interfaz que te proporcionará descripciones detalladas de las diferentes características y
+              funcionalidades de la página web.</div>
+            <div class="textoStandar cardDesign border1 shadow2 clgreyl1"><b class="clgreyl3 subTitleCard">Menú
+                lateral:</b> El menú lateral es una característica de la página web que te permite acceder a diferentes
+              secciones y recursos de la página web de manera rápida y fácil. El menú lateral contiene enlaces a las
+              diferentes secciones de la página web, como la página principal, la sección de recursos, la sección de
+              evaluación, entre otras. También puede incluir enlaces a recursos adicionales, como foros de discusión o
+              comunidades en línea. Utiliza el menú lateral para navegar por la página web y acceder a los recursos que
+              necesites de manera eficiente.</div>
+          </div>
+
           </p>
 
           <div class="cardDesign clgreyl2 border1">
@@ -151,8 +210,11 @@
     <div class="sectionPanelManualContainer">
       <ul class="section table-of-contents tabsFixed sectionPanelManual" id="scrollSpyContainer">
         <li><a href="#section1" class="textoStandar">Página de inicio</a></li>
-        <li><a href="#section2" class="textoStandar">Section 2</a></li>
-        <li><a href="#section3" class="textoStandar">Section 3</a></li>
+        <li><a href="#section2" class="textoStandar">Polilibro</a></li>
+        <li><a href="#section3" class="textoStandar">Pagina de evaluación</a></li>
+        <li><a href="#section4" class="textoStandar">Página de configuración</a></li>
+        <li><a href="#section5" class="textoStandar">Página de glosario</a></li>
+        <li><a href="#section6" class="textoStandar">Página de contacto</a></li>
       </ul>
     </div>
   </section>

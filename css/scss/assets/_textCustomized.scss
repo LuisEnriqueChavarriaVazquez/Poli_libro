@@ -2,7 +2,7 @@
 .textoStandar {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 10px 0;
   text-align: justify;
   display: inline-block;
@@ -145,4 +145,11 @@
     font-size: 1rem;
     display: none;
   }
+}
+
+
+//Estilo para los titulos de tarjetas en cada seccion del manual
+.subTitleCard{
+  padding: 4px 8px;
+  border-radius: 4px;
 }

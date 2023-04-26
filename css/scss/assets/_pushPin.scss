@@ -17,6 +17,9 @@
     height: 60px;
     font-size: 1.6rem;
     font-weight: 500;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 8px #5a7491 solid;
 }
 
 @media (max-width: 800px) {
