@@ -115,5 +115,19 @@
     .imageZoomed {
       width: 300px;
     }
+
+    .titleImageMine, .noteImageMine {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .imageZoomed {
+      width: 240px;
+    }
+
+    .titleImageMine, .noteImageMine {
+      font-size: 10px;
+    }
   }
   

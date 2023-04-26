@@ -7,13 +7,19 @@
 
 @media (min-width: 768px) {
 	.cardDesign{
-        padding: 20px;
+        padding: 20px !important;
     }
 }
 
 @media (max-width: 600px) {
     .cardDesign{
-        padding: 15px;
+        padding: 10px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .cardDesign{
+        padding: 10px 6px !important;
     }
 }
 
@@ -24,21 +30,28 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
-	padding: 20px 30px !important;
+	padding: 20px 30px;
 	gap: 20px;
 }
 
 @media (max-width: 800px) {
     .cardDesignFather{
-        padding: 20px !important;
-        gap: 20px !important;
+        padding: 20px;
+        gap: 20px;
     }
 }
 
 @media (max-width: 600px) {
     .cardDesignFather{
-        padding: 10px !important;
-        gap: 10px !important;
+        padding: 10px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cardDesignFather{
+        padding: 5px;
+        gap: 10px;
     }
 }
 
