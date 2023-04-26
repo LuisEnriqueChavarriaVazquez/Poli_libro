@@ -14,12 +14,12 @@
 
 .stickyHeaderManual {
     position: sticky;
-    height: 60px;
+    height: 80px;
     font-size: 1.6rem;
     font-weight: 500;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 8px #5a7491 solid;
+    z-index: 100;
 }
 
 @media (max-width: 800px) {

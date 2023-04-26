@@ -36,6 +36,16 @@
   }
 }
 
+@media (max-width: 500px) {
+  .contentContainerManual{
+    padding: 0px;
+  }
+
+  .containerManual {
+    padding: 0px;
+  }
+}
+
 //Grid para la seccion de bienvenida
 .manualGridSections{
   display: grid;
@@ -43,6 +53,14 @@
   grid-template-rows: auto;
   gap: 10px;
 }
+
+@media (max-width: 500px) {
+  .manualGridSections{
+    gap: 5px;
+    padding: 0px;
+  }
+}
+
 
 //Boton para las descargas de los pdfs de manual de usuario
 .buttonMenuMobile {
