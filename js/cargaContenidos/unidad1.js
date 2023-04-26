@@ -109,8 +109,121 @@ const contenidosUnidad = [
     `8`,
     `9`,
     `10`,
-    `11`,
-    `Actividades de aprendizaje`,
+    `
+    <!--Tarjeta con las actividades-->
+    <section class="containerActividadAprendizajeFather">
+        <div class="textoTitulo clbktx">Material de apoyo</div>
+        <section class="gridActividadesAprendizaje">
+            <!--Tarjeta 1-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Material de apoyo 1</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción del material de apoyo número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 2-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Material de apoyo 2</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción del material de apoyo número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 3-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Material de apoyo 3</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción del material de apoyo número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    `,
+    `
+    <!--Tarjeta con las actividades-->
+    <section class="containerActividadAprendizajeFather">
+        <div class="textoTitulo clbktx">Actividades de aprendizaje</div>
+        <section class="gridActividadesAprendizaje">
+            <!--Tarjeta 1-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 1</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 2-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 2</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 3-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 3</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 4-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 4</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 5-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 5</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 6-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 6</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripción de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+
+            <!--Tarjeta 7-->
+            <div class="actividadesAprendizaje border1 clgreyl2 shadow2 tarjetaActividades">
+                <p class="textoStandar tituloActividadAprendizaje clbktx">Actividad 7</p>
+                <p class="truncate descActividadAprendizaje clbktx">Descripcióndsdsds dsds sddssd sdsdwqwqwq qwwq de las actividad número 1 de ejemplo</p>
+                <div class="buttonDownloadActividadAprendizaje clw border1 shadow2 waves-effect">
+                    <i class="material-icons clbktx">download</i>
+                    <span class="clbktx">Descargar</span>
+                </div>
+            </div>
+        </section>
+    </section>
+    `,
     `13`,
     `14`,
     `15`,
