@@ -24,7 +24,7 @@ function inyectFooter(){
                     Permisos más allá del alcance de esta licencia pueden estar disponibles en https://luisenriquechavarriavazquez.github.io/Poli_libro/
                 </a>
             </section>
-            <section class="clgreyl1 border1 shadow2 tabFechaElaboracion">
+            <section class="clgreyl1 border1 shadow2 tabFechaElaboracion clbktx">
                 Fecha de elaboración: Marzo del 2023
             </section>
         </div>

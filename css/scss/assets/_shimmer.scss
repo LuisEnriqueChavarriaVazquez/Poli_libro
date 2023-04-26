@@ -148,6 +148,63 @@
     }
 }
 
+/*Contenedor para la carga de los manuales*/
+
+.loadingContactShimmerManual {
+    display: grid;
+    grid-template-columns: 1fr .2fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loadingContact {
+    width: 100%;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+    .loadingContact {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .loadingContactShimmerManual {
+        display: grid;
+        grid-template-columns: 1fr .4fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .loadingContact {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .loadingContactShimmerManual {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .loadingContact {
+        height: 60vh;
+    }
+}
+
+
 /*Contenedor para la carga de las palabras*/
 
 .loadingContactShimmerWord {

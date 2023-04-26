@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/scss/styles.css">
     <link rel="stylesheet" href="css/scss/addsOn/driver.min.css">
+    <link rel="stylesheet" href="css/loadingLongTime/loading.css">
 
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
@@ -33,6 +34,7 @@
     <script defer src="js/configuraciones/modoLuz.js"></script>
     <script defer src="js/configuraciones/modoLectura.js"></script>
     <script defer src="js/configuraciones/textSizerLateral.js"></script>
+    <script defer src="js/loading/loadingCuestionario.js"></script>
     <script defer src="js/noCopy.js"></script>
 
     <!--Tutorial interactivo-->
@@ -42,10 +44,23 @@
 </head>
 
 <body>
+    
+    <!--Pantalla de carga para los cuestionarios en caso de que tarde mucho-->
+    <section id="bookLoading" class="clgreyl1">
+        <div class="book">
+            <div class="book__pg-shadow"></div>
+            <div class="book__pg"></div>
+            <div class="book__pg book__pg--2"></div>
+            <div class="book__pg book__pg--3"></div>
+            <div class="book__pg book__pg--4"></div>
+            <div class="book__pg book__pg--5"></div>
+        </div>
+        <div class="clbktx textoStandar clgreyl2 border1 textoDeCarga">Cargando contenidos</div>
+    </section>
 
     <section>
         <!--Navbar superior-->
-        <div class="nav-superior cl1" id="nav-superior"></div>
+        <div class="nav-superior nav-superiorUnit3" id="nav-superior"></div>
 
         <!--Navbar principal-->
         <nav id="menuStickyUnity">

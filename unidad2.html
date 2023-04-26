@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/scss/styles.css">
     <link rel="stylesheet" href="css/scss/addsOn/driver.min.css">
+    <link rel="stylesheet" href="css/loadingLongTime/loading.css">
 
     <!--Colors-->
     <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
@@ -33,6 +34,7 @@
     <script defer src="js/configuraciones/modoLuz.js"></script>
     <script defer src="js/configuraciones/modoLectura.js"></script>
     <script defer src="js/configuraciones/textSizerLateral.js"></script>
+    <script defer src="js/loading/loadingCuestionario.js"></script>
     <script defer src="js/noCopy.js"></script>
 
     <!--Tutorial interactivo-->
@@ -43,9 +45,23 @@
 
 <body>
 
+    <!--Pantalla de carga para los cuestionarios en caso de que tarde mucho-->
+    <section id="bookLoading" class="clgreyl1">
+        <div class="book">
+            <div class="book__pg-shadow"></div>
+            <div class="book__pg"></div>
+            <div class="book__pg book__pg--2"></div>
+            <div class="book__pg book__pg--3"></div>
+            <div class="book__pg book__pg--4"></div>
+            <div class="book__pg book__pg--5"></div>
+        </div>
+        <div class="clbktx textoStandar clgreyl2 border1 textoDeCarga">Cargando contenidos</div>
+    </section>
+
+
     <section>
         <!--Navbar superior-->
-        <div class="nav-superior cl1" id="nav-superior"></div>
+        <div class="nav-superior nav-superiorUnit2" id="nav-superior"></div>
 
         <!--Navbar principal-->
         <nav id="menuStickyUnity">
@@ -109,14 +125,12 @@
                                     Sección C.3</a>
                                 <hr>
                                 <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
-                                    id="a1tutorialButton"
-                                    href="#modal1">
+                                    id="a1tutorialButton" href="#modal1">
                                     <i class="material-icons clbktx">auto_stories</i>
                                     <p class="clbktx">Material de apoyo</p>
                                 </div>
                                 <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
-                                    id="a2tutorialButton"
-                                    href="#modal2">
+                                    id="a2tutorialButton" href="#modal2">
                                     <i class="material-icons clbktx">diversity_2</i>
                                     <p class="clbktx">Cierre de unidad temática</p>
                                 </div>
@@ -128,8 +142,7 @@
                                     </div>
                                 </a>
                                 <div class="cardOpcionesMenuLateral waves-effect waves-light clgreyl2 border1 shadow2"
-                                    id="a4tutorialButton"
-                                    href="#modal3">
+                                    id="a4tutorialButton" href="#modal3">
                                     <i class="material-icons clbktx">format_quote</i>
                                     <p class="clbktx">Referencias</p>
                                 </div>
@@ -330,9 +343,9 @@
         <i class="material-icons">text_format</i>
     </a>
 
- <!--Boton de tutorial-->
- <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-med-and-down scale-transition"
- id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
+    <!--Boton de tutorial-->
+    <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-med-and-down scale-transition"
+        id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
 
 </body>
 
