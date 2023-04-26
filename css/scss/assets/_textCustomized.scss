@@ -41,12 +41,14 @@
   font-size: 2.3rem;
   font-weight: 700;
   margin: 0 0 10px 0;
+  padding-left: 0;
 }
 
 @media (max-width: 800px) {
   .textoTitulo {
     font-size: 1.8rem;
     font-weight: 500;
+    padding-left: 0;
   }
 
   .textoFooter {
