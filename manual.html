@@ -21,6 +21,9 @@
   <script defer src="js/materialize.min.js"></script>
   <script defer src="js/activateComponentsMaterialize.js"></script>
 
+  <!--Menus sticky-->
+  <script defer src="js/pushpin.js"></script>
+
   <!--Componentes inyectables-->
   <script defer src="js/components/footer.js"></script>
 
@@ -45,7 +48,7 @@
       <i id="expandIcon" class="material-icons white-text">expand_less</i>
   </div> -->
     <!--Navbar principal-->
-    <nav>
+    <nav class="pushpin-demo-nav pin-top">
       <div class="nav-wrapper cl2">
         <a href="index.html" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
             class="material-icons">arrow_back</i></a>
@@ -55,11 +58,13 @@
   </section>
 
 
+  <p id="titleSectionManual" class="textoTitulo clbktx navTitlteManualDefault clgreyl1 clbktx">Página de inicio</p>
+
   <section class="clgreyl1 containerManual">
     <div class="row">
       <div class="col s12 m9 l10">
+
         <div id="section1" class="section scrollspy">
-          <p class="textoTitulo clbktx">Seccción 1</p>
           <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, impedit
             architecto? Beatae perferendis ab magni! Iure nulla voluptas velit eligendi minima autem qui laborum. Rem
             excepturi quam nisi iusto id?
@@ -92,14 +97,7 @@
             temporibus hic! </p>
         </div>
 
-        <div class="defaultImage materialboxed">
-          <div class="defaultImageContent">
-
-          </div>
-        </div>
-
         <div id="section2" class="section scrollspy">
-          <p class="textoTitulo clbktx">Seccción 2</p>
           <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem
             eos
             accusamus molestias commodi officiis, facilis rem quaerat maxime, nihil iure ut soluta illum modi
@@ -188,14 +186,7 @@
             vero perspiciatis alias., officia hic laboriosam tempore, molestiae id minima voluptatum iure. </p>
         </div>
 
-        <div class="defaultImage materialboxed">
-          <div class="defaultImageContent">
-
-          </div>
-        </div>
-
         <div id="section3" class="section scrollspy">
-          <p class="textoTitulo clbktx">Seccción 3</p>
           <p class="textoStandar clbktx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odit, amet eum
             dignissimos voluptatibus ducimus dolorem deserunt exercitationem quia? Debitis obcaecati omnis sed quaerat
             perspiciatis blanditiis aliquid quia quibusdam officia.
@@ -282,10 +273,12 @@
             Officia repudiandae quia in voluptatibus molestiae incidunt nisi similique alias tenetur inventore eaque
             autem, eius iure quis rem quaerat vel sunt fugit hic et magnam voluptatem sequi animi facere! Est. </p>
         </div>
+
       </div>
+
       <div class="col hide-on-small-only m3 l2">
-        <ul class="section table-of-contents tabsFixed sectionPanelManual">
-          <li><a href="#section1" class="textoStandar">Section 1</a></li>
+        <ul class="section table-of-contents tabsFixed sectionPanelManual" id="scrollSpyContainer">
+          <li><a href="#section1" class="textoStandar">Página de inicio</a></li>
           <li><a href="#section2" class="textoStandar">Section 2</a></li>
           <li><a href="#section3" class="textoStandar">Section 3</a></li>
         </ul>
