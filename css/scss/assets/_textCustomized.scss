@@ -25,13 +25,13 @@
 
 @media (max-width: 800px) {
   .textoConceptos {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
 .textoFooter {
   font-family: "Roboto", sans-serif;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-align: left;
 }
@@ -41,18 +41,20 @@
   font-size: 2.3rem;
   font-weight: 700;
   margin: 0 0 10px 0;
-  padding-left: 0;
+}
+
+.textoTituloFullText {
+  padding-left: 0px;
 }
 
 @media (max-width: 800px) {
   .textoTitulo {
     font-size: 1.8rem;
     font-weight: 500;
-    padding-left: 0;
   }
 
   .textoFooter {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -61,6 +63,9 @@
     font-size: 1.6rem;
     font-weight: 500;
     margin: 0;
+  }
+
+  .textoTituloFullText {
     padding-left: 5px;
   }
 }
@@ -158,9 +163,8 @@
   }
 }
 
-
 //Estilo para los titulos de tarjetas en cada seccion del manual
-.subTitleCard{
+.subTitleCard {
   padding: 4px 8px;
   border-radius: 4px;
 }

@@ -13,12 +13,31 @@
 
 @media (max-width: 600px) {
     .cardDesign{
+        padding: 15px !important;
+    }
+}
+
+//Diseño de la card para cuando tenemos exceso de texto
+.cardDesignFullText {
+	width: 100%;
+	height: auto;
+	padding: 20px 30px;
+}
+
+@media (min-width: 768px) {
+	.cardDesignFullText{
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardDesignFullText{
         padding: 10px !important;
     }
 }
 
 @media (max-width: 500px) {
-    .cardDesign{
+    .cardDesignFullText{
         padding: 10px 6px !important;
     }
 }
