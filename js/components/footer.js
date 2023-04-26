@@ -24,11 +24,14 @@ function inyectFooter(){
                     Permisos más allá del alcance de esta licencia pueden estar disponibles en https://luisenriquechavarriavazquez.github.io/Poli_libro/
                 </a>
             </section>
+            <section class="clgreyl1 border1 shadow2 tabFechaElaboracion">
+                Fecha de elaboración: Marzo del 2023
+            </section>
         </div>
         <div class="footerContainerTwo">
-        <a class='btn waves-effect waves-light border1 clgreyl4 black-text' href='#!'>Manual<i
+        <a class='btn waves-effect waves-light border1 clgreyl4 black-text' style="z-index: 0;" href='#!'>Manual<i
             class="material-icons right">help</i></a>
-        <a class='btn waves-effect waves-light border1 clgreyl4 black-text' href='/contacto'>Contacto<i
+        <a class='btn waves-effect waves-light border1 clgreyl4 black-text' style="z-index: 0;" href='/contacto'>Contacto<i
             class="material-icons right">alternate_email</i></a>
         </div>
     </footer>

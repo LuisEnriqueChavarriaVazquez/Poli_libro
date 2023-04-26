@@ -66,6 +66,14 @@
   top: 0;
 }
 
+@media (max-width: 1000px) {
+  .titleNavIpn {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
 @media (max-width: 800px) {
   .nav-superior {
     height: 60px;
@@ -81,6 +89,18 @@
     font-size: 1.1rem;
     font-weight: 600;
     text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .titleNavIpn {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .titleNavIpn {
+    font-size: .8rem;
   }
 }
 
