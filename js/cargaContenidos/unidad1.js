@@ -80,6 +80,7 @@ const contenidosUnidad = [
             </div>
         </div>
     </div>`,
+
     `<div class="clgreyl2 cardDesignFather shadow2 border1">
         <div class="cardDesign clw shadow2 border1">
             <p class="textoTitulo clbktx">Texto título A.1</p>
@@ -98,8 +99,25 @@ const contenidosUnidad = [
                 laboriosam magnam! Obcaecati harum nemo molestias adipisci quas?
             </p>
         </div>
-    </div>`
+    </div>`,
+    `2`,
+    `3`,
+    `4`,
+    `5`,
+    `6`,
+    `7`,
+    `8`,
+    `9`,
+    `10`,
+    `11`,
+    `Actividades de aprendizaje`,
+    `13`,
+    `14`,
+    `15`,
 ];
+
+
+console.log('contenidosUnidad: ', contenidosUnidad.length);
 
 /////////////////////////////////////
 //Object delegation para los botones
@@ -116,17 +134,19 @@ let contenedorParaElContenidoDeLaUnidad = document.getElementById('lateralUnityC
 //Accedemos al contenedor que tiene las opciones para el menu en computadora.
 let buttonContaineChargeContent = document.getElementById('lateralUnityMenuSectionContainer');
 buttonContaineChargeContent.addEventListener('click', function(event){
-    if(event.target.classList.contains('navOptionsContent')){
+    if(event.target.classList.contains('deskOption')){
+        console.log(event.target)
         let buttonIndex = event.target.getAttribute('contador');
         contenedorParaElContenidoDeLaUnidad.innerHTML = contenidosUnidad[buttonIndex];
     }
 });
 
 //Accedemos al contenedor que tiene las opciones para el menu en celular.
-let buttonContaineChargeContentMobile = document.getElementsByClassName('containerSectionLateralMobileMenu');
+let buttonContaineChargeContentMobile = document.getElementsByClassName('mobileOptionsContainer');
 for(var i = 0; i < buttonContaineChargeContentMobile.length; i++){
     buttonContaineChargeContentMobile[i].addEventListener('click', function(event){
-        if(event.target.classList.contains('navOptionsContentMobileMenu')){
+        if(event.target.classList.contains('mobileOption')){
+            console.log(event.target)
             let buttonIndex = event.target.getAttribute('contador');
             contenedorParaElContenidoDeLaUnidad.innerHTML = contenidosUnidad[buttonIndex];
         }
