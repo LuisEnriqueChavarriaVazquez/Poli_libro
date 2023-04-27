@@ -22,7 +22,12 @@ function readingProgressUpdateBar() {
 
     /////////// Ancho final para la barra inferior
     let anchoFinal = ((lastScrollTop*100)/pageHeight);
-    progressReading.setAttribute('style', `width: ${anchoFinal + 25}%;`)
+    progressReading.setAttribute('style', `width: ${anchoFinal + 25}%;`);
+
+    //Comprobamos que estemos en el final de la página
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight) {
+        progressReading.setAttribute('style', `width: ${100}%;`);
+    }
 }
   
 window.addEventListener('scroll', readingProgressUpdateBar);

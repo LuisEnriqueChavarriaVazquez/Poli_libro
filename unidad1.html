@@ -35,6 +35,8 @@
     <script defer src="js/configuraciones/modoLectura.js"></script>
     <script defer src="js/configuraciones/textSizerLateral.js"></script>
     <script defer src="js/loading/loadingCuestionario.js"></script>
+    <script class="hide-on-med-and-down" defer src="js/progressReading/progressReadingContent.js"></script>
+    <script class="hide-on-large-only" defer src="js/progressReading/progressReading.js"></script>
     <script defer src="js/noCopy.js"></script>
 
     <!--Script para la carga de los contenidos-->
@@ -61,6 +63,7 @@
         <div class="clbktx textoStandar clgreyl2 border1 textoDeCarga">Cargando contenidos</div>
     </section>
 
+
     <section>
         <!--Navbar superior-->
         <div class="nav-superior nav-superiorUnit1" id="nav-superior"></div>
@@ -74,10 +77,19 @@
                         Título de la unidad 1
                     </span>
                 </a>
+                <!--Barra de progreso de lectura en modo computadora-->
+                <div class="progressContent hide-on-med-and-down">
+                    <div class="determinate" id="progressReadingContent"></div>
+                </div>
             </div>
         </nav>
     </section>
 
+    <!--Barra de progreso de lectura para modo celular-->
+    <div class="progress hide-on-large-only">
+        <div class="determinate" id="progressReading"></div>
+    </div>
+    
 
     <section class="fullUnity clgreyl1">
         <!--Contenidos principales de la unidad-->

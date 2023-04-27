@@ -169,3 +169,19 @@
   padding: 4px 8px;
   border-radius: 4px;
 }
+
+//Estilos para las tarjetas para las actividades y materiales de apoyo
+.cardTitleActividad {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+@media (max-width: 800px) {
+  .cardTitleActividad {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+}
