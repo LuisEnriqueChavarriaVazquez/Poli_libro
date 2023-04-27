@@ -27,6 +27,7 @@ function readingProgressUpdateBar() {
     //Comprobamos que estemos en el final de la página
     if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight) {
         progressReading.setAttribute('style', `width: ${100}%;`);
+        M.toast({html: 'Lectura completada 📖'});
     }
 }
   
