@@ -39,6 +39,7 @@
     <!--Scripts para la evaluacion-->
     <script defer src="js/evaluacion/puntajeActual.js"></script>
     <script src="js/evaluacion/mezclaArray.js"></script>
+    <script defer src="js/evaluacion/nombreGrupoAlumno.js"></script>
     <script defer src="js/evaluacion/jspdf.min.js"></script>
     <script defer src="js/evaluacion/fechaActual.js"></script>
     <script defer src="js/evaluacion/validarCompletadoDeCuestionario.js"></script>
@@ -210,6 +211,28 @@
                             id="intentosActuales2"></span></p>
                 </div>
             </div>
+        </section>
+
+        <p class="textoTitulo clbktx tituloEvaluacion">Datos alumno</p>
+        <!--Seccion de formulario de datos-->
+        <section class="contenedorDatosCuestionarioAlumno clgreyl1 border1 shadow2">
+            <div class="inputEvaluacionDatosAlumnosContainer clw border1 shadow2">
+                <div class="input-field">
+                    <i class="material-icons prefix clbktx">account_circle</i>
+                    <input id="nombreAlumnoInput" type="text" class="validate active">
+                    <label for="nombreAlumnoInput">Nombre (Empezando por apellidos)</label>
+                </div>
+            </div>
+            <div class="inputEvaluacionDatosAlumnosContainer clw border1 shadow2">
+                <div class="input-field">
+                    <i class="material-icons prefix clbktx">groups</i>
+                    <input id="grupoAlumnoInput" type="text" class="validate active">
+                    <label for="grupoAlumnoInput">Grupo</label>
+                </div>
+            </div>
+        </section>
+        <section class="containerSaveDataUser clgreyl1 border1 shadow2">
+            <a class='btn-large waves-effect waves-light border1 white-text cl4' id="guardarDatos"></a>
         </section>
 
         <p class="textoTitulo clbktx tituloEvaluacion">Preguntas</p>
