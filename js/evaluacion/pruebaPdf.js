@@ -14,12 +14,22 @@ documentoPrueba.addEventListener('click', () => {
     let colorTwoPDF = [];
     let colorThreePDF = [];
 
+    //Se crea la variable donde se almacenaran los intentos
+    let intentosFinalValidado = "";
+
+    //Titulo de la unidad para el archivo de PDF
+    let tituloUnidadArchivoFinal = "resultados_cuestionario_";
+
     if(unidadActual == 'u1'){
 
         tituloPDF = 'Unidad 1: Título de la unidad con un texto largo de prueba';
         colorOnePDF = [61, 81, 71];
         colorTwoPDF = [85, 112, 99];
         colorThreePDF = [109, 142, 126];
+
+        intentosFinalValidado = localStorage.getItem('intentosU1');
+
+        tituloUnidadArchivoFinal += "unidad_1";
 
     }else if(unidadActual == 'u2'){
 
@@ -28,12 +38,20 @@ documentoPrueba.addEventListener('click', () => {
         colorTwoPDF = [160, 104, 110];
         colorThreePDF = [205, 140, 146];
 
+        intentosFinalValidado = localStorage.getItem('intentosU2');
+
+        tituloUnidadArchivoFinal += "unidad_2";
+
     }else if(unidadActual == 'u3'){
 
         tituloPDF = 'Unidad 3: Título de la unidad con un texto largo de prueba';
         colorOnePDF = [116, 84, 116];
         colorTwoPDF = [153, 109, 153]; 
         colorThreePDF = [181, 131, 181];
+
+        intentosFinalValidado = localStorage.getItem('intentosU3');
+
+        tituloUnidadArchivoFinal += "unidad_3";
 
     }else if(unidadActual == 'u4'){
 
@@ -42,12 +60,20 @@ documentoPrueba.addEventListener('click', () => {
         colorTwoPDF = [214, 124, 114];
         colorThreePDF = [232, 151, 142];
 
+        intentosFinalValidado = localStorage.getItem('intentosU4');
+
+        tituloUnidadArchivoFinal += "unidad_4";
+
     }else if(unidadActual == 'u5'){
 
         tituloPDF = 'Unidad 5: Título de la unidad con un texto largo de prueba';
         colorOnePDF = [120, 129, 158];
         colorTwoPDF = [145, 155, 189];
         colorThreePDF = [174, 185, 218];
+
+        intentosFinalValidado = localStorage.getItem('intentosU5');
+
+        tituloUnidadArchivoFinal += "unidad_5";
 
     }
 
@@ -153,12 +179,12 @@ documentoPrueba.addEventListener('click', () => {
     doc.text(35, 121.5+10, 'Tiempo de respuesta: ' + horas + ":" +  minutos + "':" + segundos + "''");
     doc.text(35, 121.5+20, 'Fecha de envio: ' + fecha);
     doc.text(35, 121.5+30, 'Calificación: ' + getGrade());
-    doc.text(35, 121.5+40, 'Intentos: ' + localStorage.getItem('intentos'));
+    doc.text(35, 121.5+40, 'Intentos: ' + intentosFinalValidado);
 
     if(getGrade() >= 6){
         doc.text(35, 121.5+50, 'Estado: ' + 'Aprobado');
     }else{
-        doc.text(35, 121.5+50, 'Estado: ' + 'Reprobado');
+        doc.text(35, 121.5+50, 'Estado: ' + 'Sigue intentando');
     }
 
     /////////////////////////////////////////
@@ -379,7 +405,5 @@ documentoPrueba.addEventListener('click', () => {
     //Pag 2
     imprimirLasPreguntasPorHojaDragDrop();
 
-    doc.save('resultado_cuestionario_unidad_1.pdf');
-    //let previewPDF = document.getElementById('previewPDF');
-    //previewPDF.setAttribute('src', doc.output('bloburl'));
+    doc.save(tituloUnidadArchivoFinal + '.pdf');
 })

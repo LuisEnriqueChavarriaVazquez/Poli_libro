@@ -1,7 +1,31 @@
+//Obtencion de la url actual para conocer que unidad es...
+/*Debemos hacer una funcion que obtenga la URL para comprobar si estamos en la
+página de la Unidad 1, 2, 3, 4, 5 y asi cargar los colores de esa unidad*/
+let urlEsDeUnidadIntentos = () => {
+    let urlActual = window.location.href;
+    urlActual = urlActual.split("/").pop();
+    return urlActual;
+}
+
+
+//Validamos en donde guardar el numero de intentos
+let seleccionUnidadIntentos = ""; //Se guardara aqui el nombre de la variable según la unidad
+if(urlEsDeUnidadIntentos() == "unidad1_evaluacion.html"){
+    seleccionUnidadIntentos = "intentosU1";
+}else if(urlEsDeUnidadIntentos() == "unidad2_evaluacion.html"){
+    seleccionUnidadIntentos = "intentosU2";
+}else if(urlEsDeUnidadIntentos() == "unidad3_evaluacion.html"){
+    seleccionUnidadIntentos = "intentosU3";
+}else if(urlEsDeUnidadIntentos() == "unidad4_evaluacion.html"){
+    seleccionUnidadIntentos = "intentosU4";
+}else if(urlEsDeUnidadIntentos() == "unidad5_evaluacion.html"){
+    seleccionUnidadIntentos = "intentosU5";
+}
+
 ///////////////////////////////////NUMERO DE INTENTOS
 //Validacion si no existe
-if (localStorage.getItem("intentos") === null) {
-    localStorage.setItem('intentos', 0);
+if (localStorage.getItem(seleccionUnidadIntentos) === null) {
+    localStorage.setItem(seleccionUnidadIntentos, 0);
 }
 
 //Contenedor
@@ -9,11 +33,12 @@ let intentosActuales = document.getElementById('intentosActuales');
 let intentosActuales2 = document.getElementById('intentosActuales2');
 
 function contarIntento(){
-    let intentosGuardados = localStorage.getItem('intentos');
-    localStorage.setItem('intentos', parseInt(intentosGuardados) + 1);
-    intentosActuales.innerText = localStorage.getItem('intentos');
-    intentosActuales2.innerText = localStorage.getItem('intentos');
+    let intentosGuardados = localStorage.getItem(seleccionUnidadIntentos);
+    localStorage.setItem(seleccionUnidadIntentos, parseInt(intentosGuardados) + 1);
+    intentosActuales.innerText = localStorage.getItem(seleccionUnidadIntentos);
+    intentosActuales2.innerText = localStorage.getItem(seleccionUnidadIntentos);
 }
+
 
 ///////////////////////////////////TIEMPO DE EXAMEN
 //Contadores
