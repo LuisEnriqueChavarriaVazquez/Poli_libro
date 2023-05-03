@@ -245,6 +245,17 @@
   }
 }
 
+//Button para la descarga pero en flotante
+.buttonMenuMobileDownloadResult{
+  position: fixed;
+  right: 20px;
+  bottom: 85px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*Estilos para las preguntas de opt multiple*/
 
 .cardPregunta {
