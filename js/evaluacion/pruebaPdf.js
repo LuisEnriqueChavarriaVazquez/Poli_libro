@@ -154,7 +154,7 @@ documentoPrueba.addEventListener('click', () => {
     //Rectangulo para el contenido del esta sección
     doc.setDrawColor(0);
     doc.setFillColor(225,225,225);
-    doc.roundedRect(10, 85, 195, 100, 5, 5, 'F');
+    doc.roundedRect(10, 85, 195, 140, 5, 5, 'F');
     
     //Rectangulo para el titulo
     doc.setDrawColor(0);
@@ -175,16 +175,19 @@ documentoPrueba.addEventListener('click', () => {
     doc.setTextColor(0);
     doc.setFont("helvetica");
     doc.setFontSize(16);
-    doc.text(35, 121.5, 'Preguntas correctas: ' + puntajeTotal + '/20'); //Puntaje total es una variable global de evaluacion_unidad.js
-    doc.text(35, 121.5+10, 'Tiempo de respuesta: ' + horas + ":" +  minutos + "':" + segundos + "''");
-    doc.text(35, 121.5+20, 'Fecha de envio: ' + fecha);
-    doc.text(35, 121.5+30, 'Calificación: ' + getGrade());
-    doc.text(35, 121.5+40, 'Intentos: ' + intentosFinalValidado);
+    doc.text(35, 121.5, 'Nombre: ' + localStorage.getItem('nombreAlumno'));
+    doc.text(35, 131.5, 'Grupo: ' + localStorage.getItem('grupoAlumno'));
+    doc.text(35, 151.5, 'Preguntas correctas: ' + puntajeTotal + '/20');
+    doc.text(35, 151.5, 'Preguntas correctas: ' + puntajeTotal + '/20'); //Puntaje total es una variable global de evaluacion_unidad.js
+    doc.text(35, 151.5+10, 'Tiempo de respuesta: ' + horas + ":" +  minutos + "':" + segundos + "''");
+    doc.text(35, 151.5+20, 'Fecha de envio: ' + fecha);
+    doc.text(35, 151.5+30, 'Calificación: ' + getGrade());
+    doc.text(35, 151.5+40, 'Intentos: ' + intentosFinalValidado);
 
     if(getGrade() >= 6){
-        doc.text(35, 121.5+50, 'Estado: ' + 'Aprobado');
+        doc.text(35, 151.5+50, 'Estado: ' + 'Aprobado');
     }else{
-        doc.text(35, 121.5+50, 'Estado: ' + 'Sigue intentando');
+        doc.text(35, 151.5+50, 'Estado: ' + 'Sigue intentando');
     }
 
     /////////////////////////////////////////
@@ -192,32 +195,38 @@ documentoPrueba.addEventListener('click', () => {
     /////////////////////////////////////////
     
     //Para las iconos de respuestas correctas
+    let iconoNombre = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAA70lEQVRYw+2XwQ2DMAxF/4klmICVmIEbB0aARbIUZ5xTZiC9FKS2dklcRxVS/E8Q+E+KY2OAGneJFg4e8SkPh9bWPpzmh4Ilwn3YR0Q4OwCxALIDHJbSdQVUAF+tnN4BnMQq56pVAxCr3F2+lg5gq5xMAXSdSG2rEH2+AXKanQqQ065VgJwPjhKgL8p/AxrM8PCY0QjPJ7cRfmE57y9lACSe+uIAoxzIW1Q8ycWPqVEOOvQYMaJHZw8YsL5YrBgsARPbQSe7HGwsYLMD7Cxgv12zq4DMsSVdpBu80uV0o2OqgjSdXg2/KTL/xa3xazwAaHfH7cySnP8AAAAASUVORK5CYII=';
+    doc.addImage(iconoNombre, 'png', 20, 115, 9,9);
+
+    let iconoGrupo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAABdklEQVRYw+3Uvy4EURQG8F8i9BKFxHoDq9zSM2i8gB6JSiGZQuUpNDbxBrthekpEIWpEobEIoVjFzg6zs+ZPTCJkvlPde8/3nXv+3EuNGjVq/CVMWXfs0aNj66aqlp9zqv/FTs1Ve/uk/CBEhVmspeT7+taqC3ASSXY0NHSi1Ul1AXqR5DyYj1a98o1su3WrnWpgsQDf86Pj+7i69yMuRUqUxQftRAPbpZucxQc3CYeb0mOaxS/gkP/QcgPkpZj3VeSWKLdJuTOYy88aswkLVqwKBFataJosxc/ArA2HXlJNfnVk0+xP/9ADb2NHdGjvDordtykQutTz7Mo0aHnIFB/agxaYduVZz6VQoPkpvuQiQdgHM+4Su9dCe3bt2hO6TpzdmQH7id0LS4N7jtZ3GQTx+syWxVTOi7acxz4BWB5RetGim0q5AfHD2s4s7U788KCR0uoaU+fBAD4Vqv/QnsDkmP6McR6gX9K+Y/2DADVq1Kjx+/gAp8oFfL88d7gAAAAASUVORK5CYII=';
+    doc.addImage(iconoGrupo, 'png', 20, 125, 9,9);
+
     let iconoPreguntasCorrectas = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAtUlEQVRYw+2Wyw2AMAiG2cOF3MppuliNnrpDfcRHtBhbHomxwKUJlO/wQwuA2bctbk6NG6AU0ICD8bhE9XGu0uDlA7v47gFDOLHyi7sUMIgCBppg3ZrR0RqjDgBrdv4FuLZcDy1aqp0jaRYBEMGjIns0iwSIKADPKtbgDXA/swDPkULAVb5TAzGAz+oiBiBvIhQAYiKrt2keQGHQxJ4Ke64r/pNZAPXFS311VF9+1dd3M7N6bQKbKNmNxSvK6wAAAABJRU5ErkJggg==';
-    doc.addImage(iconoPreguntasCorrectas, 'png', 20, 115, 9,9);
+    doc.addImage(iconoPreguntasCorrectas, 'png', 20, 145, 9,9);
 
     //Para los iconos del tiempo de respuesta
     let iconoTiempoRespuesta = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAB4klEQVRYw+2Xu04CQRSGP5FC5VKojUJlCI8ANiY8gK0xvgEQKys0EDuMvRJM7Gyx0UTCW0iobdRgIsTCBiwMFsyOK8zuzu6GTUw4W56z55/5z3VgLv9BQmxzwi0d3hgxokubBiUyLPh3nuScV0YW3zNVNr07X6POl6Vz4xtywaoX9wf0HZ0bX489d87DXE2cskWBHCmiREmRo0CL4R+bS8K67ld4MP3YpUBUaRelQNdkec+y3ul/3Q+oELG1jlBhYILQuEXddPas1o2zpnvUnENrmLZJaMcsQVv+t2+fmH15+qTLeunKjLJJ2prkXk3OWGtF1EDmk+UpjLIqW1jYAUBZJrUFuWeSnogngIikqapuaS9Cnbd0YQ8AedmjQioOjQvGPQPEZXUrYngsVE0bB04A0BQ2pWlVQ6iKvgCKwqYxreoIVc4XQE7YdKZVPaFK+wJIy3KbEiM8MV8AMZkqPgAy3gD0KfrmmnX3FOkEeZcnYfXBIYvugqyTprDEqWxqj+y4SVOdQhvLFney+99MrC02habTKlRkfXKk1yp0mp2arLpes9Np1yqy3uUEc2jXOgNHJRv6A8d5ZNrvFo4jM4ChP/O1JYDFK4DVcebLbwDrewAPkECeUAE8AgN5xs5l9vIDWYMHeVY1mfoAAAAASUVORK5CYII=';
-    doc.addImage(iconoTiempoRespuesta, 'png', 20, 115+10, 9,9);
+    doc.addImage(iconoTiempoRespuesta, 'png', 20, 145+10, 9,9);
 
     //Para los iconos de las fechas
     let iconoFechaEnvio = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAdUlEQVRYhe3XOw6AIBAE0LmHXh9uBhWeQWOidhD2Z4yZmRb2FTQL8N/sV73OEZgduyKjPpekrUhYxuM39fC7bURk8/izqQ8UF6D0AeGDye8TmAasJWAHtCHgD4gekAABAh8FpCFA4IXlN3x9D/+AhH+hGEaTA3674jG3YD03AAAAAElFTkSuQmCC';
-    doc.addImage(iconoFechaEnvio, 'png', 20, 115+20, 9,9);
+    doc.addImage(iconoFechaEnvio, 'png', 20, 145+20, 9,9);
 
     //Para los iconos de la calificacion
     let iconoCalificacion = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAOUlEQVRYw+3TIQ4AMAgEQf7/6dagGlRzhmSmCtM1UAXMTr/fWSAXiH8sYE3dgYA7WB2IExAQEAAeF6LcbqDQieQHAAAAAElFTkSuQmCC';
-    doc.addImage(iconoCalificacion, 'png', 20, 115+30, 9,9);
+    doc.addImage(iconoCalificacion, 'png', 20, 145+30, 9,9);
 
     //Para el icono de los intentos
     let iconoIntentos = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAB6UlEQVRYw+2Xv0oDQRDGf5hoZVAJaGelBz6BijbG0sb02goWIlj65w7sBZ9AsdTCVizOIHJdglVAlBQ+gaBWBozFTeKe7l12z4tVZrvMl+/bndmZnYO+9e3/bIx1TqjwyBtvPFLhhHXGsiEv49OkpVlNfMp/I18g0FKrK2AhHXmO467k7XVMzpZ+lOsIRRWXElMMM8wUJVyqEf81o3b0deXP5zhalMO5gqqbS+SU3TeYTcTO0lBOYRio79jfUOyKLnKj5MLo5nzTDxptaFCRMLhRQSc4ReOcFTuBCrqXVQj81MY+9Olz8SneLqXnC+xC640XgAvx+sk9pyn7d6wFHDlDM6lHrQlFLcafJAA18a/FC5wJxE0l4Ir/LF6gIpClVAJL4q/ECzwIxEkl4Ij/IV7gVSCFVAIF8b9Gf/YSG7GnEdhgwEYgScLVnqBFlTm7EHlG9LDCU6fSTxm3SfJviQNtGIbY410QL2yTN7+mUYn9hHqf7LSFFnc2heYZ0YdWkjdvy65VhBJ7Ri06zw63yhtm1OzgkN1UM4hxu05nFg/OzzD04MlUMxIwkf2jH034M4vZjy0Am0pNXDKT7eAFMMJVpPDu8VhmOqvRMZzvjno5/IY2z13vxve2reLz0asPkH/5hOpb35LsCxKK0f1mzxXVAAAAAElFTkSuQmCC';
-    doc.addImage(iconoIntentos, 'png', 20, 115+40, 9,9);
+    doc.addImage(iconoIntentos, 'png', 20, 145+40, 9,9);
 
     //Para lo iconos de aprobacion
     let iconoAprobado = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABl0lEQVR4Ae3WA2iuARSH8et4w7Vy186ua9u2lbu27exm5Bbm7Boytzjb29kz63x6MZ6nfhn/8/GdZFmWZVketRo/kI/qbvn4gdUYtc3AX7RANGjBX8wYjePTIGFKG21H/IVE6C9GRauVj00hTmFBt1MoVD5OqzHi/VDGz8bgZitH/MCIlwfp5xQCdQrSTx5GvCpIP4sQqEWQfqrsAPsIuf4S28+o/ZE5f5Swhzl7nLYi6SBiMQ1jrgNohCBxrB2xD42QfqLhaXNxCJ+QjFwUQLo9hZP2ogHSTzOOw3Ur8RJ5kCD+YzIibbcyvgUn4artyISE4RectAva+NNw3JII/22/QesRNiBQO1CvjD8Lx21GKQSaRmTjJy5jI7ReQ1AC7YjtyvhWXIDjlqFGGd2GFJzGTITqJaSfYqxHT1tRp4y/CFclKOMTsAJ6QQ5QjliHLdDGX4bryiH93ITTXitHlKBWGX8NniQOvYDWO0gQbbgBzxIfjvgQZPwteJr4dMQnZfwdeJ74eMQXSLd7GJN9wwNYlmVZI1c7iJl2lL7EnFcAAAAASUVORK5CYII=";
     let iconoReprobado = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAACL0lEQVRYw+2XzUojQRDHfxskoomKevPrJL7ALmaPOS97FdkXEOPRy2ZX49G4dxV9h6wXQfEllJBzFvwaDwpeBA0I7cGe2jHd0zOTkAHBmltXzb+q67vhg94DZfjKb/7S4AaFwqNOjTLzfOoefIo/XKFCvgs2megcfJw9WqHg/vfENmOdwP/gLhLc/25ZSAbex36blSeUKDJLnjyzFClxwtMbmR364sIPchT40aNE3iqXp4QXkDxkIJ71/+EfqZBzSueo8BhQEeMWewHbC7FuXAjcYzc6tL5oncnYMZukLv8tuhPzTqyfSlgvnmSUI2l3xfeFxGldkFjshFvhl9V6R4W5Lkkd4tyquMfPnCxVPDyqZA1pk5cTN23aW9qlZi/L2ZaEbsuQt/GWpUdlbD70LzgsZ9cCcm3I23jDUt2WGP7SrOMIEDfvWJ+VTQU1zVqJcIObt6LPaqaChmYVnYGM4hU1SsNUcKtZc10NqDkpN4P88Ax1pWBIUiV9BT13kS3IyckRZFuaJidHmtoKjUCNLnFAkxYtmhywFKh34hWarVW8Uj8VHoxN4oEK/YYZjlZha3YAM5yGriunzLyRdTY7W7uGac71aZNVPjPKKF9Y5Z8+PWc6sAA427Vt4GQ5Q6F45mebTRnKPKNQnEmriBw45sjc0PDfrNLftYqNuCOzfeiPcI9CsRYqv4ZCcc9I3KHf87UlhcUrhdWx58tvCut7Cg+QVJ5QKTwCU3nGflDv6QVrGz1C2gNOnwAAAABJRU5ErkJggg==";
     if(getGrade() >= 6){
-        doc.addImage(iconoAprobado, 'png', 20, 115+50, 9,9);
+        doc.addImage(iconoAprobado, 'png', 20, 145+50, 9,9);
     }else{
-        doc.addImage(iconoReprobado, 'png', 20, 115+50, 9,9);
+        doc.addImage(iconoReprobado, 'png', 20, 145+50, 9,9);
     }
 
     /////////////////////////////////////////////
