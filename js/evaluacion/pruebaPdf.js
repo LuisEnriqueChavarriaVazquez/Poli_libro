@@ -93,7 +93,18 @@ function crearPdf(){
  
          tituloUnidadArchivoFinal += "unidad_5";
  
-     }
+     }else if(unidadActual == 'unidad4_sola'){ //Este es para la otra página de unidad sola
+ 
+        tituloPDF = 'Unidad 4: Elementos de matemáticas financieras y la planeación financiera';
+        colorOnePDF = [75,121,170];
+        colorTwoPDF = [102,179,255];
+        colorThreePDF = [128,191,255];
+
+        intentosFinalValidado = localStorage.getItem('intentosU1');
+
+        tituloUnidadArchivoFinal += "unidad_4";
+
+    }
  
      /////////////////////////////////////////////
      //PAGINA 1
