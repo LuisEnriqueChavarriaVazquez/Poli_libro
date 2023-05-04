@@ -31,6 +31,10 @@
     <script defer src="js/loading/loadingPolilibro.js"></script>
     <script defer src="js/noCopy.js"></script>
 
+    <!--Tutorial interactivo-->
+    <script defer src="js/driver.min.js"></script>
+    <script defer src="js/tutorialPolilibro.js"></script>
+
 </head>
 
 <body>
@@ -90,6 +94,16 @@
             style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
         </section>
     </section>
+
+    <!--Boton para acceder a la página de analítica-->
+    <a href="analitica.html" data-target="slide-out"
+        class="border5 cl3 shadow2 white-text waves-effect waves-light buttonMenuMobile">
+        <i class="material-icons">leaderboard</i>
+    </a>
+
+    <!--Boton de tutorial-->
+    <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-med-and-down scale-transition"
+    id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
 
     <!--Inyectamos componente de footer-->
     <section id="footerListener"></section>
