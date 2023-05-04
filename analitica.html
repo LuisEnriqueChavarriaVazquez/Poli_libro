@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" id="generalDocument">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Análisis de resultados</title>
+    <link rel="shortcut icon" href="img/ipn.ico" type="image/x-icon">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/scss/addsOn/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/scss/styles.css">
+    <link rel="stylesheet" href="css/scss/addsOn/driver.min.css">
+
+    <!--Colors-->
+    <link id="colorAdaptable" rel="stylesheet" href="css/colors/standarColors.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/materialize.min.js"></script>
+    <script defer src="js/activateComponentsMaterialize.js"></script>
+
+    <!--Scripts de análitica-->
+
+    <!--Componentes inyectables-->
+    <script defer src="js/components/header.js"></script>
+    <script defer src="js/components/footer.js"></script>
+
+    <!--Scripts de configuraciones-->
+    <script defer src="js/configuraciones/modoLuz.js"></script>
+    <script defer src="js/configuraciones/modoLectura.js"></script>
+    <script defer src="js/loading/loadingPolilibro.js"></script>
+    <script defer src="js/noCopy.js"></script>
+
+    <!--Tutorial interactivo-->
+    <script defer src="js/driver.min.js"></script>
+    <script defer src="js/tutorialPolilibro.js"></script>
+
+</head>
+
+<body>
+
+    <section>
+        <!--Navbar superior-->
+        <div class="nav-superior cl1" id="nav-superior"></div>
+        <!--Navbar principal-->
+        <!--Navbar principal-->
+        <nav>
+            <div class="nav-wrapper cl2">
+                <a href="index.html" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i
+                        class="material-icons">arrow_back</i></a>
+                <a class="brand-logo titleUnity">Análisis de resultados</a>
+            </div>
+        </nav>
+    </section>
+
+    <!--Contenidos de los datos-->
+    <section class="contenedorDatos_padre">
+        
+        <!--Datos generales-->
+        <section class="contenedorDatos_general">
+            <div class="clgreyl1 border1 shadow2 generalCardData" id="general_1">Prueba</div>
+            <div class="clgreyl1 border1 shadow2 generalCardData" id="general_2">Prueba</div>
+            <div class="clgreyl1 border1 shadow2 generalCardData" id="general_3">Prueba</div>
+            <div class="clgreyl1 border1 shadow2 generalCardData" id="general_4">Prueba</div>
+            <div class="clgreyl1 border1 shadow2 generalCardData" id="general_5">Prueba</div>
+        </section>
+
+        <!--Grafica de los puntos-->
+        <section class="contenedorDatos_graficas">
+            <div class="clgreyl1 border1 shadow2 graficaCardData" id="grafica_1">Grafica</div>
+            <div class="clgreyl1 border1 shadow2 graficaCardData" id="grafica_2">Grafica</div>
+            <div class="clgreyl1 border1 shadow2 graficaCardData" id="grafica_3">Grafica</div>
+        </section>
+
+    </section>
+
+    <!--Boton para acceder a la página de analítica-->
+    <a href="analitica.html" data-target="slide-out"
+        class="border5 cl3 shadow2 white-text waves-effect waves-light buttonMenuMobile">
+        <i class="material-icons">leaderboard</i>
+    </a>
+
+    <!--Boton de tutorial-->
+    <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-med-and-down scale-transition"
+    id="buttonComputerHelp"><i class="material-icons left">help</i>Ayuda</a>
+
+    <!--Inyectamos componente de footer-->
+    <section id="footerListener"></section>
+
+
+
+</body>
+
+</html>

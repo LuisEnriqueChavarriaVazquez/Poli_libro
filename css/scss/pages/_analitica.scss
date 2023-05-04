@@ -1,0 +1,83 @@
+.contenedorDatos_padre{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    //Contenedor general de datos
+    .contenedorDatos_general{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "general_1 general_2"
+            "general_1 general_3"
+            "general_1 general_4"
+            "general_5 general_5"
+        ;
+        gap: 15px;
+        padding: 60px 60px 0 60px;
+        margin-bottom: 10px;
+
+        .generalCardData{
+            padding: 20px;
+            box-sizing: content-box;
+        }
+
+        #general_1{
+            grid-area: general_1;
+            height: 230px;
+        }
+
+        #general_2{
+            grid-area: general_2;
+        }
+
+        #general_3{
+            grid-area: general_3;
+        }
+
+        #general_4{
+            grid-area: general_4;
+        }
+
+        #general_5{
+            grid-area: general_5;
+            height: 120px;
+        }
+    }
+
+    //Contenedor de graficas
+    .contenedorDatos_graficas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "grafica_1 grafica_1"
+            "grafica_2 grafica_3"
+        ;
+        gap: 15px;
+        padding: 0 60px 60px 60px;
+        margin-bottom: 10px;
+
+        .graficaCardData{
+            padding: 20px;
+            box-sizing: content-box;
+        }
+    
+        #grafica_1{
+            grid-area: grafica_1;
+            height: 250px;
+        }
+    
+        #grafica_2{
+            grid-area: grafica_2;
+            height: 220px;
+        }
+    
+        #grafica_3{
+            grid-area: grafica_3;
+            height: 220px;
+        }
+    }
+
+}
