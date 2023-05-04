@@ -60,16 +60,26 @@
     font-weight: 500;
   }
 
+  .textoGrande {
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+
   .textoFooter {
     font-size: 0.8rem;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .textoTitulo {
     font-size: 1.6rem;
     font-weight: 500;
     margin: 0;
+  }
+
+  .textoGrande {
+    font-size: 1.8rem;
+    font-weight: 600;
   }
 
   .textoTituloFullText {

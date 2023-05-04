@@ -6,14 +6,47 @@
     //Contenedor general de datos
     .contenedorDatos_general {
         display: grid;
-        grid-template-columns: .9fr 1fr 1fr;
+        grid-template-columns: 0.9fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "general_1 general_2 general_3"
             "general_1 general_4 general_5";
         gap: 15px;
         padding: 60px 300px 0 300px;
-        margin-bottom: 10px;
+
+        @media (max-width: 1600px) {
+            & {
+                grid-template-areas:
+                    "general_1 general_2 general_3"
+                    "general_1 general_4 general_5";
+                padding: 25px 25px 0 25px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            & {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "general_1 general_1"
+                    "general_2 general_3"
+                    "general_4 general_5";
+                padding: 30px 20px 0 20px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            & {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "general_1 general_1 general_1"
+                    "general_2 general_2 general_2"
+                    "general_3 general_3 general_3"
+                    "general_4 general_4 general_4"
+                    "general_5 general_5 general_5";
+                padding: 30px 10px 0 10px;
+                gap: 10px;
+            }
+        }
 
         .generalCardData {
             padding: 20px;
@@ -33,10 +66,11 @@
                 padding: 0;
                 font-weight: 700;
                 display: grid;
-                grid-template-columns: .1fr 1fr;
+                grid-template-columns: 0.1fr 1fr;
                 grid-template-rows: auto;
 
-                .generalCardData_son1,.generalCardData_son2{
+                .generalCardData_son1,
+                .generalCardData_son2 {
                     height: 100%;
                     width: auto;
                     display: flex;
@@ -45,7 +79,7 @@
                     padding: 2px 30px;
                 }
 
-                .generalCardData_son2{
+                .generalCardData_son2 {
                     border-radius: 0 10px 10px 0;
                 }
             }
@@ -123,7 +157,12 @@
 
         #general_5 {
             grid-area: general_5;
-            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            height: auto;
         }
     }
 
@@ -137,7 +176,30 @@
             "grafica_2 grafica_3";
         gap: 15px;
         padding: 0 300px 60px 300px;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
+
+        @media (max-width: 1600px) {
+            & {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "grafica_1"
+                    "grafica_2"
+                    "grafica_3";
+                padding: 15px 25px 0 25px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            & {
+                padding: 10px 20px 0 20px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            & {
+                padding: 10px 10px 0 10px;
+            }
+        }
 
         .graficaCardData {
             padding: 20px;
@@ -146,17 +208,17 @@
 
         #grafica_1 {
             grid-area: grafica_1;
-            height: 250px;
+            height: auto;
         }
 
         #grafica_2 {
             grid-area: grafica_2;
-            height: 220px;
+            height: auto;
         }
 
         #grafica_3 {
             grid-area: grafica_3;
-            height: 220px;
+            height: auto;
         }
     }
 }
