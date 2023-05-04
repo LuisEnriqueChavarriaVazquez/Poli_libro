@@ -97,11 +97,11 @@ function crearPdf(){
  
         tituloPDF = 'Unidad 4: Elementos de matemáticas financieras y la planeación financiera';
         colorOnePDF = [75,121,170];
-        colorTwoPDF = [102,179,255];
-        colorThreePDF = [128,191,255];
+        colorTwoPDF = [95,142,197];
+        colorThreePDF = [149,184,209];
 
         
-        intentosFinalValidado = localStorage.getItem('intentos');
+        intentosFinalValidado = localStorage.getItem('intentos_unidad_4');
 
         tituloUnidadArchivoFinal += "unidad_4";
 

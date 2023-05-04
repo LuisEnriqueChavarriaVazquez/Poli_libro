@@ -20,6 +20,8 @@ if(urlEsDeUnidadIntentos() == "unidad1_evaluacion.html"){
     seleccionUnidadIntentos = "intentosU4";
 }else if(urlEsDeUnidadIntentos() == "unidad5_evaluacion.html"){
     seleccionUnidadIntentos = "intentosU5";
+}else if(urlEsDeUnidadIntentos() == "evaluacion_unidad_4.html"){
+    seleccionUnidadIntentos = "intentos_unidad_4";
 }
 
 ///////////////////////////////////NUMERO DE INTENTOS
