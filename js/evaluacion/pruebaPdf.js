@@ -100,6 +100,7 @@ function crearPdf(){
         colorTwoPDF = [102,179,255];
         colorThreePDF = [128,191,255];
 
+        
         intentosFinalValidado = localStorage.getItem('intentos');
 
         tituloUnidadArchivoFinal += "unidad_4";
