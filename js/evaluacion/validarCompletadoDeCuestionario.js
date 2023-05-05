@@ -31,7 +31,13 @@ function validateExamenCompletado(){
             //Creamos una funcion para asignar los valores en memoria
             function asignacionStats(val1,val2,val3,val4){
                 let tiempoActualHoras_stats = document.getElementById('tiempoActualHoras').textContent;
+                if(tiempoActualHoras_stats == 00){
+                    tiempoActualHoras_stats = 0;
+                }
                 let tiempoActualMinutos_stats = document.getElementById('tiempoActualMinutos').textContent;
+                if(tiempoActualMinutos_stats == 00){
+                    tiempoActualMinutos_stats = 0;
+                }
                 let intentosActuales_stats = document.getElementById('intentosActuales').textContent;
                 let contadorPreguntas_stats = document.getElementById('contadorPreguntas').textContent;
                 //Registramos en memoria algunos datos para las stats

@@ -64,17 +64,19 @@ function runTime(){
         tiempoActualSegundos2.innerText = segundos;
         segundos++;
 
-        if(segundos == 60){
+        if(segundos == 59){
             minutos++;
             tiempoActualMinutos.innerText = minutos;
             tiempoActualMinutos2.innerText = minutos;
             segundos = 0;
         }
 
-        if(minutos == 60){
+        if(minutos == 59){
             horas++;
             tiempoActualHoras.innerText = horas;
             tiempoActualHoras2.innerText = horas;
+            tiempoActualMinutos.innerText = 0;
+            tiempoActualMinutos2.innerText = 0;
             minutos = 0;
         }
 
