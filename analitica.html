@@ -22,9 +22,11 @@
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
     <!--Scripts de análitica-->
-    <script defer src="js/stats/calificacionPorUnidad.js"></script>
-    <script defer src="js/stats/calificacionPorUnidadBarra.JS"></script>
+    <script defer src="js/stats/intentosPromedio.js"></script>
     <script defer src="js/stats/probabilidadAprobar.js"></script>
+    <script defer src="js/stats/calificacionPorUnidad.js"></script>
+    <script defer src="js/stats/examenesHechos.js"></script>
+    <script defer src="js/stats/calificacionPorUnidadBarra.JS"></script>
 
     <!--Componentes inyectables-->
     <script defer src="js/components/header.js"></script>
@@ -89,7 +91,7 @@
             </div>
             <!--Examenes respondidos-->
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_2">
-                <p class="textoGrande clbktx"><span>0</span>/5</p>
+                <p class="textoGrande clbktx"><span id="dato_examenes_hechos">0</span>/5</p>
                 <p class="textoStandar clbktx">Exámenes respondidos</p>
             </div>
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_3">
@@ -97,7 +99,7 @@
                 <p class="textoStandar clbktx">Promedio por examen</p>
             </div>
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_4">
-                <p class="textoGrande clbktx"><span>20</span> intentos</p>
+                <p class="textoGrande clbktx"><span id="dato_intentos_examen">20</span> intentos</p>
                 <p class="textoStandar clbktx">Promedio por examen</p>
             </div>
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_5">
@@ -184,15 +186,11 @@
                     </div>
                 </section>
             </div>
-            <div class="clgreyl1 border1 shadow2 graficaCardData" id="grafica_2">
-                <p class="textoTitulo clbktx">Gráfica de aciertos</p>
-            </div>
-            <div class="clgreyl1 border1 shadow2 graficaCardData" id="grafica_3">
-                <p class="textoTitulo clbktx">Gráfica de tiempo</p>
-            </div>
         </section>
 
     </section>
+
+    <br><br><br><br><br><br><br><br>
 
     <!--Boton de tutorial-->
     <a class="waves-effect waves-light btn-large botonPolilibro border1 cl4 hide-on-med-and-down scale-transition"

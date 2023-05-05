@@ -175,8 +175,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
-            "grafica_1 grafica_1"
-            "grafica_2 grafica_3";
+            "grafica_1 grafica_1";
         gap: 15px;
         padding: 0 300px 60px 300px;
         margin-bottom: 25px;
@@ -186,9 +185,7 @@
             & {
                 grid-template-columns: 1fr;
                 grid-template-areas:
-                    "grafica_1"
-                    "grafica_2"
-                    "grafica_3";
+                    "grafica_1";
                 padding: 15px 25px 0 25px;
             }
         }
@@ -214,21 +211,10 @@
             grid-area: grafica_1;
             height: auto;
         }
-
-        #grafica_2 {
-            grid-area: grafica_2;
-            height: auto;
-        }
-
-        #grafica_3 {
-            grid-area: grafica_3;
-            height: auto;
-        }
     }
 }
 
 //Estilos para las graficas de barras.
-
 .contenedorGraficaMain {
     width: 100%;
     height: 380px;
@@ -344,3 +330,4 @@
         }
     }
 }
+
