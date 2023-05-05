@@ -215,9 +215,9 @@ function crearPdf(){
      doc.text(35, 151.5+40, 'Intentos: ' + intentosFinalValidado);
  
      if(getGrade() >= 6){
-         doc.text(35, 151.5+50, 'Estado: ' + 'Aprobado');
+         doc.text(35, 151.5+50, 'Estado: ' + 'Pasaste la prueba.');
      }else{
-         doc.text(35, 151.5+50, 'Estado: ' + 'Sigue intentando');
+         doc.text(35, 151.5+50, 'Estado: ' + 'Sigue intentando.');
      }
  
      /////////////////////////////////////////
