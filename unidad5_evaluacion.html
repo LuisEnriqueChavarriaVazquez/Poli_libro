@@ -220,15 +220,15 @@
             <div class="inputEvaluacionDatosAlumnosContainer clw border1 shadow2">
                 <div class="input-field">
                     <i class="material-icons prefix clbktx">account_circle</i>
-                    <input id="nombreAlumnoInput" type="text" class="validate active">
-                    <label for="nombreAlumnoInput">Nombre (Empezando por apellidos)</label>
+                    <input id="nombreAlumnoInput" type="text" class="validate active clbktx">
+                    <label for="nombreAlumnoInput" class="clbktx">Nombre (Empezando por apellidos)</label>
                 </div>
             </div>
             <div class="inputEvaluacionDatosAlumnosContainer clw border1 shadow2">
                 <div class="input-field">
                     <i class="material-icons prefix clbktx">groups</i>
-                    <input id="grupoAlumnoInput" type="text" class="validate active">
-                    <label for="grupoAlumnoInput">Grupo</label>
+                    <input id="grupoAlumnoInput" type="text" class="validate active clbktx">
+                    <label for="grupoAlumnoInput" class="clbktx">Grupo</label>
                 </div>
             </div>
         </section>
@@ -242,18 +242,18 @@
         <section class="cardsEvaluationTwo clgreyl1 border1 shadow2" id="contenedor_preguntas_two"></section>
 
         <!--Descarga de archivos-->
-        <section id="contenedorDescargaArchivos">
+        <section > <!--id="contenedorDescargaArchivos"-->
             <p class="textoTitulo clbktx tituloEvaluacion">Descargar resultados</p>
             <section class="cardsEvaluationDownload clgreyl1 border1">
-                <p class="notaStyle clgreyl2 border1 shadow2 clbktx textoStandar">Nota: Por respeto a su privacidad las
+                <p class="notaStyle clgreyl2 border1 shadow2 clbktx textoStandar">Nota Android: Por respeto a su privacidad las
                     descargas de PDFs de
                     resultados en Android
                     no son posibles, puesto que al ser generados del lado del cliente se solicitan permisos de
                     lectura/escritura más alla de lo necesario. Favor de tomar captura de
                     pantalla de sus resultados si es usuario de Android.</p>
 
-                <a class='btn-large waves-effect waves-light border1 white-text cl4' id="documentoPrueba" unidadButton="u5">Descargar<i
-                        class="material-icons right">file_download</i></a>
+                <a class='btn-large waves-effect waves-light border1 white-text cl4 hide-on-med-and-down' id="documentoPrueba"
+                    unidadButton="u5">Descargar<i class="material-icons right">file_download</i></a>
             </section>
         </section>
 
@@ -268,7 +268,7 @@
     </a>
 
     <a data-target="mobile-demo"
-        class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobileDownloadResult scale-transition scale-out nav-superiorUnit5"
+        class="border5 shadow2 white-text waves-effect waves-light buttonMenuMobileDownloadResult scale-transition scale-out nav-superiorUnit5 hide-on-med-and-down"
         style="width: 54px; height: 54px;" id="documentoPruebaFloat">
         <i class="material-icons">download</i>
     </a>

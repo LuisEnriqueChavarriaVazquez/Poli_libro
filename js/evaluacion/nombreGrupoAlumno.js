@@ -33,14 +33,18 @@ function validarButtonDatosPersonales(){
         //Editamos el button
         guardarDatosButton.innerHTML = `Editar datos<i class="material-icons right">edit</i>`;
         nombreAlumnoInput.setAttribute('disabled','');
+        nombreAlumnoInput.classList.remove('clbktx');
         grupoAlumnoInput.setAttribute('disabled','');
+        grupoAlumnoInput.classList.remove('clbktx');
         
     }else if(localStorage.getItem('estadoDatosPersonalesAlumno') == 'vacio'){
         
         //Editamos el button
         guardarDatosButton.innerHTML = `Guardar datos<i class="material-icons right">save</i>`;
         nombreAlumnoInput.removeAttribute('disabled','');
+        nombreAlumnoInput.classList.add('clbktx');
         grupoAlumnoInput.removeAttribute('disabled','');
+        grupoAlumnoInput.classList.add('clbktx');
     }
     return localStorage.getItem('estadoDatosPersonalesAlumno');
 };
@@ -74,7 +78,7 @@ guardarDatosButton.addEventListener('click', () => {
             validarButtonDatosPersonales();
             
             //Retroalimentamos al usuario
-            M.toast({html: `Edite los campos vacios 🖋️`});
+            M.toast({html: `Edite los campos 🖋️`});
         }else{
             localStorage.setItem('estadoDatosPersonalesAlumno', "guardado");
             validarButtonDatosPersonales();

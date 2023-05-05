@@ -19,4 +19,4 @@ let sumaIntentos = intentosFiltrado.reduce((e, i) => {
 });
 
 //Ponemos el valor en la interfaz
-dato_intentos_examen.textContent = sumaIntentos/intentosFiltrado.length;
+dato_intentos_examen.textContent = (sumaIntentos/intentosFiltrado.length).toFixed(1);

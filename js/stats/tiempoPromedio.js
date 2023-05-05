@@ -31,7 +31,7 @@ let horasSumaToMin = horasSuma*60;
 let minutosSuma = minutosFilter.reduce((e,i) => e+i);
 
 //Sacamos el promedio
-let promedioTiempoStat = (horasSumaToMin + minutosSuma)/minutosFilter.length;
+let promedioTiempoStat = ((horasSumaToMin + minutosSuma)/minutosFilter.length).toFixed(1);
 
 //Tiempo promedio
 dato_tiempoPromedio.textContent = promedioTiempoStat;
