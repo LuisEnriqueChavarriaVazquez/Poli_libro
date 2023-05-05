@@ -302,13 +302,14 @@ function checkDragAndDrop(numeroPregunta,id_preguntas,id_button, id_retroaliment
 
       //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
       puntajeTotal += (puntos/4);
-      preguntasContestadasTotal++;
+      preguntasContestadasTotal += 1;
+      
+      //Validamos que el examen se hay terminado en este punto
+      validateExamenCompletado();
 
       //Mensaje de pregunta correctas e incorrectas
       M.toast({html: `Pregunta evaluada`});
 
-      //Validamos que el examen se hay terminado en este punto
-      validateExamenCompletado();
       
   }else{
     //Validacion de preguntas faltantes

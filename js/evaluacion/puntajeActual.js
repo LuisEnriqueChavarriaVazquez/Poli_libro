@@ -15,7 +15,7 @@ let contadorPreguntasRespondidas2 = document.getElementById('contadorPreguntasRe
 
 //Cuando terminamos la pregunta final, entonces sacamos la califacion
 function getGrade(){
-    if(contadorPreguntasRespondidas.textContent >= 19){
+    if(preguntasContestadasTotal == 20){
         //Calculo de la calificacion
         let calificacionFinal = (puntajeTotal*10)/20;
         return calificacionFinal;

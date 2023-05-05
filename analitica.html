@@ -22,6 +22,9 @@
     <script defer src="js/activateComponentsMaterialize.js"></script>
 
     <!--Scripts de análitica-->
+    <script defer src="js/stats/calificacionPorUnidad.js"></script>
+    <script defer src="js/stats/calificacionPorUnidadBarra.JS"></script>
+    <script defer src="js/stats/probabilidadAprobar.js"></script>
 
     <!--Componentes inyectables-->
     <script defer src="js/components/header.js"></script>
@@ -56,7 +59,7 @@
     </section>
 
     <!--Contenidos de los datos-->
-    <section class="contenedorDatos_padre">
+    <section class="contenedorDatos_padre clw">
         
         <!--Datos generales-->
         <section class="contenedorDatos_general">
@@ -65,41 +68,41 @@
                 <p class="textoTitulo clbktx">Calificaciones</p>
                 <div class="border1 textoStandar clw generalCardData_son"> 
                     <div class="clbktx generalCardData_son1">U1</div> 
-                    <div class="clwtx generalCardData_son2 barraGraficaStats1">10</div>
+                    <div class="clwtx generalCardData_son2 barraGraficaStats1" id="calU1Stats">10</div>
                 </div>
                 <div class="border1 textoStandar clw generalCardData_son"> 
                     <div class="clbktx generalCardData_son1">U2</div> 
-                    <div class="clwtx generalCardData_son2 barraGraficaStats2">10</div>
+                    <div class="clwtx generalCardData_son2 barraGraficaStats2" id="calU2Stats">10</div>
                 </div>
                 <div class="border1 textoStandar clw generalCardData_son"> 
                     <div class="clbktx generalCardData_son1">U3</div> 
-                    <div class="clwtx generalCardData_son2 barraGraficaStats3">10</div>
+                    <div class="clwtx generalCardData_son2 barraGraficaStats3" id="calU3Stats">10</div>
                 </div>
                 <div class="border1 textoStandar clw generalCardData_son"> 
                     <div class="clbktx generalCardData_son1">U4</div> 
-                    <div class="clwtx generalCardData_son2 barraGraficaStats4">10</div>
+                    <div class="clwtx generalCardData_son2 barraGraficaStats4" id="calU4Stats">10</div>
                 </div>
                 <div class="border1 textoStandar clw generalCardData_son"> 
                     <div class="clbktx generalCardData_son1">U5</div> 
-                    <div class="clwtx generalCardData_son2 barraGraficaStats5">10</div>
+                    <div class="clwtx generalCardData_son2 barraGraficaStats5" id="calU5Stats">10</div>
                 </div>
             </div>
             <!--Examenes respondidos-->
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_2">
                 <p class="textoGrande clbktx"><span>0</span>/5</p>
-                <p class="textoStandar clbktx">exámenes respondidos</p>
+                <p class="textoStandar clbktx">Exámenes respondidos</p>
             </div>
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_3">
                 <p class="textoGrande clbktx"><span>60</span> mins</p>
-                <p class="textoStandar clbktx">promedio por examen</p>
+                <p class="textoStandar clbktx">Promedio por examen</p>
             </div>
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_4">
                 <p class="textoGrande clbktx"><span>20</span> intentos</p>
-                <p class="textoStandar clbktx">promedio por examen</p>
+                <p class="textoStandar clbktx">Promedio por examen</p>
             </div>
             <div class="clgreyl1 border1 shadow2 generalCardData" id="general_5">
-                <p class="textoGrande clbktx"><span>60</span>%</p>
-                <p class="textoStandar clbktx">probabilidad de aprobar</p>
+                <p class="textoGrande clbktx"><span id="dato_probabilidad_pasar"></span>%</p>
+                <p class="textoStandar clbktx">Probabilidad de aprobar</p>
             </div>
         </section>
 

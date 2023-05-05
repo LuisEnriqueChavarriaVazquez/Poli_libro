@@ -55,6 +55,7 @@
             "general_1 general_4 general_5";
         gap: 15px;
         padding: 60px 300px 0 300px;
+        margin-bottom: 25px;
 
         @media (max-width: 1600px) {
             & {
@@ -258,12 +259,14 @@
 
                 div {
                     display: flex;
-                    justify-content: center;
+                    justify-content: right;
                     align-items: flex-end;
 
                     height: 110%;
+                    position: relative;
+                    left: 5px;
 
-                    font-size: 0.8rem;
+                    font-size: 1.2rem;
                     font-weight: 700;
                 }
             }
@@ -291,7 +294,7 @@
                     position: relative;
                     right: 30px;
 
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                     font-weight: 700;
                 }
             }
@@ -323,19 +326,19 @@
                 }
 
                 #unidad2CalificacionBarra{
-                    width: 10%;
+                    width: 30%;
                 }
 
                 #unidad3CalificacionBarra{
-                    width: 10%;
+                    width: 50%;
                 }
 
                 #unidad4CalificacionBarra{
-                    width: 10%;
+                    width: 20%;
                 }
 
                 #unidad5CalificacionBarra{
-                    width: 10%;
+                    width: 70%;
                 }
             }
         }
