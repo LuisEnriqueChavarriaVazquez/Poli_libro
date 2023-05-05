@@ -44,6 +44,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    gap: 15px;
 
     //Contenedor general de datos
     .contenedorDatos_general {
@@ -55,7 +56,6 @@
             "general_1 general_4 general_5";
         gap: 15px;
         padding: 60px 300px 0 300px;
-        margin-bottom: 25px;
 
         @media (max-width: 1600px) {
             & {
@@ -178,7 +178,6 @@
             "grafica_1 grafica_1";
         gap: 15px;
         padding: 0 300px 60px 300px;
-        margin-bottom: 25px;
         height: auto;
 
         @media (max-width: 1600px) {
@@ -303,6 +302,7 @@
                 align-items: center;
 
                 div{
+                    width: 1px;
                     height: 55%;
                     border-radius: 0 8px 8px 0;
                 }

@@ -1,5 +1,6 @@
 //Accedemos al contenedor de las calificaciones
 let barraGraficaStats1 = document.getElementById('unidad1CalificacionBarra');
+console.log('barraGraficaStats1: ', barraGraficaStats1);
 let barraGraficaStats2 = document.getElementById('unidad2CalificacionBarra');
 let barraGraficaStats3 = document.getElementById('unidad3CalificacionBarra');
 let barraGraficaStats4 = document.getElementById('unidad4CalificacionBarra');
