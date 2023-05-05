@@ -20,17 +20,29 @@ document.getElementById("boton-captura-pantalla").addEventListener("click", func
           var ctx = canvas.getContext("2d");
           ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   
-          // Descarga la imagen resultante
-          var link = document.createElement("a");
-          link.download = "captura-pantalla.png";
-          link.href = canvas.toDataURL("image/png");
-          link.click();
+          // Recorta la imagen para obtener solo la parte que cubre 100vh
+          var recorte = canvas.toDataURL("image/png");
+          var img = new Image();
+          img.onload = function() {
+            var canvas_recorte = document.createElement("canvas");
+            canvas_recorte.width = img.width;
+            canvas_recorte.height = window.innerHeight;
+            var ctx_recorte = canvas_recorte.getContext("2d");
+            ctx_recorte.drawImage(img, 0, -(canvas.height - window.innerHeight), img.width, canvas.height);
   
-          // Limpia los recursos utilizados
-          video.pause();
-          video.srcObject = null;
-          stream.getTracks()[0].stop();
-          document.body.removeChild(video);
+            // Descarga la imagen resultante
+            var link = document.createElement("a");
+            link.download = "captura-pantalla.png";
+            link.href = canvas_recorte.toDataURL("image/png");
+            link.click();
+  
+            // Limpia los recursos utilizados
+            video.pause();
+            video.srcObject = null;
+            stream.getTracks()[0].stop();
+            document.body.removeChild(video);
+          };
+          img.src = recorte;
         };
       })
       .catch(function(error) {
