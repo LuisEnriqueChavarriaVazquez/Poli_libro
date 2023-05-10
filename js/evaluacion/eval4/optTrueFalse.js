@@ -16,7 +16,7 @@ let questionsTF = [
         respuesta: "V",
     },
     {
-        enunciado: "El VAN  se puede definir como el valor monetario que resulta de restar la suma de los flujos descontados (flujos de efectivo del proyecto a valor presente) a la inversión inicial",
+        enunciado: "El VAN  se puede definir como el valor monetario que resulta de restar la suma de los flujos descontados (flujos de efectivo del proyecto a valor presente) a la inversión inicial.",
         respuesta: "V",
     },
     {
@@ -24,16 +24,16 @@ let questionsTF = [
         respuesta: "F",
     },
     {   //Preguntas parafraseadas
-        enunciado: "Enunciado de pregunta True/False 6",
-        respuesta: "V",
-    },
-    {
-        enunciado: "Enunciado de pregunta True/False 7",
+        enunciado: "Cuanto mayor sea el intervalo de tiempo en que se realiza la capitalización de una inversión, mayores serán los rendimientos que se obtendrán.",
         respuesta: "F",
     },
     {
-        enunciado: "Enunciado de pregunta True/False 8",
+        enunciado: "El Valor Actual Neto (VAN) es una medida financiera que se utiliza para calcular el valor monetario resultante de restar la inversión inicial a la suma de los flujos de efectivo futuros del proyecto, descontados a su valor presente.",
         respuesta: "V",
+    },
+    {
+        enunciado: "El período de recuperación de la inversión (PRI) solo se puede calcular tomando en cuenta el valor del dinero en el tiempo y no es posible calcularlo sin considerar este factor.",
+        respuesta: "F",
     },
 ];
 
