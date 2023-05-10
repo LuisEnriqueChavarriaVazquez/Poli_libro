@@ -1,29 +1,29 @@
 let questionsTF = [
-    {
-        enunciado: "Enunciado de pregunta True/False 0",
+    { //Preguntas originales
+        enunciado: "Para calcular el valor presente se utiliza una tasa de descuento.",
         respuesta: "V",
     },
     {
-        enunciado: "Enunciado de pregunta True/False 1",
+        enunciado: "El interés simple es el que se gana en un depósito dado y se vuelve parte del principal al final de un período específico.",
         respuesta: "F",
     },
     {
-        enunciado: "Enunciado de pregunta True/False 2",
+        enunciado: "El período de recuperación de la inversión (PRI) es un método que se puede calcular sin tomar en cuenta el valor del dinero en el tiempo y también puede calcularse tomando en cuenta el valor del dinero en el tiempo.",
         respuesta: "V",
     },
     {
-        enunciado: "Enunciado de pregunta True/False 3",
-        respuesta: "F",
-    },
-    {
-        enunciado: "Enunciado de pregunta True/False 4",
+        enunciado: "Una de los criterios de decisión para aceptar o no invertir en un proyecto de inversión es el siguiente: TIR>TMAR.",
         respuesta: "V",
     },
     {
-        enunciado: "Enunciado de pregunta True/False 5",
-        respuesta: "F",
+        enunciado: "El VAN  se puede definir como el valor monetario que resulta de restar la suma de los flujos descontados (flujos de efectivo del proyecto a valor presente) a la inversión inicial",
+        respuesta: "V",
     },
     {
+        enunciado: "Entre más largo sea el período de capitalización de una inversión se ganan más rendimientos.",
+        respuesta: "F",
+    },
+    {   //Preguntas parafraseadas
         enunciado: "Enunciado de pregunta True/False 6",
         respuesta: "V",
     },

@@ -74,20 +74,20 @@ function collectAnswers(definicion, concepto, numeroPregunta, idPregunta){
 let questionsDragAndDrop = [
   [
     {
-        concepto: "Concepto 1.1",
-        definicion: "Lorem ipsum dolorignissimos. Minus molestias idofficia ipsum corrupti impedit.",
+        concepto: "Valor del dinero en el tiempo",
+        definicion: "Técnica que parte de la premisa de que el dinero actual tiene un valor mayor que el que se recibirá en una fecha futura.",
     },
     {
-        concepto: "Concepto 1.2",
-        definicion: "Ullam dignissimos. Minus molestias idofficia ipsum corrupti impedit. ullam dignissimos. Minus molestias.",
+        concepto: "Valor presente",
+        definicion: "El valor actual de una cantidad de dinero que se recibirá o pagará en el futuro, teniendo en cuenta una tasa de descuento o interés.",
     },
     {
-        concepto: "Concepto 1.3",
-        definicion: "Illum quos perspiciatis, voluptatum veritatis error nihil laboriosam earum voluptatem aliquid, facilis consequatur.",
+        concepto: "Valor futuro",
+        definicion: "El valor que tendrá una cantidad de dinero en un momento futuro, teniendo en cuenta una tasa de interés.",
     },
     {
-        concepto: "Concepto 1.4",
-        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+        concepto: "Flujos de efectivo",
+        definicion: "Las entradas y salidas de dinero que ocurren en un proyecto, inversión o negocio a lo largo del tiempo.",
     },
     {
       id: "0"
@@ -95,20 +95,20 @@ let questionsDragAndDrop = [
   ],
   [
     {
-        concepto: "Concepto 2.1",
-        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+        concepto: "Flujos de efectivo",
+        definicion: "El valor presente y el valor futuro se determinan a partir de:",
     },
     {
-        concepto: "Concepto 2.2",
-        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+        concepto: "Ingresos",
+        definicion: "Dinero que entra en una entidad o persona durante un período, a través de ventas, inversiones, donaciones, intereses, etc.",
     },
     {
-        concepto: "Concepto 2.3",
-        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+        concepto: "Egresos",
+        definicion: "Gastos o salidas de dinero que una entidad o persona realiza durante un período para mantener sus operaciones o lograr objetivos, como salarios, alquiler, suministros, publicidad, compra de activos fijos, entre otros.",
     },
     {
-        concepto: "Concepto 2.4",
-        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+        concepto: "Valor futuro",
+        definicion: "El valor que tendrá una cantidad de dinero en un momento futuro, teniendo en cuenta una tasa de interés.",
     },
     {
       id: "1"
@@ -116,20 +116,20 @@ let questionsDragAndDrop = [
   ],
   [
     {
-        concepto: "Concepto 3.1",
-        definicion: "Lorem ipsum dolor sit amet consect sdm,dsmsdm sd,msd,msd, offcorrupti impedit.",
+        concepto: "Anualidad",
+        definicion: "Se denomina así a los importes iguales que se repiten durante un periodo determinado de tiempo.",
     },
     {
-        concepto: "Concepto 3.2",
-        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+        concepto: "Cantidad única",
+        definicion: "Es una cantidad de dinero invertida o prestada en una sola ocasión.",
     },
     {
-        concepto: "Concepto 3.3",
-        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+        concepto: "Principal o capital",
+        definicion: "Es la cantidad de dinero invertida en una empresa, proyecto o negocio para generar ingresos o rentabilidad.",
     },
     {
-        concepto: "Concepto 3.4",
-        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+        concepto: "Programa de anualidades",
+        definicion: "Es un plan de pagos periódicos para devolver un préstamo o recibir pagos regulares por una inversión.",
     },
     {
       id: "2"
@@ -137,20 +137,20 @@ let questionsDragAndDrop = [
   ],
   [
     {
-        concepto: "Concepto 4.1",
-        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+        concepto: "Principal",
+        definicion: "Nombre técnico que recibe la cantidad de dinero sobre la que se pagan intereses",
     },
     {
-        concepto: "Concepto 4.2",
-        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+        concepto: "Depósito",
+        definicion: "Es una cantidad de dinero que se entrega a una entidad financiera para su custodia y que puede estar sujeta a ciertas restricciones y condiciones.",
     },
     {
-        concepto: "Concepto 4.3",
-        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+        concepto: "Inversión",
+        definicion: "Es el acto de destinar una cantidad de dinero a un proyecto o negocio con el objetivo de obtener una rentabilidad o ganancia futura. Las inversiones pueden realizarse en distintos tipos de activos, como acciones, bonos, bienes raíces, entre otros.",
     },
     {
-        concepto: "Concepto 4.4",
-        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+        concepto: "Anualidad",
+        definicion: "Se denomina así a los importes iguales que se repiten durante un periodo determinado de tiempo",
     },
     {
       id: "3"
@@ -158,25 +158,25 @@ let questionsDragAndDrop = [
   ],
   [
     {
-        concepto: "Concepto 5.1",
-        definicion: "Lorem ipsum dolor sit amet consect offcorrupti impedit.",
+        concepto: "Programa de amortización",
+        definicion: "Muestra en forma precisa cómo será pagado un préstamo, determina el pago requerido en cada fecha y especifica qué cantidad se está pagando de intereses y qué cantidad se paga a principal.",
     },
     {
-        concepto: "Concepto 5.2",
-        definicion: "Ullam dignissimos. Minus molestias idoffi Minus molestias.",
+        concepto: "Programa de anualidades",
+        definicion: "Plan de pagos periódicos para devolver un préstamo o recibir pagos regulares por una inversión.",
     },
     {
-        concepto: "Concepto 5.3",
-        definicion: "Illum quos perspiciatis, voluptatum vertem aliquid, facilis consequatur.",
+        concepto: "Cálculo de anualidades",
+        definicion: "Proceso para determinar el monto de los pagos periódicos necesarios para pagar un préstamo o recibir una cantidad determinada de dinero en un período de tiempo.",
     },
     {
-        concepto: "Concepto 5.4",
-        definicion: "Ameconsectetur aliquam dignissimos porro explicabo.",
+      concepto: "Principal",
+      definicion: "Nombre técnico que recibe la cantidad de dinero sobre la que se pagan intereses",
     },
     {
       id: "4"
     }
-  ]
+  ],
 ];
 
 //Mezclamos el array de opciones
