@@ -110,7 +110,7 @@ function printQuestionsTrueFalse(){
                             <i class="material-icons">help</i>
                             </a>
                         </div>
-                        <p class="getEnunciadoPdf preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${suffledquestionsTF[i].enunciado}</p>
+                        <p class="getEnunciadoPdf preguntaEnunciado clgreyl2 clbktx border1 textoPregunta">${suffledquestionsTF[i].enunciado}</p>
                     </div>
                     
                     <section class="optionsQuestionContainer clgreyl3 hide-on-small-only" ></section>

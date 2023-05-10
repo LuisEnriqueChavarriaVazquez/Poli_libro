@@ -235,7 +235,7 @@ for(var h = 0; h < 2; h++){
     
       <section class="definicionCajaContainerFather">
         <div class="definicionCajaContainer shadow2 clgreyl1 border1">
-          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][0].definicion}</p>
+          <p class="textoPregunta clbktx">${suffledquestionsDragAndDrop[h][0].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][0].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
             <div id="stateQuestion_${0}_${h}" class="border1 clgreyl1">
@@ -244,7 +244,7 @@ for(var h = 0; h < 2; h++){
           </div>
         </div>
         <div class="definicionCajaContainer shadow2 clgreyl1 border1">
-          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][1].definicion}</p>
+          <p class="textoPregunta clbktx">${suffledquestionsDragAndDrop[h][1].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][1].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
             <div id="stateQuestion_${1}_${h}" class="border1 clgreyl1">
@@ -253,7 +253,7 @@ for(var h = 0; h < 2; h++){
           </div>
         </div>
         <div class="definicionCajaContainer shadow2 clgreyl1 border1">
-          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][2].definicion}</p>
+          <p class="textoPregunta clbktx">${suffledquestionsDragAndDrop[h][2].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][2].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
             <div id="stateQuestion_${2}_${h}" class="border1 clgreyl1">
@@ -262,7 +262,7 @@ for(var h = 0; h < 2; h++){
           </div>
         </div>
         <div class="definicionCajaContainer shadow2 clgreyl1 border1">
-          <p class="textoStandar clbktx">${suffledquestionsDragAndDrop[h][3].definicion}</p>
+          <p class="textoPregunta clbktx">${suffledquestionsDragAndDrop[h][3].definicion}</p>
           <div class="definicionCaja clbordertdotted clw shadow2h border1" valorConcepto="${suffledquestionsDragAndDrop[h][3].definicion}">
             <p class="textoStandar clbktx">Arrastra el concepto aquí</p>
             <div id="stateQuestion_${3}_${h}" class="border1 clgreyl1">

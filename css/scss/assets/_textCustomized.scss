@@ -14,6 +14,31 @@
   }
 }
 
+/*Textos*/
+.textoPregunta {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  text-align: justify;
+  display: inline-block;
+}
+
+@media (max-width: 800px) {
+  .textoPregunta {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .textoPregunta {
+    font-size: .83rem;
+    line-height: 13.5px;
+    text-align: left;
+  }
+}
+
 .textoConceptos {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;

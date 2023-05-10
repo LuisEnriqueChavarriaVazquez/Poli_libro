@@ -202,7 +202,7 @@ function preguntas_aleatorias() {
                             <i class="material-icons">help</i>
                         </a>
                     </div>
-                    <p class="getEnunciadoPdf preguntaEnunciado clgreyl2 clbktx border1 textoStandar">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
+                    <p class="getEnunciadoPdf preguntaEnunciado clgreyl2 clbktx border1 textoPregunta">${preguntas[preguntas_aleatorias_indices[i]].enunciado}</p>
                 </div>
                 
                 <!--Opciones de la pregunta-->
