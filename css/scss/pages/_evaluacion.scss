@@ -345,6 +345,7 @@
   width: 100%;
   height: auto;
   margin: 10px;
+  font-size: 1.1rem;
 }
 
 .mensajeCorrecta {
@@ -375,6 +376,12 @@
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .mensajeCorrecta, .mensajeNeutra, .mensajeIncorrecta{
+    font-size: .8rem;
+  }
 }
 
 /*Barra de progreso*/
