@@ -549,6 +549,21 @@
   font-size: 20px;
 }
 
+@media (max-width: 500px) {
+  .definicionCaja {
+    height: auto;
+    padding: 5px;
+  }
+
+  .definicionCaja p {
+    font-size: 15px;
+  }
+
+  .definicionCaja div {
+    padding: 5px;
+  }
+}
+
 .definicionCaja div {
   display: flex;
   justify-content: flex-end;
