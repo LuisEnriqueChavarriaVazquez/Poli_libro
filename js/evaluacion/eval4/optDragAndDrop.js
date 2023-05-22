@@ -141,8 +141,8 @@ let questionsDragAndDrop = [
         definicion: "Nombre técnico que recibe la cantidad de dinero sobre la que se pagan intereses",
     },
     {
-        concepto: "Depósito",
-        definicion: "Es una cantidad de dinero que se entrega a una entidad financiera para su custodia y que puede estar sujeta a ciertas restricciones y condiciones.",
+        concepto: "Flujo neto de efectivo (FNE)",
+        definicion: "Diferencia matemática entre los ingresos en efectivo de la empresa y sus egresos en efectivo en cada período.",
     },
     {
         concepto: "Inversión",

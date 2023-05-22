@@ -12,7 +12,7 @@ let questionsTF = [
         respuesta: "V",
     },
     {
-        enunciado: "Una de los criterios de decisión para aceptar o no invertir en un proyecto de inversión es el siguiente: TIR>TMAR.",
+        enunciado: "Uno de los criterios de decisión para aceptar o rechazar invertir en un proyecto de inversión es el siguiente: TIR>TMAR.",
         respuesta: "V",
     },
     {
@@ -52,14 +52,22 @@ function checkTFanswer(id, respuesta, idRetroalimentacion, contenedorButtonsTF){
     //Validamos que sean correctas
     if(valueAnswerUser == respuesta){
         retroalimentacionContainer.classList.add('mensajeCorrecta');
-        retroalimentacionContainer.textContent = "Correcto, la respuesta es: " + respuesta;
+        if(respuesta == "F"){
+            retroalimentacionContainer.textContent = "Correcto, la respuesta es falso";
+        }else if(respuesta == "V"){
+            retroalimentacionContainer.textContent = "Correcto, la respuesta es verdadero";
+        }
 
         //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
         puntajeTotal++;
         preguntasContestadasTotal++;
     }else{
         retroalimentacionContainer.classList.add('mensajeIncorrecta');
-        retroalimentacionContainer.textContent = "Incorrecto, la respuesta es: " + respuesta;
+        if(respuesta == "F"){
+            retroalimentacionContainer.textContent = "Incorrecto, la respuesta es falso";
+        }else if(respuesta == "V"){
+            retroalimentacionContainer.textContent = "Incorrecto, la respuesta es verdadero";
+        }
 
         //IMPORTANTE... Estas variables estan en el archivo de puntajeActual.js
         preguntasContestadasTotal++;

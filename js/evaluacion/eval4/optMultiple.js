@@ -14,12 +14,12 @@ function pregunta(numero) {
 
     //Explicaciones de las preguntas
     let respuestasExplicacion = [0, "Valor del dinero en el tiempo"
-        , "Valor presente", "Valor del dinero en el tiempo"
+        , "Valor presente", "Valor futuro"
         , "Flujos de efectivo", "Anualidad"
         , "Interés compuesto", "Principal"
         , "$121,665", "Capitalizarla trimestralmente"
         , "Es falso", "Ordinarias, vencidas o diferidas"
-        , "Programa de amortización", "Periodo de Recuperación de la inversión"
+        , "Programa de amortización", "Período de Recuperación de la inversión"
         , "Tasa Interna de Rendimiento (TIR)", "índice de rentabilidad  (IR)"
         , "Relación beneficio-costo", "Hay utilidad"
         , "25,454", "TIR mayor que TMAR"
@@ -109,11 +109,11 @@ const preguntas = [
         "opciones": ['Flujos de efectivo','Ingresos', 'Egresos'],
     },
     {
-        "enunciado": "Se denomina así a los importes iguales que se repiten durante un periodo determinado de tiempo",
+        "enunciado": "Se denomina así a los importes iguales que se repiten durante un período determinado de tiempo",
         "opciones": ['Cantidad única', 'Anualidad', 'Principal o capital'],
     },
     {
-        "enunciado": "Interés que se gana en un depósito dado y que se vuelve parte del principal al final de un periodo específico",
+        "enunciado": "Interés que se gana en un depósito dado y que se vuelve parte del principal al final de un período específico",
         "opciones": ['Interés simple', 'Interés compuesto', 'Interés intermedio'],
     },
     {
@@ -142,11 +142,11 @@ const preguntas = [
     },
     {
         "enunciado": "Método que también se puede calcular sin tomar en cuenta el valor del dinero en el tiempo",
-        "opciones": ['Tasa Interna de Rendimiento ', 'Periodo de Recuperación de la inversión', 'Valor Presente Neto (VPN)'],
+        "opciones": ['Tasa Interna de Rendimiento ', 'Período de Recuperación de la inversión', 'Valor Presente Neto (VPN)'],
     },
     {
         "enunciado": "Es una tasa de descuento que hace posible igualar el valor presente de los ingresos con el valor presente de los egresos",
-        "opciones": ['Valor Presente Neto (VPN)', 'Periodo de recuperación', 'Tasa Interna de Rendimiento (TIR)'],
+        "opciones": ['Valor Presente Neto (VPN)', 'Período de recuperación', 'Tasa Interna de Rendimiento (TIR)'],
     },
     {
         "enunciado": "Se obtiene dividiendo el valor presente de los flujos netos de efectivo entre la inversión inicial del proyecto",
@@ -236,7 +236,7 @@ function preguntas_aleatorias() {
                 
                 <!--Boton para revisar la pregunta-->
                 <div class="evaluateQuestionContainer">
-                    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar pregunta<i
+                    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar respuesta<i
                     class="material-icons right">done</i></a>
                     <!--Retroalimentacion de la pregunta-->
                     <div id="retroalimentacion" cajaRetroalimentacion="retroalimentacion"></div>

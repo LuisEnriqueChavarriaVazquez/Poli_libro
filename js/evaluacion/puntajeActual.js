@@ -20,7 +20,7 @@ function getGrade(){
         let calificacionFinal = (puntajeTotal*10)/20;
         return calificacionFinal;
     }else{
-        return 'TEST SIN TERMINAR, NO HAGAS TRAMPA.';
+        return 'Test sin terminar. ' + preguntasContestadasTotal + "/20";
     }
 }
 
