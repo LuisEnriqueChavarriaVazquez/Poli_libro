@@ -1,7 +1,7 @@
 function pregunta(numero) {
     //Respuestas para las preguntas
     let respuestasId = [0, "pregunta1_opt3"
-        , "pregunta2_opt1", "pregunta3_opt3"
+        , "pregunta2_opt1", "pregunta3_opt2"
         , "pregunta4_opt1", "pregunta5_opt2"
         , "pregunta6_opt2", "pregunta7_opt3"
         , "pregunta8_opt2", "pregunta9_opt2"
