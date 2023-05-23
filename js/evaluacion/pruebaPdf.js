@@ -205,6 +205,7 @@ function crearPdf(){
      doc.setTextColor(0);
      doc.setFont("helvetica");
      doc.setFontSize(16);
+     doc.setFontType("normal");
      doc.text(35, 121.5, 'Nombre: ' + localStorage.getItem('nombreAlumno'));
      doc.text(35, 131.5, 'Grupo: ' + localStorage.getItem('grupoAlumno'));
      doc.text(35, 151.5, 'Preguntas correctas: ' + puntajeTotal + '/20');
@@ -219,6 +220,8 @@ function crearPdf(){
      }else{
          doc.text(35, 151.5+50, 'Estado: ' + 'Sigue intentando.');
      }
+
+     doc.setFontType("bold");
  
      /////////////////////////////////////////
      //Iconos para cada uno de los resultados
