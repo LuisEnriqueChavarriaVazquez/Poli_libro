@@ -236,7 +236,7 @@ function preguntas_aleatorias() {
                 
                 <!--Boton para revisar la pregunta-->
                 <div class="evaluateQuestionContainer">
-                    <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar respuesta<i
+                    <a style="text-transform: lowercase !important;" class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="button_evaluation_${preguntas_aleatorias_indices[i]}" onclick="pregunta(${preguntas_aleatorias_indices[i]})">Revisar respuesta<i
                     class="material-icons right">done</i></a>
                     <!--Retroalimentacion de la pregunta-->
                     <div id="retroalimentacion" cajaRetroalimentacion="retroalimentacion"></div>
