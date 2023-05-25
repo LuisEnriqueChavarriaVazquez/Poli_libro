@@ -274,7 +274,7 @@ for(var h = 0; h < 2; h++){
     
       <!--Boton para revisar la pregunta-->
       <div class="evaluateQuestionContainer">
-        <a class='btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="buttonEvaluateDragAndDrop_${h}" onclick="checkDragAndDrop('${h}','${suffledquestionsDragAndDrop[h][4].id}','buttonEvaluateDragAndDrop_${h}','retroalimentacionDragAndDrop_${h}')">Revisar
+        <a style="text-transform: lowercase !important;" class='btnMinuscula btn-large btnIndividualQuestion waves-effect waves-light border1 cl5 white-text' id="buttonEvaluateDragAndDrop_${h}" onclick="checkDragAndDrop('${h}','${suffledquestionsDragAndDrop[h][4].id}','buttonEvaluateDragAndDrop_${h}','retroalimentacionDragAndDrop_${h}')">Revisar
           conceptos<i class="material-icons right">done</i></a>
         <!--Retroalimentacion de la pregunta-->
         <div id="retroalimentacionDragAndDrop_${h}" cajaRetroalimentacion="retroalimentacion"></div>
