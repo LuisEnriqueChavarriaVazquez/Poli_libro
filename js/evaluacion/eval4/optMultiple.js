@@ -6,8 +6,8 @@ function pregunta(numero) {
         , "pregunta6_opt2", "pregunta7_opt3"
         , "pregunta8_opt2", "pregunta9_opt2"
         , "pregunta10_opt1", "pregunta11_opt1"
-        , "pregunta12_opt1", "pregunta13_opt2"
-        , "pregunta14_opt3", "pregunta15_opt3"
+        , "pregunta12_opt1", "pregunta13_opt3"
+        , "pregunta14_opt2", "pregunta15_opt3"
         , "pregunta16_opt3", "pregunta17_opt2"
         , "pregunta18_opt1", "pregunta19_opt2"
         , "pregunta20_opt3"];
@@ -19,8 +19,8 @@ function pregunta(numero) {
         , "Interés compuesto", "Principal"
         , "$121,665", "Capitalizarla trimestralmente"
         , "Es falso", "Ordinarias, vencidas o diferidas"
-        , "Programa de amortización", "Período de Recuperación de la inversión"
-        , "Tasa Interna de Rendimiento (TIR)", "índice de rentabilidad  (IR)"
+        , "Programa de amortización", "122,039"
+        , "Los presupuestos", "La preparación del presupuesto de efectivo y la planeación de utilidades"
         , "Relación beneficio-costo", "Hay utilidad"
         , "25,454", "TIR mayor que TMAR"
         , "VAN o VPN"];
@@ -141,16 +141,16 @@ const preguntas = [
         "opciones": ['Programa de amortización','Programa de anualidades', 'Cálculo de anualidades'],
     },
     {
-        "enunciado": "Método que también se puede calcular sin tomar en cuenta el valor del dinero en el tiempo",
-        "opciones": ['Tasa Interna de Rendimiento ', 'Período de Recuperación de la inversión', 'Valor Presente Neto (VPN)'],
+        "enunciado": "Si inviertes $100,000 pesos a 2 años con una tasa de interés del 10% anual capitalizable mensualmente, al término del plazo recibirás:",
+        "opciones": ['121,000', '984,973', '122,039'],
     },
     {
-        "enunciado": "Es una tasa de descuento que hace posible igualar el valor presente de los ingresos con el valor presente de los egresos",
-        "opciones": ['Valor Presente Neto (VPN)', 'Período de recuperación', 'Tasa Interna de Rendimiento (TIR)'],
+        "enunciado": "Los estados financieros proforma se construyen con base en:",
+        "opciones": ['Los flujos de efectivo', 'Los presupuestos', 'Los ingresos'],
     },
     {
-        "enunciado": "Se obtiene dividiendo el valor presente de los flujos netos de efectivo entre la inversión inicial del proyecto",
-        "opciones": ['Tasa Promedio de Rentabilidad (TPR)', 'Relación Ventas sobre Utilidad (RVU)', 'Índice de Rentabilidad  (IR)'],
+        "enunciado": "Son dos aspectos clave de la planeación financiera",
+        "opciones": ['La contabilidad y la auditoria', 'La tesorería y el financiamiento', 'La preparación del presupuesto de efectivo y la planeación de utilidades'],
     },
     {
         "enunciado": "Se obtiene dividiendo el valor presente de los beneficios (ingresos) entre el valor presente de los costos",

@@ -8,12 +8,12 @@ let questionsTF = [
         respuesta: "F",
     },
     {
-        enunciado: "El período de recuperación de la inversión (PRI) es un método que se puede calcular sin tomar en cuenta el valor del dinero en el tiempo y también puede calcularse tomando en cuenta el valor del dinero en el tiempo.",
+        enunciado: "El proceso de planeación financiera comienza con la elaboración de planes financieros a largo plazo o estratégicos y con base en estos se formulan los planes y presupuestos a corto plazo u operativos.",
         respuesta: "V",
     },
     {
-        enunciado: "Uno de los criterios de decisión para aceptar o rechazar invertir en un proyecto de inversión es el siguiente: TIR>TMAR.",
-        respuesta: "V",
+        enunciado: "Los presupuestos son una estimación en términos monetarios solo de los ingresos de una empresa.",
+        respuesta: "F",
     },
     {
         enunciado: "El VAN  se puede definir como el valor monetario que resulta de restar la suma de los flujos descontados (flujos de efectivo del proyecto a valor presente) a la inversión inicial.",
