@@ -107,8 +107,8 @@ let questionsDragAndDrop = [
         definicion: "Gastos o salidas de dinero que una entidad o persona realiza durante un período para mantener sus operaciones o lograr objetivos, como salarios, alquiler, suministros, publicidad, compra de activos fijos, entre otros.",
     },
     {
-        concepto: "Valor futuro",
-        definicion: "El valor que tendrá una cantidad de dinero en un momento futuro, teniendo en cuenta una tasa de interés.",
+        concepto: "Amortizar",
+        definicion: "Es el proceso de saldar o liquidar una deuda.",
     },
     {
       id: "1"
@@ -170,8 +170,8 @@ let questionsDragAndDrop = [
         definicion: "Proceso para determinar el monto de los pagos periódicos necesarios para pagar un préstamo o recibir una cantidad determinada de dinero en un período de tiempo.",
     },
     {
-      concepto: "Principal",
-      definicion: "Nombre técnico que recibe la cantidad de dinero sobre la que se pagan intereses",
+      concepto: "Amortizar",
+      definicion: "Es el proceso de saldar o liquidar una deuda.",
     },
     {
       id: "4"

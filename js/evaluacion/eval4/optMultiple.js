@@ -8,7 +8,8 @@ function pregunta(numero) {
         , "pregunta10_opt1", "pregunta11_opt1"
         , "pregunta12_opt1", "pregunta13_opt3"
         , "pregunta14_opt2", "pregunta15_opt3"
-        , "pregunta16_opt3", "pregunta17_opt2"
+        , "pregunta16_opt3"
+        , "pregunta17_opt2"
         , "pregunta18_opt1", "pregunta19_opt2"
         , "pregunta20_opt3"];
 
@@ -21,7 +22,8 @@ function pregunta(numero) {
         , "Es falso", "Ordinarias, vencidas o diferidas"
         , "Programa de amortización", "122,039"
         , "Los presupuestos", "La preparación del presupuesto de efectivo y la planeación de utilidades"
-        , "Relación beneficio-costo", "Hay utilidad"
+        , "Relación beneficio-costo"
+        , "10,442.03"
         , "25,454", "TIR mayor que TMAR"
         , "VAN o VPN"];
 
@@ -157,8 +159,8 @@ const preguntas = [
         "opciones": ['Relación ventas sobre utilidad (RVU)', 'Rentabilidad sobre la inversión inicial (RSI)', 'Relación beneficio-costo'],
     },
     {
-        "enunciado": "Si la suma de ingresos actualizados es de $748,710 y la suma de egresos actualizados es de $722,604 ¿Cuál es la relación beneficio-costo?",
-        "opciones": ['Hay equilibrio operativo', 'Hay utilidad', 'Hay pérdida'],
+        "enunciado": "Considerando los siguientes datos: principal $60,000, tasa de interés 6%, plazo 6 meses, ¿cuál es el valor de la anualidad?",
+        "opciones": ['15,854.21', '10,442.03', '10,004.38'],
     },
     {
         "enunciado": "Por una inversión al cabo de un año recibirás 28,000 pesos; considerando una tasa de descuento del 10% ¿Cuánto dinero tendrás que invertir?",

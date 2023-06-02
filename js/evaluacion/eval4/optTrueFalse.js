@@ -23,6 +23,10 @@ let questionsTF = [
         enunciado: "Entre más largo sea el período de capitalización de una inversión se ganan más rendimientos.",
         respuesta: "F",
     },
+    {
+        enunciado: "Entre más corto sea el período de capitalización se ganan menos rendimientos.",
+        respuesta: "F",
+    },
     {   //Preguntas parafraseadas
         enunciado: "Cuanto mayor sea el intervalo de tiempo en que se realiza la capitalización de una inversión, mayores serán los rendimientos que se obtendrán.",
         respuesta: "F",
@@ -30,10 +34,6 @@ let questionsTF = [
     {
         enunciado: "El Valor Actual Neto (VAN) es una medida financiera que se utiliza para calcular el valor monetario resultante de restar la inversión inicial a la suma de los flujos de efectivo futuros del proyecto, descontados a su valor presente.",
         respuesta: "V",
-    },
-    {
-        enunciado: "El período de recuperación de la inversión (PRI) solo se puede calcular tomando en cuenta el valor del dinero en el tiempo y no es posible calcularlo sin considerar este factor.",
-        respuesta: "F",
     },
 ];
 
