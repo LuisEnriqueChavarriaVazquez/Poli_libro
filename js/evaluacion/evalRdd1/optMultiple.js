@@ -131,7 +131,7 @@ const preguntas = [
         "opciones": ['Capitalizarla anualmente', 'Capitalizarla trimestralmente', 'Capitalizarla semestralmente'],
     },
     {
-        "enunciado": "Entre más corto sea el período de capitalización menor será el valor futuro",
+        "enunciado": "Entre más largo sea el período de capitalización de una inversión se ganan más rendimientos",
         "opciones": ['Es falso', 'Es verdadero', 'Depende de la tasa de interés'],
     },
     {
