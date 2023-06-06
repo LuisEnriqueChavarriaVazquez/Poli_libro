@@ -23,10 +23,10 @@ let questionsTF = [
         enunciado: "Entre más largo sea el período de capitalización de una inversión se ganan más rendimientos.",
         respuesta: "F",
     },
-    {
-        enunciado: "Entre más corto sea el período de capitalización se ganan menos rendimientos.",
-        respuesta: "F",
-    },
+    // {
+    //     enunciado: "Entre más corto sea el período de capitalización se ganan menos rendimientos.",
+    //     respuesta: "F",
+    // },
     {   //Preguntas parafraseadas
         enunciado: "Cuanto mayor sea el intervalo de tiempo en que se realiza la capitalización de una inversión, mayores serán los rendimientos que se obtendrán.",
         respuesta: "F",
